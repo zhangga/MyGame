@@ -36,8 +36,9 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 			if (HttpUtil.is100ContinueExpected(request)) {
 				send100Continue(ctx);
 			}
-			QueryStringDecoder queryStringDecoder = new QueryStringDecoder(request.uri());
-			Map<String, List<String>> params = queryStringDecoder.parameters();
+			QueryStringDecoder decoder = new QueryStringDecoder(request.uri());
+			//URL中携带的参数
+			Map<String, List<String>> params = decoder.parameters();
             if (!params.isEmpty()) {
                 for (Entry<String, List<String>> p : params.entrySet()) {
                     String key = p.getKey();
@@ -50,7 +51,17 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 		}
 		if (msg instanceof HttpContent) {
 			HttpContent httpContent = (HttpContent) msg;
-            ByteBuf content = httpContent.content();
+            ByteBuf buf = httpContent.content();
+            if (buf.readableBytes() <= 0)
+            	return;
+            buf.markReaderIndex();
+            int len = buf.readInt();
+            if (buf.readableBytes() < len) {
+    			buf.resetReaderIndex();
+    			return;
+    		}
+            short cmdId = buf.readShort();
+            System.out.println(cmdId);
 		}
 	}
 

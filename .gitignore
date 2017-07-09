@@ -1,5 +1,7 @@
 MyCommon/bin/*
 MyGameServer/bin/*
 MyGameServer/logs/*
+MyGameServer/logs
 MyLogin/bin/*
 MyLogin/logs/*
+MyLogin/logs
