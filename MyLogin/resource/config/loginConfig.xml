@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config version="1.0">
+	<LoginPort>3001</LoginPort>
+	<IsPublish>false</IsPublish>
+	<CacheUserNum>10000</CacheUserNum>
+	<SessionTimeOut>1800000</SessionTimeOut>
+	<WhiteListOpen>false</WhiteListOpen>
+	<WhiteList>/59.108.46.199,/127.0.0.1,/192.168.0.*</WhiteList>	<!-- 白名单列表 -->
+</config>
