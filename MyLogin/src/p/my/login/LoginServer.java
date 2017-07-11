@@ -1,7 +1,5 @@
 package p.my.login;
 
-import java.util.concurrent.Executors;
-
 import javax.net.ssl.SSLEngine;
 
 import org.apache.log4j.Logger;
@@ -20,9 +18,11 @@ import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.ssl.SslHandler;
 import p.my.common.support.SecureChatSslContextFactory;
+import p.my.common.web.WebActionManager;
 import p.my.login.constant.LoginConfig;
 import p.my.login.constant.LoginConstant;
 import p.my.login.core.HttpMessageHandler;
+import p.my.login.task.TaskManager;
 
 /**
  * 登陆服主入口
@@ -46,8 +46,13 @@ public class LoginServer {
 	private void start() {
 		logger.info("初始化游戏资源");
     	initResource(LoginConstant.RES_PATH);
+    	
+    	WebActionManager.init(LoginConstant.WEB_ACTION_PACKAGE);
+    	
+    	logger.info("初始化任务管理器");
+        TaskManager.gi().init();
+        TaskManager.gi().startService();
 		
-		Runtime.getRuntime().addShutdownHook(new Thread(new ShutdownHooker()));
 		//监听端口
 		initNet();
 	}
@@ -104,13 +109,5 @@ public class LoginServer {
 		}
 		
 	}
-	
-	class ShutdownHooker implements Runnable {
-        @Override
-        public void run() {
-//            TaskManager.getInstance().release();
-//            GameWorld.getInstance().onShutdown();
-        }
-    }
 
 }

@@ -1,5 +1,9 @@
 package p.my.login.core;
 
+import static io.netty.handler.codec.http.HttpResponseStatus.CONTINUE;
+import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
+import static p.my.common.util.HttpUtil.TAIL;
+
 import org.apache.log4j.Logger;
 
 import io.netty.buffer.ByteBuf;
@@ -8,16 +12,14 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpContent;
+import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.codec.http.HttpRequest;
 import io.netty.handler.codec.http.HttpUtil;
-import io.netty.handler.codec.http.QueryStringDecoder;
-
-import static io.netty.handler.codec.http.HttpResponseStatus.*;
-import static io.netty.handler.codec.http.HttpVersion.*;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+import p.my.common.util.SecurityUtil;
+import p.my.common.web.WebAction;
+import p.my.common.web.WebActionManager;
+import p.my.login.constant.LoginConfig;
+import p.my.login.constant.LoginConstant;
 
 /**
  * HTTP消息处理
@@ -36,32 +38,37 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 			if (HttpUtil.is100ContinueExpected(request)) {
 				send100Continue(ctx);
 			}
-			QueryStringDecoder decoder = new QueryStringDecoder(request.uri());
-			//URL中携带的参数
-			Map<String, List<String>> params = decoder.parameters();
-            if (!params.isEmpty()) {
-                for (Entry<String, List<String>> p : params.entrySet()) {
-                    String key = p.getKey();
-                    List<String> vals = p.getValue();
-                    for (String val : vals) {
-                    	logger.info("PARAM: "+key+" = "+val+"\n");
-                    }
-                }
-            }
+			//处理GET请求
+			if (request.method() == HttpMethod.GET) {
+				handlerWebAction(ctx, request);
+			}
 		}
 		if (msg instanceof HttpContent) {
 			HttpContent httpContent = (HttpContent) msg;
             ByteBuf buf = httpContent.content();
-            if (buf.readableBytes() <= 0)
+            if (buf.readableBytes() < 14) {
+            	logger.error("接收到的消息长度为：" + buf.readableBytes() + "   不满足要求！");
             	return;
+            }
             buf.markReaderIndex();
-            int len = buf.readInt();
-            if (buf.readableBytes() < len) {
-    			buf.resetReaderIndex();
-    			return;
-    		}
-            short cmdId = buf.readShort();
-            System.out.println(cmdId);
+            //检测magic header.		2位
+			short magicHeader = buf.readShort();
+			if (magicHeader != LoginConstant.MAGIC_HEADER) {
+				buf.resetReaderIndex();
+				logger.error("接收到的消息头不合法" + magicHeader);
+				return;
+			}
+			//不断的检测，直到数据都已经读取了		2位
+			int dataLength = buf.readShort();
+			if (buf.readableBytes() < dataLength) {
+				buf.resetReaderIndex();
+				return;
+			}
+			//将消息完整的接收
+//			byte[] decoded = new byte[dataLength];
+//			buf.readBytes(decoded);
+//			ByteBuf bb = Unpooled.wrappedBuffer(decoded);
+			GameActionDispatcher.dispatch(ctx, buf);
 		}
 	}
 
@@ -71,17 +78,34 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 	}
 
 	@Override
-	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		super.channelActive(ctx);
-	}
-
-	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 		logger.error(cause);
 //        ctx.close();
 	}
 	
-	private static void send100Continue(ChannelHandlerContext ctx) {
+	/**
+	 * 处理URL请求
+	 * @param ctx
+	 * @param request
+	 */
+	private void handlerWebAction(ChannelHandlerContext ctx, HttpRequest request) {
+		String uri = request.uri();
+		String ip = ctx.channel().remoteAddress().toString();
+		if (!SecurityUtil.ipValidate(LoginConfig.getWHITE_LIST_LIST(), ip)) {
+			logger.error("URL请求的IP不在白名单中："+ip);
+			return;
+		}
+		//消息分发
+		String filter = uri.substring(1, uri.indexOf(TAIL));
+		WebAction action = WebActionManager.getAction(filter);
+		if (action == null) {
+			logger.error("URL请求的action不存在："+filter);
+			return;
+		}
+		action.doRequest(request, ctx);
+	}
+	
+	private void send100Continue(ChannelHandlerContext ctx) {
         FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, CONTINUE);
         ctx.write(response);
     }
