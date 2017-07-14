@@ -1,5 +1,8 @@
 package p.my.login;
 
+import java.util.Date;
+import java.util.List;
+
 import javax.net.ssl.SSLEngine;
 
 import org.apache.log4j.Logger;
@@ -17,11 +20,18 @@ import io.netty.handler.codec.http.HttpContentCompressor;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.ssl.SslHandler;
+import p.my.common.db.JedisManager;
+import p.my.common.db.MyBatisFactory;
 import p.my.common.support.SecureChatSslContextFactory;
 import p.my.common.web.WebActionManager;
+import p.my.login.bean.Channel;
+import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.constant.LoginConstant;
 import p.my.login.core.HttpMessageHandler;
+import p.my.login.dao.UserDao;
+import p.my.login.mapper.ChannelMapper;
+import p.my.login.task.GlobalTasks;
 import p.my.login.task.TaskManager;
 
 /**
@@ -46,12 +56,15 @@ public class LoginServer {
 	private void start() {
 		logger.info("初始化游戏资源");
     	initResource(LoginConstant.RES_PATH);
+    	logger.info("初始化DB配置");
+    	initDB(LoginConstant.RES_PATH);
     	
     	WebActionManager.init(LoginConstant.WEB_ACTION_PACKAGE);
     	
     	logger.info("初始化任务管理器");
         TaskManager.gi().init();
         TaskManager.gi().startService();
+        GlobalTasks.gi().init();
 		
 		//监听端口
 		initNet();
@@ -63,8 +76,22 @@ public class LoginServer {
     }
 	
 	private void initDB(String path) {
-//        DataManager.getInstance().init(path, "proxool.logon", CacheDefine.CACHE_ID_USER);
-//        JedisManager.gi().init();
+		MyBatisFactory.init();
+		ChannelMapper map = MyBatisFactory.getMapper(ChannelMapper.class);
+		List<Channel> list = map.getAllChannel();
+		UserDao dao = new UserDao(MyBatisFactory.getFactory());
+		User user = new User();
+		user.setId(1);
+		user.setAccount("11");
+		user.setChannel(list.get(0).getId());
+		user.setSub_channel(0);
+		user.setIdx(0);
+		user.setPlatform((byte)0);
+		user.setState((byte)1);
+		user.setCreate_time(new Date());
+		user.setLogin_time(new Date());
+		user = dao.createUser(user);
+        JedisManager.gi().init();
     }
 	
 	/**

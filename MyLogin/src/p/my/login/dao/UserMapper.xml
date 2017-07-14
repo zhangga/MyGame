@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="p.my.login.dao.UserMapper">
+	
+	<cache eviction="LRU" flushInterval="60000" size="512" readOnly="true" />
+    
+    <insert id="createUser" parameterType="User" useGeneratedKeys="true" keyColumn="id">
+        INSERT INTO user_10000_0 
+        	(id, channel, sub_channel, platform, account, idx, state, create_time, login_time)
+        VALUES 
+        	(#{id}, #{channel}, #{sub_channel}, #{platform}, #{account}, #{idx}, #{state}, #{create_time}, #{login_time})
+    </insert>
+    
+</mapper>

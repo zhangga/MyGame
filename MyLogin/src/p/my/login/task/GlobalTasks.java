@@ -44,7 +44,7 @@ public class GlobalTasks
 			TaskManager.gi().schedulePeriodicTask(ETaskType.GLOBAL, new Task() {
 				@Override
 				public void run() {
-					logger.error("==================");
+					
 				}
 				
 				@Override
@@ -69,7 +69,7 @@ public class GlobalTasks
 			TaskManager.gi().schedulePeriodicTask(ETaskType.GLOBAL, new Task() {
 				@Override
 				public void run() {
-					logger.error("==================");
+					
 				}
 				
 				@Override

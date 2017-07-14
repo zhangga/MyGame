@@ -39,7 +39,7 @@ public class LoginConfig {
     private static List<String> WHITE_LIST_LIST;
 	
 	public static void loadData(String res_path) {
-		final File file = new File(res_path, "config/loginConfig.xml");
+		final File file = new File(res_path, "config/login_config.xml");
         ResourceListener listener = new ResourceListener() {
             @Override
             public File listenedFile() {

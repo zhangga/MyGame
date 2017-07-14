@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 参数设置 -->
+	<settings>
+		<!-- 这个配置使全局的映射器启用或禁用缓存 -->
+    	<setting name="cacheEnabled" value="true" />
+    	<!-- 允许JDBC支持生成的键。需要适合的驱动。如果设置为true则这个设置强制生成的键被使用，尽管一些驱动拒绝兼容但仍然有效（比如Derby） -->
+        <setting name="useGeneratedKeys" value="true" />
+		<!-- 配置默认的执行器。SIMPLE执行器没有什么特别之处。REUSE执行器重用预处理语句。BATCH执行器重用语句和批量更新 -->  
+        <setting name="defaultExecutorType" value="REUSE" /> 
+        <!-- 设置超时时间，它决定驱动等待一个数据库响应的时间 -->  
+        <setting name="defaultStatementTimeout" value="5000" />
+    </settings>
+    
+    <!-- 别名定义 -->  
+    <typeAliases>  
+        <typeAlias alias="User" type="p.my.login.bean.User" />
+    </typeAliases>
+    
+    <!--配置environment环境-->
+    <environments default="development">
+    	<environment id="development">
+    		<transactionManager type="JDBC" />
+    		<dataSource type="POOLED">
+    			<property name="driver" value="com.mysql.jdbc.Driver" />
+    			<property name="url" value="jdbc:mysql://47.95.10.167:3306/my_login" />
+    			<property name="username" value="root" />
+    			<property name="password" value="zzq6851520" />
+    			<!-- 在任意时间存在的活动（也就是正在使用）连接的数量 -->  
+                <property name="poolMaximumActiveConnections" value="10" />
+                <!-- 任意时间存在的空闲连接数 -->  
+                <property name="poolMaximumIdleConnections" value="5" />
+                <!-- 在被强制返回之前，池中连接被检查的时间 -->  
+                <property name="poolMaximumCheckoutTime" value="20000" />
+                <!-- 这是给连接池一个打印日志状态机会的低层次设置，还有重新尝试获得连接，这些情况下往往需要很长时间（为了避免连接池没有配置时静默失败） -->  
+                <property name="poolTimeToWait" value="20000" />
+                <!-- 发送到数据的侦测查询，用来验证连接是否正常工作，并且准备接受请求。 -->  
+                <property name="poolPingQuery" value="NO PING QUERY SET" />
+                <!-- 这是开启或禁用侦测查询。如果开启，你必须用一个合法的SQL语句（最好是很快速的）设置poolPingQuery属性 -->  
+                <property name="poolPingEnabled" value="false" />
+                <!-- 这是用来配置poolPingQuery多次时间被用一次。这可以被设置匹配标准的数据库连接超时时间，来避免不必要的侦测 -->  
+                <property name="poolPingConnectionsNotUsedFor" value="0" />
+            </dataSource>
+    	</environment>
+    </environments>
+    
+    <!-- 映射文件，mapper的配置文件 -->
+    <mappers>
+    	<mapper resource="p/my/login/dao/UserMapper.xml"/>
+    	
+    	<!--扫描包路径下所有Mapper接口-->
+		<package name="p.my.login.mapper"/>
+    </mappers>
+</configuration>

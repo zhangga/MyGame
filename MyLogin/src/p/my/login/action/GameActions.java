@@ -1,9 +1,10 @@
-package p.my.login.core;
+package p.my.login.action;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import p.my.login.action.game.GameTestAction;
+import p.my.login.core.GameAction;
 
 /**
  * 所有的GameAction都在这里进行了对应和枚举。
