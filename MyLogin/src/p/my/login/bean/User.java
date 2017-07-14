@@ -14,7 +14,7 @@ public class User {
 	
 	private int channel;
 	
-	private int sub_channel;
+	private byte sub_channel;
 	
 	private byte platform;
 	
@@ -44,11 +44,11 @@ public class User {
 		this.channel = channel;
 	}
 
-	public int getSub_channel() {
+	public byte getSub_channel() {
 		return sub_channel;
 	}
 
-	public void setSub_channel(int sub_channel) {
+	public void setSub_channel(byte sub_channel) {
 		this.sub_channel = sub_channel;
 	}
 

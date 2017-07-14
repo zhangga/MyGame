@@ -3,6 +3,7 @@ package p.my.login.action;
 import java.util.HashMap;
 import java.util.Map;
 
+import p.my.login.action.game.GameLoginAction;
 import p.my.login.action.game.GameTestAction;
 import p.my.login.core.GameAction;
 
@@ -16,6 +17,7 @@ public enum GameActions
 {
 	
 	TEST(0, GameTestAction.class, "测试"),
+	LOGIN(101, GameLoginAction.class, "登陆"),
 	;
 	
 	//消息号

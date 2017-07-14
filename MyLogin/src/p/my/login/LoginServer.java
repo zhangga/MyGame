@@ -84,7 +84,7 @@ public class LoginServer {
 		user.setId(1);
 		user.setAccount("11");
 		user.setChannel(list.get(0).getId());
-		user.setSub_channel(0);
+		user.setSub_channel((byte)0);
 		user.setIdx(0);
 		user.setPlatform((byte)0);
 		user.setState((byte)1);
