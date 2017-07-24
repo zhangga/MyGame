@@ -72,7 +72,7 @@ public class LoginServer {
 	
 	private void del() {
 		User user = new User();
-		user.setAccount("my");
+		user.setAccount("yiba");
 		user.setChannel(10000);
 		user.setPlatform((byte)0);
 		user = GameWorld.gi().getAndCreateUser(user);

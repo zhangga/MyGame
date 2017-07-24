@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.Logger;
 
+import p.my.common.db.DBMapper;
 import p.my.common.db.MyBatisFactory;
 import p.my.login.bean.Channel;
 import p.my.login.bean.User;
@@ -37,12 +38,10 @@ public class GameWorld {
 	//用户列表
 	private Map<String, User> users = null;
 	
-	private ChannelMapper mapper = null;
-	
 	public void init() {
 		//渠道列表
-		mapper = MyBatisFactory.getMapper(ChannelMapper.class);
-		List<Channel> list = mapper.getAllChannel();
+		DBMapper<ChannelMapper> mapper = MyBatisFactory.getMapper(ChannelMapper.class);
+		List<Channel> list = mapper.mapper.getAllChannel();
 		mapper.close();
 		for (Channel ch : list) {
 			logger.info("渠道id:"+ch.getId()+"->"+ch.getName());
@@ -124,7 +123,8 @@ public class GameWorld {
 					channel.addIdx();
 					UserDao dao = new UserDao(MyBatisFactory.getFactory());
 					dao.createTable(channel.getId(), channel.getIdx());
-					mapper.updateChannel(channel);
+					DBMapper<ChannelMapper> mapper = MyBatisFactory.getMapper(ChannelMapper.class);
+					mapper.mapper.updateChannel(channel);
 					mapper.close();
 				}
 			}

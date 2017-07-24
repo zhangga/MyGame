@@ -14,7 +14,7 @@ public class LoginConstant {
     /**
 	 * 用户表达到多少条后分表
 	 */
-	public static final int MAX_ROW = 1;
+	public static final int MAX_ROW = 500000;
 	
 	/** 用户ID起始值 */
 	public static final int USER_ID_INITVALUE = 100000;

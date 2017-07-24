@@ -50,13 +50,15 @@ public class MyBatisFactory {
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public static <T> T getMapper(Class<?> T) {
+	public static <T> DBMapper<T> getMapper(Class<?> T) {
 		SqlSession session = null;
+		DBMapper<T> dbm = null;
 		try {
 			session = factory.openSession();
+			dbm = new DBMapper<>(session);
 			T mapper = (T) session.getMapper(T);
-			IMapper m = null;
-			return mapper;
+			dbm.mapper = mapper;
+			return dbm;
 		} catch (Exception e) {
 			logger.error("获取Mapper时发生异常", e);
 		} finally {
@@ -64,7 +66,7 @@ public class MyBatisFactory {
 //				session.close();
 //			}
 		}
-		return null;
+		return dbm;
 	}
 
 }
