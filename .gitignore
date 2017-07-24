@@ -5,3 +5,4 @@ MyGameServer/logs
 MyLogin/bin/*
 MyLogin/logs/*
 MyLogin/logs
+*.class

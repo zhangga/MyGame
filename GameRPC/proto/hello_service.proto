@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.wycx.rpc.proto;
+
+
+option java_multiple_files = true;
+option java_package = "com.wycx.rpc.proto.service";
+option java_outer_classname = "GreetingService";
+
+import "hello.proto";
+
+service HelloService {
+    rpc sayHello(HelloRequest) returns (HelloResponse);
+}

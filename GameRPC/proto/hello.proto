@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.wycx.rpc.proto;
+
+option java_multiple_files = true;
+option java_package = "com.wycx.rpc.proto.model";
+option java_outer_classname = "Hello";
+
+message HelloRequest {
+    string name  = 1;
+    int32 id    = 2;  
+}
+
+message HelloResponse {
+    string message = 1;  
+}
