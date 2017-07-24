@@ -21,6 +21,7 @@ public class Channel {
 	
 	private Date create_time;
 	
+	/** 该渠道当前用户数量 */
 	private AtomicInteger userCounter = new AtomicInteger();
 
 	public int getId() {
@@ -61,6 +62,10 @@ public class Channel {
 
 	public void setUserCount(int count) {
 		this.userCounter.set(count);
+	}
+	
+	public void addUserCount() {
+		this.userCounter.incrementAndGet();
 	}
 	
 	public boolean isNewTable() {

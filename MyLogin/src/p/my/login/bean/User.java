@@ -27,6 +27,10 @@ public class User {
 	private Date create_time;
 	
 	private Date login_time;
+	
+	public String getKey() {
+		return channel+"_"+account+"_"+platform;
+	}
 
 	public int getId() {
 		return id;

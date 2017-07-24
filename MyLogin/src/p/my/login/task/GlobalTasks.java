@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import p.my.common.task.Task;
 import p.my.common.util.TimeUtil;
+import p.my.login.game.GameWorld;
 
 /**
  * {@code ETaskType.GLOBAL}
@@ -69,7 +70,7 @@ public class GlobalTasks
 			TaskManager.gi().schedulePeriodicTask(ETaskType.GLOBAL, new Task() {
 				@Override
 				public void run() {
-					
+					GameWorld.gi().onUpdate();
 				}
 				
 				@Override

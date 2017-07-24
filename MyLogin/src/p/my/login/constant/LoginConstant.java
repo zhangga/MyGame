@@ -7,12 +7,22 @@ public class LoginConstant {
     
     public static final String WEB_ACTION_PACKAGE = "p.my.login.action.web";
     
+    public static final byte TRUE = 1;
+    
+    public static final byte FALSE = 0;
+    
     /**
 	 * 用户表达到多少条后分表
 	 */
-	public static final int MAX_ROW = 200000;
+	public static final int MAX_ROW = 1;
 	
-	public static final int CHANNEL_OTHER = 0;
+	/** 用户ID起始值 */
+	public static final int USER_ID_INITVALUE = 100000;
+	
+	/** 其他渠道 */
+	public static final int CHANNEL_OTHER = 10000;
+	
+	public static final byte SUB_CHANNEL = 0;
     
     /** 消息头魔数*/
   	public static final short MAGIC_HEADER = 0x2425;

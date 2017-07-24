@@ -1,5 +1,8 @@
 package p.my.login.dao;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import p.my.common.db.BaseSqlDao;
@@ -24,6 +27,32 @@ public class UserDao extends BaseSqlDao {
 			return user;
 		}
 		return null;
+	}
+	
+	public User getUser(User puser) {
+		User user = this.selectOne("selectUser", puser);
+		return user;
+	}
+	
+	public int getUserCount(int channel, int idx) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("table", "user_"+channel+"_"+idx);
+		return this.selectOne("selectCount", map);
+	}
+	
+	public int getUserMax(int channel, int idx) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("table", "user_"+channel+"_"+idx);
+		Integer max = this.selectOne("selectMax", map);
+		if (max == null)
+			return 0;
+		return max;
+	}
+	
+	public void createTable(int channel, int idx) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("table", "user_"+channel+"_"+idx);
+		this.update("createTable", map);
 	}
 
 }

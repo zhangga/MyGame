@@ -5,10 +5,37 @@
 	<cache eviction="LRU" flushInterval="60000" size="512" readOnly="true" />
     
     <insert id="createUser" parameterType="User" useGeneratedKeys="true" keyColumn="id">
-        INSERT INTO user_10000_0 
+        INSERT INTO user_#{channel}_#{idx} 
         	(id, channel, sub_channel, platform, account, idx, state, create_time, login_time)
         VALUES 
         	(#{id}, #{channel}, #{sub_channel}, #{platform}, #{account}, #{idx}, #{state}, #{create_time}, #{login_time})
     </insert>
+    
+    <select id="selectUser" parameterType="User" resultType="User">
+    	SELECT * FROM user_#{channel}_#{idx} WHERE channel=#{channel} AND account=#{account} AND platform=#{platform}
+    </select>
+    
+    <select id="selectCount" parameterType="map" resultType="Integer">
+    	SELECT count(id) FROM ${table}
+    </select>
+    
+    <select id="selectMax" parameterType="map" resultType="Integer">
+    	SELECT max(id) FROM ${table}
+    </select>
+    
+    <update id="createTable" parameterType="map">
+    	CREATE TABLE IF NOT EXISTS ${table} (
+		  `id` int(11) NOT NULL,
+		  `channel` int(11) NOT NULL,
+		  `sub_channel` tinyint(4) NOT NULL,
+		  `platform` tinyint(4) NOT NULL COMMENT 'platform 0:other 1:android 2:IOS',
+		  `account` varchar(100) NOT NULL,
+		  `idx` int(11) NOT NULL,
+		  `state` tinyint(4) NOT NULL DEFAULT '1',
+		  `create_time` datetime NOT NULL,
+		  `login_time` datetime NOT NULL,
+		  PRIMARY KEY (`id`) 
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+    </update>
     
 </mapper>

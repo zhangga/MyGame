@@ -44,12 +44,18 @@ public class MyBatisFactory {
 		return factory;
 	}
 	
+	/**
+	 * 调用close方法
+	 * @param T
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T getMapper(Class<?> T) {
 		SqlSession session = null;
 		try {
 			session = factory.openSession();
 			T mapper = (T) session.getMapper(T);
+			IMapper m = null;
 			return mapper;
 		} catch (Exception e) {
 			logger.error("获取Mapper时发生异常", e);
