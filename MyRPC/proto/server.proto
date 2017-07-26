@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package p.my.rpc.proto;
+
+option java_multiple_files = true;
+option java_package = "p.my.rpc.proto.model";
+option java_outer_classname = "RPCServerState";
+
+message ServerStateRequest {
+    int32 id = 1;
+    string name  = 2;
+    string host = 3;
+    int32 port = 4;
+    int32 online = 5;
+}
+
+message ServerStateResponse {
+    bool state = 1;
+}
