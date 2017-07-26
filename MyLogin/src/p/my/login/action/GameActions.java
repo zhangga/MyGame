@@ -21,7 +21,7 @@ public enum GameActions
 	;
 	
 	//消息号
-	private int cmd;
+	public int cmd;
 	
 	//描述
 	private String desc;

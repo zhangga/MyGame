@@ -3,6 +3,7 @@ package p.my.login.action.game;
 import org.apache.log4j.Logger;
 
 import p.my.common.message.Message;
+import p.my.login.action.GameActions;
 import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.core.GameAction;
@@ -41,8 +42,10 @@ public class GameLoginAction extends GameAction {
 		puser.setPlatform(platform);
 		User ruser = GameWorld.gi().getAndCreateUser(puser);
 		
-		
-		long curr = System.currentTimeMillis();
+		Message msg = new Message(GameActions.LOGIN.cmd, req.getCtx());
+		msg.setBool(LoginConfig.isPUBLISH());
+		msg.setInt(ruser.getId());
+		sendMsg(msg);
 	}
 
 }
