@@ -8,6 +8,8 @@ import org.apache.log4j.Logger;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import p.my.rpc.proto.service.ServerStateServiceGrpc;
+import p.my.rpc.service.ServerStateServiceImpl;
 
 /**
  * RPC服务器
@@ -37,7 +39,7 @@ public class MyRPC {
 				try {
 					server = ServerBuilder.forPort(29999)
 							//添加所有的RPC服务
-							.addService(HelloServiceGrpc.bindService(new GreetingServiceImpl()))
+							.addService(ServerStateServiceGrpc.bindService(new ServerStateServiceImpl()))
 							.build().start();
 				} catch (IOException e) {
 					e.printStackTrace();

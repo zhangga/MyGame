@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package p.my.rpc.proto;
 
-
 option java_multiple_files = true;
 option java_package = "p.my.rpc.proto.service";
 option java_outer_classname = "RPCServerStateService";
