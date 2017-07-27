@@ -28,6 +28,7 @@ import p.my.login.core.HttpMessageHandler;
 import p.my.login.game.GameWorld;
 import p.my.login.task.GlobalTasks;
 import p.my.login.task.TaskManager;
+import p.my.rpc.MyRPC;
 
 /**
  * 登陆服主入口
@@ -40,6 +41,8 @@ public class LoginServer {
 	private static final Logger logger = Logger.getLogger(LoginServer.class);
 	
 	public static void main(String[] args) {
+		MyRPC rpc = new MyRPC();
+		rpc.start();
 		LoginServer login = new LoginServer();
 		login.start();
 		logger.info("登陆服启动成功");

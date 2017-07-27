@@ -23,11 +23,11 @@ public class ServerStateServiceGrpc {
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi
   public static final io.grpc.MethodDescriptor<p.my.rpc.proto.model.ServerStateRequest,
-      p.my.rpc.proto.model.ServerStateResponse> METHOD_SAY_HELLO =
+      p.my.rpc.proto.model.ServerStateResponse> METHOD_SEND_STATE =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "p.my.rpc.proto.ServerStateService", "sayHello"),
+              "p.my.rpc.proto.ServerStateService", "sendState"),
           io.grpc.protobuf.ProtoUtils.marshaller(p.my.rpc.proto.model.ServerStateRequest.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(p.my.rpc.proto.model.ServerStateResponse.getDefaultInstance()));
 
@@ -47,18 +47,18 @@ public class ServerStateServiceGrpc {
 
   public static interface ServerStateService {
 
-    public void sayHello(p.my.rpc.proto.model.ServerStateRequest request,
+    public void sendState(p.my.rpc.proto.model.ServerStateRequest request,
         io.grpc.stub.StreamObserver<p.my.rpc.proto.model.ServerStateResponse> responseObserver);
   }
 
   public static interface ServerStateServiceBlockingClient {
 
-    public p.my.rpc.proto.model.ServerStateResponse sayHello(p.my.rpc.proto.model.ServerStateRequest request);
+    public p.my.rpc.proto.model.ServerStateResponse sendState(p.my.rpc.proto.model.ServerStateRequest request);
   }
 
   public static interface ServerStateServiceFutureClient {
 
-    public com.google.common.util.concurrent.ListenableFuture<p.my.rpc.proto.model.ServerStateResponse> sayHello(
+    public com.google.common.util.concurrent.ListenableFuture<p.my.rpc.proto.model.ServerStateResponse> sendState(
         p.my.rpc.proto.model.ServerStateRequest request);
   }
 
@@ -80,10 +80,10 @@ public class ServerStateServiceGrpc {
     }
 
     @java.lang.Override
-    public void sayHello(p.my.rpc.proto.model.ServerStateRequest request,
+    public void sendState(p.my.rpc.proto.model.ServerStateRequest request,
         io.grpc.stub.StreamObserver<p.my.rpc.proto.model.ServerStateResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SAY_HELLO, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_SEND_STATE, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -105,9 +105,9 @@ public class ServerStateServiceGrpc {
     }
 
     @java.lang.Override
-    public p.my.rpc.proto.model.ServerStateResponse sayHello(p.my.rpc.proto.model.ServerStateRequest request) {
+    public p.my.rpc.proto.model.ServerStateResponse sendState(p.my.rpc.proto.model.ServerStateRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SAY_HELLO, getCallOptions(), request);
+          getChannel(), METHOD_SEND_STATE, getCallOptions(), request);
     }
   }
 
@@ -129,14 +129,14 @@ public class ServerStateServiceGrpc {
     }
 
     @java.lang.Override
-    public com.google.common.util.concurrent.ListenableFuture<p.my.rpc.proto.model.ServerStateResponse> sayHello(
+    public com.google.common.util.concurrent.ListenableFuture<p.my.rpc.proto.model.ServerStateResponse> sendState(
         p.my.rpc.proto.model.ServerStateRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SAY_HELLO, getCallOptions()), request);
+          getChannel().newCall(METHOD_SEND_STATE, getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_SAY_HELLO = 0;
+  private static final int METHODID_SEND_STATE = 0;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -154,8 +154,8 @@ public class ServerStateServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((p.my.rpc.proto.model.ServerStateRequest) request,
+        case METHODID_SEND_STATE:
+          serviceImpl.sendState((p.my.rpc.proto.model.ServerStateRequest) request,
               (io.grpc.stub.StreamObserver<p.my.rpc.proto.model.ServerStateResponse>) responseObserver);
           break;
         default:
@@ -177,12 +177,12 @@ public class ServerStateServiceGrpc {
       final ServerStateService serviceImpl) {
     return io.grpc.ServerServiceDefinition.builder(SERVICE_NAME)
         .addMethod(
-          METHOD_SAY_HELLO,
+          METHOD_SEND_STATE,
           asyncUnaryCall(
             new MethodHandlers<
               p.my.rpc.proto.model.ServerStateRequest,
               p.my.rpc.proto.model.ServerStateResponse>(
-                serviceImpl, METHODID_SAY_HELLO)))
+                serviceImpl, METHODID_SEND_STATE)))
         .build();
   }
 }

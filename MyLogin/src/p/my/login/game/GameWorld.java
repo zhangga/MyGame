@@ -13,11 +13,14 @@ import org.apache.log4j.Logger;
 import p.my.common.db.DBMapper;
 import p.my.common.db.MyBatisFactory;
 import p.my.login.bean.Channel;
+import p.my.login.bean.Server;
 import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.constant.LoginConstant;
 import p.my.login.dao.UserDao;
 import p.my.login.mapper.ChannelMapper;
+import p.my.rpc.service.ServiceResult;
+import p.my.rpc.service.ServiceResultKey;
 
 public class GameWorld {
 	
@@ -31,6 +34,9 @@ public class GameWorld {
 	
 	//当前最大的用户ID
 	private AtomicInteger maxId = new AtomicInteger(LoginConstant.USER_ID_INITVALUE);
+	
+	//服务器列表
+	private Map<Integer, Server> servers = new HashMap<>();
 	
 	//渠道列表
 	private Map<Integer, Channel> channels = new HashMap<>();
@@ -59,6 +65,9 @@ public class GameWorld {
 		//用户容器
 		int capacity = (int) (LoginConfig.CACHE_UER_NUM / 0.75f);
 		users = new ConcurrentHashMap<>(capacity);
+		//服务器列表
+		String s = ServiceResult.take(ServiceResultKey.SERVER_STATE);
+		System.out.println("================="+s);
 	}
 	
 	/**
@@ -173,6 +182,10 @@ public class GameWorld {
 	
 	public Channel getChannel(int id) {
 		return channels.get(id);
+	}
+	
+	public Map<Integer, Server> getServers() {
+		return servers;
 	}
 
 }

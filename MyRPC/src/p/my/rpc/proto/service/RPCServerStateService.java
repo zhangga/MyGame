@@ -24,11 +24,11 @@ public final class RPCServerStateService {
   static {
     java.lang.String[] descriptorData = {
       "\n\024server_service.proto\022\016p.my.rpc.proto\032\014" +
-      "server.proto2i\n\022ServerStateService\022S\n\010sa" +
-      "yHello\022\".p.my.rpc.proto.ServerStateReque" +
-      "st\032#.p.my.rpc.proto.ServerStateResponseB" +
-      "1\n\026p.my.rpc.proto.serviceB\025RPCServerStat" +
-      "eServiceP\001b\006proto3"
+      "server.proto2j\n\022ServerStateService\022T\n\tse" +
+      "ndState\022\".p.my.rpc.proto.ServerStateRequ" +
+      "est\032#.p.my.rpc.proto.ServerStateResponse" +
+      "B1\n\026p.my.rpc.proto.serviceB\025RPCServerSta" +
+      "teServiceP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

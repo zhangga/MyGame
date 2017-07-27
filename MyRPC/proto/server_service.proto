@@ -9,5 +9,5 @@ option java_outer_classname = "RPCServerStateService";
 import "server.proto";
 
 service ServerStateService {
-    rpc sayHello(ServerStateRequest) returns (ServerStateResponse);
+    rpc sendState(ServerStateRequest) returns (ServerStateResponse);
 }
