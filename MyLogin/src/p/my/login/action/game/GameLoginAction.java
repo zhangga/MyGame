@@ -1,12 +1,17 @@
 package p.my.login.action.game;
 
+import java.util.Calendar;
+
 import org.apache.log4j.Logger;
 
+import p.my.common.db.MyBatisFactory;
 import p.my.common.message.Message;
 import p.my.login.action.GameActions;
+import p.my.login.bean.Server;
 import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.core.GameAction;
+import p.my.login.dao.UserDao;
 import p.my.login.game.GameWorld;
 
 /**
@@ -41,11 +46,30 @@ public class GameLoginAction extends GameAction {
 		puser.setAccount(account);
 		puser.setPlatform(platform);
 		User ruser = GameWorld.gi().getAndCreateUser(puser);
+		ruser.setLogin_time(Calendar.getInstance().getTime());
+		
+		//判断玩家是否在线,如果玩家在线则登录在线的服务器
+		int onlineId = GameWorld.gi().getOnlineServerId(ruser.getId());
+		Server target = GameWorld.gi().getTargetServer(selectId, onlineId);
+		
+		//没有开启的服务器
+		if (target == null) {
+			return;
+		}
 		
 		Message msg = new Message(GameActions.LOGIN.cmd, req.getCtx());
 		msg.setBool(LoginConfig.isPUBLISH());
 		msg.setInt(ruser.getId());
+		//目标服务器
+		msg.setString(target.host);
+		msg.setShort(target.port);
+		msg.setShort(target.id);
 		sendMsg(msg);
+		
+		//增加在线玩家
+		GameWorld.gi().addOnlineUser(ruser, target.id);
+		UserDao dao = new UserDao(MyBatisFactory.getFactory());
+		dao.updateUserLogin(ruser);
 	}
 
 }

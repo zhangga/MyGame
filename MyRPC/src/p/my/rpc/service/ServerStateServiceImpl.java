@@ -5,6 +5,8 @@ import p.my.rpc.proto.model.ServerStateRequest;
 import p.my.rpc.proto.model.ServerStateResponse;
 import p.my.rpc.proto.service.ServerStateServiceGrpc.ServerStateService;
 
+import static p.my.rpc.service.ServiceResult.COMMA;
+
 /**
  * 接收到服务器状态
  *
@@ -19,8 +21,8 @@ public class ServerStateServiceImpl implements ServerStateService {
 		responseObserver.onNext(resp);
 		responseObserver.onCompleted();
 		StringBuilder sb = new StringBuilder();
-		sb.append(request.getId()).append(",").append(request.getName()).append(",")
-			.append(request.getHost()).append(",").append(request.getPort()).append(",")
+		sb.append(request.getId()).append(COMMA).append(request.getName()).append(COMMA)
+			.append(request.getHost()).append(COMMA).append(request.getPort()).append(COMMA)
 			.append(request.getOnline());
 		ServiceResult.offer(ServiceResultKey.SERVER_STATE, sb.toString());
 	}

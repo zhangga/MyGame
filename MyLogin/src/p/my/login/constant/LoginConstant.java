@@ -33,5 +33,8 @@ public class LoginConstant {
     public static final byte SERVER_STATE_NORMAL = 1;
     /** 服务器状态:维护 */
     public static final byte SERVER_STATE_MAINTAIN = 2;
+    
+    //服务器超过n秒未发送状态，判断维护
+    public static final int SERVER_LIMIT_TIME = 5;
 
 }

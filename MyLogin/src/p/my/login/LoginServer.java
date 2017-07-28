@@ -21,7 +21,6 @@ import p.my.common.db.JedisManager;
 import p.my.common.db.MyBatisFactory;
 import p.my.common.support.SecureChatSslContextFactory;
 import p.my.common.web.WebActionManager;
-import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.constant.LoginConstant;
 import p.my.login.core.HttpMessageHandler;
@@ -74,11 +73,15 @@ public class LoginServer {
 	}
 	
 	private void del() {
-		User user = new User();
-		user.setAccount("yiba");
-		user.setChannel(10000);
-		user.setPlatform((byte)0);
-		user = GameWorld.gi().getAndCreateUser(user);
+//		User user = new User();
+//		user.setId(100001);
+//		user.setAccount("zzq");
+//		user.setChannel(10000);
+//		user.setIdx(0);
+//		user.setPlatform((byte)0);
+//		user.setLogin_time(Calendar.getInstance().getTime());
+//		UserDao dao = new UserDao(MyBatisFactory.getFactory());
+//		dao.updateUserLogin(user);
 	}
 	
 	private void initResource(String path) {

@@ -1,5 +1,6 @@
 package p.my.login.game;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -11,12 +12,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.log4j.Logger;
 
 import p.my.common.db.DBMapper;
+import p.my.common.db.JedisManager;
 import p.my.common.db.MyBatisFactory;
 import p.my.login.bean.Channel;
 import p.my.login.bean.Server;
 import p.my.login.bean.User;
 import p.my.login.constant.LoginConfig;
 import p.my.login.constant.LoginConstant;
+import p.my.login.constant.RedisKey;
 import p.my.login.dao.UserDao;
 import p.my.login.mapper.ChannelMapper;
 import p.my.rpc.service.ServiceResult;
@@ -37,6 +40,9 @@ public class GameWorld {
 	
 	//服务器列表
 	private Map<Integer, Server> servers = new HashMap<>();
+	
+	//当前选择的服务器ID
+	private volatile int currSid = 0;
 	
 	//渠道列表
 	private Map<Integer, Channel> channels = new HashMap<>();
@@ -65,9 +71,6 @@ public class GameWorld {
 		//用户容器
 		int capacity = (int) (LoginConfig.CACHE_UER_NUM / 0.75f);
 		users = new ConcurrentHashMap<>(capacity);
-		//服务器列表
-		String s = ServiceResult.take(ServiceResultKey.SERVER_STATE);
-		System.out.println("================="+s);
 	}
 	
 	/**
@@ -154,17 +157,50 @@ public class GameWorld {
 		puser.setSub_channel(LoginConstant.SUB_CHANNEL);
 		puser.setIdx(channel.getIdx());
 		puser.setState(LoginConstant.TRUE);
-		Date curr = new Date();
+		Date curr = Calendar.getInstance().getTime();
 		puser.setCreate_time(curr);
 		puser.setLogin_time(curr);
 	}
 	
-	public User getUser(String userKey) {
-		return users.get(userKey);
+	/**
+	 * 获取玩家当前所在的服务器ID
+	 * @param uid
+	 * @return
+	 */
+	public int getOnlineServerId(int uid) {
+		String id = JedisManager.gi().hget(RedisKey.KEY_ONLINE_ROLE, String.valueOf(uid));
+		if (id == null)
+			return -1;
+		return Integer.valueOf(id);
 	}
 	
-	public void addUser(User user) {
+	/**
+	 * 给玩家分配服务器
+	 * @param selectId
+	 * @param onlineId
+	 * @return
+	 */
+	public Server getTargetServer(int selectId, int onlineId) {
+		//指定的服务器
+		if (selectId > 0) {
+			return servers.get(selectId);
+		}
+		Server server = null;
+		//上次在线的服务器
+		if (onlineId != -1) {
+			server = servers.get(onlineId);
+		}
+		//分配的服务器
+		if (server == null || server.state != LoginConstant.SERVER_STATE_NORMAL) {
+			server = servers.get(this.currSid);
+		}
+		return server;
+	}
+	
+	public void addOnlineUser(User user, int serverId) {
 		users.put(user.getKey(), user);
+		JedisManager.gi().hset(RedisKey.KEY_ONLINE_ROLE, user.getId()+"", String.valueOf(serverId));
+		JedisManager.gi().publish(RedisKey.PUB_LOGIN, user.getId()+RedisKey.COLON+serverId);
 	}
 	
 	public void onUpdate() {
@@ -180,12 +216,69 @@ public class GameWorld {
 		}
 	}
 	
+	/**
+	 * 更新服务器状态
+	 */
+	public void updateServerState() {
+		try {
+			long curr = System.currentTimeMillis();
+			//服务器列表
+			List<String> result = ServiceResult.getAll(ServiceResultKey.SERVER_STATE);
+			if (result != null) {
+				for (String value : result) {
+					String[] vs = value.split(ServiceResult.COMMA);
+					if (vs.length < 5)
+						continue;
+					int id = Integer.valueOf(vs[0]);
+					if (servers.containsKey(id)) {
+						Server server = servers.get(id);
+						server.online = Integer.valueOf(vs[4]);
+						server.lastTime = curr;
+					}
+					else {
+						Server server = new Server();
+						server.id = id;
+						server.name = vs[1];
+						server.host = vs[2];
+						server.port = Integer.valueOf(vs[3]);
+						server.online = Integer.valueOf(vs[4]);
+						server.state = LoginConstant.SERVER_STATE_NORMAL;
+						server.lastTime = curr;
+						servers.put(id, server);
+					}
+				}
+			}
+			int sid = 0, min = Integer.MAX_VALUE;
+			//超时判断
+			for (Server server : this.servers.values()) {
+				if (curr - server.lastTime > LoginConstant.SERVER_LIMIT_TIME) {
+					server.state = LoginConstant.SERVER_STATE_MAINTAIN;
+					continue;
+				}
+				if (server.online < min) {
+					sid = server.id;
+					min = server.online;
+				}
+			}
+			if (sid > 0 && sid != currSid) {
+				currSid = sid;
+				logger.info("切换服务器。id = "+sid+", onlineNum = "+this.servers.get(sid).online);
+			}
+		} catch (Exception e) {
+			logger.error("更新服务器状态发生异常", e);
+		}
+	}
+	
 	public Channel getChannel(int id) {
 		return channels.get(id);
 	}
 	
 	public Map<Integer, Server> getServers() {
 		return servers;
+	}
+	
+	public User getUser(String userKey) {
+		return users.get(userKey);
 	}
 
 }

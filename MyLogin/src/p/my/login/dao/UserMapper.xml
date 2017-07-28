@@ -15,6 +15,10 @@
     	SELECT * FROM user_#{channel}_#{idx} WHERE channel=#{channel} AND account=#{account} AND platform=#{platform}
     </select>
     
+    <update id="updateUserLogin" parameterType="User">
+    	UPDATE user_#{channel}_#{idx} SET login_time = #{login_time} WHERE id = #{id}
+    </update>
+    
     <select id="selectCount" parameterType="map" resultType="Integer">
     	SELECT count(id) FROM ${table}
     </select>

@@ -34,6 +34,10 @@ public class UserDao extends BaseSqlDao {
 		return user;
 	}
 	
+	public void updateUserLogin(User user) {
+		this.update("updateUserLogin", user);
+	}
+	
 	public int getUserCount(int channel, int idx) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("table", "user_"+channel+"_"+idx);

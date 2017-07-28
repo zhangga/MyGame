@@ -45,7 +45,8 @@ public class GlobalTasks
 			TaskManager.gi().schedulePeriodicTask(ETaskType.GLOBAL, new Task() {
 				@Override
 				public void run() {
-					System.out.println("当前服务器数量："+GameWorld.gi().getServers().size());
+					//更新服务器状态
+					GameWorld.gi().updateServerState();
 				}
 				
 				@Override
