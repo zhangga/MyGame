@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config version="1.0">
-	<LoginPort>3000</LoginPort>
+	<LoginPort>10000</LoginPort>
+	<Protocol>http</Protocol>
 	<IsPublish>false</IsPublish>
 	<CacheUserNum>100000</CacheUserNum>
 	<SessionTimeOut>1800000</SessionTimeOut>

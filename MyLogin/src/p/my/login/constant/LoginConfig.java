@@ -26,17 +26,19 @@ public class LoginConfig {
 	
     /** 登陆服端口 */
     public static int LOGIN_PORT;
+    /** 是否HTTPS协议 */
+    public static boolean HTTPS;
     /** 是否是发布版本 */
-    private static boolean PUBLISH;
+    public static boolean PUBLISH;
     /** 缓存用户数量 */
     public static int CACHE_UER_NUM;
     /** session超时时间 */
     public static long SESSION_TIMEOUT;
 
     /** 白名单是否开启 */
-    private static boolean WHITE_LIST_OPEN;
+    public static boolean WHITE_LIST_OPEN;
     /** 白名单列表 */
-    private static List<String> WHITE_LIST_LIST;
+    public static List<String> WHITE_LIST_LIST;
 	
 	public static void loadData(String res_path) {
 		final File file = new File(res_path, "config/login_config.xml");
@@ -52,6 +54,7 @@ public class LoginConfig {
                     Document doc = XmlUtil.load(file);
                     Element root = doc.getDocumentElement();
                     LOGIN_PORT = Integer.parseInt(XmlUtil.getChildText(root, "LoginPort"));
+                    HTTPS = XmlUtil.getChildText(root, "Protocol").toUpperCase().equals("HTTPS");
                     PUBLISH = Boolean.parseBoolean(XmlUtil.getChildText(root, "IsPublish"));
                     CACHE_UER_NUM = Integer.parseInt(XmlUtil.getChildText(root, "CacheUserNum"));
                     SESSION_TIMEOUT = Integer.parseInt(XmlUtil.getChildText(root, "SessionTimeOut"));
@@ -75,18 +78,6 @@ public class LoginConfig {
         };
         listener.onResourceChange(file);
         ResourceManager.getInstance().addResourceListener(listener);
-	}
-
-	public static boolean isPUBLISH() {
-		return PUBLISH;
-	}
-
-	public static boolean isWHITE_LIST_OPEN() {
-		return WHITE_LIST_OPEN;
-	}
-
-	public static List<String> getWHITE_LIST_LIST() {
-		return WHITE_LIST_LIST;
 	}
 
 }

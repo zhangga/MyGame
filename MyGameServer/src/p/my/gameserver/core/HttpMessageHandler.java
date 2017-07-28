@@ -1,4 +1,4 @@
-package p.my.login.core;
+package p.my.gameserver.core;
 
 import static io.netty.handler.codec.http.HttpResponseStatus.CONTINUE;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
@@ -18,8 +18,8 @@ import io.netty.handler.codec.http.HttpUtil;
 import p.my.common.util.SecurityUtil;
 import p.my.common.web.WebAction;
 import p.my.common.web.WebActionManager;
-import p.my.login.constant.LoginConfig;
-import p.my.login.constant.LoginConstant;
+import p.my.gameserver.constant.GameConfig;
+import p.my.gameserver.constant.GameConstant;
 
 /**
  * HTTP消息处理
@@ -53,7 +53,7 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
             buf.markReaderIndex();
             //检测magic header.		2位
 			short magicHeader = buf.readShort();
-			if (magicHeader != LoginConstant.MAGIC_HEADER) {
+			if (magicHeader != GameConstant.MAGIC_HEADER) {
 				buf.resetReaderIndex();
 				logger.error("接收到的消息头不合法" + magicHeader);
 				return;
@@ -91,7 +91,7 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 	private void handlerWebAction(ChannelHandlerContext ctx, HttpRequest request) {
 		String uri = request.uri();
 		String ip = ctx.channel().remoteAddress().toString();
-		if (!SecurityUtil.ipValidate(LoginConfig.WHITE_LIST_LIST, ip)) {
+		if (!SecurityUtil.ipValidate(GameConfig.URL_SAFE_IP, ip)) {
 			logger.error("URL请求的IP不在白名单中："+ip);
 			return;
 		}
@@ -102,7 +102,14 @@ public class HttpMessageHandler extends ChannelInboundHandlerAdapter {
 			logger.error("URL请求的action不存在："+filter);
 			return;
 		}
-		action.doRequest(request, ctx);
+		GameActionDispatcher.submit(1, new Runnable() {
+			
+			@Override
+			public void run() {
+				action.doRequest(request, ctx);
+			}
+		});
+		
 	}
 	
 	private void send100Continue(ChannelHandlerContext ctx) {

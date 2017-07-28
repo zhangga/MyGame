@@ -44,7 +44,7 @@ public class LoginServer {
 		rpc.start();
 		LoginServer login = new LoginServer();
 		login.start();
-		logger.info("登陆服启动成功");
+		logger.info("=========登陆服启动成功=========");
 	}
 	
 	/**
@@ -124,7 +124,7 @@ public class LoginServer {
 		@Override
 		protected void initChannel(SocketChannel sc) throws Exception {
 			ChannelPipeline pipeline = sc.pipeline();
-			if (LoginConfig.isPUBLISH()) {
+			if (LoginConfig.HTTPS) {
 				SSLEngine engine = SecureChatSslContextFactory.getServerContext().createSSLEngine();
 				engine.setUseClientMode(false);
 				pipeline.addLast("ssl", new SslHandler(engine));

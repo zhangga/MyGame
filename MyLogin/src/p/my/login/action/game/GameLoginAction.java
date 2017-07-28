@@ -33,7 +33,7 @@ public class GameLoginAction extends GameAction {
 		
 		//选择服务器策略，只在测试环境生效
 		int selectId = 0;
-		if (!LoginConfig.isPUBLISH()) {
+		if (!LoginConfig.PUBLISH) {
 			int index = account.lastIndexOf("#");
 			if (index >= 0) {
 				selectId = Integer.valueOf(account.substring(index+1));
@@ -58,7 +58,7 @@ public class GameLoginAction extends GameAction {
 		}
 		
 		Message msg = new Message(GameActions.LOGIN.cmd, req.getCtx());
-		msg.setBool(LoginConfig.isPUBLISH());
+		msg.setBool(LoginConfig.PUBLISH);
 		msg.setInt(ruser.getId());
 		//目标服务器
 		msg.setString(target.host);

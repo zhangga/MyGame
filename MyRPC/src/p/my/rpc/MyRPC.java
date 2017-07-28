@@ -37,7 +37,7 @@ public class MyRPC {
 			@Override
 			public void run() {
 				try {
-					server = ServerBuilder.forPort(29999)
+					server = ServerBuilder.forPort(9999)
 							//添加所有的RPC服务
 							.addService(ServerStateServiceGrpc.bindService(new ServerStateServiceImpl()))
 							.build().start();

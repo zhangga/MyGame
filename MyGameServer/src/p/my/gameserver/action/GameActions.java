@@ -1,11 +1,10 @@
-package p.my.login.action;
+package p.my.gameserver.action;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import p.my.login.action.game.GameLoginAction;
-import p.my.login.action.game.GameTestAction;
-import p.my.login.core.GameAction;
+import p.my.gameserver.action.game.GameLoginAction;
+import p.my.gameserver.core.GameAction;
 
 /**
  * 所有的GameAction都在这里进行了对应和枚举。
@@ -16,8 +15,7 @@ import p.my.login.core.GameAction;
 public enum GameActions
 {
 	
-	TEST(0, GameTestAction.class, "测试"),
-	LOGIN(100, GameLoginAction.class, "登陆"),
+	LOGIN(101, GameLoginAction.class, "进入游戏"),
 	;
 	
 	//消息号
