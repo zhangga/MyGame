@@ -16,6 +16,7 @@ public enum GameActions
 {
 	
 	LOGIN(101, GameLoginAction.class, "进入游戏"),
+	ERROR(110, null, "错误提示")
 	;
 	
 	//消息号

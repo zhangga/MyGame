@@ -1,8 +1,7 @@
 package p.my.gameserver.core;
 
 import p.my.common.message.Message;
-import p.my.common.message.MessageArray;
-import p.my.common.util.HttpUtil;
+import p.my.gameserver.constant.ErrorCmd;
 import p.my.gameserver.data.GameRole;
 
 /**
@@ -25,7 +24,26 @@ public abstract class GameAction
 	 */
 	public void action(Message req, int uid, int token)
 	{
+		if (!doValid(req, uid, token))
+			return;
 		doAction(null, req);
+	}
+	
+	/**
+	 * 有效性检查
+	 * @param req
+	 * @param uid
+	 * @param token
+	 * @return
+	 */
+	public boolean doValid(Message req, int uid, int token) {
+		GameRole role = null;
+		//判断token，持有过期token的玩家将被踢下线
+		if (role.getToken() != token) {
+			role.getMsgMgr().sendErrorMsg(req.getCtx(), ErrorCmd.TOKEN_EXPIRE);
+			return false;
+		}
+		return true;
 	}
 	
 	/**
@@ -36,22 +54,6 @@ public abstract class GameAction
 	 */
 	public abstract void doAction(GameRole role, Message req);
 	
-	/**
-	 * 供子类调用，向客户端回写消息
-	 * @param resp
-	 */
-	protected void sendMsg(Message resp)
-	{
-		MessageArray msgs = new MessageArray(resp);
-		msgs.pack();
-		HttpUtil.sendResponse(resp.getCtx(), resp.getBuf());
-	}
-	
-	protected void putMsgQueue(Message resp)
-	{
-		HttpUtil.sendResponse(resp.getCtx(), resp.getBuf());
-	}
-
 	public int getCmd() {
 		return cmd;
 	}
