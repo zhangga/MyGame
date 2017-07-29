@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MailContentSkin" width="600" height="1067" currentState="normal" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="normal,reward,delete">
+    <e:Component id="basic" anchorOffsetY="0" currentState="red" y="190" height="602" skinName="skins.PopSkin4"
+                 width="560" horizontalCenter="0" locked="true" />
+    <e:Image source="public_frame_3_png" y="251" scale9Grid="35,38,86,80" width="520" anchorOffsetY="0"
+             horizontalCenter="1" height="510" />
+    <e:Rect width="465" height="2" y="666" fillColor="0x898989" horizontalCenter="0" locked="true" />
+    <e:Label id="title_label" text="邮件标题" y="278" fontFamily="Microsoft JhengHei" textColor="0xffae21" size="28"
+             horizontalCenter="0" bold="true" width="448" textAlign="center" verticalAlign="middle" />
+    <e:Scroller width="460" height="330" y="330" horizontalCenter="0" anchorOffsetY.reward="0"
+                horizontalCenter.reward="0" height.reward="190" height.delete="190">
+        <e:Group>
+            <e:Label id="mail_desc_label" fontFamily="Microsoft JhengHei" size="22" bold="true" width="100%"
+                     textAlign="left" anchorOffsetY="0" textColor="0x2a0505" lineSpacing.reward="6" />
+        </e:Group>
+    </e:Scroller>
+    <e:Button id="reward_btn" label="" y="680" skinName="skins.Comn_Btn_GreenSkin" width="133" horizontalCenter="0.5"
+              icon="btn_icon_confirm_png" icon.normal="btn_icon_buys_png" enabled.delete="false"
+              icon.delete="btn_icon_reward_png" horizontalCenter.delete="-99.5" />
+    <e:Group id="reward_grp" includeIn="reward,delete" y="530" horizontalCenter="0">
+        <e:layout>
+            <e:HorizontalLayout/>
+        </e:layout>
+    </e:Group>
+    <e:Button id="delete_btn" label="删除" includeIn="delete" y="679" skinName="skins.Comn_Btn_YellowSkin" width="133"
+              horizontalCenter="115" height="58" />
+</e:Skin>

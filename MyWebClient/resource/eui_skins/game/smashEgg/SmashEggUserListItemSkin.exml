@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.SmashEggUserListItemSkin" width="480" height="135" currentState="other"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="other,my">
+    <e:Image source="public_frame_14_png" left="0" top="0" bottom="0" right="0" scale9Grid="38,40,81,80" locked="true" />
+    <e:Image source="public_frame_13_png" x="29" y="25" />
+    <e:Group includeIn="my" x="0" y="3">
+        <e:Image source="smash_egg_labelbg_png" includeIn="my" x="3" y="0" />
+        <e:Label text="我的宝藏" includeIn="my" x="3" y="56" fontFamily="Microsoft YaHei" size="18" rotation="314" />
+    </e:Group>
+    <e:Group x="125" y="23">
+        <e:Group x="0" y="0">
+            <e:Image source="public_frame_9_png" x="0" y="0" height="32" scale9Grid="11,12,70,3" width="152"
+                     locked="true" />
+            <e:Label id="name_label" text="名字名字名字" fontFamily="Microsoft YaHei" textColor="0x2A0505"
+                     horizontalCenter="0" bold="true" size="22" y="5" />
+        </e:Group>
+        <e:Label id="left_eggnum_label" text="剩余金蛋：99个" y="43" fontFamily="Microsoft YaHei" size="20"
+                 textColor="0x2A0505" x="0" bold="true" />
+        <e:Label id="hummer_num_label" text="消耗锤子：99个" y="43" fontFamily="Microsoft YaHei" size="20"
+                 textColor="0x2A0505" x="0" bold="true" />
+        <e:layout>
+            <e:VerticalLayout gap="10" />
+        </e:layout>
+    </e:Group>
+    <e:Group y="90" horizontalCenter="132">
+        <e:Label text="竞猜中：" y="0" fontFamily="Microsoft YaHei" size="18" textColor="0x2A0505" bold="true" x="0"
+                 locked="true" />
+        <e:Label id="left_time_label" text="99：99：99" y="0" fontFamily="Microsoft YaHei" size="18" bold="true" x="0"
+                 textColor="0xff0000" />
+        <e:layout>
+            <e:HorizontalLayout/>
+        </e:layout>
+    </e:Group>
+    <e:Button id="item_button" label="协助" x="318" y="23" skinName="skins.Comn_Btn_YellowSkin" label.my="开启" />
+</e:Skin>

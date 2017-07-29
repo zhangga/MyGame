@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PlayerHeadBarSkin" width="88" height="88" currentState="normal" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="normal">
+    <e:Image id="head_icon_img" width="72" height="72" horizontalCenter="0" verticalCenter="0"
+             source="invite_vacancy_icon_png" horizontalCenter.normal="0" verticalCenter.normal="0" />
+    <e:Image source="public_frame_13_png" scale9Grid="24,24,35,36" horizontalCenter="2" verticalCenter="2" />
+</e:Skin>

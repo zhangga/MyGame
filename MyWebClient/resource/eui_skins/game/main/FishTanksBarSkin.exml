@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FishTanksBarSkin" width="600" height="100" currentState="open" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="close,open">
+    <e:Group id="icon_bg" x="0" y="0">
+        <e:Image source="main_btn_bg_png" y="0" horizontalCenter="0" />
+        <e:Image id="tank_icon" source="ishenqi_1_007_png" horizontalCenter="0" />
+        <e:Image source="main_btn_bg_png" y="0" width="87" height="87" x="5" />
+        <e:Image source="fieldGuide_tab_unselected_png" y="71" width="96" height="28" horizontalCenter="0" />
+        <e:Label id="name_label" text="金字塔" y="76" fontFamily="Microsoft YaHei" size="18" textColor="0x2a0505"
+                 horizontalCenter="1" bold="true" />
+    </e:Group>
+    <e:Scroller id="scroll_list" height="100" left="98" right="5" touchEnabled="false">
+        <e:Group touchEnabled="false">
+            <e:Group id="tanks_grp" y="0" scaleX="1" scaleY="1" left="40" touchEnabled="false" />
+        </e:Group>
+    </e:Scroller>
+    <e:Button id="open_btn" label="" x="100" verticalCenter="0" scaleX.open="-1" x.open="135">
+        <e:skinName>
+            <e:Skin states="up,down">
+                <e:Image width="100%" height="100%" width.down="90%" height.down="90%" source="arrow_blue_png"
+                         source.down="arrow_blue_png" horizontalCenter="0" verticalCenter="0" />
+            </e:Skin>
+        </e:skinName>
+    </e:Button>
+</e:Skin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.CurrencyBarSkin" xmlns:e="http://ns.egret.com/eui">
+	<e:Group x="0" y="0">
+		<e:Label id="label_l" text="" fontFamily="Microsoft YaHei" size="18" textAlign="right" x="0" y="19" bold="true" textColor="0x000000"/>
+		<e:Group width="38" height="38" x="146" y="0">
+			<e:Image id="img_icon" horizontalCenter="0" verticalCenter="0" source="mainview_gold_png" width="30" height="30"/>
+		</e:Group>
+		<e:Group x="186" y="0">
+			<e:Image id="img_rBg" left="0" right="0" height="38" verticalCenter="0" source=""/>
+			<e:Label id="label_r" text="9999" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" verticalCenter="0" bold="true" textColor="0x000000"/>
+		</e:Group>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

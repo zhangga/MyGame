@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ShopPanelSkin" width="600" xmlns:e="http://ns.egret.com/eui"  xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing" height="1067">
+	<e:Group id="btn_close" width="600" height="150" x="0" y="0"/>
+	<e:Group x="0" bottom="0">
+		<e:Image scale9Grid="125,125,177,331" anchorOffsetY="0" anchorOffsetX="0" source="shop_bg_png" x="0" bottom="0"/>
+		<e:Image id="btn_back" source="public_json.public_back_png" x="36" bottom="838"/>
+		<e:Label text="商店每天24:00刷新" bold="true" size="20" x="288" bottom="849"/>
+		<e:Image source="public_frame_3_png" width="575" height="769" scale9Grid="39,35,76,83" anchorOffsetY="0" anchorOffsetX="0" x="16" bottom="70"/>
+		<e:Image source="public_json.public_frame_2_png" scale9Grid="34,36,88,88" anchorOffsetY="0" height="730" anchorOffsetX="0" width="533" x="31" bottom="90"/>
+		<e:Scroller id="scorll" width="550" height="726" skinName="skins.BagScrollBarSkin" anchorOffsetY="0" anchorOffsetX="0" x="32" bottom="92">
+			<e:Group id="shop_list">
+				<e:layout>
+					<e:TileLayout requestedColumnCount="3" horizontalGap="20" verticalGap="20" paddingLeft="6" paddingTop="10"/>
+				</e:layout>
+			</e:Group>
+		</e:Scroller>
+		<ns1:TabBtnGroup id="tab_btn_group" skinName="skins.TabBtnGroupSkin" x="55" bottom="35"/>
+	</e:Group>
+</e:Skin>

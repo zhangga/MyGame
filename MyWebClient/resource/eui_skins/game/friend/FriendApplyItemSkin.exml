@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FriendApplyItemSkin" width="528" height="130" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group height="128" width="520" locked="true">
+		<e:Image source="public_frame_3_png" scale9Grid="39,35,76,83" left="-2" right="0" top="-4" bottom="0" />
+		<e:Image width="100%" height="100%" source="public_frame_13_png" scale9Grid="26,27,32,29" />
+	</e:Group>
+	<ns1:PlayerHeadBar id="head_bar" x="23" y="19" skinName="skins.PlayerHeadBarSkin"/>
+	<e:Group x="125" y="31">
+		<e:Image source="public_frame_9_png" x="0" y="0" scale9Grid="11,5,70,16" width="136" />
+		<e:Label id="name_label" text="名字名字名字" y="2" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" horizontalCenter="0"  bold="true"/>
+	</e:Group>
+	<e:Label id="money_label" text="总资产：8888B" y="74" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="126"  bold="true"/>
+	<e:Group x="292" y="37">
+		<e:Button id="agree_btn" label="" x="0" y="0" skinName="skins.Comn_Btn_GreenSkin" width="100"
+		          icon="btn_icon_tongyi_png"  height="55"/>
+		<e:Button id="reject_btn" label="" x="10" y="10" skinName="skins.Comn_Btn_OrgSkin" width="100"
+		          icon="btn_icon_jujue_png"  height="55"/>
+		<e:layout>
+			<e:HorizontalLayout gap="10" />
+		</e:layout>
+	</e:Group>
+</e:Skin>

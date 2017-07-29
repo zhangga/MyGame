@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TabBtnGroupSkin2" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group id="subLayer" x="0" y="0">
+		<e:layout>
+		<e:HorizontalLayout gap="-40"/>
+		</e:layout>
+		<ns1:TabBtnItem2 x="41" y="14" scaleX="1" scaleY="1" skinName="skins.TabBtnItemSkin2"/>
+	</e:Group>
+	<e:Group id="topLayer" x="0" y="0" touchChildren="false" touchEnabled="false">
+		<ns1:TabBtnItem2 x="51" y="24" scaleX="1" scaleY="1" skinName="skins.TabBtnItemSkin2"/>
+		<e:layout>
+			<e:HorizontalLayout gap="-40"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="redLayer" touchEnabled="false" touchChildren="false">
+		<e:layout>
+			<e:HorizontalLayout gap="-40"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

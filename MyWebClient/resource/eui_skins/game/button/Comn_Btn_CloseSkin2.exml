@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.Comn_Btn_CloseSkin2" xmlns:e="http://ns.egret.com/eui" states="normal,blue,green,red,brown">
+    <e:Button x="0" y="0" includeIn="normal">
+        <e:skinName>
+            <e:Skin states="up,down">
+                <e:Image width="100%" height="100%" width.down="90%" height.down="90%" horizontalCenter="0" bottom="0"
+                         source="public_close2_normal_png" />
+            </e:Skin>
+        </e:skinName>
+    </e:Button>
+    <e:Button x="0" y="0" includeIn="blue">
+        <e:skinName>
+            <e:Skin states="up,down">
+                <e:Image width="100%" height="100%" width.down="90%" height.down="90%" horizontalCenter="0" bottom="0"
+                         source="public_close6_png" />
+            </e:Skin>
+        </e:skinName>
+    </e:Button>
+    <e:Button x="0" y="0" includeIn="green">
+        <e:skinName>
+            <e:Skin states="up,down">
+                <e:Image width="100%" height="100%" width.down="90%" height.down="90%" horizontalCenter="0" bottom="0"
+                         source="public_close5_png" />
+            </e:Skin>
+        </e:skinName>
+    </e:Button>
+	<e:Button x="0" y="0" includeIn="red">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="public_close4_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button x="0" y="0" includeIn="brown">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="public_close7_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

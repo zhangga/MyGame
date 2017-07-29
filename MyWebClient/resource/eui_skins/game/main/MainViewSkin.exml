@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MainViewSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<ns1:MainPanelLayer id="panelLayer" skinName="skins.MainPanelLayerSkin" />
+	<ns1:BottonMenuLayer id="menu" skinName="skins.BottonMenuLayerSkin" touchEnabled="false" />
+	<e:Image scale9Grid="51,5,89,27" y="0" source="main_back_png" x="0" />
+	<e:Group x="93" y="15" width="181">
+		<e:BitmapLabel id="bmLab_gold" y="0" text="999.99MM" letterSpacing="-4" font="FlutterBigFont_fnt" horizontalCenter="0" />
+	</e:Group>
+	<e:ProgressBar id="progress" width="108" height="21" y="60" x="130"  visible="false"/>
+	<e:Label id="lab_goldAdd" text="" fontFamily="Microsoft YaHei" size="18" y="61" x="122" textAlign="center" width="124"
+	         textColor="0xffffff" />
+	<e:BitmapLabel id="bmLab_diamond" y="38" text="9999" letterSpacing="-4" font="FlutterBlueFont_fnt" scaleX="0.8"
+	               scaleY="0.8" right="30" />
+	<ns1:FishTanksBar id="fishtank_bar" y="570" left="0" width="600" skinName="skins.FishTanksBarSkin" />
+	<e:Group x="280" y="13">
+		<e:Image id="img_state" source="DegreeOfJoy_good_png" y="0" x="36" />
+		<e:Image source="DegreeOfJoy_good_bar_png" x="0" y="41" />
+		<e:Label id="lab_state" text="秒产增加100%" fontFamily="Microsoft YaHei" size="16" y="48" x="4" textAlign="center"
+		         width="124" textColor="0xFFFFFF" />
+	</e:Group>
+	<e:Group y="108" touchEnabled="false" right="-8">
+		<e:Group id="invitegiftLayer" x="10" y="10" scaleX="0.8" scaleY="0.8" width="87" height="87">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="main_bubble_circle_png" />
+			<e:Button id="invitegiftBtn" label="" x="0" y="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_zhuanzz_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+
+
+
+		<e:Group id="turnplateLayer" x="93" y="0" scaleX="0.8" scaleY="0.8" width="87" height="87">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="main_btn_bg_png" />
+			<e:Button id="btn_turnplate" label="" x="0" y="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_turnplate_png" source.down="main_btn_turnplate_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="friendLayer" x="186" y="0" scaleX="0.8" scaleY="0.8" width="87" height="87">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="main_btn_bg_png" />
+			<e:Button id="btn_friend" label="" x="0" y="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_friend_png" source.down="main_btn_friend_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="shopLayer" x="196" y="10" scaleX="0.8" scaleY="0.8" width="87" height="87">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="main_btn_bg_png"/>
+			<e:Button id="btn_shop" label="" x="0" y="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="main_btn_shop_png" source.down="main_btn_shop_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+
+			</e:Button>
+		</e:Group>
+		<ns1:MainViewBtnsBar id="buttons_bar" x="80" y="194" skinName="skins.MainButtonBarSkin"/>
+		<e:Group id="smasheggLayer" x="20" y="20" visible="false">
+			<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" />
+			<e:Button label="" horizontalCenter="0" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_redPacket_png" source.down="main_btn_redPacket_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="mailLayer" x="20" y="20" visible="false">
+			<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" />
+			<e:Button label="" horizontalCenter="0" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="" source.down="" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="monthCardLayer" x="40" y="40" anchorOffsetX="0" visible="false">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="main_bubble_circle_png" />
+			<e:Button label="" horizontalCenter="0" verticalCenter="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_yueka_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group x="0" y="0" visible="false">
+			<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" />
+			<e:Button label="" x="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_signIn_png" source.down="main_btn_signIn_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="loginsevenLayer" x="10" y="10" visible="false">
+			<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" />
+			<e:Button label="" x="0">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="main_btn_sevDay_png" source.down="main_btn_sevDay_png" />
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:layout>
+			<e:VerticalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="system_set_btn" width="50" height="50" x="8" y="8"/>
+</e:Skin>

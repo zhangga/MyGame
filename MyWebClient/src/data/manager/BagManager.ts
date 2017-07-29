@@ -1,0 +1,7 @@
+class BagManager {
+	public constructor() {
+	}
+
+	
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PopSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="backLayer" verticalCenter="0" horizontalCenter="0" height="872" width="599">
+		<e:Image id="panel_bg" source="upgrade_bg_png" scale9Grid="74,109,451,654" left="0" right="0" top="0" bottom="0"/>
+		<e:Image id="panel_title" source="upgrade_title_png" y="0" x="210"/>
+		<e:Image scale9Grid="39,35,76,83" source="public_frame_3_png" top="70" bottom="36" left="20" right="20"/>
+	</e:Group>
+</e:Skin>

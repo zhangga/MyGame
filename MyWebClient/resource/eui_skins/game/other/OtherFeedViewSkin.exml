@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.OtherFeedViewSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="visit,rob,pollute" >
+	<e:Image scale9Grid="69,71,421,430" source="feed_bg_png" x="0" top="675" bottom="0"/>
+	<e:Image source="feed_bg_png" left="0" right="0" scale9Grid="19,11,119,53" scaleY="-1" bottom="0" height="190" visible="false"/>
+	<e:Group y="824" horizontalCenter="0" includeIn="visit" visible="false">
+		<e:Image source="public_mask2_png" y="0" height="30" width="197" scale9Grid="19,19,119,119" x="0"/>
+		<e:Label id="lab_login" text="上次登录：90小时" fontFamily="Microsoft YaHei" size="20" bold="true" y="5" textColor="0xede122" x="16"/>
+	</e:Group>
+	<e:Group y="871" x="32" includeIn="visit,pollute">
+		<e:Label text="欢乐度" fontFamily="Microsoft YaHei" size="20" bold="true" y="8" x="0" textColor="0xffffff"/>
+		<e:Group x="68" y="0">
+		<e:Group id="grp_star" x="0" y="0">
+			<e:Image id="img_degree0" source="feed_DegreeOfJoy_0_png" x="0" y="0"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="10" y="10" id="img_degree1"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="20" y="20" id="img_degree2"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="30" y="30" id="img_degree3"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="40" y="40" id="img_degree4"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="50" y="50" id="img_degree5"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="60" y="60" id="img_degree6"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="70" y="70" id="img_degree7"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="80" y="80" id="img_degree8"/>
+			<e:Image source="feed_DegreeOfJoy_0_png" x="90" y="90" id="img_degree9"/>
+			<e:layout>
+			<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="animLayer" y="18" left="0" right="0">
+			<e:layout>
+			<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+		</e:Group>
+		<e:Label id="lab_outPut" text="秒产：+90%" fontFamily="Microsoft YaHei" size="20" bold="true" y="18" x="10" textColor="0xFFFFFF"/>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="btn_back" x="90" y="930" icon="fanhui_png" skinName="skins.Comn_Btn_YellowSkin"/>
+	<e:Button id="btn_do" label="" x="335" y="930" icon="weishi_png" icon.visit="btn_icon_qinwen_png" icon.rob="daoqu_png" icon.pollute="wuran_icon_png" skinName="skins.Comn_Btn_GreenSkin"/>
+	<e:Label id="lab_hasTime" text="99/99" fontFamily="Microsoft YaHei" size="20" bold="true" x="520" textColor="0xFFFFFF" y="948" includeIn="visit"/>
+	<e:Label id="lab_hasTimeByOne" text="已喂食此人：9/9" fontFamily="Microsoft YaHei" size="20" bold="true" textColor="0xFFFFFF" x="223" y="1017" includeIn="visit"/>
+	<e:Button id="btn_enemy" label="" x="466.5" y="710" includeIn="rob,pollute">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="feed_enemy_btn_png" source.down="feed_enemy_btn_png" width.down="90%" height.down="90%" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Egret</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #888888;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.js" src-release="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/jszip/jszip.js" src-release="libs/jszip/jszip.min.js"></script>
+	<script egret="lib" src="libs/SDK/SDKUtil.js" src-release="libs/SDK/SDKUtil.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    
+	<!-- talking data -->
+	<script src="https://h5.talkingdata.com/g/h5/v1/您的APPID" type="text/javascript"></script>
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/data/model/ModelBase.js"></script>
+	<script egret="game" src="bin-debug/sdk/ChannelDefine.js"></script>
+	<script egret="game" src="bin-debug/sdk/sa/SaTalkingData.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelThing.js"></script>
+	<script egret="game" src="bin-debug/view/item/BaseTipsBar.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/ILoginInfo.js"></script>
+	<script egret="game" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
+	<script egret="game" src="bin-debug/data/FishData.js"></script>
+	<script egret="game" src="bin-debug/view/base/BaseComp.js"></script>
+	<script egret="game" src="bin-debug/view/base/BaseSystemPanel.js"></script>
+	<script egret="game" src="bin-debug/view/base/BaseTabView.js"></script>
+	<script egret="game" src="bin-debug/view/base/BaseUI.js"></script>
+	<script egret="game" src="bin-debug/view/base/BaseWindowPanel.js"></script>
+	<script egret="game" src="bin-debug/view/body/fish/FishBase.js"></script>
+	<script egret="game" src="bin-debug/sdk/ISDKHandler.js"></script>
+	<script egret="game" src="bin-debug/data/manager/EnemyManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/FactoryManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/FieldGuideManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/FriendManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/Language.js"></script>
+	<script egret="game" src="bin-debug/data/manager/LoginManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/MailManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/ModelManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/OfflineManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/PlayerManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/RandomEventManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/RedPointManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/SmashEggManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/SyncFactory.js"></script>
+	<script egret="game" src="bin-debug/data/manager/SyncManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/TaskManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/TechnologyManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/TopRankManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/TurnplateManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/VisiteManager.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelAchieve.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelAward.js"></script>
+	<script egret="game" src="bin-debug/common/GameCommon.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelBron.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelDailyTask.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelDecorate.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelDecorateLv.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelEffect.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelFieldGuide.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelFish.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelFishLv.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelItem.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelLevel.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelMonthCard.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelRandEvent.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelSevenLogin.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelShop.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelSynthetic.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelTechnology.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelText.js"></script>
+	<script egret="game" src="bin-debug/common/GameErrorTip.js"></script>
+	<script egret="game" src="bin-debug/data/model/ModelTurnplate.js"></script>
+	<script egret="game" src="bin-debug/data/MonthCard.js"></script>
+	<script egret="game" src="bin-debug/data/Player.js"></script>
+	<script egret="game" src="bin-debug/data/RankData.js"></script>
+	<script egret="game" src="bin-debug/data/SimplePlayer.js"></script>
+	<script egret="game" src="bin-debug/define/GameDefine.js"></script>
+	<script egret="game" src="bin-debug/define/GoodsDefine.js"></script>
+	<script egret="game" src="bin-debug/define/UnitDefine.js"></script>
+	<script egret="game" src="bin-debug/event/FishTankEevent.js"></script>
+	<script egret="game" src="bin-debug/event/GameDispatcher.js"></script>
+	<script egret="game" src="bin-debug/event/GameEvent.js"></script>
+	<script egret="game" src="bin-debug/GraphicsUtils.js"></script>
+	<script egret="game" src="bin-debug/interface/IFish.js"></script>
+	<script egret="game" src="bin-debug/interface/IModule.js"></script>
+	<script egret="game" src="bin-debug/interface/IRedPoint.js"></script>
+	<script egret="game" src="bin-debug/load/LoadManager.js"></script>
+	<script egret="game" src="bin-debug/LoadingUI.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/net/HttpManager.js"></script>
+	<script egret="game" src="bin-debug/net/message/BuffManager.js"></script>
+	<script egret="game" src="bin-debug/net/message/MESSAGE_ID.js"></script>
+	<script egret="game" src="bin-debug/net/message/Message.js"></script>
+	<script egret="game" src="bin-debug/net/MessageErrorManager.js"></script>
+	<script egret="game" src="bin-debug/net/MessageReceive.js"></script>
+	<script egret="game" src="bin-debug/net/MessageSend.js"></script>
+	<script egret="game" src="bin-debug/net/NetBase.js"></script>
+	<script egret="game" src="bin-debug/net/NetManager.js"></script>
+	<script egret="game" src="bin-debug/common/GameSkin.js"></script>
+	<script egret="game" src="bin-debug/sdk/container/ISDKGiftContainer.js"></script>
+	<script egret="game" src="bin-debug/sdk/container/ISDKPayContainer.js"></script>
+	<script egret="game" src="bin-debug/sdk/container/ISDKShareContainer.js"></script>
+	<script egret="game" src="bin-debug/sdk/container/SDKShareContainer.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/IADInfo.js"></script>
+	<script egret="game" src="bin-debug/common/InfiniteNumber.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/IPayInfo.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/IPlayerInfo.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/ISDKResourceConfig.js"></script>
+	<script egret="game" src="bin-debug/sdk/data/ISDKShareInfo.js"></script>
+	<script egret="game" src="bin-debug/common/RedPoint.js"></script>
+	<script egret="game" src="bin-debug/sdk/HttpUtil.js"></script>
+	<script egret="game" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="game" src="bin-debug/sdk/ISDKStatistics.js"></script>
+	<script egret="game" src="bin-debug/data/BeVisitedPlayer.js"></script>
+	<script egret="game" src="bin-debug/sdk/SDKDefine.js"></script>
+	<script egret="game" src="bin-debug/sdk/SDKManager.js"></script>
+	<script egret="game" src="bin-debug/sound/SoundDefine.js"></script>
+	<script egret="game" src="bin-debug/sound/SoundFactory.js"></script>
+	<script egret="game" src="bin-debug/ThemeAdapter.js"></script>
+	<script egret="game" src="bin-debug/tool/SineBase.js"></script>
+	<script egret="game" src="bin-debug/tool/Tool.js"></script>
+	<script egret="game" src="bin-debug/tool/TweenLiteUtil.js"></script>
+	<script egret="game" src="bin-debug/view/achievement/AchievementPanel.js"></script>
+	<script egret="game" src="bin-debug/view/activity/invitegift/InviteGiftPanel.js"></script>
+	<script egret="game" src="bin-debug/view/activity/limitgift/GiftTimeLimitPanel.js"></script>
+	<script egret="game" src="bin-debug/view/activity/loginseven/LoginSevenPanel.js"></script>
+	<script egret="game" src="bin-debug/view/activity/monthcard/MonthCardPanel.js"></script>
+	<script egret="game" src="bin-debug/view/alert/AlertDisconnect.js"></script>
+	<script egret="game" src="bin-debug/view/alert/AlertHint.js"></script>
+	<script egret="game" src="bin-debug/view/alert/AlertOfflineEarnings.js"></script>
+	<script egret="game" src="bin-debug/view/alert/DescAlertPanel.js"></script>
+	<script egret="game" src="bin-debug/view/alert/UnLockAlertHint.js"></script>
+	<script egret="game" src="bin-debug/view/alert/WarningPanel.js"></script>
+	<script egret="game" src="bin-debug/data/BookData.js"></script>
+	<script egret="game" src="bin-debug/view/base/BasePopPanel.js"></script>
+	<script egret="game" src="bin-debug/data/CrownData.js"></script>
+	<script egret="game" src="bin-debug/_GF.js"></script>
+	<script egret="game" src="bin-debug/data/manager/AchieveManager.js"></script>
+	<script egret="game" src="bin-debug/data/manager/BagManager.js"></script>
+	<script egret="game" src="bin-debug/view/base/CurrencyBar.js"></script>
+	<script egret="game" src="bin-debug/view/base/GoodsInstence.js"></script>
+	<script egret="game" src="bin-debug/view/base/SoundBtn.js"></script>
+	<script egret="game" src="bin-debug/view/base/SoundRadioBtn.js"></script>
+	<script egret="game" src="bin-debug/view/base/TabBtnGroup.js"></script>
+	<script egret="game" src="bin-debug/view/base/TabBtnGroup2.js"></script>
+	<script egret="game" src="bin-debug/view/body/Animation.js"></script>
+	<script egret="game" src="bin-debug/view/body/Bubble.js"></script>
+	<script egret="game" src="bin-debug/view/body/DropIcon.js"></script>
+	<script egret="game" src="bin-debug/view/body/fish/CdLock.js"></script>
+	<script egret="game" src="bin-debug/view/body/fish/EnjoyFish.js"></script>
+	<script egret="game" src="bin-debug/view/body/fish/Fish.js"></script>
+	<script egret="game" src="bin-debug/data/manager/DataManager.js"></script>
+	<script egret="game" src="bin-debug/view/body/fish/RandEevent.js"></script>
+	<script egret="game" src="bin-debug/view/body/FlutterHint.js"></script>
+	<script egret="game" src="bin-debug/view/body/LevelUpHint.js"></script>
+	<script egret="game" src="bin-debug/view/body/SecOutputAddAnim.js"></script>
+	<script egret="game" src="bin-debug/view/CreateRoleView.js"></script>
+	<script egret="game" src="bin-debug/view/dailytask/DailyTaskPanel.js"></script>
+	<script egret="game" src="bin-debug/view/decorate/DecorateGashaponPanel.js"></script>
+	<script egret="game" src="bin-debug/view/decorate/DecoratePanel.js"></script>
+	<script egret="game" src="bin-debug/view/enemy/EnemyListPaneL.js"></script>
+	<script egret="game" src="bin-debug/view/fieldguide/CrownBar.js"></script>
+	<script egret="game" src="bin-debug/view/fieldguide/FieldGuidePanel.js"></script>
+	<script egret="game" src="bin-debug/view/FishTankLayer.js"></script>
+	<script egret="game" src="bin-debug/view/FishTankView.js"></script>
+	<script egret="game" src="bin-debug/view/friend/FriendApplyListPanel.js"></script>
+	<script egret="game" src="bin-debug/view/friend/FriendGiftListPanel.js"></script>
+	<script egret="game" src="bin-debug/view/friend/FriendGiftPanel.js"></script>
+	<script egret="game" src="bin-debug/view/friend/FriendPanel.js"></script>
+	<script egret="game" src="bin-debug/view/friend/FriendSeachPanel.js"></script>
+	<script egret="game" src="bin-debug/view/heaven/HeavenPanel.js"></script>
+	<script egret="game" src="bin-debug/data/manager/DecorateManager.js"></script>
+	<script egret="game" src="bin-debug/view/item/FieldGuideTipsBar.js"></script>
+	<script egret="game" src="bin-debug/view/item/ItemIntroducebar.js"></script>
+	<script egret="game" src="bin-debug/view/item/ShopTipsBar.js"></script>
+	<script egret="game" src="bin-debug/view/LoginView.js"></script>
+	<script egret="game" src="bin-debug/view/lottery/TurnplatePanel.js"></script>
+	<script egret="game" src="bin-debug/view/lottery/TurnplaterResultAlert.js"></script>
+	<script egret="game" src="bin-debug/view/mail/MailContentPanel.js"></script>
+	<script egret="game" src="bin-debug/view/mail/MailListPanel.js"></script>
+	<script egret="game" src="bin-debug/view/main/BottonMenuLayer.js"></script>
+	<script egret="game" src="bin-debug/view/main/MainPanelLayer.js"></script>
+	<script egret="game" src="bin-debug/view/main/PlayerHeadBar.js"></script>
+	<script egret="game" src="bin-debug/view/MainScene.js"></script>
+	<script egret="game" src="bin-debug/view/MainView.js"></script>
+	<script egret="game" src="bin-debug/view/ModuleLayer.js"></script>
+	<script egret="game" src="bin-debug/view/other/OtherFeedView.js"></script>
+	<script egret="game" src="bin-debug/view/other/OtherFishTank.js"></script>
+	<script egret="game" src="bin-debug/view/pay/ShopPayPanel.js"></script>
+	<script egret="game" src="bin-debug/view/prompt/NoviceGuidePanel.js"></script>
+	<script egret="game" src="bin-debug/view/prompt/PromptInfo.js"></script>
+	<script egret="game" src="bin-debug/view/prompt/PromptPanel.js"></script>
+	<script egret="game" src="bin-debug/view/shop/BatchDisposebar.js"></script>
+	<script egret="game" src="bin-debug/view/shop/ShopGoldPanel.js"></script>
+	<script egret="game" src="bin-debug/view/shop/ShopPanel.js"></script>
+	<script egret="game" src="bin-debug/view/smashEgg/SmashEggLotteryPanel.js"></script>
+	<script egret="game" src="bin-debug/view/smashEgg/SmashEggUserListPanel.js"></script>
+	<script egret="game" src="bin-debug/view/system/SystemSetPanel.js"></script>
+	<script egret="game" src="bin-debug/view/technology/TechnologyPanel.js"></script>
+	<script egret="game" src="bin-debug/view/toprank/TopRankPanel.js"></script>
+	<script egret="game" src="bin-debug/view/upgrade/FishTankAdvancePanel.js"></script>
+	<script egret="game" src="bin-debug/view/upgrade/MainUpgradeItem.js"></script>
+	<script egret="game" src="bin-debug/view/upgrade/UpgradePanel.js"></script>
+	<script egret="game" src="bin-debug/view/warehouse/BagPanel.js"></script>
+	<script egret="game" src="bin-debug/view/warehouse/CrownSynthesisPanel.js"></script>
+	<script egret="game" src="bin-debug/view/warehouse/GemSynthesisPanel.js"></script>
+	<script egret="game" src="bin-debug/view/warehouse/WarehousePanel.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="exactFit"
+         data-frame-rate="30"
+         data-content-width="600"
+         data-content-height="1067"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": "" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * }
+         **/
+        egret.runEgret({renderMode:"webgl", audioType:0});
+    </script>
+</body>
+</html>

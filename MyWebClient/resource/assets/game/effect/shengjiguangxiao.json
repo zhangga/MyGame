@@ -1,0 +1,46 @@
+{"mc":{
+	"action":{
+		"frameRate":12,
+		"labels":[
+			{"name":"1","frame":1,"end":5}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"shengjiguangxiao_00028",
+			"x":-300,
+			"y":-150
+			},
+			{
+			"res":"shengjiguangxiao_00030",
+			"x":-300,
+			"y":-150
+			},
+			{
+			"res":"shengjiguangxiao_00032",
+			"x":-300,
+			"y":-150
+			},
+			{
+			"res":"shengjiguangxiao_00034",
+			"x":-300,
+			"y":-150
+			},
+			{
+			"res":"shengjiguangxiao_00036",
+			"x":-300,
+			"y":-150
+			}
+			]
+}},
+	"res":{
+		"shengjiguangxiao_00032":{"x":602,"y":0,"w":600,"h":300},
+		"shengjiguangxiao_00036":{"x":0,"y":0,"w":600,"h":300},
+		"shengjiguangxiao_00028":{"x":602,"y":302,"w":600,"h":300},
+		"shengjiguangxiao_00034":{"x":0,"y":302,"w":600,"h":300},
+		"shengjiguangxiao_00030":{"x":1204,"y":0,"w":600,"h":300}
+	}}

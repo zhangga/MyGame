@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DescAlertPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Group y="185" horizontalCenter="0">
+        <e:Image source="public_pop_bg2_png" scale9Grid="69,71,421,430" height="504" y="0" x="0"  anchorOffsetY="0"/>
+        <e:Image source="public_frame_3_png" y="66" horizontalCenter="0.5" width="506" scale9Grid="39,35,76,83"
+                 height="327"  anchorOffsetY="0"/>
+        <e:Button id="btnBack" label="" skinName="skins.Comn_Btn_CloseSkin" top="8" right="6" />
+        <e:Label id="labelAlert" text="" y="95" fontFamily="Microsoft YaHei" size="24" horizontalCenter="0"
+                 textAlign="left" width="440" height="270" textColor="0x2a0505" lineSpacing="10"
+                 bold="true"  anchorOffsetY="0" verticalAlign="middle"/>
+        <e:Button id="btn_sure" label="" y="411" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_buys_png"
+                  width="130"  horizontalCenter="0"/>
+    </e:Group>
+</e:Skin>

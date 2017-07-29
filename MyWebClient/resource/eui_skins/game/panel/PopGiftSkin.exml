@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PopGiftSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image id="panel_bg" source="public_pop_bg_gift_png" horizontalCenter="0" verticalCenter="-32.5"/>
+	<e:Image id="panel_title" y="282" source="xianshitehuilibao_png" horizontalCenter="0.5"/>
+	<e:Button id="btn_back" label="Button" skinName="skins.Comn_Btn_CloseSkin" right="80" top="272"/>
+</e:Skin>

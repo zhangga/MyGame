@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.SecOutputAddAnimSkin" xmlns:e="http://ns.egret.com/eui" width="308" height="43">
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image source="public_sec_up_png" x="0" y="13"/>
+		<e:BitmapLabel id="bmpLab_num" font="FlutterFont_fnt" text="" letterSpacing="-6" x="3" y="0"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" gap="0"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

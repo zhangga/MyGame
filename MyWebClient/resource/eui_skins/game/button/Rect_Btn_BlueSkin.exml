@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.Rect_Btn_BlueSkin" states="up,down,disabled" minHeight="50" minWidth="100" currentState="up"
+        xmlns:e="http://ns.egret.com/eui">
+    <e:Image horizontalCenter="0" verticalCenter="0" width="100%"
+             height="100%" width.down="90%" height.down="90%"  source="btn_rect_blue_png" source.disabled="btn_rect_gray_png" scale9Grid="29,18,121,17"/>
+    <e:Label id="labelDisplay" size="20" textColor="0xFFFFFF"
+             verticalAlign="middle" textAlign="center" fontFamily="Microsoft YaHei"  verticalCenter="-6" horizontalCenter="0" bold="true"/>
+    <e:Image id="iconDisplay" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" scaleX.down="0.95"
+             scaleY.down="0.95" />
+</e:Skin>

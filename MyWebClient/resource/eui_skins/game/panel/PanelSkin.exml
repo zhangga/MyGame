@@ -1,0 +1,10 @@
+<e:Skin class="skins.PanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" height="730" bottom="110" width="100%">
+		<e:Image id="panel_bg" scale9Grid="69,128,421,288" source="public_pop_bg3_png" left="0" right="0" top="30" bottom="0"/>
+		<e:Image id="panel_top" source="public_pop_topBg1_png" left="5" right="6" y="38"/>
+		<e:Image id="panel_titlebg" source="public_pop_titleBg_png" y="0" horizontalCenter="0"/>
+		<e:Image id="panel_title" source="friend_title_png" y="0" horizontalCenter="0"/>
+		<e:Button id="btn_back" label="" skinName="skins.Comn_Btn_CloseSkin" y="30" right="0"/>
+		<e:Component id="btn_back2" currentState="blue" skinName="skins.Comn_Btn_CloseSkin2" bottom="5" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

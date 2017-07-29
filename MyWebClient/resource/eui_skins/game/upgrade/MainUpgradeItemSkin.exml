@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MainUpgradeItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<ns1:UpgradeItem id="item" y="-100" x="0" skinName="skins.UpgradeItemSkin" height="100"/>
+	<e:Group id="maskLayer" x="0" y="0" width="510" height="100"/>
+</e:Skin>

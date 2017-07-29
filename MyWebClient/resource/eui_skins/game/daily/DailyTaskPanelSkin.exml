@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DailyTaskPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Component id="basic" height="900" y="167" anchorOffsetY="0" horizontalCenter="0" skinName="skins.PanelSkin2" />
+	<e:Image source="public_frame_3_png" y="275" scale9Grid="39,35,76,83" width="560" anchorOffsetY="0" height="631"
+	         horizontalCenter="0" />
+	<e:Scroller id="scroll" width="530" height="580" y="295" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group id="list_grp">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Group x="66" y="945">
+		<e:Label text="全部完成奖励：" x="0" fontFamily="Microsoft YaHei" size="24" stroke="2" strokeColor="0x700b0b"
+		         verticalCenter="0" bold="true" />
+		<e:Image source="icon_goods_diamond_png" x="160" y="0" />
+		<e:Label id="award_num_label" text="×999" x="210" fontFamily="Microsoft YaHei" size="24" stroke="2"
+		         strokeColor="0x700B0B" verticalCenter="0" bold="true" />
+	</e:Group>
+	<e:Group x="399" y="921">
+		<e:Label text="已完成：" x="0" y="0" fontFamily="Microsoft YaHei" size="22" textColor="0xffffff" stroke="2" bold="true" />
+		<e:Label id="total_pro_label" text="0/0" x="10" y="10" fontFamily="Microsoft YaHei" size="22" textColor="0xFFFFFF"
+		         stroke="2" bold="true" />
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="reward_btn" label="" x="396" y="958" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_confirm_png"
+	          width="141" />
+</e:Skin> 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ShopGoldPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="public_frame_2_png" width="526" height="714" scale9Grid="19,19,119,119" x="31" anchorOffsetY="0" y="257"/>
+	<e:Scroller skinName="skins.BagScrollBarSkin" width="532" x="44" height="690" y="271">
+		<e:Group id="itemLayer">
+		<e:layout>
+			<e:TileLayout requestedColumnCount="3" horizontalGap="8" verticalGap="8"/>
+		</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

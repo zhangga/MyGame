@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.EnemyListItemSkin" width="460" height="110" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image left="0" right="0" scale9Grid="35,37,24,83" top="0" bottom="0" source="public_frame_2_png"/>
+	<e:Label id="lab_hint" text="泡泡产出：999金币" fontFamily="Microsoft YaHei" size="18" textColor="0x590A0A" x="104" y="51" width="220" height="40" verticalAlign="middle" bold="true"/>
+	<e:Label id="lab_name" text="other" fontFamily="Microsoft YaHei" size="24" x="104" y="16" bold="true" textColor="0xa3e809" strokeColor="0x2a0505" stroke="2"/>
+	<e:Button id="btn_enemy" label="复仇" skinName="skins.Comn_Btn_OrgSkin" verticalCenter="0.5" x="334" width="117"/>
+	<ns1:PlayerHeadBar id="rank_head" skinName="skins.PlayerHeadBarSkin" y="12" x="12"/>
+</e:Skin>

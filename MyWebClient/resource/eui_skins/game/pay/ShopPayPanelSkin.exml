@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ShopPayPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" horizontalCenter="0" anchorOffsetY="0" height="627"  skinName="skins.PanelSkin3" y="150"/>
+	<e:Image source="public_frame_3_png" y="260" horizontalCenter="0" width="570" height="469" scale9Grid="39,35,76,83" anchorOffsetY="0"/>
+	<e:Scroller width="535" height="424" x="32" y="290" skinName="skins.ScrollerSkin">
+		<e:Group anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group width="173" height="420" x="20" y="15">
+				<e:Image x="0" y="0" source="pay_monthcard_png" scaleX="1" scaleY="1"/>
+				<e:Button id="btn28" label="¥28" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Group id="reward_yk" x="22" y="244">
+					<e:Button id="btn_yk" label="" skinName="skins.Comn_Btn_GreenSkin" icon="lingqu_png" width="130" height="52" x="0" y="0"/>
+					<e:Image source="icon_goods_diamond_png" width="32" height="32" x="24" y="46"/>
+					<e:Label text="x300" size="22" rotation="359.85" textColor="0x007982" x="58" y="55"/>
+				</e:Group>
+				<e:Group id="desc_yk" x="16" y="255" visible="false">
+					<e:Label text="购买获得300钻石" x="0" y="0" size="18" fontFamily="Microsoft YaHei" textColor="0x7a4424"/>
+					<e:Label text="每日领取300钻石" x="0" y="26" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424"/>
+					<e:Label text="300" x="72" y="0" size="18" fontFamily="Microsoft YaHei" textColor="0xfe5310"/>
+					<e:Label text="300" x="72" y="26" size="18" fontFamily="Microsoft YaHei" textColor="0xFE5310"/>
+				</e:Group>
+				<e:Label id="detail_yk" text="点击查看更多" textColor="0x018266" bold="true" size="20" horizontalCenter="0" verticalCenter="13"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="30" y="25">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_lifecard_png"/>
+				<e:Button id="btn80" label="¥80" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Group id="reward_zs" x="22" y="244">
+					<e:Button id="btn_zs" label="" skinName="skins.Comn_Btn_GreenSkin" icon="lingqu_png" width="130" height="52" x="0" y="0"/>
+					<e:Image source="icon_goods_diamond_png" width="32" height="32" x="24" y="46"/>
+					<e:Label text="x400" size="22" rotation="359.85" textColor="0x007982" x="58" y="55"/>
+				</e:Group>
+				<e:Group id="desc_zs" x="16" y="255" visible="false">
+					<e:Label text="购买获得400钻石" x="0" y="0" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+					<e:Label text="每日领取400钻石" x="0" y="26" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+					<e:Label text="400" x="72" y="0" size="18" fontFamily="Microsoft YaHei" textColor="0xFE5310" scaleX="1" scaleY="1"/>
+					<e:Label text="400" x="72" y="26" size="18" fontFamily="Microsoft YaHei" textColor="0xFE5310" scaleX="1" scaleY="1"/>
+				</e:Group>
+				<e:Label id="detail_zs" text="点击查看更多" textColor="0x018266" bold="true" size="20" horizontalCenter="0" verticalCenter="13"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="30" y="25">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_gold_png"/>
+				<e:Button id="btn500" label="500" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="20.5" y="20" source="goumaijinbi_png"/>
+				<e:Label text="购买金币\n秒产越高\n购买获得越多" x="18.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1" width="140" height="70" y="250" multiline="true" lineSpacing="3" textAlign="center"/>
+				<e:Label text="可获得金币" x="20.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1" width="140" height="48" y="183.5" multiline="true" lineSpacing="3" textAlign="center" anchorOffsetY="0"/>
+				<e:Label id="goldLabel" text="9.9KM" x="19.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1" width="140" height="28" y="207.5" multiline="true" lineSpacing="3" textAlign="center" anchorOffsetY="0"/>
+				<e:Image x="40.5" y="78" source="icon_goods_jinbi_png"/>
+				<e:Image x="10" y="351" source="icon_goods_diamond_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="40" y="35">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买600钻石" x="36" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得600钻石" x="36.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花6元" x="62" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn6" label="¥6" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi1_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="60" y="55">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买3000钻石" x="32" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得3000钻石" x="32.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花30元" x="58" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn30" label="¥30" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi2_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="60" y="55">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买9800钻石" x="32" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得9800钻石" x="32.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花98元" x="58" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn98" label="¥98" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi3_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="60" y="55">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买19800钻石" x="28" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得19800钻石" x="26.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花198元" x="54" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn198" label="¥198" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi4_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="60" y="55">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买32800钻石" x="28" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得32800钻石" x="26.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花328元" x="54" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn328" label="¥328" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi5_png"/>
+			</e:Group>
+			<e:Group width="173" height="420" x="50" y="45">
+				<e:Image x="0" y="0" scaleX="1" scaleY="1" source="pay_diamond_png"/>
+				<e:Label text="购买64800钻石" x="28" y="281" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="获得64800钻石" x="26.5" y="190.5" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Label text="花648元" x="54" y="255" size="18" fontFamily="Microsoft YaHei" textColor="0x7A4424" scaleX="1" scaleY="1"/>
+				<e:Button id="btn648" label="¥648" x="7" y="354.5" skinName="skins.Comn_Btn_OrgSkin" scaleX="0.9" scaleY="0.9"/>
+				<e:Image x="18.5" y="21.5" source="goumaizuanshi_png"/>
+				<e:Image x="39.5" y="79.5" source="zuanshi6_png"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

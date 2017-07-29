@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.InviteGiftPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Component id="basic" width="600" anchorOffsetY="0" horizontalCenter="0" height="900" bottom="0"
+	             skinName="skins.PanelSkin2"  locked="true"/>
+	<e:Image source="public_frame_3_png" y="272" scale9Grid="39,35,76,83" width="545" anchorOffsetY="0" height="225"
+	         horizontalCenter="0.5"  locked="true"/>
+	<e:Image source="invite_gift_banner_png" y="294" horizontalCenter="-2"  locked="true"/>
+	<e:Button id="qq_invite_btn" label="" x="350" y="299">
+		<e:skinName>
+			<e:Skin states="up,down" width="87" height="87">
+				<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" width="100%" height="100%"
+				         width.down="90%" height.down="90%" />
+				<e:Image source="invite_qq_btn_png" width.down="90%" height.down="90%" verticalCenter="-3" width="100%"
+				         height="100%" horizontalCenter="-3" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="weixin_invite_btn" label="" x="445" y="299">
+		<e:skinName>
+			<e:Skin states="up,down" width="87" height="87">
+				<e:Image source="main_bubble_rect_png" horizontalCenter="0" verticalCenter="0" width="100%" height="100%"
+				         width.down="90%" height.down="90%" />
+				<e:Image width="100%" height="100%" source="invite_weixin_btn_png" width.down="90%" height.down="90%"
+				         horizontalCenter="-2" verticalCenter="-2" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="public_frame_3_png" y="490" scale9Grid="39,35,76,83" width="545" anchorOffsetY="0" height="492"
+	         horizontalCenter="0.5"  locked="true"/>
+	<e:Image source="public_frame_2_png" y="553" scale9Grid="30,36,96,86" width="499" height="413" horizontalCenter="0.5"  locked="true"/>
+	<e:Label text="他人点击你发送的【链接】能成为朋友" y="460" fontFamily="Microsoft YaHei" size="18" textColor="0x2a0505"
+	         horizontalCenter="-2" bold="true"  locked="true"/>
+	<e:Label text="好友通过链接进入游戏，您可获得邀请奖励" y="987" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" stroke="2"
+	         strokeColor="0x700b0b" bold="true"  locked="true"/>
+	<e:Group x="26" y="510">
+		<e:Image source="textinput_bg2_png" x="0" y="0" />
+		<e:Label text="邀请名单" y="6" fontFamily="Microsoft YaHei" size="22" stroke="2" strokeColor="0x700B0B" x="45" bold="true" />
+	</e:Group>
+	<e:Scroller id="scorll" width="480" height="392" y="566" horizontalCenter="0">
+		<e:Group id="invite_list" width="100%" height="100%">
+			<e:layout>
+				<e:TileLayout verticalGap="10" requestedColumnCount="3" horizontalGap="10" />
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

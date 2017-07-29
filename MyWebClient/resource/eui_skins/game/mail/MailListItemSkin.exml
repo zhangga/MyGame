@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MailListItemSkin" width="525" height="130" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="unopen,open" >
+    <e:Image anchorOffsetX="0" width="525" height="130" scale9Grid="35,37,24,83" source="public_frame_14_png" />
+    <e:Image y="23" left="13"  source=""/>
+	<e:Image source="mail_icon_unopen_png" x="37" y="38" source.open="mail_icon_open_png"/>
+    <e:Group y="28" x="120">
+        <e:Image y="0" right="0" left="0"  source="textinput_bg_png" scale9Grid="34,19,205,16" height="40" width="259"/>
+        <e:Label id="name_label" text="邮件名称" y="8" fontFamily="Microsoft YaHei" size="24" textColor="0x2a0505"
+                 bold="true"  horizontalCenter="0"/>
+    </e:Group>
+	<e:Label id="time_label" text="2017-07-07 14:00:00" y="84" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" bold="true" horizontalCenter="-20"/>
+	<e:Label text="已领取" includeIn="open" x="416" y="55" fontFamily="Microsoft YaHei" size="24" stroke="2" textColor="0xffc838"/>
+	<e:Button label="查看" x="394" y="40" touchEnabled="true" skinName="skins.Comn_Btn_GreenSkin" width="110" includeIn="unopen"/>
+</e:Skin>

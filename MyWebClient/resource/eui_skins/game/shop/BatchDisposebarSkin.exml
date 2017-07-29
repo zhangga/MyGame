@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.BatchDisposebarSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="buy" >
+	<e:Group y="0" x="0" includeIn="buy" touchEnabled="false">
+		<e:Group x="0" y="0" touchEnabled="false">
+		<e:Button id="btnReduce" label="" x="0" y="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="button_shop_count_png" source.down="button_shop_count_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="button_minus_png" horizontalCenter="0" verticalCenter="-2" touchEnabled="false"/>
+		</e:Group>
+		<e:TextInput id="input_num" width="140" height="40" x="77" y="9" restrict="0-9" width.buy="130"/>
+		<e:Group x="0" y="1" touchEnabled="false">
+		<e:Button id="btnAdd" label="" x="0" y="0">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="button_shop_count_png" source.down="button_shop_count_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="button_plus_png" horizontalCenter="0" verticalCenter="-2" touchEnabled="false"/>
+		</e:Group>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle" gap.buy="10"/>
+		</e:layout>
+	</e:Group>
+	<e:Group includeIn="buy" y="47" horizontalCenter="0">
+		<e:Image id="img_payIcon" x="0" source="mainview_gold_png" includeIn="buy" y="0" width="40" height="40"/>
+		<e:Label id="lab_money" text="0" x="50" fontFamily="Microsoft YaHei" size="24" includeIn="buy" y="9" bold="true"/>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="btn_buy" label="" includeIn="buy" y="96" skinName="skins.Comn_Btn_GreenSkin" horizontalCenter="0" icon="btn_icon_buy_png"/>
+</e:Skin>

@@ -1,0 +1,46 @@
+{"mc":{
+	"action":{
+		"frameRate":12,
+		"labels":[
+			{"name":"1","frame":1,"end":5}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"hongxinjia0001",
+			"x":-60,
+			"y":-60
+			},
+			{
+			"res":"hongxinjia0003",
+			"x":-24,
+			"y":-24
+			},
+			{
+			"res":"hongxinjia0005",
+			"x":-12,
+			"y":-13
+			},
+			{
+			"res":"hongxinjia0007",
+			"x":-17,
+			"y":-18
+			},
+			{
+			"res":"hongxinjia0009",
+			"x":-16,
+			"y":-16
+			}
+			]
+}},
+	"res":{
+		"hongxinjia0005":{"x":86,"y":34,"w":23,"h":24},
+		"hongxinjia0001":{"x":119,"y":1,"w":5,"h":5},
+		"hongxinjia0007":{"x":51,"y":1,"w":33,"h":34},
+		"hongxinjia0003":{"x":1,"y":1,"w":48,"h":47},
+		"hongxinjia0009":{"x":86,"y":1,"w":31,"h":31}
+	}}

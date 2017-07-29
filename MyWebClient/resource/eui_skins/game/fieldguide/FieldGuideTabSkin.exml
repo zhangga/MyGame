@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FieldGuideTabSkin" states="up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected" currentState="up" xmlns:e="http://ns.egret.com/eui" width="146" height="51">
+    <e:Group width="100%" height="100%">
+        <e:Image fillMode="scale" alpha.downAndSelected="1" alpha.upAndSelected="1" alpha.up="1"
+                
+                
+                
+                 horizontalCenter="0" verticalCenter="0" source.down="fieldGuide_tab_selected_png" verticalCenter.down="5" source.downAndSelected="fieldGuide_tab_selected_png" verticalCenter.downAndSelected="5" source.disabledAndSelected="fieldGuide_tab_selected_png" verticalCenter.disabledAndSelected="5" alpha.disabledAndSelected="0.7" source.upAndSelected="fieldGuide_tab_selected_png" verticalCenter.upAndSelected="5" source.up="fieldGuide_tab_unselected_png" source="fieldGuide_tab_unselected_png" source.disabled="fieldGuide_tab_disable_png"/>
+        <e:Label id="labelDisplay" size="20" textColor="0x707070"
+                 textAlign="center" verticalAlign="middle"
+                 fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="0" textColor.up="0x590a0a" textColor.down="0xffffff" text="" textColor.upAndSelected="0xffffff" textColor.downAndSelected="0xffffff"/>
+    </e:Group>
+</e:Skin>

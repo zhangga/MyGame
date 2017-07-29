@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FriendGiftPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Group id="close_touch_grp" width="100%" height="100%" touchEnabled="true" locked="true" />
+    <e:Component id="basic" skinName="skins.PopSkin2" width="580" height="600" horizontalCenter="0" anchorOffsetY="0"
+                 y="200" />
+    <e:Scroller id="scorll" width="540" height="430" y="310" skinName="skins.BagScrollBarSkin" x="35">
+        <e:Group>
+            <e:List id="friend_list" width="100%" height="100%" />
+        </e:Group>
+    </e:Scroller>
+    <e:Label text="每个好友每日限送一次" y="747" fontFamily="Microsoft YaHei" size="22" horizontalCenter="0" stroke="1"
+             strokeColor="0x700b0b" bold="true" />
+</e:Skin>

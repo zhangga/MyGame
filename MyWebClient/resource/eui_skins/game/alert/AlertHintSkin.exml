@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.AlertHintSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="normal,share,coin,unlock">
+	<e:Component id="basic" skinName="skins.PopSkin2" width="550" horizontalCenter="0" height="389"  verticalCenter="-69" height.coin="348" width.coin="520"/>
+	<e:Label id="lab_hint" text="打劫成功，对方欢乐度降低10%" y="395" fontFamily="Microsoft YaHei" size="24" textColor="0x2A0505"
+	         horizontalCenter="0" textAlign="center" height="66" width="433" verticalAlign="middle" bold="true"  includeIn="normal,share,unlock" y.unlock="402"/>
+	<e:Button id="btn_sure" label="" y="572" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_buys_png"
+	          horizontalCenter="0" skinName.share="skins.Comn_Btn_YellowSkin"
+	          horizontalCenter.share="-94.5"  horizontalCenter.coin="0.5" y.coin="523" icon.coin="jiesuo_png" skinName.coin="skins.Comn_Btn_BlueSkin" skinName.unlock="skins.Comn_Btn_BlueSkin" icon.unlock="jiesuo_png" horizontalCenter.normal="0.5" y.normal="562" y.share="562" horizontalCenter.unlock="0.5" y.unlock="562"/>
+	<e:Button id="btn_share" label="" y="562" skinName="skins.Comn_Btn_GreenSkin" icon="yaoqingfanbei_png"
+	          includeIn="share"  horizontalCenter="95.5"/>
+	<e:Group y="500" horizontalCenter="0.5" horizontalCenter.coin="1" y.coin="447">
+		<e:Group x="0" y="0" width="40" height="40">
+			<e:Image id="img_turnplateIcon" source="jinbi_png" horizontalCenter="0" verticalCenter="0" height="46"
+			         width="46" />
+		</e:Group>
+		<e:BitmapLabel id="bmpLab_num" x="70" y="19" font="FlutterFont_fnt" text="x13123" letterSpacing="-6"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle"  gap="10"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

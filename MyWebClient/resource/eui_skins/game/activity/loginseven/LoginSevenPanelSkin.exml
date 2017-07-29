@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.LoginSevenPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Image source="public_bg2_png" horizontalCenter="0" verticalCenter="-26.5" />
+    <e:Scroller width="573" height="420" y="473" skinName="skins.BagScrollBarSkin" x="20">
+        <e:Group id="itemGrp">
+            <e:layout>
+                <e:TileLayout verticalGap="13" horizontalGap="20" requestedColumnCount="3" />
+            </e:layout>
+        </e:Group>
+    </e:Scroller>
+    <e:Button id="btn_back" label="" bottom="142" horizontalCenter="0.5" skinName="skins.Comn_Btn_CloseSkin2"></e:Button>
+</e:Skin>

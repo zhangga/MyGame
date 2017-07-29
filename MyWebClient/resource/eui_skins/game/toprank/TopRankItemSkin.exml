@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TopRankItemSkin" width="510" height="126" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group verticalCenter="0">
+		<e:Image width="505" height="122" y="0" source="public_frame_14_png" scale9Grid="35,41,86,81" anchorOffsetX="0"
+		         anchorOffsetY="0" horizontalCenter="0" />
+		<e:Image id="rank_bg" horizontalCenter="-186" source="toprank_n_png" verticalCenter="1" />
+		<e:Label id="rank_num" text="99" y="53" horizontalCenter="-185.5" size="22" textColor="0x000000"
+		         fontFamily="Microsoft YaHei" bold="true" />
+		<ns1:PlayerHeadBar id="rank_head" skinName="skins.PlayerHeadBarSkin" y="18" x="120" />
+		<e:Group x="230" y="26">
+			<e:Image source="public_frame_9_png" scale9Grid="23,11,44,3" anchorOffsetX="0" width="145" height="30" />
+			<e:Label id="rank_name" text="进击的美人鱼" y="4" size="20" fontFamily="Microsoft YaHei" bold="true" textColor="0x2a0505"
+			         textAlign="center" horizontalCenter="0.5" />
+		</e:Group>
+		<e:Group x="232" y="74">
+			<e:Label text="总资产：" size="20" fontFamily="Microsoft YaHei" bold="true" textColor="0x2a0505" x="0" y="0" />
+			<e:Label id="rank_value" text="999B" size="20" fontFamily="Microsoft YaHei" bold="true" textColor="0x2a0505" x="80"
+			         y="0" />
+		</e:Group>
+	</e:Group>
+</e:Skin>

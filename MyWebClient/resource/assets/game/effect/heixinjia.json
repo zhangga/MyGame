@@ -1,0 +1,46 @@
+{"mc":{
+	"action":{
+		"frameRate":12,
+		"labels":[
+			{"name":"1","frame":1,"end":5}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"heixinjia0001",
+			"x":-60,
+			"y":-60
+			},
+			{
+			"res":"heixinjia0003",
+			"x":-24,
+			"y":-24
+			},
+			{
+			"res":"heixinjia0005",
+			"x":-12,
+			"y":-13
+			},
+			{
+			"res":"heixinjia0007",
+			"x":-17,
+			"y":-18
+			},
+			{
+			"res":"heixinjia0009",
+			"x":-16,
+			"y":-17
+			}
+			]
+}},
+	"res":{
+		"heixinjia0001":{"x":119,"y":1,"w":5,"h":5},
+		"heixinjia0007":{"x":51,"y":1,"w":33,"h":34},
+		"heixinjia0003":{"x":1,"y":1,"w":48,"h":47},
+		"heixinjia0005":{"x":86,"y":34,"w":23,"h":23},
+		"heixinjia0009":{"x":86,"y":1,"w":31,"h":31}
+	}}

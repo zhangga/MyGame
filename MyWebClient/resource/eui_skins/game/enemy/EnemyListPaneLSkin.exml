@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.EnemyListPaneLSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Component id="basic" skinName="skins.PopSkin2" width="545" height="690" horizontalCenter="0" y="150"/>
+	<e:Image source="public_frame_3_png" y="260" horizontalCenter="0" width="510" height="556" scale9Grid="39,35,76,83"/>
+	<e:Scroller id="scorll" width="478" height="510" y="282" skinName="skins.BagScrollBarSkin" x="63">
+		<e:Group id="itemLayer">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

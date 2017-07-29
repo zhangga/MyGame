@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DecorateItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="scene_item" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image id="scene_icon" scale9Grid="15,13,86,7" y="5" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" source="ishenqi_1_003_png" width="88" height="88"/>
+		<e:Image id="img_mask" source="public_json.public_mask2_png" width="72" height="66" horizontalCenter="0" verticalCenter="-5"/>
+		<e:Image y="5" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="4" source="public_frame_18_png" scale9Grid="29,32,28,24"/>
+		<e:Image id="select_bg" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-32" scale9Grid="23,28,35,23" source="mainview_seletedtick_icon_png" y="0"/>
+		<e:Image source="fieldGuide_tab_unselected_png" y="72" width="96" height="28" horizontalCenter="0"/>
+		<e:Label id="label_scene" text="金字塔" size="18" fontFamily="Microsoft YaHei" anchorOffsetX="0" bold="true" y="76" horizontalCenter="1" textColor="0x2a0505"/>
+		<e:Image id="img_lock" source="public_json.public_lock_png" y="18" horizontalCenter="3"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.WarnPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Group y="260" horizontalCenter="0">
+        <e:Image source="public_pop_bg2_png" scale9Grid="69,71,421,430" height="375" y="0" x="0" locked="true" />
+        <e:Image source="public_frame_3_png" y="66" horizontalCenter="0" width="506" scale9Grid="39,35,76,83"
+                 height="201" locked="true" />
+        <e:Button id="btnBack" label="" skinName="skins.Comn_Btn_CloseSkin" top="8" right="6" />
+        <e:Label id="labelAlert" text="" y="95" fontFamily="Microsoft YaHei" size="24" horizontalCenter="0"
+                 textAlign="center" width="440" height="138" verticalAlign="middle" textColor="0x2a0505" lineSpacing="6"
+                 bold="true" />
+        <e:Button id="btn_sure" label="" y="290" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_buys_png" x="109"
+                  width="130" />
+        <e:Button id="btn_cancel" label="" y="290" icon="btn_icon_cancel_png" skinName="skins.Comn_Btn_YellowSkin"
+                  x="322" width="130" />
+    </e:Group>
+</e:Skin>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FieldGuideTipsBarSkin" width="600" height="1067" currentState="lock"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" states="lock,buy,award">
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image height.lock="455" height.award="543" height.buy="572" source="tip_bg_png" x="0" y="0"
+		         scale9Grid="77,335,268,234" />
+		<e:Image source="item_quality_bar2_png" x="190" y="56" />
+		<e:Label id="name_label" text="描述" y="42" size="20" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xF7A433"
+		         x="210" />
+		<e:Label id="lab_desc" text="这是一条鱼" fontFamily="Microsoft YaHei" size="17" x="210" y="83" bold="true"
+		         textColor="0x000000" anchorOffsetX="0" width="184" anchorOffsetY="0" height="122" />
+		<ns1:FieldGuideItemBase id="fgItemBase" x="31" y="16" skinName="skins.FieldGuideItemBaseSkin" />
+		<e:Group x="53" y="240">
+			<e:Label text="秒产：" y="0" size="20" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xF7A433" x="0" />
+			<e:Group x="0" y="0" scaleX="0.9" scaleY="0.9">
+				<ns1:CurrencyBar id="currency_gold" x="33" skinName="skins.CurrencyBarSkin" />
+			</e:Group>
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+		<e:Group x="230" y="240">
+			<e:Label text="泡泡产出：" y="0" size="20" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xF7A433" x="0" />
+			<e:Group x="0" y="0" scaleX="0.9" scaleY="0.9">
+				<ns1:CurrencyBar id="currency_outPut" x="33" skinName="skins.CurrencyBarSkin" />
+			</e:Group>
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+		<e:Button id="btn_done" label="未解锁" y="452" skinName="skins.Comn_Btn_GreenSkin" y.lock="312" includeIn="buy,award"
+		          label.buy="" y.buy="451" skinName.award="skins.Comn_Btn_OrgSkin" y.award="457" label.award=""
+		          horizontalCenter="0" horizontalCenter.buy="0" horizontalCenter.award="0" />
+		<e:Label id="lab_buyTime" text="3/3" includeIn="buy" x="277" y="468" size="18" fontFamily="Microsoft YaHei"
+		         bold="true" textColor="0x2A0505" />
+		<ns1:CurrencyBar id="curr" includeIn="buy" y="509" skinName="skins.CurrencyBarSkin" x="222" />
+		<e:Group y="336" horizontalCenter="0" y.lock="328">
+			<e:Label text="购买解锁条件：" y="0" size="20" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xF7A433" x="1"
+			         includeIn="lock" />
+			<e:Label id="lab_unlockDsc" text="解锁内容" fontFamily="Microsoft YaHei" size="18" x="10" y="10" includeIn="lock"
+			         width="210" height="70" bold="true" textColor="0x2a0505" verticalAlign="middle" />
+			<e:layout>
+				<e:VerticalLayout gap="12" horizontalAlign="center" />
+			</e:layout>
+		</e:Group>
+		<e:Group includeIn="buy,award" y="336" horizontalCenter="0" horizontalCenter.buy="0" y.buy="327"
+		         horizontalCenter.award="0" y.award="327">
+			<e:Group x="35" y="0" includeIn="buy,award" height="38">
+				<e:Label text="当前皇冠个数：" y="32" size="20" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xF7A433" x="66"
+				         includeIn="buy,award" />
+				<e:Label id="lab_hasCrown" text="3/3" includeIn="buy,award" x="0" y="0" size="18" fontFamily="Microsoft YaHei"
+				         bold="true" textColor="0x2a0505" />
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle" />
+				</e:layout>
+			</e:Group>
+			<e:Label text="达到皇冠秒产永久保留" includeIn="buy,award" x="69" y="10" size="18" fontFamily="Microsoft YaHei" bold="true"
+			         height="38" verticalAlign="middle" textColor="0x2a0505" />
+			<e:Group x="0" y="58" includeIn="buy,award">
+				<e:Label id="lab_receive" text="满皇冠可领取神器点：" includeIn="buy,award" x="0" y="10" size="18"
+				         fontFamily="Microsoft YaHei" bold="true" textColor="0x2a0505" />
+				<e:Group x="0" y="0" includeIn="buy,award">
+					<ns1:CurrencyBar id="currArtifact" includeIn="buy,award" y="0" skinName="skins.CurrencyBarSkin" x="28" />
+				</e:Group>
+				<e:layout>
+					<e:HorizontalLayout verticalAlign="middle" />
+				</e:layout>
+			</e:Group>
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" gap="-2" />
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

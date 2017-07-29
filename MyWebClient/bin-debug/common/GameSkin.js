@@ -1,0 +1,125 @@
+var __reflect = (this && this.__reflect) || function (p, c, t) {
+    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
+};
+/**
+ *
+ * @author
+ *
+ */
+var GameSkin = (function () {
+    function GameSkin() {
+    }
+    GameSkin.getBaseTabButtonSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,upAndSelected,downAndSelected\" currentState=\"upAndSelected\" xmlns:e=\"http://ns.egret.com/eui\" width=\"87\" height=\"87\">\n\t        <e:Group bottom=\"0\" horizontalCenter=\"0\" width=\"87\" height=\"87\">\n\t\t        <e:Image source.up=\"\" source.down=\"\" source.upAndSelected=\"public_btn_bg1_png\" source.downAndSelected=\"public_btn_bg1_png\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n\t\t        <e:Image source=\"public_btn_bg_png\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n\t\t        <e:Image scaleX=\"1\" scaleY=\"1\" touchEnabled=\"false\" source=\"" + resName + "\" y=\"0\" horizontalCenter=\"0\"/>\n\t        </e:Group>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getTabButtonSkin2 = function (labelName, selectedImg, unselectedImg) {
+        if (selectedImg === void 0) { selectedImg = "radiobutton_select_down2_png"; }
+        if (unselectedImg === void 0) { unselectedImg = "radiobutton_unselect2_jpg"; }
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins.Common_TabButtonSkin2\" states=\"up,down,disabled,downAndSelected\" currentState=\"disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n            <e:Group width=\"100%\" height=\"100%\" horizontalCenter=\"0\" x=\"0\" y=\"0\">\n                <e:Image fillMode=\"scale\" alpha=\"1\"\n                    source.up=\"" + unselectedImg + "\"\n                    source.down=\"" + selectedImg + "\"\n                    source.disabled=\"" + selectedImg + "\"\n                    source.downAndSelected=\"" + selectedImg + "\"\n                    source=\"" + unselectedImg + "\" scale9Grid.up=\"29,5,69,32\" width=\"100%\" />\n                <e:Label textAlign=\"center\" verticalAlign=\"middle\" fontFamily=\"Microsoft YaHei\" textColor=\"0xe9deb3\" text=\"" + labelName + "\" size=\"22\" horizontalCenter=\"0\" verticalCenter=\"0\" bold=\"true\"/>\n            </e:Group>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getTabHallBtnSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,upAndSelected,downAndSelected\" xmlns:e=\"http://ns.egret.com/eui\" width=\"87\" height=\"87\">\n\t        <e:Group bottom=\"0\" horizontalCenter=\"0\" width=\"87\" height=\"87\">\n\t\t        <e:Image source.up=\"newactivity_iconbtn1_png\" source.down=\"newactivity_iconbtn2_png\" source.upAndSelected=\"newactivity_iconbtn2_png\" source.downAndSelected=\"newactivity_iconbtn2_png\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n\t\t        <e:Image scaleX=\"1\" scaleY=\"1\" touchEnabled=\"false\" source=\"" + resName + "\" y=\"0\" horizontalCenter=\"0\"/>\n\t        </e:Group>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getActivityButtonSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n           <e:Image width=\"79\" height=\"79\" source=\"newactivity_iconbtn1_png\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n            <e:Image width=\"100%\" height=\"100%\" alpha.disabled=\"0.5\"\n                    source.disabled=\"" + resName + "\" source.up=\"" + resName + "\" \n                    width.down=\"90%\" height.down=\"90%\" source.down=\"" + resName + "\" verticalCenter.up=\"0\" horizontalCenter.up=\"0\" verticalCenter.disabled=\"0\" horizontalCenter.disabled=\"0\" verticalCenter.down=\"0\" horizontalCenter.down=\"0\"/>\n            <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n                    size=\"20\"\n                    textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n            <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getActivityButtonNoBgSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n            <e:Image width=\"100%\" height=\"100%\" alpha.disabled=\"0.5\"\n                    source.disabled=\"" + resName + "\" source.up=\"" + resName + "\" \n                    width.down=\"90%\" height.down=\"90%\" source.down=\"" + resName + "\" verticalCenter.up=\"0\" horizontalCenter.up=\"0\" verticalCenter.disabled=\"0\" horizontalCenter.disabled=\"0\" verticalCenter.down=\"0\" horizontalCenter.down=\"0\"/>\n            <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n                    size=\"20\"\n                    textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n            <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getTopRankGiftRadioButtonSkin = function (resName, title) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n             <e:Group width=\"100%\" height=\"100%\" horizontalCenter.upAndSelected=\"0\" y.upAndSelected=\"0\" horizontalCenter=\"0\" x=\"0\" y=\"0\" scaleX=\"1\" scaleY=\"1\">\n                <e:layout>\n                    <e:HorizontalLayout verticalAlign=\"middle\"/>\n                </e:layout>\n                <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                    source.up=\"sevDay_title_tab_trapezoida_png\"\n                    source.down=\"sevDay_title_tab_trapezoida_png\"\n                    source.disabled=\"sevDay_title_tab_trapezoida_png\"\n                    source.upAndSelected=\"sevDay_title_tab_trapezoidl_png\"\n                    source.downAndSelected=\"sevDay_title_tab_trapezoidl_png\"\n                    source.disabledAndSelected=\"sevDay_title_tab_trapezoidl_png\" \n                    source=\"sevDay_title_tab_trapezoida_png\"/>\n                <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0xE9DEB3\"\n                        textAlign=\"center\" verticalAlign=\"middle\"\n                        fontFamily=\"Microsoft YaHei\"/>\n             </e:Group>\n             <e:Label text=\"" + title + "\" strokeColor=\"0x2A0505\" stroke=\"0\" size=\"22\" touchEnabled=\"false\" fontFamily=\"Microsoft YaHei\" textAlign=\"center\" scaleX=\"1\" scaleY=\"1\" bold=\"true\" textColor=\"0xE9DEB3\" verticalCenter=\"0\" horizontalCenter=\"0\"/>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getGemSyntheticBtn = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" width=\"182\" height=\"50\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n             <e:Group width=\"182\" height=\"50\" x=\"0\" y=\"0\"/>\n             <e:Image scaleX=\"1\" scaleY=\"1\" horizontalCenter=\"0\" touchEnabled=\"false\" bottom=\"1\" width=\"160\" source=\"public_line_1_jpg\" height=\"3\"/>\n             <e:Group width=\"100%\" height=\"100%\" horizontalCenter.upAndSelected=\"0\" y.upAndSelected=\"0\" horizontalCenter=\"0\" x=\"0\" y=\"0\" scaleX=\"1\" scaleY=\"1\">\n                <e:layout>\n                    <e:HorizontalLayout verticalAlign=\"middle\"/>\n                </e:layout>\n                <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                    source.up=\"\"\n                    source.down=\"\"\n                    source.disabled=\"\"\n                    source.upAndSelected=\"forge_gem_selected_bg_png\"\n                    source.downAndSelected=\"forge_gem_selected_bg_png\"\n                    source.disabledAndSelected=\"forge_gem_selected_bg_png\" \n                    source=\"\"/>\n                <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0xE9DEB3\"\n                        left=\"16\" verticalAlign=\"middle\"\n                        fontFamily=\"Microsoft YaHei\"/>\n             </e:Group>\n             <e:Label id=\"label_name\" width=\"152\" height=\"20\" text=\"2\u7EA7\u6728\u7CFB\u5B9D\u77F3\" size=\"20\"  touchEnabled=\"false\" verticalCenter=\"0\" fontFamily=\"Microsoft YaHei\" left=\"16\" textColor=\"0xe9deb3\"/>\n             \n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getActivityHallRadioButtonSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n             <e:Group width=\"100%\" height=\"100%\" horizontalCenter.upAndSelected=\"0\" y.upAndSelected=\"0\" horizontalCenter=\"0\" x=\"0\" y=\"0\" scaleX=\"1\" scaleY=\"1\">\n                <e:layout>\n                    <e:HorizontalLayout verticalAlign=\"middle\"/>\n                </e:layout>\n                <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                    source.up=\"public_btn_bg_png\"\n                    source.down=\"public_btn_bg_png\"\n                    source.disabled=\"public_btn_bg_png\"\n                    source.upAndSelected=\"public_btn_bg1_png\"\n                    source.downAndSelected=\"public_btn_bg1_png\"\n                    source.disabledAndSelected=\"public_btn_bg1_png\" \n                    source=\"public_btn_bg_png\"/>\n                <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0x707070\"\n                        textAlign=\"center\" verticalAlign=\"middle\"\n                        fontFamily=\"Tahoma\"/>\n             </e:Group>\n            <e:Image scaleX=\"1\" scaleY=\"1\" touchEnabled=\"false\" verticalCenter=\"6\" source=\"" + resName + "\" horizontalCenter=\"0\"/>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getCreateRoleRadioButtonSkin = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins.CreateRoleRadioButtonSkin\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\"\n                currentState=\"disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" height=\"110\"\n                width=\"115\">\n            <e:Group width=\"100%\" height=\"100%\" horizontalCenter.upAndSelected=\"0\" y.upAndSelected=\"0\" horizontalCenter=\"0\"\n                    x=\"0\" y=\"0\" scaleX=\"1\" scaleY=\"1\">\n                    <e:Image fillMode=\"scale\" source=\"function_icon_bg_png\" horizontalCenter=\"0\" verticalCenter=\"0\" />\n            </e:Group>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getActivitySpringRadioButtonSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n             <e:Group width=\"100%\" height=\"100%\" horizontalCenter.upAndSelected=\"0\" y.upAndSelected=\"0\" horizontalCenter=\"0\" x=\"0\" y=\"0\" scaleX=\"1\" scaleY=\"1\">\n                <e:layout>\n                    <e:HorizontalLayout verticalAlign=\"middle\"/>\n                </e:layout>\n                <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                    source.up=\"spring_tab_unselect_png\"\n                    source.down=\"spring_tab_unselect_png\"\n                    source.disabled=\"spring_tab_unselect_png\"\n                    source.upAndSelected=\"spring_tab_selected_png\"\n                    source.downAndSelected=\"spring_tab_selected_png\"\n                    source.disabledAndSelected=\"spring_tab_selected_png\" \n                    source=\"spring_tab_unselect_png\"/>\n                <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0x707070\"\n                        textAlign=\"center\" verticalAlign=\"middle\"\n                        fontFamily=\"Tahoma\"/>\n             </e:Group>\n            <e:Image scaleX=\"1\" scaleY=\"1\" touchEnabled=\"false\" verticalCenter=\"6\" source=\"" + resName + "\" horizontalCenter=\"0\"/>\n        </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getButtonSkin3 = function (upRes, disRes, downScale) {
+        if (downScale === void 0) { downScale = "90%"; }
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins." + upRes + "\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n    <e:Image width=\"100%\" height=\"100%\" alpha.disabled=\"1\"\n             source.disabled=\"" + disRes + "\" source.up=\"" + upRes + "\" \n             width.down=\"" + downScale + "\" height.down=\"" + downScale + "\" source.down=\"" + upRes + "\" verticalCenter.up=\"0\" horizontalCenter.up=\"0\" verticalCenter.disabled=\"0\" horizontalCenter.disabled=\"0\" verticalCenter.down=\"0\" horizontalCenter.down=\"0\"/>\n    <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n             size=\"20\" \n             textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n    <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n</e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getNormalButtonSkin = function (resName) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins." + resName + "\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n    <e:Image width=\"100%\" height=\"100%\" alpha.disabled=\"0.5\"\n             source.disabled=\"" + resName + "\" source.up=\"" + resName + "\" \n             width.down=\"90%\" height.down=\"90%\" source.down=\"" + resName + "\" verticalCenter.up=\"0\" horizontalCenter.up=\"0\" verticalCenter.disabled=\"0\" horizontalCenter.disabled=\"0\" verticalCenter.down=\"0\" horizontalCenter.down=\"0\"/>\n    <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n             size=\"20\"\n             textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n    <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n</e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getNormalProgressBarSkin = function (resName) {
+        var exmlText = "<?xml version= \"1.0\" encoding= \"utf-8\" ?>\n            <e:Skin class=\"skins." + resName + "\" xmlns:e=\"http://ns.egret.com/eui\">\n                <e:Image source= \"" + resName + "\"  scale9Grid= \"1,1,4,4\" width= \"100%\" alpha=\"0\"\n        height = \"100%\" verticalCenter= \"0\" />\n            <e:Image id= \"thumb\" height= \"100%\" width= \"100%\" source= \"" + resName + "\" scale9Grid= \"8,6,3,4\" />\n                <e:Label id= \"labelDisplay\" textAlign= \"center\" verticalAlign= \"middle\"\n        size = \"15\" fontFamily= \"Tahoma\" textColor= \"0x707070\" \n        horizontalCenter = \"0\" verticalCenter= \"0\" />\n            </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getNormalProBarSkin = function (bgName, resName) {
+        var exmlText = "<?xml version= \"1.0\" encoding= \"utf-8\" ?>\n            <e:Skin class=\"skins." + resName + "\" xmlns:e=\"http://ns.egret.com/eui\">\n                <e:Image source= \"" + bgName + "\"  scale9Grid= \"1,1,4,4\" width= \"100%\" alpha=\"0\"\n        height = \"100%\" verticalCenter= \"0\" />\n            <e:Image id= \"thumb\" height= \"100%\" width= \"100%\" source= \"" + resName + "\" scale9Grid= \"8,6,3,4\" />\n                <e:Label id= \"labelDisplay\" textAlign= \"center\" verticalAlign= \"middle\"\n        size = \"15\" fontFamily= \"Tahoma\" textColor= \"0x707070\" \n        horizontalCenter = \"0\" verticalCenter= \"0\" />\n            </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getDamageBarSkin = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.BossProgress\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" width=\"220\">\n                <e:Label id=\"desc\" size=\"18\" fontFamily=\"Microsoft YaHei\" textColor=\"0xffffff\" text=\"\"  top=\"3\" width=\"100%\"/>\n                <e:Image id=\"line\" source=\"public_line_png\" width=\"100%\"  top=\"-3\"/>\n            </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getFightingChangeBarSkin = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.FightingBar\" width=\"688\" height=\"1100\" xmlns:e=\"http://ns.egret.com/eui\"\n                    xmlns:w=\"http://ns.egret.com/wing\" states=\"item,box,equip\">\n                <e:Group horizontalCenter=\"0\">\n                    <e:Image source=\"word_zongzhandouli_png\" y=\"0\" x=\"0\" />\n                    <e:BitmapLabel id=\"change_label\" text=\"111\" letterSpacing=\"-6\" scaleX=\"0.8\" scaleY=\"0.8\" font=\"font_fight_green_fnt\" x=\"200\" y=\"28\"/>\n                    <e:BitmapLabel id=\"fightingNum\" font=\"font_fight_yellow_fnt\" text=\"111\" letterSpacing=\"-6\" scaleX=\"0.8\" scaleY=\"0.8\" x=\"170\" y=\"28\"/>\n                </e:Group>\n            </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getGameLoadingBar = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.GameLoadingBar\" width=\"688\" height=\"1100\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" states=\"item,box,equip\" >\n                <e:Image source=\"login_bg_jpg\"/>\n                <e:Image source=\"logo_png\" y=\"180\" horizontalCenter=\"0\"/>\n                <e:ProgressBar id=\"bar\" y=\"864\" horizontalCenter=\"0\"/>\n                <e:Label text=\"\u9996\u6B21\u52A0\u8F7D\u6E38\u620F\u65F6\u95F4\u8F83\u957F\uFF0C\u8BF7\u8010\u5FC3\u7B49\u5F85\" y=\"793\" textColor=\"0xe90cf4\" fontFamily=\"KaiTi\" size=\"24\" horizontalCenter=\"0\" stroke=\"1\" strokeColor=\"0xffffff\"/>\n                <e:Label id=\"loadtext\" text=\"\u6B63\u5728\u8FDE\u63A5\u670D\u52A1\u5668..\" y=\"910\" fontFamily=\"Microsoft YaHei\" size=\"22\" horizontalCenter=\"0\" stroke=\"1\" strokeColor=\"0xffffff\" textColor=\"0xc68ffc\"/>\n            </e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getGameLoadingProBar = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.GameLoadingProBar\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n                <e:Image scale9Grid=\"1,1,4,4\" verticalCenter=\"0\" source=\"common_thumb_bg_jpg\" left=\"18\" right=\"18\" height=\"18\"/>\n                <e:Image id=\"thumb\" source=\"common_thumb_jpg\" verticalCenter=\"1\" height=\"18\" left=\"18\" right=\"18\" x=\"18\" y=\"3\"/>\n                <e:Image scale9Grid=\"1,1,4,4\" verticalCenter=\"0\" x=\"0\" y=\"10\" source=\"progress_style_1_png\"/>\n                <e:Group id=\"animLayer\" touchChildren=\"false\" touchEnabled=\"false\" verticalCenter=\"1\" y=\"12\" left=\"18\" right=\"18\"/>\n            </e:Skin>";
+        return exmlText;
+    };
+    /**过场动画皮肤**/
+    GameSkin.getLoadingMapView = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.GuochangView\" width=\"688\" height=\"1100\" xmlns:e=\"http://ns.egret.com/eui\"\n                    xmlns:w=\"http://ns.egret.com/wing\">\n                <e:Group id=\"loading_bar\">\n                    <e:Image source=\"con_mark_png\" locked=\"true\" />\n                    <e:Image source=\"logo_png\" y=\"200\" horizontalCenter=\"0\"/>\n                    <e:Label text=\"\u6B63\u5728\u8F7D\u5165\u573A\u666F...\" y=\"620\" fontFamily=\"Microsoft YaHei\" size=\"26\" horizontalCenter=\"0\"/>\n                </e:Group>\n                <e:Scroller id=\"poetry_scroll\" width=\"300\" height=\"500\" x=\"120\" y=\"150\" touchChildren=\"false\" touchEnabled=\"false\">\n                    <e:Group>\n                        <e:Image id=\"backImg\" source=\"\" />\n                        <e:Image id=\"poetryImg\" source=\"\" />\n                    </e:Group>\n                </e:Scroller>\n            </e:Skin>";
+        return exmlText;
+    };
+    /**副本倒计时皮肤**/
+    GameSkin.getDupTimeBar = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.DupTimeBar\" width=\"688\" height=\"1100\" xmlns:e=\"http://ns.egret.com/eui\">\n                <e:Group >\n                    <e:Image source=\"public_name_bg_png\" scale9Grid=\"51,6,202,38\" width=\"380\"/>\n                    <e:Label id=\"txt\" text=\"\u526F\u672C\u5269\u4F59\u65F6\u95F4\uFF1A00\uFF1A00\" fontFamily=\"Microsoft YaHei\" size=\"22\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n                </e:Group>\n            </e:Skin>";
+        return exmlText;
+    };
+    /**头像框皮肤**/
+    GameSkin.getHeadIconBar = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n            <e:Skin class=\"skins.HeadIconItemSkin\" xmlns:e=\"http://ns.egret.com/eui\" width=\"140\" height=\"130\">\n                <e:Image id=\"head_icon\" y=\"0\" horizontalCenter=\"0\" width=\"90\" height=\"90\" source=\"r5_headIcon_jpg\" />\n                    <e:Image source=\"bag_defaultframe_png\" horizontalCenter=\"0\" scale9Grid=\"10,10,64,64\" width=\"90\" height=\"90\" locked=\"true\" />\n                    <e:Group y=\"100\" horizontalCenter=\"0\">\n                        <e:Label id=\"name_label\" text=\"\u73A9\u5BB6\u540D\u79F0\" fontFamily=\"Microsoft YaHei\" size=\"22\" textColor=\"0x28e828\" />\n                        <e:layout>\n                            <e:HorizontalLayout/>\n                        </e:layout>\n                    </e:Group>\n            </e:Skin>";
+        return exmlText;
+    };
+    // public getNormalButtonCloseSkin(): string {
+    //     return this.getNormalButtonSkin("common_button_close_png");
+    // }
+    // public getNormalButtonBackSkin(): string {
+    //     return this.getNormalButtonSkin("Chat_Button_Back_png");
+    // }
+    // public getNormalButtonTrueSkin(): string {
+    //     return this.getNormalButtonSkin("common_button_true_png");
+    // }
+    // public getNormalButtonpopubarbackSkin(): string {
+    //     return this.getNormalButtonSkin("common_popurbarback_png");
+    // }
+    GameSkin.getServerButtonSkin = function (upRes, downRes) {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins." + upRes + "\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n    <e:Image width=\"100%\" height=\"100%\" alpha.disabled=\"1\"\n             source.disabled=\"" + upRes + "\" source.up=\"" + upRes + "\" \n             source.down=\"" + downRes + "\" verticalCenter.up=\"0\" horizontalCenter.up=\"0\" verticalCenter.disabled=\"0\" horizontalCenter.disabled=\"0\" verticalCenter.down=\"0\" horizontalCenter.down=\"0\"/>\n    <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n             size=\"28\" \n             textColor=\"0xe9deb3\" verticalAlign=\"middle\" textAlign=\"center\"/>\n    <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n</e:Skin>";
+        return exmlText;
+    };
+    GameSkin.getServerButtonSkin1 = function () {
+        var exmlText = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins.serverBtn\" states=\"up,down,disabled\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Image width=\"100%\" height=\"100%\" source=\"login_server_btn_up_png\" source.down=\"login_server_btn_png\" source.disabled=\"login_server_btn_up_png\"/>\n\t<e:Label id=\"labelDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\" textColor=\"0xffffff\" size=\"20\" fontFamily=\"Microsoft YaHei\"/>\n</e:Skin>";
+        return exmlText;
+    };
+    return GameSkin;
+}());
+__reflect(GameSkin.prototype, "GameSkin");
+//# sourceMappingURL=GameSkin.js.map

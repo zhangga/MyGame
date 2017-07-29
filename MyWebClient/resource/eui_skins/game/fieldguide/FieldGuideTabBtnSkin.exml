@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FieldGuideTabBtnSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:RadioButton id="btn_type" label="" skinName="skins.FieldGuideTabSkin" enabled="false"/>
+</e:Skin>

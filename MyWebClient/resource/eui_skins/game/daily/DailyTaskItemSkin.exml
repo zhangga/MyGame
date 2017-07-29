@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DailyTaskItemSkin" width="525" height="112" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Group height="110" width="525">
+        <e:Image source="public_frame_3_png" scale9Grid="39,35,76,83" left="-2" right="0" top="-4" bottom="0" />
+        <e:Image width="100%" height="100%" source="public_frame_13_png" scale9Grid="26,27,32,29" />
+    </e:Group>
+    <e:Group x="14" y="6">
+        <e:Image x="9" y="2" height="88" source="main_bubble_circle_png" width="88" locked="true" />
+        <e:Image x="8" y="5" source="public_frame_13_png" locked="true" />
+        <e:Image id="icon" width="94" height="94" source="miaochanyangqiguan_png" />
+    </e:Group>
+    <e:Label id="name_label" text="" y="18" size="24" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0xf7a433"
+             x="130" bold="true" />
+    <e:Label id="awd_desc_label" text="" y="60" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="123"
+             width="251" lineSpacing="6" anchorOffsetX="0" bold="true" />
+    <e:Label id="progress_label" text="进度：9/9" y="20" fontFamily="Microsoft YaHei" size="18" textColor="0x2A0505"
+             lineSpacing="6" anchorOffsetX="0" horizontalCenter="150" bold="true" />
+    <e:Button id="award_btn" label="" y="46" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_upgrade_png" height="52"
+              width="130" horizontalCenter="156.5" />
+</e:Skin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.AlertOfflineEarningsSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Component id="basic" skinName="skins.PopSkin2" width="550" horizontalCenter="0" height="390" verticalCenter="-18"/>
+	<e:Label id="lab_hint" text="离线时间20天，获得以下收益" y="435" fontFamily="Microsoft YaHei" size="24" textColor="0x2A0505" horizontalCenter="0.5" textAlign="center" height="88" width="433" verticalAlign="middle" bold="true"/>
+	<e:Group y="539" horizontalCenter="1">
+		<e:Group x="0" y="0" width="40" height="40">
+		<e:Image id="img_icon" horizontalCenter="0" verticalCenter="0" height="46" width="46" source="mainview_gold_png"/>
+		</e:Group>
+		<e:BitmapLabel id="bmpLab_num" x="70" y="19" font="FlutterFont_fnt" text="x13123" letterSpacing="-6"/>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle" gap="10"/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="btn_sure" label="" y="602" skinName="skins.Comn_Btn_GreenSkin" icon="btn_icon_buys_png" horizontalCenter="0.5"/>
+</e:Skin>

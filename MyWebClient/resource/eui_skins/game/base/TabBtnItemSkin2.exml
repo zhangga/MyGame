@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TabBtnItemSkin2" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<e:Image id="img_bg" scaleX="1" scaleY="1" source="public_tab_unselected_png" rotation="180" horizontalCenter="0" bottom="0"/>
+	<e:Image id="img_lab" horizontalCenter="0" scaleX="1" scaleY="1" bottom="-4" source="buwei10_png"/>
+</e:Skin>

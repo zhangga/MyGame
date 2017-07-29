@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.SmashEggUserListSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" anchorOffsetY="0" horizontalCenter="0" bottom="0" skinName="skins.PopSkin2"
+                 currentState="red" height="850" width="560" locked="true" />
+    <e:Group y="335" horizontalCenter="0">
+        <e:Image source="public_frame_3_png" y="0" scale9Grid="44,45,70,70" width="520" anchorOffsetY="0" height="240"
+                 horizontalCenter="0" locked="true" />
+        <e:Image source="smash_egg_banner1_png" horizontalCenter="0" verticalCenter="0" locked="true" />
+        <e:Label text="每次邀请可获得2个锤子，每天最多获得10个：" y="146" fontFamily="Microsoft YaHei" size="18" stroke="2"
+                 strokeColor="0x700B0B" bold="true" x="30" locked="true" />
+        <e:Button id="invite_btn" x="390" y="90" skinName="skins.Comn_Btn_GreenSkin" width="100"
+                  icon="btn_icon_invite_png" height="50" />
+        <e:Label id="invite_giftnum_label" text="10/10" y="146" fontFamily="Microsoft YaHei" size="18" stroke="2"
+                 strokeColor="0x700B0B" bold="true" textColor="0xffed1c" right="40" />
+        <e:Group x="50" y="185">
+            <e:Label text="活动剩余时间：" y="0" fontFamily="Microsoft YaHei" size="20" stroke="2" strokeColor="0x700B0B"
+                     bold="true" x="0" locked="true" />
+            <e:Label id="act_lefttime_label" text="99：99：99" y="10" fontFamily="Microsoft YaHei" size="20"
+                     strokeColor="0x700B0B" bold="true" x="10" textColor="0xff0000" />
+            <e:layout>
+                <e:HorizontalLayout/>
+            </e:layout>
+        </e:Group>
+			<e:Group x="369" y="161">
+				<e:Image source="textinput_bg_png" x="17" y="21" width="97" height="28" scale9Grid="42,22,259,11"/>
+				<e:Image source="icon_chuizi_png" x="0" y="0" width="66" height="66"/>
+				<e:Label id="chuizi_num_label" text="×10" y="26" fontFamily="Microsoft YaHei" size="20" strokeColor="0x700B0B" bold="true" textColor="0xffffff" x="61"/>
+			</e:Group>
+    </e:Group>
+    <e:Group x="40" y="577">
+        <e:Image source="public_frame_3_png" y="0" scale9Grid="44,45,70,70" width="520" height="398" anchorOffsetY="0"
+                 x="0" locked="true" />
+        <e:Scroller id="scorll" width="485" height="355" y="21" x="18">
+            <e:Group>
+                <e:List id="friend_list" width="100%" height="100%" />
+            </e:Group>
+        </e:Scroller>
+    </e:Group>
+    <e:Label text="帮助好友找到钥匙可拿走一半宝藏奖励" y="983" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" stroke="2"
+             strokeColor="0x700B0B" bold="true" />
+    <e:Button id="btn_back" label="Button" y="1018" skinName="skins.Comn_Btn_CloseSkin2" currentState="red"
+              horizontalCenter="0" />
+</e:Skin>

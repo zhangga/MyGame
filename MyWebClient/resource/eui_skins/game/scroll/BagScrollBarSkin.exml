@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.BagScrollBarSkin" minWidth="20" minHeight="20" xmlns:e="http://ns.egret.com/eui" height="196">
+    <e:Image source="track_bagScroll_png"  scale9Grid="3,7,2,7" top="-4" bottom="-4" right="6"/>
+    <e:VScrollBar id="verticalScrollBar" skinName="skins.BagHScrollBarSkin" height="100%" right="0"/>
+</e:Skin>

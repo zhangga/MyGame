@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FriendListItemSkin" width="525" height="140" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="public_frame_8_png" anchorOffsetX="0" width="525" height="140" scale9Grid="35,37,24,83" />
+	<e:BitmapLabel id="rank_label" font="number1_fnt_fnt" text="89" verticalCenter="0.5"  horizontalCenter="-208" letterSpacing="-1" scaleX="0.9" scaleY="0.9"/>
+	<e:Image id="rank_icon" horizontalCenter="-205" verticalCenter="-0.5" source="toprank_1_png" visible="false"/>
+	<ns1:PlayerHeadBar id="player_head_bar" y="26" skinName="skins.PlayerHeadBarSkin"  left="95"/>
+	<e:Group y="34" left="192">
+		<e:Image source="public_frame_9_png" x="0" y="0" scale9Grid="11,5,70,16" width="136" />
+		<e:Label id="name_label" text="名字名字名字" y="2" fontFamily="Microsoft YaHei" size="20" textColor="0x2a0505"
+		         horizontalCenter="0" bold="true" />
+	</e:Group>
+	<e:Label id="money_label" text="总资产：8888B" y="83" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505"
+	         bold="true"  left="192"/>
+	<e:Group id="baifang_btn" y="27" x="363">
+		<e:Image source="public_bubble_circle_png" locked="true" />
+		<e:Button label="" x="-3" y="-2">
+			<e:skinName>
+				<e:Skin states="up,down">
+					<e:Image width="100%" height="100%" source="btn_baifang_png" source.down="btn_baifang_png" width.down="90%"
+					         height.down="90%" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Button id="delete_btn" label="" y="37" touchEnabled="true" x="458">
+		<e:skinName>
+			<e:Skin states="up,down">
+				<e:Image source="button_plus_png" width.down="27" height.down="27" rotation="45" horizontalCenter="0" top="0" />
+				<e:Label text="删除" y="42" fontFamily="Microsoft YaHei" size="22" textColor="0x2a0505" horizontalCenter="0"
+				         size.down="18" textAlign="center" width="45" bold="true" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin> 

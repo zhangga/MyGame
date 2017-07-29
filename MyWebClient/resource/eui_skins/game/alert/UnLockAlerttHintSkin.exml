@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.UnLockAlerttHintSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="100%" height="100%" fillAlpha="0.5" fillColor="0x000000" strokeColor="0x000000" />
+	<e:Group id="back_anim_grp" y="386" horizontalCenter="0" />
+	<e:Group id="anim_grp" y="386" x="300"/>
+	<e:Image id="unlock_title_img" source="unlock_hint_title1_png" y="125" horizontalCenter="0" />
+	<e:Button id="btn_back" label="" skinName="skins.Comn_Btn_CloseSkin" top="116" right="21" />
+	<e:Group y="600" horizontalCenter="0">
+		<e:Image source="public_frame_16_png" y="0" scale9Grid="22,13,133,19" width="235" x="0" locked="true" />
+		<e:Label id="name_label" text="傻傻小鱼" y="6" fontFamily="Microsoft YaHei" textColor="0x2a0505" size="28"
+		         horizontalCenter="0" />
+	</e:Group>
+	<e:Button id="share_btn" label="" y="750" scaleX="0.4" scaleY="0.4" horizontalCenter="0">
+		<e:skinName>
+			<e:Skin states="up,down" xmlns:ns1="*">
+				<e:Image width="100%" height="100%" source="unlock_xuanyao_btn_png" width.down="90%" height.down="90%"
+				         horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Group id="fishLayer"  y="386" horizontalCenter="0"/>
+</e:Skin>

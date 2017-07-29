@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.WarehousePanelSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" width="600" height="1067">
+	<e:Component id="basic" skinName="skins.PanelSkin"/>
+	<ns1:TabBtnGroup id="tabGrp" y="980" skinName="skins.TabBtnGroupSkin" x="68"/>
+</e:Skin>

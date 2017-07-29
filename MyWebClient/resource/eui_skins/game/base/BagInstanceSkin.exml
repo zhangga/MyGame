@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.BagInstanceSkin" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<ns1:GoodsInstence id="goods" skinName="skins.GoodsInstenceSkin" horizontalCenter="0"/>
+	<e:Label id="lab_num" text="X0" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" textColor="0x590A0A" bold="true" y="126" visible="false"/>
+	<e:Group x="1" y="131">
+		<e:Button id="btn_back" label="" y="0" skinName="skins.Comn_Btn_GreenSkin" scaleX="0.8" scaleY="0.8" x="0"/>
+		<e:Label text="放回" fontFamily="Microsoft YaHei" horizontalCenter="0" verticalCenter="-2" size="22" touchEnabled="false" bold="true"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FriendGiftLogItemSkin" width="468" height="45" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group verticalCenter="0.5" x="16">
+		<e:Image source="public_frame_9_png" x="0" y="0" scale9Grid="11,5,70,16" width="136" />
+		<e:Label id="name_label" text="名字名字名字" y="2" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" horizontalCenter="0"  bold="true"/>
+	</e:Group>
+	<e:Label id="desc_label" text="" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="165" verticalCenter="0" />
+	<e:Rect height="1" y="42" strokeColor="0x444444" fillColor="0x3f3c3c" ellipseWidth="1" left="5" right="10" />
+</e:Skin>

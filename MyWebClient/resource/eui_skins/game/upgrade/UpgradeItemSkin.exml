@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.UpgradeItemSkin" width="575" height="128" currentState="break" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" states="deblocking,break,upgrade,max" >
+	<e:Image left="0" right="0" scale9Grid="35,37,24,83" top="0" bottom="0" source="public_frame_17_png" source.deblocking="public_frame_19_png"/>
+	<e:Group x="125" y="10" includeIn="break,upgrade,max">
+		<e:Group y="0" x="0">
+		<e:Image y="0" x="0" scale9Grid="14,3,65,19" source="fieldGuide_tab_unselected_png"/>
+		<e:Label id="lab_name" text="啥啥小鱼" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" verticalCenter="-2" textColor="0x590A0A" bold="true"/>
+		</e:Group>
+		<e:Label id="lab_lv" text="Lv.1" fontFamily="Microsoft YaHei" size="20" textColor="0x590A0A" x="87" y="4" bold="true"/>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Group x="131" includeIn="break,upgrade,max" verticalCenter="20">
+		<ns1:CurrencyBar id="currency_gold" y="67" skinName="skins.CurrencyBarSkin"/>
+		<e:Label id="lab_hint" text="9999" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" verticalCenter="0" bold="true" textColor="0x000000" height="38" verticalAlign="middle" includeIn="deblocking,break,upgrade"/>
+		<e:layout>
+		<e:VerticalLayout gap="-4"/>
+		</e:layout>
+	</e:Group>
+	<e:Button id="btn_upgrade" label="" skinName="skins.Comn_Btn_GreenSkin"  y="54" icon="btn_icon_upgrade_png" x="389"  includeIn="upgrade"/>
+	<e:Button id="btn_max" label="" skinName="skins.Comn_Btn_BlueSkin" y="55" x="389" icon="yimanji_png" includeIn="max" enabled="false"/>
+	<e:Button id="btn_advance" label="" skinName="skins.Comn_Btn_BlueSkin" y="54" icon="tupo_png" x="389" includeIn="break"/>
+	<e:Button id="btn_unLock" label="" skinName="skins.Comn_Btn_OrgSkin" y="54" x="201" includeIn="deblocking"/>
+	<e:Group includeIn="deblocking" x="239" y="51" touchChildren="false" touchEnabled="false">
+		<e:Image source="public_json.public_lock_png" includeIn="deblocking" x="0" y="0"/>
+		<e:Image source="jiesuo_png" includeIn="deblocking" x="10" y="13"/>
+	</e:Group>
+	<ns1:CurrencyBar id="currency" y="12" skinName="skins.CurrencyBarSkin" x="423" x.deblocking="233" includeIn="deblocking,break,upgrade"/>
+	<ns1:GoodsInstence id="goods" x="21" skinName="skins.GoodsInstenceSkin" currentState="concise" y="15" includeIn="break,upgrade,max"/>
+</e:Skin>

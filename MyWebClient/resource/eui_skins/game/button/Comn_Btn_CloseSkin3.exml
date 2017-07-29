@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.Comn_Btn_CloseSkin3" states="up,down" xmlns:e="http://ns.egret.com/eui" width="57" height="57">
+    <e:Image horizontalCenter="0"  scaleX.down="0.9" scaleY.down="0.9" verticalCenter="0" source="fieldGuide_btn_close_png" source.down="fieldGuide_btn_close_png"/>
+</e:Skin>

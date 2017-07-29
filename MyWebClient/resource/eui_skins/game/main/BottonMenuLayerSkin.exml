@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.BottonMenuLayerSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui">
+    <e:Group bottom="0" horizontalCenter="0">
+		<e:RadioButton id="tab_1" label="" x="30" y="-20" scaleX="1" scaleY="1" groupName="menu" name="1" value="0" selected="true">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="main_btn_upgrade_up_png" source.down="main_btn_upgrade_down_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton id="tab_2" label="" x="40" y="-10" scaleX="1" scaleY="1" groupName="menu" name="2" value="1">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="main_btn_skill_up_png" source.down="main_btn_skill_down_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton id="tab_3" label="" x="50" y="0" scaleX="1" scaleY="1" groupName="menu" name="3" value="2">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="main_btn_artifact_up_png" source.down="main_btn_artifact_down_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton id="tab_4" label="" x="60" y="10" scaleX="1" scaleY="1" groupName="menu" name="4" value="3">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="main_btn_advance_up_png" source.down="main_btn_advance_down_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:layout>
+			<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.LoadingUISkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="loading_jpg"/>
+	<e:Group y="772" horizontalCenter="0">
+		<e:Image source="loading_progress_png" x="10" y="10" id="img_progress1"/>
+		<e:Image source="loading_progress_png" x="30" y="30" id="img_progress2"/>
+		<e:Image source="loading_progress_png" x="40" y="40" id="img_progress3"/>
+		<e:Image source="loading_progress_png" x="50" y="50" id="img_progress4"/>
+		<e:Image source="loading_progress_png" x="60" y="60" id="img_progress5"/>
+		<e:Image source="loading_progress_png" x="70" y="70" id="img_progress6"/>
+		<e:Image source="loading_progress_png" x="80" y="80" id="img_progress7"/>
+		<e:layout>
+			<e:HorizontalLayout gap="6"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

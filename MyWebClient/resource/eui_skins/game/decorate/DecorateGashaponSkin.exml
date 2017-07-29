@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DecorateGashaponSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="close_touch_grp" width="100%" height="100%" touchEnabled="true" locked="true"/>
+	<e:Group id="dans" x="110" y="515">
+		<e:Image x="0" y="2" source="dan1_png"/>
+		<e:Image x="14" y="55" source="dan2_png" rotation="340.36"/>
+		<e:Image x="106" y="22" source="dan3_png" rotation="28.43"/>
+		<e:Image x="114" y="23" source="dan4_png" rotation="348.27"/>
+		<e:Image x="182" y="29" source="dan5_png" rotation="357.9"/>
+		<e:Image x="235" y="34" source="dan6_png"/>
+		<e:Image x="305" y="-1" source="dan7_png" rotation="17.63"/>
+	</e:Group>
+	<e:Image x="38" y="134" source="gashapon_bg_png"/>
+	<e:Group x="252" y="637.9">
+		<e:Image id="dan" x="1" y="0" source="dan4_png"/>
+		<e:Image x="0" y="58" source="danbtm_png"/>
+		<e:Group id="anim_guang" width="1" height="1" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="btn_artifact" x="147" y="761" visible="false">
+		<e:Button label="" verticalCenter="0" horizontalCenter="0" skinName="skins.Comn_Btn_YellowSkin"/>
+		<e:Image horizontalCenter="0" verticalCenter="0" source="niudiamond_png"/>
+	</e:Group>
+	<e:Group id="btn_diamond" y="761" horizontalCenter="0">
+		<e:Button label="" horizontalCenter="0" verticalCenter="0" skinName="skins.Comn_Btn_GreenSkin"/>
+		<e:Image horizontalCenter="0" verticalCenter="0" source="niudiamond_png"/>
+	</e:Group>
+	<e:Group x="105" y="818" visible="false">
+		<e:Image x="59" y="6" source="public_frame_15_png" scale9Grid="34,13,205,10" anchorOffsetY="0" height="28" anchorOffsetX="0" width="120"/>
+		<e:Image x="37" y="-1" source="icon_goods_shenqidian_png" width="42" height="42"/>
+		<e:Label id="label_artifact" text="100/100" y="10" size="20" right="5" fontFamily="Microsoft YaHei"/>
+	</e:Group>
+	<e:Group y="815" horizontalCenter="-28">
+		<e:Image x="71" y="9" source="public_frame_15_png" scale9Grid="34,13,205,10" anchorOffsetY="0" height="28" anchorOffsetX="0" width="120"/>
+		<e:Image x="48" y="0" source="icon_goods_diamond_png"/>
+		<e:Label id="label_diamond" text="100/500" y="13" size="20" right="5" fontFamily="Microsoft YaHei" bold="true"/>
+	</e:Group>
+	<e:Group id="anim_zhuan" width="1" height="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="2" verticalCenter="0"/>
+	<e:Button id="btn_close" label="Button" x="517" y="106" skinName="skins.Comn_Btn_CloseSkin"/>
+</e:Skin>

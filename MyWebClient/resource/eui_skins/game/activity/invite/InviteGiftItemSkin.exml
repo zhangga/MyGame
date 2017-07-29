@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.InviteGiftItemSkin" width="150" height="230" currentState="opening"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" states="opening,reward,over">
+	<w:Config id="15d10fb110d" />
+	<e:Image source="public_frame_14_png" scale9Grid="41,41,75,72" width="150" height="229" anchorOffsetY="0" locked="true" />
+	<e:Group x="23" y="20">
+		<e:Image source="public_frame_9_png" y="1" width="110" scale9Grid="26,3,48,21" x="0" locked="true" />
+		<e:Label id="name_label" text="1" fontFamily="Microsoft YaHei" bold="true" textColor="0x000000" horizontalCenter="0"
+		         size="20" y="3" />
+	</e:Group>
+	<ns1:PlayerHeadBar id="head_bar" width="20" height="20" y="81" skinName="skins.PlayerHeadBarSkin" horizontalCenter="4"/>
+	<e:Group y="135" horizontalCenter="3">
+		<e:Image source="icon_goods_diamond_png" x="0" y="0" width="30" height="30" />
+		<e:Label text="×100" x="32" y="4" fontFamily="Microsoft YaHei" size="22" textColor="0xffae21" bold="true" />
+	</e:Group>
+	<e:Label text="待邀请" includeIn="opening" y="180" fontFamily="Microsoft YaHei" textColor="0x661313" size="22" bold="true"
+	         horizontalCenter="4" />
+	<e:Button id="reward_btn" label="" includeIn="reward,over" y="164" skinName="skins.Comn_Btn_GreenSkin" width="105"
+	          icon="btn_icon_confirm_png" horizontalCenter="3.5" enabled.over="false" icon.over="btn_icon_reward_png" />
+</e:Skin>

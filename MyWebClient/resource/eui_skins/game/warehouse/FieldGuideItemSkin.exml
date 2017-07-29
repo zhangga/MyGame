@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FieldGuideItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing" >
+	<ns1:FieldGuideItemBase id="infoLayer" x="136" y="78" skinName="skins.FieldGuideItemBaseSkin" anchorOffsetX="82" anchorOffsetY="78"/>
+	<e:Group id="arrowLayer" x="0" y="96" touchEnabled="false" touchChildren="false">
+		<e:Image id="img_1" source="fieldGuide_arrow_0_png" rotation="90" scaleY="-1" y="0" scale9Grid="2,4,16,21" x="217"/>
+		<e:Image id="img_2" y="104" source="fieldGuide_line_0_png" scale9Grid="21,4,45,30" x="0"/>
+		<e:Image id="img_3" source="fieldGuide_arrow_0_png" y="114" x="123"/>
+		<e:Image id="img_4" y="104" source="fieldGuide_line_0_png" scale9Grid="21,4,45,30" scaleX="-1" x="273"/>
+		<e:Image id="img_0" source="fieldGuide_arrow_0_png" y="0" rotation="90" x="58" scale9Grid="2,4,16,19"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PopSkin4" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="410"
+        height="440">
+	<e:Image id="panel_bg" source="upgrade_bg_png" scale9Grid="74,109,451,654" left="0" right="0" top="0" bottom="0" />
+	<e:Button id="btn_back" label="" skinName="skins.Comn_Btn_CloseSkin" right="0" top="15"/>
+	<e:Image id="panel_title" source="upgrade_title_png" y="0"  horizontalCenter="0"/>
+</e:Skin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.SynthesisItemSkin" width="500" height="147" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<e:Image source="public_frame_2_png" left="0" right="0" scale9Grid="19,19,119,119" top="0" bottom="0"/>
+	<ns1:GoodsInstence skinName="skins.GoodsInstenceSkin" x="4" y="14"/>
+	<ns1:GoodsInstence skinName="skins.GoodsInstenceSkin" x="123" y="14"/>
+	<ns1:GoodsInstence skinName="skins.GoodsInstenceSkin" x="242" y="14"/>
+	<ns1:GoodsInstence skinName="skins.GoodsInstenceSkin" x="398" y="14"/>
+	<e:Image source="39_png" x="98" y="56"/>
+	<e:Image source="39_png" x="215" y="56"/>
+	<e:Image source="40_png" x="343" y="56"/>
+</e:Skin>

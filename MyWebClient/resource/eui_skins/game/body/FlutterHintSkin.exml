@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FlutterHintSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0">
+		<e:Image id="img_icon" x="0" y="0" scaleX="0.7" scaleY="0.7" source="icon_hint_gold_png"/>
+		<e:BitmapLabel id="bmLab_add" x="61" y="14" font="FlutterFont_fnt" letterSpacing="-4" text=""/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

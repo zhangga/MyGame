@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.BagHScrollBarSkin" minWidth="20" minHeight="8" xmlns:e="http://ns.egret.com/eui">
+    <e:Image id="thumb" source="thumb_bagScroll_png" horizontalCenter="0" />
+</e:Skin>

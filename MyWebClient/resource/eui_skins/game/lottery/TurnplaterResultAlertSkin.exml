@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TurnplaterResultAlertSkin" width="600" height="1067" currentState="one" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="one,two" >
+	<e:Component id="basic" skinName="skins.PopSkin2" width="510" horizontalCenter="0" height="389" y="270"/>
+	<e:Image id="img_turnplate_desc" y="382" horizontalCenter="0" source="turnplate_desc4_png"/>
+	<e:Image id="img_turnplateIcon" y="418" horizontalCenter="0" source="zhuanpanmiaochanzhufu_png"/>
+	<e:Label id="lab_hint" text="获得金币x100" y="495" fontFamily="SimHei" size="24" textColor="0x2a0505" horizontalCenter="0.5" textAlign="center" height="66" width="433" verticalAlign="middle"/>
+	<e:Group y="565" horizontalCenter="0">
+		<e:Button id="btn_sure" label="" y="0" icon="btn_icon_buys_png" width="130" x="0" skinName.two="skins.Comn_Btn_YellowSkin" skinName="skins.Comn_Btn_YellowSkin" skinName.one="skins.Comn_Btn_GreenSkin"/>
+		<e:Button id="btn_double" label="" y="10" skinName="skins.Comn_Btn_GreenSkin" icon="fenxiangfanbei_png" width="152" x="10" includeIn="two"/>
+		<e:layout>
+			<e:HorizontalLayout gap="40"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

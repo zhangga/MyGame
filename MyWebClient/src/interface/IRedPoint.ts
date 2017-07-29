@@ -1,0 +1,3 @@
+interface IRedPoint {
+	onCheckRedPoint(...param);
+}

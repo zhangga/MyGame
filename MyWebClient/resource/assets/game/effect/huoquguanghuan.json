@@ -1,0 +1,52 @@
+{"mc":{
+	"action":{
+		"frameRate":8,
+		"labels":[
+			{"name":"1","frame":1,"end":6}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"huoquguanghuan0001",
+			"x":-295,
+			"y":-299
+			},
+			{
+			"res":"huoquguanghuan0003",
+			"x":-290,
+			"y":-295
+			},
+			{
+			"res":"huoquguanghuan0005",
+			"x":-297,
+			"y":-289
+			},
+			{
+			"res":"huoquguanghuan0007",
+			"x":-300,
+			"y":-292
+			},
+			{
+			"res":"huoquguanghuan0009",
+			"x":-294,
+			"y":-286
+			},
+			{
+			"res":"huoquguanghuan0011",
+			"x":-291,
+			"y":-297
+			}
+			]
+}},
+	"res":{
+		"huoquguanghuan0001":{"x":0,"y":0,"w":591,"h":599},
+		"huoquguanghuan0011":{"x":1195,"y":0,"w":584,"h":597},
+		"huoquguanghuan0005":{"x":593,"y":591,"w":595,"h":583},
+		"huoquguanghuan0007":{"x":593,"y":0,"w":600,"h":589},
+		"huoquguanghuan0009":{"x":0,"y":601,"w":590,"h":577},
+		"huoquguanghuan0003":{"x":1190,"y":599,"w":581,"h":595}
+	}}

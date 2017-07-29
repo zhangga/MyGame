@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FriendSeachPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="seach,player">
+	<e:Group id="close_touch_grp" width="100%" height="100%" touchEnabled="true" locked="true" />
+	<e:Component id="basic" skinName="skins.PopSkin2" width="580" height="455" horizontalCenter="0" anchorOffsetY="0"
+	             verticalCenter="-23" locked="true" />
+	<e:Group x="30" y="410">
+		<e:Image source="public_frame_3_png" y="0" scale9Grid="39,35,76,83" width="540" height="195" x="0" />
+		<e:TextInput id="seach_txt" y="70" skinName="skins.Game_TextInputSkin" width="400" prompt="填写对方的ID"
+		             textColor="0xffffff" x="70" restrict="0-9" visible.player="false" />
+		<e:Group includeIn="player" y="50" x="115">
+			<e:Image source="main_head_frame_png" x="0" y="0" includeIn="player" />
+			<e:Group x="140" y="7" includeIn="player">
+				<e:Image source="public_frame_9_png" x="0" y="0" scale9Grid="11,5,70,16" width="136" />
+				<e:Label id="name_label" text="名字名字名字" y="2" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505"
+				         horizontalCenter="0" bold="true" />
+			</e:Group>
+			<e:Label id="findID_label" text="UID：8888B" y="50" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505"
+			         x="145" includeIn="player" bold="true" />
+		</e:Group>
+	</e:Group>
+	<e:Button id="seach_btn" label="" y="616" skinName="skins.Comn_Btn_OrgSkin" icon="btn_icon_seach_png"
+	          horizontalCenter="0" y.player="638" icon.player="btn_icon_add_png" />
+	<e:Label id="myID_label" text="我的ID：9999999" y="683" fontFamily="Microsoft YaHei" textColor="0x2a0505" size="24"
+	         horizontalCenter="0" visible.player="false" bold="true" />
+	<e:Button label="" right="60" y="600" visible="false">
+		<e:skinName>
+			<e:Skin states="up,down" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+				<e:Image width="100%" height="100%" source="tianjiahaoyou_png" source.down="tianjiahaoyou_png" width.down="90%"
+				         height.down="90%" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

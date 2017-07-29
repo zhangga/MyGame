@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PopSkin3" currentState="red" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="410"
+        height="440" states="red" >
+	<e:Image id="panel_bg" source="public_pop_bg2_png" anchorOffsetY="0" anchorOffsetX="0" scale9Grid="79,76,410,410" width="410" x="0" height="440" y="0"/>
+	<e:Component id="btn_back" y="-15" currentState="red" x="364" skinName="skins.Comn_Btn_CloseSkin"/>
+</e:Skin>

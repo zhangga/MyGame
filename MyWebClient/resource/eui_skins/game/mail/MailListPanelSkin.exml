@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MailListPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" anchorOffsetY="0" horizontalCenter="0" bottom="0"  skinName="skins.PanelSkin2" height="900"/>
+    <e:Image source="public_frame_3_png" y="270" horizontalCenter="0" width="570" height="676" scale9Grid="39,35,76,83"
+             />
+    <e:Label id="not_mail_label" text="邮箱空空如也！" y="532" fontFamily="Microsoft YaHei" textColor="0xea840e"
+             horizontalCenter="0" />
+    <e:Scroller id="scorll" width="545" height="620" y="296" skinName="skins.BagScrollBarSkin" x="32">
+        <e:Group>
+            <e:List id="mail_list" width="100%" height="100%" />
+        </e:Group>
+    </e:Scroller>
+    <e:Button id="onekey_delete_btn" label="一键删除" x="125" y="955" skinName="skins.Comn_Btn_OrgSkin" width="140" />
+    <e:Button id="onekey_reward_btn" label="一键领取" x="344" y="955" skinName="skins.Comn_Btn_GreenSkin" width="140" />
+</e:Skin>

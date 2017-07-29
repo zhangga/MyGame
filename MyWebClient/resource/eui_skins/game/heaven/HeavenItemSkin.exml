@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.HeavenItemSkin" width="530" height="128" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+    <e:Group width="528" x="0" height="123" y="0">
+		<e:Image source="public_frame_3_png" scale9Grid="39,35,76,83" left="-2" right="0" top="-4" bottom="0"/>
+		<e:Image width="100%" height="100%" source="public_frame_13_png" scale9Grid="26,27,32,29"/>
+	</e:Group>
+	<e:Group x="17" y="15">
+		<e:Image source="public_frame_13_png" width="92" height="92" x="2" y="0" locked="true"/>
+		<ns1:GoodsInstence id="fish_goods" x="0" y="0" skinName="skins.GoodsInstenceSkin" currentState="concise"/>
+	</e:Group>
+	<e:Group x="129" y="15">
+		<e:Group x="0" y="0">
+			<e:Image source="public_frame_9_png" x="0" y="0" scale9Grid="11,5,70,16" width="136"/>
+			<e:Label id="name_label" text="名字名字名字" y="2" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" horizontalCenter="0" bold="true"/>
+		</e:Group>
+		<e:Group x="3" y="35">
+			<e:Label text="当前产出：" y="0" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="0" lineSpacing="6" anchorOffsetX="0" bold="true"/>
+			<e:Label id="secoutput_label" text="9999/秒" y="0" fontFamily="Microsoft YaHei" size="20" x="0" lineSpacing="6" anchorOffsetX="0" textColor="0x2a0505" bold="true"/>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+	<e:Group id="huangguan_grp" y="70" horizontalCenter="-66">
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="huangguan_grp2" y="70" horizontalCenter="-66">
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+		<e:Image source="item_crown_1_png" x="2" y="7" scaleX="1" scaleY="1"/>
+		<e:Label id="huangguan_label" text="0/10" x="46" y="9" fontFamily="Microsoft YaHei" size="22" textColor="0x2a0505" bold="true"/>
+	</e:Group>
+	<e:Group y="70" horizontalCenter="148">
+		<e:Label text="奖励神器点：" y="12" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" lineSpacing="6" bold="true"/>
+		<e:Image x="111" width="40" height="40" source="niudanbi_png"/>
+		<e:Label id="award_num_label" text="99999" y="12" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="156" lineSpacing="6" bold="true"/>
+	</e:Group>
+	<e:Label id="unlock_label" text="达到3皇冠领取" y="25" fontFamily="Microsoft YaHei" size="20" lineSpacing="6" anchorOffsetX="0" textColor="0xff0000" horizontalCenter="162" bold="true"/>
+	<e:Button id="award_btn" label="" y="13" icon="btn_icon_confirm_png" scaleX="0.8" scaleY="0.8" skinName="skins.Comn_Btn_YellowSkin" horizontalCenter="164.5" width="165" height="65"/>
+</e:Skin>

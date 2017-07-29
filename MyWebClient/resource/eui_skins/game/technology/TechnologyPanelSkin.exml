@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TechnologyPanelSkin" width="600" height="384" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller id="scorll" y="10" width="594" height="290" horizontalCenter="4" skinName="skins.BlueScrollBarSkin">
+		<e:Group anchorOffsetX="0">
+			<e:List id="technology_list">
+				<e:layout>
+					<e:VerticalLayout gap="2" />
+				</e:layout>
+			</e:List>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

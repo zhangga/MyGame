@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.LoginViewSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="sea_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="loginLayer" x="180" y="478">
+		<e:TextInput id="tInp" width="240" height="40" y="0" x="0" prompt="在此输入账号"/>
+		<e:Button id="btn_login" label="登录" y="74" x="70"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.AchievementPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" width="600" height="900" y="167" anchorOffsetY="0" horizontalCenter="0"
+                 skinName="skins.PanelSkin2" />
+    <e:Image source="public_frame_3_png" y="279" scale9Grid="39,35,76,83" width="560" anchorOffsetY="0" height="730"
+             horizontalCenter="0" />
+    <e:Scroller id="scroll" width="540" height="670" y="308" skinName="skins.BagScrollBarSkin" x="35" anchorOffsetY="0">
+        <e:Group id="list_grp">
+            <e:layout>
+                <e:VerticalLayout/>
+            </e:layout>
+        </e:Group>
+    </e:Scroller>
+</e:Skin> 

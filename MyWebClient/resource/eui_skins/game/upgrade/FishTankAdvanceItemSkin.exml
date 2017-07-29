@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FishTankAdvanceItemSkin" width="575" height="128" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image left="0" right="0" scale9Grid="35,37,24,83" top="0" bottom="0" source="public_frame_17_png"/>
+	<e:Group x="124" y="14">
+		<e:Label id="lab_name" text="鱼缸名字" y="2" size="24" fontFamily="Microsoft YaHei" strokeColor="0x0D78E0" x="0" textColor="0x0593ff" bold="true"/>
+		<e:Group y="51" x="251" scaleX="0.4" scaleY="0.4" height="66">
+			<e:Image id="img_star0" source="upgrade_adv_star0_png" x="0" y="0"/>
+			<e:Image id="img_star1" source="upgrade_adv_star0_png" x="10" y="10"/>
+			<e:Image id="img_star2" source="upgrade_adv_star0_png" x="20" y="20"/>
+			<e:Image id="img_star3" source="upgrade_adv_star0_png" x="30" y="30"/>
+			<e:Image id="img_star4" source="upgrade_adv_star0_png" x="0" y="0"/>
+			<e:layout>
+			<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Label id="lab_condition" text="" fontFamily="Microsoft YaHei" size="18" bold="true" textColor="0x000000" width="260" height="54" verticalAlign="middle" lineSpacing="16" x="124" y="56"/>
+	<e:Button id="btn_upgrade" label="" x="389" y="54" icon="tupo_png" skinName="skins.Comn_Btn_BlueSkin"/>
+	<ns1:CurrencyBar id="currency" x="429" y="13" skinName="skins.CurrencyBarSkin"/>
+	<e:Group x="14" y="16">
+		<e:Image x="9" y="2" height="88" source="main_bubble_circle_png" width="88"/>
+		<e:Image id="icon" width="94" height="94" source="miaochanyangqiguan_png"/>
+		<e:Image x="8" y="5" source="public_frame_18_png"/>
+	</e:Group>
+</e:Skin>

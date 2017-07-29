@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MainButtonBarSkin" width="72" height="322" currentState="close" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" states="close,open">
+    <e:Scroller id="scroll_list" touchEnabled="false" left="0" right="0" top="75" bottom="0" visible.close="false">
+        <e:Group touchEnabled="false">
+            <e:Group id="btns_grp" y="0" scaleX="1" scaleY="1" touchEnabled="false" right="0">
+                <e:Group id="toprankLayer" x="30" y="30" anchorOffsetX="0" scaleX="0.8" scaleY="0.8" width="87"
+                         height="87">
+                    <e:Image horizontalCenter="0" verticalCenter="0" source="main_bubble_circle_png" />
+                    <e:Button label="" horizontalCenter="0" verticalCenter="0">
+                        <e:skinName>
+                            <e:Skin states="up,down,disabled">
+                                <e:Image width="100%" height="100%" source="main_btn_rank_png"
+                                         source.down="main_btn_rank_png" />
+                                <e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+                            </e:Skin>
+                        </e:skinName>
+                    </e:Button>
+                </e:Group>
+                <e:Group id="dailytaskLayer" x="30" y="30" anchorOffsetX="0" scaleX="0.8" scaleY="0.8" width="87"
+                         height="87">
+                    <e:Image horizontalCenter="0" verticalCenter="0" source="main_bubble_circle_png" />
+                    <e:Button label="" horizontalCenter="0" verticalCenter="0">
+                        <e:skinName>
+                            <e:Skin states="up,down,disabled">
+                                <e:Image width="100%" height="100%" source="main_btn_daily_png" />
+                                <e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+                            </e:Skin>
+                        </e:skinName>
+                    </e:Button>
+                </e:Group>
+                <e:Group id="achieveLayer" x="25" y="861" scaleX="0.8" scaleY="0.8" width="87" height="87">
+                    <e:Image horizontalCenter="0" verticalCenter="0" source="main_bubble_circle_png" />
+                    <e:Button label="" x="0" y="0">
+                        <e:skinName>
+                            <e:Skin states="up,down,disabled">
+                                <e:Image width="100%" height="100%" source="main_btn_medal_png"
+                                         source.down="main_btn_medal_png" />
+                            </e:Skin>
+                        </e:skinName>
+                    </e:Button>
+                </e:Group>
+                <e:layout>
+                    <e:VerticalLayout/>
+                </e:layout>
+            </e:Group>
+        </e:Group>
+    </e:Scroller>
+    <e:Group y="-6" x="-6">
+        <e:Image source="main_bubble_rect_png" horizontalCenter="1" verticalCenter="2" width="77" height="77"
+                 scale9Grid="28,26,31,28" />
+        <e:Button id="open_btn" label="" scaleY.open="-1" horizontalCenter="0" verticalCenter="0">
+            <e:skinName>
+                <e:Skin states="up,down">
+                    <e:Image width="100%" height="100%" width.down="90%" height.down="90%" source="main_btn_spread_png"
+                             source.down="main_btn_spread_png" horizontalCenter="0" verticalCenter="0" />
+                </e:Skin>
+            </e:skinName>
+        </e:Button>
+    </e:Group>
+</e:Skin>

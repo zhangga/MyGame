@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MonthCardPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" skinName="skins.PopSkin2" width="534" height="615" y="170" horizontalCenter="0" />
+	<e:Image source="public_frame_3_png" y="275" horizontalCenter="0" scale9Grid="39,35,76,83" width="495" height="410"/>
+	<e:Group y="310" horizontalCenter="0">
+		<e:Image source="month_card_icon_png" x="235" y="9"/>
+		<e:Image source="zhongshen_card_icon_png" x="0" y="0"/>
+		<e:layout>
+			<e:HorizontalLayout gap="60"/>
+		</e:layout>
+	</e:Group>
+	<e:Label id="month_desc" text="未购买月卡" y="535" fontFamily="Microsoft YaHei" size="22" textColor="0x2A0505" horizontalCenter="-115" bold="true"/>
+	<e:Label id="forever_desc" text="未购买终生卡" y="535" fontFamily="Microsoft YaHei" size="22" textColor="0x2a0505" horizontalCenter="122" bold="true"/>
+	<e:Button id="btn_buy" label="" y="685" skinName="skins.Comn_Btn_OrgSkin" width="160" horizontalCenter="0" icon="btn_icon_buybuy_png"/>
+	<e:Group id="btn_month" x="120" y="579">
+		<e:Button label="" skinName="skins.Comn_Btn_GreenSkin" verticalCenter="0" horizontalCenter="0"/>
+		<e:Image id="img_month" source="lingqu_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="btn_forever" x="355" y="579">
+		<e:Button label="" skinName="skins.Comn_Btn_GreenSkin" verticalCenter="0" horizontalCenter="0"/>
+		<e:Image id="img_forever" source="lingqu_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

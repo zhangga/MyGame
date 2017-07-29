@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TechnologyItemSkin" width="575" height="128" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Image scale9Grid="39,35,76,83" source="public_frame_17_png" left="0" right="0" top="0" bottom="0"/>
+	<e:Group x="14" y="16">
+		<e:Image x="9" y="2" height="88" source="main_bubble_circle_png" width="88" />
+		<e:Image x="8" y="5"  source="public_frame_18_png"/>
+		<e:Image id="icon" width="94" height="94" source="miaochanyangqiguan_png" />
+	</e:Group>
+	<e:Group x="121" y="20">
+		<e:Label id="name_label" text="科技名称" y="0" size="24" fontFamily="Microsoft YaHei" stroke="2" strokeColor="0x0d78e0" x="0" />
+		<e:Label id="level_label" text="Lv.0" y="7" fontFamily="Microsoft YaHei" size="22" textColor="0x2A0505" x="108" lineSpacing="6"  bold="true"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="bottom" gap="8" />
+		</e:layout>
+	</e:Group>
+	<e:Label id="desc_label" text="" y="55" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="118" width="258"
+	         lineSpacing="6" anchorOffsetX="0"  bold="true" height="60" verticalAlign="middle"/>
+	<e:Button id="upgrade_btn" label="" x="389" y="54" icon="btn_icon_upgrade_png" skinName="skins.Comn_Btn_BlueSkin"/>
+	<e:Label id="full_desc_label" text="已满级" y="70" fontFamily="Microsoft YaHei" size="24" textColor="0x2A0505" lineSpacing="6" bold="true" horizontalCenter="192" visible="false"/>
+	<e:Group id="consume_grp" y="12" x="424">
+		<e:Image id="money_icon" source="mainview_gold_png" x="0" width="40" height="40" />
+		<e:Label id="consume_label" text="99999" y="12" fontFamily="Microsoft YaHei" size="20" textColor="0x2A0505" x="46"
+		         lineSpacing="6"  bold="true"/>
+	</e:Group>
+</e:Skin>

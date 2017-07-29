@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.PopSkin2" currentState="blue" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="599"
+        height="872" states="blue,green,red" >
+	<e:Image id="panel_bg"  scale9Grid="69,128,421,288" left="0" right="0" top="30" bottom="0" source="public_pop_bg3_png" source.red="public_pop_bg2_png"/>
+	<e:Image id="panel_top" source="public_pop_topBg1_png" top="38" source.green="public_pop_topBg2_png" left="5" right="5" source.red="public_pop_topBg3_png"/>
+	<e:Image id="panel_titlebg" source="public_pop_titleBg_png" horizontalCenter="0" top="0"  source.green="public_pop_titleBg2_png" source.red="public_pop_titleBg3_png"/>
+	<e:Image id="panel_title" horizontalCenter="0"  source="friend_title_png"/>
+	<e:Button id="btn_back" label="" skinName="skins.Comn_Btn_CloseSkin" top="30"  right="0"/>
+</e:Skin>

@@ -1,0 +1,3806 @@
+{
+	"groups": [
+		{
+			"keys": "DegreeOfJoy_bad_png,DegreeOfJoy_bad_bar_png,DegreeOfJoy_good_png,DegreeOfJoy_good_bar_png,mainview_gold_png,mainview_seletedtick_icon_png,main_back_png,main_back_coin_png,main_back_currency_png,main_back_diamond_png,main_back_power_png,main_btn_add_png,main_btn_advance_png,main_btn_advance_down_png,main_btn_advance_up_png,main_btn_artifact_png,main_btn_artifact_down_png,main_btn_artifact_up_png,main_btn_bag_png,main_btn_bg_png,main_btn_daily_png,main_btn_friend_png,main_btn_gift_png,main_btn_heaven_png,main_btn_medal_png,main_btn_menu_png,main_btn_rank_png,main_btn_redPacket_png,main_btn_sevDay_png,main_btn_shop_png,main_btn_signIn_png,main_btn_skill_png,main_btn_skill_down_png,main_btn_skill_up_png,main_btn_task_png,main_btn_turnplate_png,main_btn_upgrade_png,main_btn_upgrade_down_png,main_btn_upgrade_up_png,main_btn_yueka_png,main_btn_zhuanzz_png,main_bubble_circle_png,main_bubble_rect_png,main_head_frame_png,main_icon_diamond_png,main_icon_fish_png,mian_btn_warehouse_png,arrow_blue_png,arrow_blue_right_png,public_json,public_frame_17_png,public_frame_18_png,public_frame_19_png,public_lv_up_png,public_redPoint_png,public_sec_up_png,public_tab2_selected_png,login_create_dice_png,login_name_bg_jpg,loading_jpg,loading_progress_png,model_zzp,main_btn_spread2_png,logo_png,jiewen_png,zhuanpan_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/game/main/DegreeOfJoy_bad.png",
+			"type": "image",
+			"name": "DegreeOfJoy_bad_png"
+		},
+		{
+			"url": "assets/game/main/DegreeOfJoy_bad_bar.png",
+			"type": "image",
+			"name": "DegreeOfJoy_bad_bar_png"
+		},
+		{
+			"url": "assets/game/main/DegreeOfJoy_good.png",
+			"type": "image",
+			"name": "DegreeOfJoy_good_png"
+		},
+		{
+			"url": "assets/game/main/DegreeOfJoy_good_bar.png",
+			"type": "image",
+			"name": "DegreeOfJoy_good_bar_png"
+		},
+		{
+			"url": "assets/game/main/mainview_gold.png",
+			"type": "image",
+			"name": "mainview_gold_png"
+		},
+		{
+			"url": "assets/game/main/mainview_seletedtick_icon.png",
+			"type": "image",
+			"name": "mainview_seletedtick_icon_png"
+		},
+		{
+			"url": "assets/game/main/main_back.png",
+			"type": "image",
+			"name": "main_back_png"
+		},
+		{
+			"url": "assets/game/main/main_back_coin.png",
+			"type": "image",
+			"name": "main_back_coin_png"
+		},
+		{
+			"url": "assets/game/main/main_back_currency.png",
+			"type": "image",
+			"name": "main_back_currency_png"
+		},
+		{
+			"url": "assets/game/main/main_back_diamond.png",
+			"type": "image",
+			"name": "main_back_diamond_png"
+		},
+		{
+			"url": "assets/game/main/main_back_power.png",
+			"type": "image",
+			"name": "main_back_power_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_add.png",
+			"type": "image",
+			"name": "main_btn_add_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_advance.png",
+			"type": "image",
+			"name": "main_btn_advance_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_advance_down.png",
+			"type": "image",
+			"name": "main_btn_advance_down_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_advance_up.png",
+			"type": "image",
+			"name": "main_btn_advance_up_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_artifact.png",
+			"type": "image",
+			"name": "main_btn_artifact_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_artifact_down.png",
+			"type": "image",
+			"name": "main_btn_artifact_down_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_artifact_up.png",
+			"type": "image",
+			"name": "main_btn_artifact_up_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_bag.png",
+			"type": "image",
+			"name": "main_btn_bag_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_bg.png",
+			"type": "image",
+			"name": "main_btn_bg_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_daily.png",
+			"type": "image",
+			"name": "main_btn_daily_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_friend.png",
+			"type": "image",
+			"name": "main_btn_friend_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_gift.png",
+			"type": "image",
+			"name": "main_btn_gift_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_heaven.png",
+			"type": "image",
+			"name": "main_btn_heaven_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_medal.png",
+			"type": "image",
+			"name": "main_btn_medal_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_menu.png",
+			"type": "image",
+			"name": "main_btn_menu_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_rank.png",
+			"type": "image",
+			"name": "main_btn_rank_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_redPacket.png",
+			"type": "image",
+			"name": "main_btn_redPacket_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_sevDay.png",
+			"type": "image",
+			"name": "main_btn_sevDay_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_shop.png",
+			"type": "image",
+			"name": "main_btn_shop_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_signIn.png",
+			"type": "image",
+			"name": "main_btn_signIn_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_skill.png",
+			"type": "image",
+			"name": "main_btn_skill_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_skill_down.png",
+			"type": "image",
+			"name": "main_btn_skill_down_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_skill_up.png",
+			"type": "image",
+			"name": "main_btn_skill_up_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_task.png",
+			"type": "image",
+			"name": "main_btn_task_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_turnplate.png",
+			"type": "image",
+			"name": "main_btn_turnplate_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_upgrade.png",
+			"type": "image",
+			"name": "main_btn_upgrade_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_upgrade_down.png",
+			"type": "image",
+			"name": "main_btn_upgrade_down_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_upgrade_up.png",
+			"type": "image",
+			"name": "main_btn_upgrade_up_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_yueka.png",
+			"type": "image",
+			"name": "main_btn_yueka_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_zhuanzz.png",
+			"type": "image",
+			"name": "main_btn_zhuanzz_png"
+		},
+		{
+			"url": "assets/game/main/main_bubble_circle.png",
+			"type": "image",
+			"name": "main_bubble_circle_png"
+		},
+		{
+			"url": "assets/game/main/main_bubble_rect.png",
+			"type": "image",
+			"name": "main_bubble_rect_png"
+		},
+		{
+			"url": "assets/game/main/main_head_frame.png",
+			"type": "image",
+			"name": "main_head_frame_png"
+		},
+		{
+			"url": "assets/game/main/main_icon_diamond.png",
+			"type": "image",
+			"name": "main_icon_diamond_png"
+		},
+		{
+			"url": "assets/game/main/main_icon_fish.png",
+			"type": "image",
+			"name": "main_icon_fish_png"
+		},
+		{
+			"url": "assets/game/main/mian_btn_warehouse.png",
+			"type": "image",
+			"name": "mian_btn_warehouse_png"
+		},
+		{
+			"url": "assets/game/public/arrow_blue.png",
+			"type": "image",
+			"name": "arrow_blue_png"
+		},
+		{
+			"url": "assets/game/public/arrow_blue_right.png",
+			"type": "image",
+			"name": "arrow_blue_right_png"
+		},
+		{
+			"url": "assets/game/public/public.json",
+			"type": "sheet",
+			"name": "public_json",
+			"subkeys": "arrow_down_png,arrow_left2_png,arrow_left_png,public_back_png,public_bg2_png,public_bg_png,public_bubble_circle_png,public_close1_png,public_close2_normal_png,public_close3_png,public_close4_png,public_close5_png,public_close6_png,public_close7_png,public_close_png,public_frame_10_png,public_frame_11_png,public_frame_12_png,public_frame_13_png,public_frame_14_png,public_frame_15_png,public_frame_16_png,public_frame_1_png,public_frame_2_png,public_frame_3_png,public_frame_4_png,public_frame_5_png,public_frame_7_png,public_frame_8_png,public_frame_9_png,public_icon_redPont_png,public_lock_png,public_mask2_png,public_mask_png,public_pop_bg2_png,public_pop_bg3_png,public_pop_bg4_png,public_pop_bg5_png,public_pop_bg_gift_png,public_pop_bg_png,public_pop_titleBg2_png,public_pop_titleBg3_png,public_pop_titleBg4_png,public_pop_titleBg5_png,public_pop_titleBg6_png,public_pop_titleBg_png,public_pop_topBg1_png,public_pop_topBg2_png,public_pop_topBg3_png,public_tab_selected_png,public_tab_unselected_png,public_tipbg_png,textinput_bg2_png,textinput_bg_png,toprank_1_png,toprank_2_png,toprank_3_png,toprank_n_png,toprank_trophy_png"
+		},
+		{
+			"url": "assets/game/public/public_frame_17.png",
+			"type": "image",
+			"name": "public_frame_17_png"
+		},
+		{
+			"url": "assets/game/public/public_frame_18.png",
+			"type": "image",
+			"name": "public_frame_18_png"
+		},
+		{
+			"url": "assets/game/public/public_frame_19.png",
+			"type": "image",
+			"name": "public_frame_19_png"
+		},
+		{
+			"url": "assets/game/public/public_lv_up.png",
+			"type": "image",
+			"name": "public_lv_up_png"
+		},
+		{
+			"url": "assets/game/public/public_redPoint.png",
+			"type": "image",
+			"name": "public_redPoint_png"
+		},
+		{
+			"url": "assets/game/public/public_sec_up.png",
+			"type": "image",
+			"name": "public_sec_up_png"
+		},
+		{
+			"url": "assets/game/public/public_tab2_selected.png",
+			"type": "image",
+			"name": "public_tab2_selected_png"
+		},
+		{
+			"url": "assets/game/login/login_create_dice.png",
+			"type": "image",
+			"name": "login_create_dice_png"
+		},
+		{
+			"url": "assets/game/login/login_name_bg.jpg",
+			"type": "image",
+			"name": "login_name_bg_jpg"
+		},
+		{
+			"url": "assets/game/loading/loading.jpg",
+			"type": "image",
+			"name": "loading_jpg"
+		},
+		{
+			"url": "assets/game/loading/loading_progress.png",
+			"type": "image",
+			"name": "loading_progress_png"
+		},
+		{
+			"url": "config/model.zzp",
+			"type": "bin",
+			"name": "model_zzp"
+		},
+		{
+			"url": "assets/game/activity/giftlimit/xianshitehuilibao.png",
+			"type": "image",
+			"name": "xianshitehuilibao_png"
+		},
+		{
+			"url": "assets/game/activity/invite/invite_gift_banner.png",
+			"type": "image",
+			"name": "invite_gift_banner_png"
+		},
+		{
+			"url": "assets/game/activity/invite/invite_qq_btn.png",
+			"type": "image",
+			"name": "invite_qq_btn_png"
+		},
+		{
+			"url": "assets/game/activity/invite/invite_vacancy_icon.png",
+			"type": "image",
+			"name": "invite_vacancy_icon_png"
+		},
+		{
+			"url": "assets/game/activity/invite/invite_weixin_btn.png",
+			"type": "image",
+			"name": "invite_weixin_btn_png"
+		},
+		{
+			"url": "assets/game/activity/jackarooGift/jackroogift_banner.png",
+			"type": "image",
+			"name": "jackroogift_banner_png"
+		},
+		{
+			"url": "assets/game/activity/loginseven/login_seven_itemBg.png",
+			"type": "image",
+			"name": "login_seven_itemBg_png"
+		},
+		{
+			"url": "assets/game/activity/monthcard/month_card_icon.png",
+			"type": "image",
+			"name": "month_card_icon_png"
+		},
+		{
+			"url": "assets/game/activity/monthcard/zhongshen_card_icon.png",
+			"type": "image",
+			"name": "zhongshen_card_icon_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_banner1.png",
+			"type": "image",
+			"name": "smash_egg_banner1_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_banner2.png",
+			"type": "image",
+			"name": "smash_egg_banner2_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_bg.png",
+			"type": "image",
+			"name": "smash_egg_bg_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_labelbg.png",
+			"type": "image",
+			"name": "smash_egg_labelbg_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_open.png",
+			"type": "image",
+			"name": "smash_egg_open_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_title.png",
+			"type": "image",
+			"name": "smash_egg_title_png"
+		},
+		{
+			"url": "assets/game/activity/smashegg/smash_egg_unopen.png",
+			"type": "image",
+			"name": "smash_egg_unopen_png"
+		},
+		{
+			"url": "assets/game/alert/hint_title.png",
+			"type": "image",
+			"name": "hint_title_png"
+		},
+		{
+			"url": "assets/game/alert/offline_title.png",
+			"type": "image",
+			"name": "offline_title_png"
+		},
+		{
+			"url": "assets/game/alert/unlock_hint_title1.png",
+			"type": "image",
+			"name": "unlock_hint_title1_png"
+		},
+		{
+			"url": "assets/game/alert/unlock_hint_title2.png",
+			"type": "image",
+			"name": "unlock_hint_title2_png"
+		},
+		{
+			"url": "assets/game/alert/unlock_xuanyao_btn.png",
+			"type": "image",
+			"name": "unlock_xuanyao_btn_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_blue.png",
+			"type": "image",
+			"name": "btn_common_blue_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_gray.png",
+			"type": "image",
+			"name": "btn_common_gray_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_green.png",
+			"type": "image",
+			"name": "btn_common_green_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_orange.png",
+			"type": "image",
+			"name": "btn_common_orange_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_purple.png",
+			"type": "image",
+			"name": "btn_common_purple_png"
+		},
+		{
+			"url": "assets/game/button/btn_common_yellow.png",
+			"type": "image",
+			"name": "btn_common_yellow_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_add.png",
+			"type": "image",
+			"name": "btn_icon_add_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_buy.png",
+			"type": "image",
+			"name": "btn_icon_buy_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_buybuy.png",
+			"type": "image",
+			"name": "btn_icon_buybuy_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_buys.png",
+			"type": "image",
+			"name": "btn_icon_buys_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_cancel.png",
+			"type": "image",
+			"name": "btn_icon_cancel_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_confirm.png",
+			"type": "image",
+			"name": "btn_icon_confirm_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_giftfood.png",
+			"type": "image",
+			"name": "btn_icon_giftfood_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_goto.png",
+			"type": "image",
+			"name": "btn_icon_goto_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_invite.png",
+			"type": "image",
+			"name": "btn_icon_invite_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_jujue.png",
+			"type": "image",
+			"name": "btn_icon_jujue_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_niudan.png",
+			"type": "image",
+			"name": "btn_icon_niudan_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_reward.png",
+			"type": "image",
+			"name": "btn_icon_reward_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_seach.png",
+			"type": "image",
+			"name": "btn_icon_seach_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_share.png",
+			"type": "image",
+			"name": "btn_icon_share_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_tongyi.png",
+			"type": "image",
+			"name": "btn_icon_tongyi_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_upgrade.png",
+			"type": "image",
+			"name": "btn_icon_upgrade_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_upgrade_ten.png",
+			"type": "image",
+			"name": "btn_icon_upgrade_ten_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_xiezhu.png",
+			"type": "image",
+			"name": "btn_icon_xiezhu_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_yaoqing.png",
+			"type": "image",
+			"name": "btn_icon_yaoqing_png"
+		},
+		{
+			"url": "assets/game/button/button_minus.png",
+			"type": "image",
+			"name": "button_minus_png"
+		},
+		{
+			"url": "assets/game/button/button_plus.png",
+			"type": "image",
+			"name": "button_plus_png"
+		},
+		{
+			"url": "assets/game/button/button_shop_count.png",
+			"type": "image",
+			"name": "button_shop_count_png"
+		},
+		{
+			"url": "assets/game/button/chakanshenqingjilu.png",
+			"type": "image",
+			"name": "chakanshenqingjilu_png"
+		},
+		{
+			"url": "assets/game/button/daoqu.png",
+			"type": "image",
+			"name": "daoqu_png"
+		},
+		{
+			"url": "assets/game/button/fanhui.png",
+			"type": "image",
+			"name": "fanhui_png"
+		},
+		{
+			"url": "assets/game/button/fenxiangfanbei.png",
+			"type": "image",
+			"name": "fenxiangfanbei_png"
+		},
+		{
+			"url": "assets/game/button/jiesuo.png",
+			"type": "image",
+			"name": "jiesuo_png"
+		},
+		{
+			"url": "assets/game/button/jiesuoxintujian.png",
+			"type": "image",
+			"name": "jiesuoxintujian_png"
+		},
+		{
+			"url": "assets/game/button/jinjie.png",
+			"type": "image",
+			"name": "jinjie_png"
+		},
+		{
+			"url": "assets/game/button/qingjie.png",
+			"type": "image",
+			"name": "qingjie_png"
+		},
+		{
+			"url": "assets/game/button/queding.png",
+			"type": "image",
+			"name": "queding_png"
+		},
+		{
+			"url": "assets/game/button/quxiao.png",
+			"type": "image",
+			"name": "quxiao_png"
+		},
+		{
+			"url": "assets/game/button/tupo.png",
+			"type": "image",
+			"name": "tupo_png"
+		},
+		{
+			"url": "assets/game/button/weishi.png",
+			"type": "image",
+			"name": "weishi_png"
+		},
+		{
+			"url": "assets/game/button/wuran_icon.png",
+			"type": "image",
+			"name": "wuran_icon_png"
+		},
+		{
+			"url": "assets/game/button/yaoqingfanbei.png",
+			"type": "image",
+			"name": "yaoqingfanbei_png"
+		},
+		{
+			"url": "assets/game/button/yimanji.png",
+			"type": "image",
+			"name": "yimanji_png"
+		},
+		{
+			"url": "assets/game/button/yulei.png",
+			"type": "image",
+			"name": "yulei_png"
+		},
+		{
+			"url": "assets/game/decorate/dan1.png",
+			"type": "image",
+			"name": "dan1_png"
+		},
+		{
+			"url": "assets/game/decorate/dan2.png",
+			"type": "image",
+			"name": "dan2_png"
+		},
+		{
+			"url": "assets/game/decorate/dan3.png",
+			"type": "image",
+			"name": "dan3_png"
+		},
+		{
+			"url": "assets/game/decorate/dan4.png",
+			"type": "image",
+			"name": "dan4_png"
+		},
+		{
+			"url": "assets/game/decorate/dan5.png",
+			"type": "image",
+			"name": "dan5_png"
+		},
+		{
+			"url": "assets/game/decorate/dan6.png",
+			"type": "image",
+			"name": "dan6_png"
+		},
+		{
+			"url": "assets/game/decorate/dan7.png",
+			"type": "image",
+			"name": "dan7_png"
+		},
+		{
+			"url": "assets/game/decorate/danbtm.png",
+			"type": "image",
+			"name": "danbtm_png"
+		},
+		{
+			"url": "assets/game/decorate/decorate_frame.png",
+			"type": "image",
+			"name": "decorate_frame_png"
+		},
+		{
+			"url": "assets/game/decorate/deco_preview.png",
+			"type": "image",
+			"name": "deco_preview_png"
+		},
+		{
+			"url": "assets/game/decorate/gashapon_bg.png",
+			"type": "image",
+			"name": "gashapon_bg_png"
+		},
+		{
+			"url": "assets/game/decorate/niudan_btn_icon.png",
+			"type": "image",
+			"name": "niudan_btn_icon_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_1.png",
+			"type": "image",
+			"name": "shenqi_1_001_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_2.png",
+			"type": "image",
+			"name": "shenqi_1_001_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_3.png",
+			"type": "image",
+			"name": "shenqi_1_001_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_4.png",
+			"type": "image",
+			"name": "shenqi_1_001_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_5.png",
+			"type": "image",
+			"name": "shenqi_1_001_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_001_6.png",
+			"type": "image",
+			"name": "shenqi_1_001_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_1.png",
+			"type": "image",
+			"name": "shenqi_1_002_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_2.png",
+			"type": "image",
+			"name": "shenqi_1_002_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_3.png",
+			"type": "image",
+			"name": "shenqi_1_002_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_4.png",
+			"type": "image",
+			"name": "shenqi_1_002_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_5.png",
+			"type": "image",
+			"name": "shenqi_1_002_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_002_6.png",
+			"type": "image",
+			"name": "shenqi_1_002_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_1.png",
+			"type": "image",
+			"name": "shenqi_1_003_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_2.png",
+			"type": "image",
+			"name": "shenqi_1_003_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_3.png",
+			"type": "image",
+			"name": "shenqi_1_003_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_4.png",
+			"type": "image",
+			"name": "shenqi_1_003_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_5.png",
+			"type": "image",
+			"name": "shenqi_1_003_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_003_6.png",
+			"type": "image",
+			"name": "shenqi_1_003_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_1.png",
+			"type": "image",
+			"name": "shenqi_1_004_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_2.png",
+			"type": "image",
+			"name": "shenqi_1_004_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_3.png",
+			"type": "image",
+			"name": "shenqi_1_004_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_4.png",
+			"type": "image",
+			"name": "shenqi_1_004_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_5.png",
+			"type": "image",
+			"name": "shenqi_1_004_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_004_6.png",
+			"type": "image",
+			"name": "shenqi_1_004_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_1.png",
+			"type": "image",
+			"name": "shenqi_1_005_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_2.png",
+			"type": "image",
+			"name": "shenqi_1_005_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_3.png",
+			"type": "image",
+			"name": "shenqi_1_005_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_4.png",
+			"type": "image",
+			"name": "shenqi_1_005_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_5.png",
+			"type": "image",
+			"name": "shenqi_1_005_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_005_6.png",
+			"type": "image",
+			"name": "shenqi_1_005_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_1.png",
+			"type": "image",
+			"name": "shenqi_1_006_1_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_2.png",
+			"type": "image",
+			"name": "shenqi_1_006_2_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_3.png",
+			"type": "image",
+			"name": "shenqi_1_006_3_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_4.png",
+			"type": "image",
+			"name": "shenqi_1_006_4_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_5.png",
+			"type": "image",
+			"name": "shenqi_1_006_5_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_1_006_6.png",
+			"type": "image",
+			"name": "shenqi_1_006_6_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_001.png",
+			"type": "image",
+			"name": "shenqi_2_001_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_002.png",
+			"type": "image",
+			"name": "shenqi_2_002_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_003.png",
+			"type": "image",
+			"name": "shenqi_2_003_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_004.png",
+			"type": "image",
+			"name": "shenqi_2_004_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_005.png",
+			"type": "image",
+			"name": "shenqi_2_005_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_006.png",
+			"type": "image",
+			"name": "shenqi_2_006_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_007.png",
+			"type": "image",
+			"name": "shenqi_2_007_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_008.png",
+			"type": "image",
+			"name": "shenqi_2_008_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_009.png",
+			"type": "image",
+			"name": "shenqi_2_009_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_010.png",
+			"type": "image",
+			"name": "shenqi_2_010_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_011.png",
+			"type": "image",
+			"name": "shenqi_2_011_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_012.png",
+			"type": "image",
+			"name": "shenqi_2_012_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_013.png",
+			"type": "image",
+			"name": "shenqi_2_013_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_014.png",
+			"type": "image",
+			"name": "shenqi_2_014_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_015.png",
+			"type": "image",
+			"name": "shenqi_2_015_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_016.png",
+			"type": "image",
+			"name": "shenqi_2_016_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_017.png",
+			"type": "image",
+			"name": "shenqi_2_017_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_018.png",
+			"type": "image",
+			"name": "shenqi_2_018_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_019.png",
+			"type": "image",
+			"name": "shenqi_2_019_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_020.png",
+			"type": "image",
+			"name": "shenqi_2_020_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_021.png",
+			"type": "image",
+			"name": "shenqi_2_021_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_022.png",
+			"type": "image",
+			"name": "shenqi_2_022_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_2_023.png",
+			"type": "image",
+			"name": "shenqi_2_023_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_001.png",
+			"type": "image",
+			"name": "shenqi_3_001_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_002.png",
+			"type": "image",
+			"name": "shenqi_3_002_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_003.png",
+			"type": "image",
+			"name": "shenqi_3_003_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_004.png",
+			"type": "image",
+			"name": "shenqi_3_004_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_005.png",
+			"type": "image",
+			"name": "shenqi_3_005_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_006.png",
+			"type": "image",
+			"name": "shenqi_3_006_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_007.png",
+			"type": "image",
+			"name": "shenqi_3_007_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_008.png",
+			"type": "image",
+			"name": "shenqi_3_008_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_009.png",
+			"type": "image",
+			"name": "shenqi_3_009_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_010.png",
+			"type": "image",
+			"name": "shenqi_3_010_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_011.png",
+			"type": "image",
+			"name": "shenqi_3_011_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_012.png",
+			"type": "image",
+			"name": "shenqi_3_012_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_013.png",
+			"type": "image",
+			"name": "shenqi_3_013_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_014.png",
+			"type": "image",
+			"name": "shenqi_3_014_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_015.png",
+			"type": "image",
+			"name": "shenqi_3_015_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_016.png",
+			"type": "image",
+			"name": "shenqi_3_016_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_017.png",
+			"type": "image",
+			"name": "shenqi_3_017_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_018.png",
+			"type": "image",
+			"name": "shenqi_3_018_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_019.png",
+			"type": "image",
+			"name": "shenqi_3_019_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_3_020.png",
+			"type": "image",
+			"name": "shenqi_3_020_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_001.png",
+			"type": "image",
+			"name": "shenqi_4_001_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_002.png",
+			"type": "image",
+			"name": "shenqi_4_002_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_003.png",
+			"type": "image",
+			"name": "shenqi_4_003_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_004.png",
+			"type": "image",
+			"name": "shenqi_4_004_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_005.png",
+			"type": "image",
+			"name": "shenqi_4_005_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_006.png",
+			"type": "image",
+			"name": "shenqi_4_006_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_007.png",
+			"type": "image",
+			"name": "shenqi_4_007_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_008.png",
+			"type": "image",
+			"name": "shenqi_4_008_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_009.png",
+			"type": "image",
+			"name": "shenqi_4_009_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_010.png",
+			"type": "image",
+			"name": "shenqi_4_010_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_011.png",
+			"type": "image",
+			"name": "shenqi_4_011_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_012.png",
+			"type": "image",
+			"name": "shenqi_4_012_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_013.png",
+			"type": "image",
+			"name": "shenqi_4_013_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_014.png",
+			"type": "image",
+			"name": "shenqi_4_014_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_015.png",
+			"type": "image",
+			"name": "shenqi_4_015_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_016.png",
+			"type": "image",
+			"name": "shenqi_4_016_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_017.png",
+			"type": "image",
+			"name": "shenqi_4_017_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_018.png",
+			"type": "image",
+			"name": "shenqi_4_018_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_019.png",
+			"type": "image",
+			"name": "shenqi_4_019_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_020.png",
+			"type": "image",
+			"name": "shenqi_4_020_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_021.png",
+			"type": "image",
+			"name": "shenqi_4_021_png"
+		},
+		{
+			"url": "assets/game/decorate/shenqi_4_022.png",
+			"type": "image",
+			"name": "shenqi_4_022_png"
+		},
+		{
+			"url": "assets/game/effect/anim_daoqu.json",
+			"type": "json",
+			"name": "anim_daoqu_json"
+		},
+		{
+			"url": "assets/game/effect/anim_daoqu.png",
+			"type": "image",
+			"name": "anim_daoqu_png"
+		},
+		{
+			"url": "assets/game/effect/anim_jiewen.json",
+			"type": "json",
+			"name": "anim_jiewen_json"
+		},
+		{
+			"url": "assets/game/effect/anim_jiewen.png",
+			"type": "image",
+			"name": "anim_jiewen_png"
+		},
+		{
+			"url": "assets/game/effect/anim_wuran.json",
+			"type": "json",
+			"name": "anim_wuran_json"
+		},
+		{
+			"url": "assets/game/effect/anim_wuran.png",
+			"type": "image",
+			"name": "anim_wuran_png"
+		},
+		{
+			"url": "assets/game/effect/anniuyan.json",
+			"type": "json",
+			"name": "anniuyan_json"
+		},
+		{
+			"url": "assets/game/effect/anniuyan.png",
+			"type": "image",
+			"name": "anniuyan_png"
+		},
+		{
+			"url": "assets/game/effect/dajinbi.json",
+			"type": "json",
+			"name": "dajinbi_json"
+		},
+		{
+			"url": "assets/game/effect/dajinbi.png",
+			"type": "image",
+			"name": "dajinbi_png"
+		},
+		{
+			"url": "assets/game/effect/dianliu1.json",
+			"type": "json",
+			"name": "dianliu1_json"
+		},
+		{
+			"url": "assets/game/effect/dianliu1.png",
+			"type": "image",
+			"name": "dianliu1_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_001_move.json",
+			"type": "json",
+			"name": "fish_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_001_move.png",
+			"type": "image",
+			"name": "fish_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_001_move.json",
+			"type": "json",
+			"name": "fish_01_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_001_move.png",
+			"type": "image",
+			"name": "fish_01_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_001_turn.json",
+			"type": "json",
+			"name": "fish_01_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_001_turn.png",
+			"type": "image",
+			"name": "fish_01_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_002_move.json",
+			"type": "json",
+			"name": "fish_01_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_002_move.png",
+			"type": "image",
+			"name": "fish_01_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_002_turn.json",
+			"type": "json",
+			"name": "fish_01_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_002_turn.png",
+			"type": "image",
+			"name": "fish_01_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_003_move.json",
+			"type": "json",
+			"name": "fish_01_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_003_move.png",
+			"type": "image",
+			"name": "fish_01_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_003_turn.json",
+			"type": "json",
+			"name": "fish_01_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_003_turn.png",
+			"type": "image",
+			"name": "fish_01_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_004_move.json",
+			"type": "json",
+			"name": "fish_01_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_004_move.png",
+			"type": "image",
+			"name": "fish_01_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_004_turn.json",
+			"type": "json",
+			"name": "fish_01_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_004_turn.png",
+			"type": "image",
+			"name": "fish_01_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_005_move.json",
+			"type": "json",
+			"name": "fish_01_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_005_move.png",
+			"type": "image",
+			"name": "fish_01_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_005_turn.json",
+			"type": "json",
+			"name": "fish_01_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_01_005_turn.png",
+			"type": "image",
+			"name": "fish_01_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_001_move.json",
+			"type": "json",
+			"name": "fish_02_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_001_move.png",
+			"type": "image",
+			"name": "fish_02_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_001_turn.json",
+			"type": "json",
+			"name": "fish_02_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_001_turn.png",
+			"type": "image",
+			"name": "fish_02_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_002_move.json",
+			"type": "json",
+			"name": "fish_02_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_002_move.png",
+			"type": "image",
+			"name": "fish_02_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_002_turn.json",
+			"type": "json",
+			"name": "fish_02_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_002_turn.png",
+			"type": "image",
+			"name": "fish_02_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_003_move.json",
+			"type": "json",
+			"name": "fish_02_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_003_move.png",
+			"type": "image",
+			"name": "fish_02_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_003_turn.json",
+			"type": "json",
+			"name": "fish_02_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_003_turn.png",
+			"type": "image",
+			"name": "fish_02_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_004_move.json",
+			"type": "json",
+			"name": "fish_02_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_004_move.png",
+			"type": "image",
+			"name": "fish_02_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_004_turn.json",
+			"type": "json",
+			"name": "fish_02_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_004_turn.png",
+			"type": "image",
+			"name": "fish_02_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_005_move.json",
+			"type": "json",
+			"name": "fish_02_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_005_move.png",
+			"type": "image",
+			"name": "fish_02_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_005_turn.json",
+			"type": "json",
+			"name": "fish_02_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_02_005_turn.png",
+			"type": "image",
+			"name": "fish_02_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_001_move.json",
+			"type": "json",
+			"name": "fish_03_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_001_move.png",
+			"type": "image",
+			"name": "fish_03_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_001_turn.json",
+			"type": "json",
+			"name": "fish_03_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_001_turn.png",
+			"type": "image",
+			"name": "fish_03_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_002_move.json",
+			"type": "json",
+			"name": "fish_03_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_002_move.png",
+			"type": "image",
+			"name": "fish_03_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_002_turn.json",
+			"type": "json",
+			"name": "fish_03_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_002_turn.png",
+			"type": "image",
+			"name": "fish_03_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_003_move.json",
+			"type": "json",
+			"name": "fish_03_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_003_move.png",
+			"type": "image",
+			"name": "fish_03_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_003_turn.json",
+			"type": "json",
+			"name": "fish_03_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_003_turn.png",
+			"type": "image",
+			"name": "fish_03_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_004_move.json",
+			"type": "json",
+			"name": "fish_03_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_004_move.png",
+			"type": "image",
+			"name": "fish_03_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_004_turn.json",
+			"type": "json",
+			"name": "fish_03_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_004_turn.png",
+			"type": "image",
+			"name": "fish_03_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_005_move.json",
+			"type": "json",
+			"name": "fish_03_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_005_move.png",
+			"type": "image",
+			"name": "fish_03_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_005_turn.json",
+			"type": "json",
+			"name": "fish_03_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_03_005_turn.png",
+			"type": "image",
+			"name": "fish_03_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_001_move.json",
+			"type": "json",
+			"name": "fish_04_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_001_move.png",
+			"type": "image",
+			"name": "fish_04_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_001_turn.json",
+			"type": "json",
+			"name": "fish_04_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_001_turn.png",
+			"type": "image",
+			"name": "fish_04_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_002_move.json",
+			"type": "json",
+			"name": "fish_04_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_002_move.png",
+			"type": "image",
+			"name": "fish_04_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_002_turn.json",
+			"type": "json",
+			"name": "fish_04_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_002_turn.png",
+			"type": "image",
+			"name": "fish_04_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_003_move.json",
+			"type": "json",
+			"name": "fish_04_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_003_move.png",
+			"type": "image",
+			"name": "fish_04_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_003_turn.json",
+			"type": "json",
+			"name": "fish_04_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_003_turn.png",
+			"type": "image",
+			"name": "fish_04_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_004_move.json",
+			"type": "json",
+			"name": "fish_04_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_004_move.png",
+			"type": "image",
+			"name": "fish_04_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_004_turn.json",
+			"type": "json",
+			"name": "fish_04_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_004_turn.png",
+			"type": "image",
+			"name": "fish_04_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_005_move.json",
+			"type": "json",
+			"name": "fish_04_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_005_move.png",
+			"type": "image",
+			"name": "fish_04_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_005_turn.json",
+			"type": "json",
+			"name": "fish_04_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_04_005_turn.png",
+			"type": "image",
+			"name": "fish_04_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_001_move.json",
+			"type": "json",
+			"name": "fish_05_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_001_move.png",
+			"type": "image",
+			"name": "fish_05_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_001_turn.json",
+			"type": "json",
+			"name": "fish_05_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_001_turn.png",
+			"type": "image",
+			"name": "fish_05_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_002_move.json",
+			"type": "json",
+			"name": "fish_05_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_002_move.png",
+			"type": "image",
+			"name": "fish_05_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_002_turn.json",
+			"type": "json",
+			"name": "fish_05_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_002_turn.png",
+			"type": "image",
+			"name": "fish_05_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_003_move.json",
+			"type": "json",
+			"name": "fish_05_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_003_move.png",
+			"type": "image",
+			"name": "fish_05_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_003_turn.json",
+			"type": "json",
+			"name": "fish_05_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_003_turn.png",
+			"type": "image",
+			"name": "fish_05_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_004_move.json",
+			"type": "json",
+			"name": "fish_05_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_004_move.png",
+			"type": "image",
+			"name": "fish_05_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_004_turn.json",
+			"type": "json",
+			"name": "fish_05_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_004_turn.png",
+			"type": "image",
+			"name": "fish_05_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_005_move.json",
+			"type": "json",
+			"name": "fish_05_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_005_move.png",
+			"type": "image",
+			"name": "fish_05_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_005_turn.json",
+			"type": "json",
+			"name": "fish_05_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_05_005_turn.png",
+			"type": "image",
+			"name": "fish_05_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_001_move.json",
+			"type": "json",
+			"name": "fish_06_001_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_001_move.png",
+			"type": "image",
+			"name": "fish_06_001_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_001_turn.json",
+			"type": "json",
+			"name": "fish_06_001_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_001_turn.png",
+			"type": "image",
+			"name": "fish_06_001_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_002_move.json",
+			"type": "json",
+			"name": "fish_06_002_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_002_move.png",
+			"type": "image",
+			"name": "fish_06_002_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_002_turn.json",
+			"type": "json",
+			"name": "fish_06_002_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_002_turn.png",
+			"type": "image",
+			"name": "fish_06_002_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_003_move.json",
+			"type": "json",
+			"name": "fish_06_003_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_003_move.png",
+			"type": "image",
+			"name": "fish_06_003_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_003_turn.json",
+			"type": "json",
+			"name": "fish_06_003_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_003_turn.png",
+			"type": "image",
+			"name": "fish_06_003_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_004_move.json",
+			"type": "json",
+			"name": "fish_06_004_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_004_move.png",
+			"type": "image",
+			"name": "fish_06_004_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_004_turn.json",
+			"type": "json",
+			"name": "fish_06_004_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_004_turn.png",
+			"type": "image",
+			"name": "fish_06_004_turn_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_005_move.json",
+			"type": "json",
+			"name": "fish_06_005_move_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_005_move.png",
+			"type": "image",
+			"name": "fish_06_005_move_png"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_005_turn.json",
+			"type": "json",
+			"name": "fish_06_005_turn_json"
+		},
+		{
+			"url": "assets/game/effect/fish/fish_06_005_turn.png",
+			"type": "image",
+			"name": "fish_06_005_turn_png"
+		},
+		{
+			"url": "assets/game/effect/guang.json",
+			"type": "json",
+			"name": "guang_json"
+		},
+		{
+			"url": "assets/game/effect/guang.png",
+			"type": "image",
+			"name": "guang_png"
+		},
+		{
+			"url": "assets/game/effect/heixinjia.json",
+			"type": "json",
+			"name": "heixinjia_json"
+		},
+		{
+			"url": "assets/game/effect/heixinjia.png",
+			"type": "image",
+			"name": "heixinjia_png"
+		},
+		{
+			"url": "assets/game/effect/heixinjian.json",
+			"type": "json",
+			"name": "heixinjian_json"
+		},
+		{
+			"url": "assets/game/effect/heixinjian.png",
+			"type": "image",
+			"name": "heixinjian_png"
+		},
+		{
+			"url": "assets/game/effect/hongxinjia.json",
+			"type": "json",
+			"name": "hongxinjia_json"
+		},
+		{
+			"url": "assets/game/effect/hongxinjia.png",
+			"type": "image",
+			"name": "hongxinjia_png"
+		},
+		{
+			"url": "assets/game/effect/hongxinjian.json",
+			"type": "json",
+			"name": "hongxinjian_json"
+		},
+		{
+			"url": "assets/game/effect/hongxinjian.png",
+			"type": "image",
+			"name": "hongxinjian_png"
+		},
+		{
+			"url": "assets/game/effect/huangguan.json",
+			"type": "json",
+			"name": "huangguan_json"
+		},
+		{
+			"url": "assets/game/effect/huangguan.png",
+			"type": "image",
+			"name": "huangguan_png"
+		},
+		{
+			"url": "assets/game/effect/huodong.json",
+			"type": "json",
+			"name": "huodong_json"
+		},
+		{
+			"url": "assets/game/effect/huodong.png",
+			"type": "image",
+			"name": "huodong_png"
+		},
+		{
+			"url": "assets/game/effect/huoquguanghuan.json",
+			"type": "json",
+			"name": "huoquguanghuan_json"
+		},
+		{
+			"url": "assets/game/effect/huoquguanghuan.png",
+			"type": "image",
+			"name": "huoquguanghuan_png"
+		},
+		{
+			"url": "assets/game/effect/jiesuoguanghuan.json",
+			"type": "json",
+			"name": "jiesuoguanghuan_json"
+		},
+		{
+			"url": "assets/game/effect/jiesuoguanghuan.png",
+			"type": "image",
+			"name": "jiesuoguanghuan_png"
+		},
+		{
+			"url": "assets/game/effect/liebiaoshuaxin.json",
+			"type": "json",
+			"name": "liebiaoshuaxin_json"
+		},
+		{
+			"url": "assets/game/effect/liebiaoshuaxin.png",
+			"type": "image",
+			"name": "liebiaoshuaxin_png"
+		},
+		{
+			"url": "assets/game/effect/niudan.json",
+			"type": "json",
+			"name": "niudan_json"
+		},
+		{
+			"url": "assets/game/effect/niudan.png",
+			"type": "image",
+			"name": "niudan_png"
+		},
+		{
+			"url": "assets/game/effect/paopao1.json",
+			"type": "json",
+			"name": "paopao1_json"
+		},
+		{
+			"url": "assets/game/effect/paopao1.png",
+			"type": "image",
+			"name": "paopao1_png"
+		},
+		{
+			"url": "assets/game/effect/paopao2.json",
+			"type": "json",
+			"name": "paopao2_json"
+		},
+		{
+			"url": "assets/game/effect/paopao2.png",
+			"type": "image",
+			"name": "paopao2_png"
+		},
+		{
+			"url": "assets/game/effect/paopao3.json",
+			"type": "json",
+			"name": "paopao3_json"
+		},
+		{
+			"url": "assets/game/effect/paopao3.png",
+			"type": "image",
+			"name": "paopao3_png"
+		},
+		{
+			"url": "assets/game/effect/paopao4.json",
+			"type": "json",
+			"name": "paopao4_json"
+		},
+		{
+			"url": "assets/game/effect/paopao4.png",
+			"type": "image",
+			"name": "paopao4_png"
+		},
+		{
+			"url": "assets/game/effect/paopao5.json",
+			"type": "json",
+			"name": "paopao5_json"
+		},
+		{
+			"url": "assets/game/effect/paopao5.png",
+			"type": "image",
+			"name": "paopao5_png"
+		},
+		{
+			"url": "assets/game/effect/paopao6.json",
+			"type": "json",
+			"name": "paopao6_json"
+		},
+		{
+			"url": "assets/game/effect/paopao6.png",
+			"type": "image",
+			"name": "paopao6_png"
+		},
+		{
+			"url": "assets/game/effect/paopao_1.json",
+			"type": "json",
+			"name": "paopao_1_json"
+		},
+		{
+			"url": "assets/game/effect/paopao_1.png",
+			"type": "image",
+			"name": "paopao_1_png"
+		},
+		{
+			"url": "assets/game/effect/paopao_2.json",
+			"type": "json",
+			"name": "paopao_2_json"
+		},
+		{
+			"url": "assets/game/effect/paopao_2.png",
+			"type": "image",
+			"name": "paopao_2_png"
+		},
+		{
+			"url": "assets/game/effect/shengjiguangxiao.json",
+			"type": "json",
+			"name": "shengjiguangxiao_json"
+		},
+		{
+			"url": "assets/game/effect/shengjiguangxiao.png",
+			"type": "image",
+			"name": "shengjiguangxiao_png"
+		},
+		{
+			"url": "assets/game/effect/shenqizhuangpei.json",
+			"type": "json",
+			"name": "shenqizhuangpei_json"
+		},
+		{
+			"url": "assets/game/effect/shenqizhuangpei.png",
+			"type": "image",
+			"name": "shenqizhuangpei_png"
+		},
+		{
+			"url": "assets/game/effect/shuibowen.json",
+			"type": "json",
+			"name": "shuibowen_json"
+		},
+		{
+			"url": "assets/game/effect/shuibowen.png",
+			"type": "image",
+			"name": "shuibowen_png"
+		},
+		{
+			"url": "assets/game/effect/shuipao.json",
+			"type": "json",
+			"name": "shuipao_json"
+		},
+		{
+			"url": "assets/game/effect/shuipao.png",
+			"type": "image",
+			"name": "shuipao_png"
+		},
+		{
+			"url": "assets/game/effect/xiaojinbi.json",
+			"type": "json",
+			"name": "xiaojinbi_json"
+		},
+		{
+			"url": "assets/game/effect/xiaojinbi.png",
+			"type": "image",
+			"name": "xiaojinbi_png"
+		},
+		{
+			"url": "assets/game/effect/xinshouyindao.json",
+			"type": "json",
+			"name": "xinshouyindao_json"
+		},
+		{
+			"url": "assets/game/effect/xinshouyindao.png",
+			"type": "image",
+			"name": "xinshouyindao_png"
+		},
+		{
+			"url": "assets/game/effect/yanggguang.json",
+			"type": "json",
+			"name": "yanggguang_json"
+		},
+		{
+			"url": "assets/game/effect/yanggguang.png",
+			"type": "image",
+			"name": "yanggguang_png"
+		},
+		{
+			"url": "assets/game/effect/yushengji.json",
+			"type": "json",
+			"name": "yushengji_json"
+		},
+		{
+			"url": "assets/game/effect/yushengji.png",
+			"type": "image",
+			"name": "yushengji_png"
+		},
+		{
+			"url": "assets/game/effect/zengjiamiaochan.json",
+			"type": "json",
+			"name": "zengjiamiaochan_json"
+		},
+		{
+			"url": "assets/game/effect/zengjiamiaochan.png",
+			"type": "image",
+			"name": "zengjiamiaochan_png"
+		},
+		{
+			"url": "assets/game/effect/zhuanpanfeng.json",
+			"type": "json",
+			"name": "zhuanpanfeng_json"
+		},
+		{
+			"url": "assets/game/effect/zhuanpanfeng.png",
+			"type": "image",
+			"name": "zhuanpanfeng_png"
+		},
+		{
+			"url": "assets/game/effect/zuanshitexiao.json",
+			"type": "json",
+			"name": "zuanshitexiao_json"
+		},
+		{
+			"url": "assets/game/effect/zuanshitexiao.png",
+			"type": "image",
+			"name": "zuanshitexiao_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_arrow_0.png",
+			"type": "image",
+			"name": "fieldGuide_arrow_0_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_arrow_1.png",
+			"type": "image",
+			"name": "fieldGuide_arrow_1_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_bg.png",
+			"type": "image",
+			"name": "fieldGuide_bg_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_btn_close.png",
+			"type": "image",
+			"name": "fieldGuide_btn_close_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_crown_off.png",
+			"type": "image",
+			"name": "fieldGuide_crown_off_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_crown_on.png",
+			"type": "image",
+			"name": "fieldGuide_crown_on_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_fish_nameTip.png",
+			"type": "image",
+			"name": "fieldGuide_fish_nameTip_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_item_bg.png",
+			"type": "image",
+			"name": "fieldGuide_item_bg_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_item_bg2.png",
+			"type": "image",
+			"name": "fieldGuide_item_bg2_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_item_mask.png",
+			"type": "image",
+			"name": "fieldGuide_item_mask_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_line_0.png",
+			"type": "image",
+			"name": "fieldGuide_line_0_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_line_1.png",
+			"type": "image",
+			"name": "fieldGuide_line_1_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_page.png",
+			"type": "image",
+			"name": "fieldGuide_page_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_tab_disable.png",
+			"type": "image",
+			"name": "fieldGuide_tab_disable_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_tab_selected.png",
+			"type": "image",
+			"name": "fieldGuide_tab_selected_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_tab_unselected.png",
+			"type": "image",
+			"name": "fieldGuide_tab_unselected_png"
+		},
+		{
+			"url": "assets/game/fieldGuide/fieldGuide_title.png",
+			"type": "image",
+			"name": "fieldGuide_title_png"
+		},
+		{
+			"url": "assets/game/fishTank/layer_1.png",
+			"type": "image",
+			"name": "layer_1_png"
+		},
+		{
+			"url": "assets/game/fishTank/layer_2.png",
+			"type": "image",
+			"name": "layer_2_png"
+		},
+		{
+			"url": "assets/game/fishTank/layer_3.png",
+			"type": "image",
+			"name": "layer_3_png"
+		},
+		{
+			"url": "assets/game/fishTank/layer_4.png",
+			"type": "image",
+			"name": "layer_4_png"
+		},
+		{
+			"url": "assets/game/fishTank/sea.jpg",
+			"type": "image",
+			"name": "sea_jpg"
+		},
+		{
+			"url": "assets/game/fishTank/sunshine1.png",
+			"type": "image",
+			"name": "sunshine1_png"
+		},
+		{
+			"url": "assets/game/fishTank/sunshine2.png",
+			"type": "image",
+			"name": "sunshine2_png"
+		},
+		{
+			"url": "assets/game/font/FlutterBigFont.fnt",
+			"type": "font",
+			"name": "FlutterBigFont_fnt"
+		},
+		{
+			"url": "assets/game/font/FlutterBlueFont.fnt",
+			"type": "font",
+			"name": "FlutterBlueFont_fnt"
+		},
+		{
+			"url": "assets/game/font/FlutterFont.fnt",
+			"type": "font",
+			"name": "FlutterFont_fnt"
+		},
+		{
+			"url": "assets/game/friend/btn_baifang.png",
+			"type": "image",
+			"name": "btn_baifang_png"
+		},
+		{
+			"url": "assets/game/friend/btn_giftfood.png",
+			"type": "image",
+			"name": "btn_giftfood_png"
+		},
+		{
+			"url": "assets/game/friend/friend_apply_log_title.png",
+			"type": "image",
+			"name": "friend_apply_log_title_png"
+		},
+		{
+			"url": "assets/game/friend/friend_apply_title.png",
+			"type": "image",
+			"name": "friend_apply_title_png"
+		},
+		{
+			"url": "assets/game/friend/friend_title.png",
+			"type": "image",
+			"name": "friend_title_png"
+		},
+		{
+			"url": "assets/game/friend/gift_food_title.png",
+			"type": "image",
+			"name": "gift_food_title_png"
+		},
+		{
+			"url": "assets/game/friend/tianjiahaoyou.png",
+			"type": "image",
+			"name": "tianjiahaoyou_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_001.png",
+			"type": "image",
+			"name": "ishenqi_1_001_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_002.png",
+			"type": "image",
+			"name": "ishenqi_1_002_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_003.png",
+			"type": "image",
+			"name": "ishenqi_1_003_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_004.png",
+			"type": "image",
+			"name": "ishenqi_1_004_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_005.png",
+			"type": "image",
+			"name": "ishenqi_1_005_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_1_006.png",
+			"type": "image",
+			"name": "ishenqi_1_006_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_001.png",
+			"type": "image",
+			"name": "ishenqi_2_001_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_002.png",
+			"type": "image",
+			"name": "ishenqi_2_002_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_003.png",
+			"type": "image",
+			"name": "ishenqi_2_003_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_004.png",
+			"type": "image",
+			"name": "ishenqi_2_004_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_005.png",
+			"type": "image",
+			"name": "ishenqi_2_005_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_006.png",
+			"type": "image",
+			"name": "ishenqi_2_006_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_007.png",
+			"type": "image",
+			"name": "ishenqi_2_007_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_008.png",
+			"type": "image",
+			"name": "ishenqi_2_008_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_009.png",
+			"type": "image",
+			"name": "ishenqi_2_009_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_010.png",
+			"type": "image",
+			"name": "ishenqi_2_010_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_011.png",
+			"type": "image",
+			"name": "ishenqi_2_011_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_012.png",
+			"type": "image",
+			"name": "ishenqi_2_012_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_013.png",
+			"type": "image",
+			"name": "ishenqi_2_013_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_014.png",
+			"type": "image",
+			"name": "ishenqi_2_014_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_015.png",
+			"type": "image",
+			"name": "ishenqi_2_015_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_016.png",
+			"type": "image",
+			"name": "ishenqi_2_016_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_017.png",
+			"type": "image",
+			"name": "ishenqi_2_017_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_018.png",
+			"type": "image",
+			"name": "ishenqi_2_018_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_019.png",
+			"type": "image",
+			"name": "ishenqi_2_019_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_020.png",
+			"type": "image",
+			"name": "ishenqi_2_020_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_021.png",
+			"type": "image",
+			"name": "ishenqi_2_021_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_022.png",
+			"type": "image",
+			"name": "ishenqi_2_022_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_2_023.png",
+			"type": "image",
+			"name": "ishenqi_2_023_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_001.png",
+			"type": "image",
+			"name": "ishenqi_3_001_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_002.png",
+			"type": "image",
+			"name": "ishenqi_3_002_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_003.png",
+			"type": "image",
+			"name": "ishenqi_3_003_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_004.png",
+			"type": "image",
+			"name": "ishenqi_3_004_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_005.png",
+			"type": "image",
+			"name": "ishenqi_3_005_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_006.png",
+			"type": "image",
+			"name": "ishenqi_3_006_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_007.png",
+			"type": "image",
+			"name": "ishenqi_3_007_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_008.png",
+			"type": "image",
+			"name": "ishenqi_3_008_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_009.png",
+			"type": "image",
+			"name": "ishenqi_3_009_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_010.png",
+			"type": "image",
+			"name": "ishenqi_3_010_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_011.png",
+			"type": "image",
+			"name": "ishenqi_3_011_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_012.png",
+			"type": "image",
+			"name": "ishenqi_3_012_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_013.png",
+			"type": "image",
+			"name": "ishenqi_3_013_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_014.png",
+			"type": "image",
+			"name": "ishenqi_3_014_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_015.png",
+			"type": "image",
+			"name": "ishenqi_3_015_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_016.png",
+			"type": "image",
+			"name": "ishenqi_3_016_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_017.png",
+			"type": "image",
+			"name": "ishenqi_3_017_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_018.png",
+			"type": "image",
+			"name": "ishenqi_3_018_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_019.png",
+			"type": "image",
+			"name": "ishenqi_3_019_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_3_020.png",
+			"type": "image",
+			"name": "ishenqi_3_020_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_001.png",
+			"type": "image",
+			"name": "ishenqi_4_001_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_002.png",
+			"type": "image",
+			"name": "ishenqi_4_002_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_003.png",
+			"type": "image",
+			"name": "ishenqi_4_003_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_004.png",
+			"type": "image",
+			"name": "ishenqi_4_004_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_005.png",
+			"type": "image",
+			"name": "ishenqi_4_005_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_006.png",
+			"type": "image",
+			"name": "ishenqi_4_006_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_007.png",
+			"type": "image",
+			"name": "ishenqi_4_007_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_008.png",
+			"type": "image",
+			"name": "ishenqi_4_008_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_009.png",
+			"type": "image",
+			"name": "ishenqi_4_009_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_010.png",
+			"type": "image",
+			"name": "ishenqi_4_010_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_011.png",
+			"type": "image",
+			"name": "ishenqi_4_011_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_012.png",
+			"type": "image",
+			"name": "ishenqi_4_012_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_013.png",
+			"type": "image",
+			"name": "ishenqi_4_013_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_014.png",
+			"type": "image",
+			"name": "ishenqi_4_014_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_015.png",
+			"type": "image",
+			"name": "ishenqi_4_015_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_016.png",
+			"type": "image",
+			"name": "ishenqi_4_016_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_017.png",
+			"type": "image",
+			"name": "ishenqi_4_017_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_018.png",
+			"type": "image",
+			"name": "ishenqi_4_018_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_019.png",
+			"type": "image",
+			"name": "ishenqi_4_019_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_020.png",
+			"type": "image",
+			"name": "ishenqi_4_020_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_021.png",
+			"type": "image",
+			"name": "ishenqi_4_021_png"
+		},
+		{
+			"url": "assets/game/icon/decorate/ishenqi_4_022.png",
+			"type": "image",
+			"name": "ishenqi_4_022_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_0.png",
+			"type": "image",
+			"name": "icon_emoji_0_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_1.png",
+			"type": "image",
+			"name": "icon_emoji_1_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_2.png",
+			"type": "image",
+			"name": "icon_emoji_2_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_3.png",
+			"type": "image",
+			"name": "icon_emoji_3_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_4.png",
+			"type": "image",
+			"name": "icon_emoji_4_png"
+		},
+		{
+			"url": "assets/game/icon/emoji/icon_emoji_5.png",
+			"type": "image",
+			"name": "icon_emoji_5_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f01001.png",
+			"type": "image",
+			"name": "f01001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f01002.png",
+			"type": "image",
+			"name": "f01002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f01003.png",
+			"type": "image",
+			"name": "f01003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f01004.png",
+			"type": "image",
+			"name": "f01004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f01005.png",
+			"type": "image",
+			"name": "f01005_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f02001.png",
+			"type": "image",
+			"name": "f02001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f02002.png",
+			"type": "image",
+			"name": "f02002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f02003.png",
+			"type": "image",
+			"name": "f02003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f02004.png",
+			"type": "image",
+			"name": "f02004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f02005.png",
+			"type": "image",
+			"name": "f02005_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f03001.png",
+			"type": "image",
+			"name": "f03001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f03002.png",
+			"type": "image",
+			"name": "f03002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f03003.png",
+			"type": "image",
+			"name": "f03003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f03004.png",
+			"type": "image",
+			"name": "f03004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f03005.png",
+			"type": "image",
+			"name": "f03005_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f04001.png",
+			"type": "image",
+			"name": "f04001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f04002.png",
+			"type": "image",
+			"name": "f04002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f04003.png",
+			"type": "image",
+			"name": "f04003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f04004.png",
+			"type": "image",
+			"name": "f04004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f04005.png",
+			"type": "image",
+			"name": "f04005_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f05001.png",
+			"type": "image",
+			"name": "f05001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f05002.png",
+			"type": "image",
+			"name": "f05002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f05003.png",
+			"type": "image",
+			"name": "f05003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f05004.png",
+			"type": "image",
+			"name": "f05004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f05005.png",
+			"type": "image",
+			"name": "f05005_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f06001.png",
+			"type": "image",
+			"name": "f06001_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f06002.png",
+			"type": "image",
+			"name": "f06002_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f06003.png",
+			"type": "image",
+			"name": "f06003_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f06004.png",
+			"type": "image",
+			"name": "f06004_png"
+		},
+		{
+			"url": "assets/game/icon/fish/f06005.png",
+			"type": "image",
+			"name": "f06005_png"
+		},
+		{
+			"url": "assets/game/icon/goods/dazhezhaomingguan.png",
+			"type": "image",
+			"name": "dazhezhaomingguan_png"
+		},
+		{
+			"url": "assets/game/icon/goods/dianjiyu.png",
+			"type": "image",
+			"name": "dianjiyu_png"
+		},
+		{
+			"url": "assets/game/icon/goods/icon_chuizi.png",
+			"type": "image",
+			"name": "icon_chuizi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/icon_goods_diamond.png",
+			"type": "image",
+			"name": "icon_goods_diamond_png"
+		},
+		{
+			"url": "assets/game/icon/goods/icon_goods_gold.png",
+			"type": "image",
+			"name": "icon_goods_gold_png"
+		},
+		{
+			"url": "assets/game/icon/goods/icon_goods_jinbi.png",
+			"type": "image",
+			"name": "icon_goods_jinbi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/icon_goods_shenqidian.png",
+			"type": "image",
+			"name": "icon_goods_shenqidian_png"
+		},
+		{
+			"url": "assets/game/icon/goods/jihuoshenqi.png",
+			"type": "image",
+			"name": "jihuoshenqi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/lixianshuibeng.png",
+			"type": "image",
+			"name": "lixianshuibeng_png"
+		},
+		{
+			"url": "assets/game/icon/goods/miaochanyangqiguan.png",
+			"type": "image",
+			"name": "miaochanyangqiguan_png"
+		},
+		{
+			"url": "assets/game/icon/goods/paopaojiareqi.png",
+			"type": "image",
+			"name": "paopaojiareqi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/qinwen.png",
+			"type": "image",
+			"name": "qinwen_png"
+		},
+		{
+			"url": "assets/game/icon/goods/shengjiguolvqi.png",
+			"type": "image",
+			"name": "shengjiguolvqi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/shenqishengji.png",
+			"type": "image",
+			"name": "shenqishengji_png"
+		},
+		{
+			"url": "assets/game/icon/goods/shoujiyu.png",
+			"type": "image",
+			"name": "shoujiyu_png"
+		},
+		{
+			"url": "assets/game/icon/goods/touqu.png",
+			"type": "image",
+			"name": "touqu_png"
+		},
+		{
+			"url": "assets/game/icon/goods/yaoqinghaoyou.png",
+			"type": "image",
+			"name": "yaoqinghaoyou_png"
+		},
+		{
+			"url": "assets/game/icon/goods/yushi.png",
+			"type": "image",
+			"name": "yushi_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi1.png",
+			"type": "image",
+			"name": "zuanshi1_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi2.png",
+			"type": "image",
+			"name": "zuanshi2_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi3.png",
+			"type": "image",
+			"name": "zuanshi3_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi4.png",
+			"type": "image",
+			"name": "zuanshi4_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi5.png",
+			"type": "image",
+			"name": "zuanshi5_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zuanshi6.png",
+			"type": "image",
+			"name": "zuanshi6_png"
+		},
+		{
+			"url": "assets/game/icon/hint/icon_hint_gold.png",
+			"type": "image",
+			"name": "icon_hint_gold_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpandajinbi.png",
+			"type": "image",
+			"name": "zhuanpandajinbi_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpandazuanshi.png",
+			"type": "image",
+			"name": "zhuanpandazuanshi_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpanmiaochanzhufu.png",
+			"type": "image",
+			"name": "zhuanpanmiaochanzhufu_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpanmiaochanzuzhou.png",
+			"type": "image",
+			"name": "zhuanpanmiaochanzuzhou_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpantoudao.png",
+			"type": "image",
+			"name": "zhuanpantoudao_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpanwuran.png",
+			"type": "image",
+			"name": "zhuanpanwuran_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpanxiaojinbi.png",
+			"type": "image",
+			"name": "zhuanpanxiaojinbi_png"
+		},
+		{
+			"url": "assets/game/icon/zhuanpan/zhuanpanxiaozuanshi.png",
+			"type": "image",
+			"name": "zhuanpanxiaozuanshi_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_0.png",
+			"type": "image",
+			"name": "item_bg_0_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_1.png",
+			"type": "image",
+			"name": "item_bg_1_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_2.png",
+			"type": "image",
+			"name": "item_bg_2_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_3.png",
+			"type": "image",
+			"name": "item_bg_3_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_4.png",
+			"type": "image",
+			"name": "item_bg_4_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_5.png",
+			"type": "image",
+			"name": "item_bg_5_png"
+		},
+		{
+			"url": "assets/game/item/item_bg_name.png",
+			"type": "image",
+			"name": "item_bg_name_png"
+		},
+		{
+			"url": "assets/game/item/item_bubble.png",
+			"type": "image",
+			"name": "item_bubble_png"
+		},
+		{
+			"url": "assets/game/item/item_photo_frame.png",
+			"type": "image",
+			"name": "item_photo_frame_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar0.png",
+			"type": "image",
+			"name": "item_quality_bar0_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar1.png",
+			"type": "image",
+			"name": "item_quality_bar1_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar2.png",
+			"type": "image",
+			"name": "item_quality_bar2_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar3.png",
+			"type": "image",
+			"name": "item_quality_bar3_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar4.png",
+			"type": "image",
+			"name": "item_quality_bar4_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_bar5.png",
+			"type": "image",
+			"name": "item_quality_bar5_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame0.png",
+			"type": "image",
+			"name": "item_quality_frame0_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame1.png",
+			"type": "image",
+			"name": "item_quality_frame1_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame2.png",
+			"type": "image",
+			"name": "item_quality_frame2_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame3.png",
+			"type": "image",
+			"name": "item_quality_frame3_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame4.png",
+			"type": "image",
+			"name": "item_quality_frame4_png"
+		},
+		{
+			"url": "assets/game/item/item_quality_frame5.png",
+			"type": "image",
+			"name": "item_quality_frame5_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_alert_title.png",
+			"type": "image",
+			"name": "turnplate_alert_title_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_back.png",
+			"type": "image",
+			"name": "turnplate_back_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_btn_down.png",
+			"type": "image",
+			"name": "turnplate_btn_down_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_btn_normal.png",
+			"type": "image",
+			"name": "turnplate_btn_normal_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc1.png",
+			"type": "image",
+			"name": "turnplate_desc1_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc2.png",
+			"type": "image",
+			"name": "turnplate_desc2_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc3.png",
+			"type": "image",
+			"name": "turnplate_desc3_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc4.png",
+			"type": "image",
+			"name": "turnplate_desc4_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc5.png",
+			"type": "image",
+			"name": "turnplate_desc5_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc6.png",
+			"type": "image",
+			"name": "turnplate_desc6_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc7.png",
+			"type": "image",
+			"name": "turnplate_desc7_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_desc8.png",
+			"type": "image",
+			"name": "turnplate_desc8_png"
+		},
+		{
+			"url": "assets/game/lottery/turnplate_lottery.png",
+			"type": "image",
+			"name": "turnplate_lottery_png"
+		},
+		{
+			"url": "assets/game/mail/mail_icon_open.png",
+			"type": "image",
+			"name": "mail_icon_open_png"
+		},
+		{
+			"url": "assets/game/mail/mail_icon_unopen.png",
+			"type": "image",
+			"name": "mail_icon_unopen_png"
+		},
+		{
+			"url": "assets/game/other/other_bg_fishTankName.png",
+			"type": "image",
+			"name": "other_bg_fishTankName_png"
+		},
+		{
+			"url": "assets/game/pay/pay_diamond.png",
+			"type": "image",
+			"name": "pay_diamond_png"
+		},
+		{
+			"url": "assets/game/pay/pay_gold.png",
+			"type": "image",
+			"name": "pay_gold_png"
+		},
+		{
+			"url": "assets/game/pay/pay_lifecard.png",
+			"type": "image",
+			"name": "pay_lifecard_png"
+		},
+		{
+			"url": "assets/game/pay/pay_monthcard.png",
+			"type": "image",
+			"name": "pay_monthcard_png"
+		},
+		{
+			"url": "assets/game/ScrollBar/thumb_bagScroll.png",
+			"type": "image",
+			"name": "thumb_bagScroll_png"
+		},
+		{
+			"url": "assets/game/ScrollBar/track_bagScroll.png",
+			"type": "image",
+			"name": "track_bagScroll_png"
+		},
+		{
+			"url": "assets/game/ScrollBar/track_blueScroll.png",
+			"type": "image",
+			"name": "track_blueScroll_png"
+		},
+		{
+			"url": "assets/game/shop/shop_bg.png",
+			"type": "image",
+			"name": "shop_bg_png"
+		},
+		{
+			"url": "assets/game/shop/shop_item_bg.png",
+			"type": "image",
+			"name": "shop_item_bg_png"
+		},
+		{
+			"url": "assets/game/shop/shop_state_disc.png",
+			"type": "image",
+			"name": "shop_state_disc_png"
+		},
+		{
+			"url": "assets/game/shop/shop_state_hot.png",
+			"type": "image",
+			"name": "shop_state_hot_png"
+		},
+		{
+			"url": "assets/game/shop/shop_state_new.png",
+			"type": "image",
+			"name": "shop_state_new_png"
+		},
+		{
+			"url": "assets/game/shop/shop_tab_diamond0.png",
+			"type": "image",
+			"name": "shop_tab_diamond0_png"
+		},
+		{
+			"url": "assets/game/shop/shop_tab_diamond1.png",
+			"type": "image",
+			"name": "shop_tab_diamond1_png"
+		},
+		{
+			"url": "assets/game/shop/shop_tab_gold0.png",
+			"type": "image",
+			"name": "shop_tab_gold0_png"
+		},
+		{
+			"url": "assets/game/shop/shop_tab_gold1.png",
+			"type": "image",
+			"name": "shop_tab_gold1_png"
+		},
+		{
+			"url": "assets/game/shop/shop_title.png",
+			"type": "image",
+			"name": "shop_title_png"
+		},
+		{
+			"url": "assets/game/tip/tip_bg.png",
+			"type": "image",
+			"name": "tip_bg_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_advance_title.png",
+			"type": "image",
+			"name": "upgrade_advance_title_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_adv_star0.png",
+			"type": "image",
+			"name": "upgrade_adv_star0_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_adv_star1.png",
+			"type": "image",
+			"name": "upgrade_adv_star1_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_bg.png",
+			"type": "image",
+			"name": "upgrade_bg_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_close.png",
+			"type": "image",
+			"name": "upgrade_close_png"
+		},
+		{
+			"url": "assets/game/upgrade/upgrade_title.png",
+			"type": "image",
+			"name": "upgrade_title_png"
+		},
+		{
+			"url": "assets/game/warehouse/18.png",
+			"type": "image",
+			"name": "18_png"
+		},
+		{
+			"url": "assets/game/warehouse/19.png",
+			"type": "image",
+			"name": "19_png"
+		},
+		{
+			"url": "assets/game/warehouse/39.png",
+			"type": "image",
+			"name": "39_png"
+		},
+		{
+			"url": "assets/game/warehouse/40.png",
+			"type": "image",
+			"name": "40_png"
+		},
+		{
+			"url": "assets/game/warehouse/quanbufenlei.png",
+			"type": "image",
+			"name": "quanbufenlei_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_bag0.png",
+			"type": "image",
+			"name": "warehouse_tab_bag0_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_bag1.png",
+			"type": "image",
+			"name": "warehouse_tab_bag1_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_fieldguide0.png",
+			"type": "image",
+			"name": "warehouse_tab_fieldguide0_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_fieldguide1.png",
+			"type": "image",
+			"name": "warehouse_tab_fieldguide1_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_synthesis_crown0.png",
+			"type": "image",
+			"name": "warehouse_tab_synthesis_crown0_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_synthesis_crown1.png",
+			"type": "image",
+			"name": "warehouse_tab_synthesis_crown1_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_synthesis_mat0.png",
+			"type": "image",
+			"name": "warehouse_tab_synthesis_mat0_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_tab_synthesis_mat1.png",
+			"type": "image",
+			"name": "warehouse_tab_synthesis_mat1_png"
+		},
+		{
+			"url": "assets/game/warehouse/warehouse_title.png",
+			"type": "image",
+			"name": "warehouse_title_png"
+		},
+		{
+			"url": "assets/game/word/buwei10.png",
+			"type": "image",
+			"name": "buwei10_png"
+		},
+		{
+			"url": "assets/game/word/buwei11.png",
+			"type": "image",
+			"name": "buwei11_png"
+		},
+		{
+			"url": "assets/game/word/buwei20.png",
+			"type": "image",
+			"name": "buwei20_png"
+		},
+		{
+			"url": "assets/game/word/buwei21.png",
+			"type": "image",
+			"name": "buwei21_png"
+		},
+		{
+			"url": "assets/game/word/buwei30.png",
+			"type": "image",
+			"name": "buwei30_png"
+		},
+		{
+			"url": "assets/game/word/buwei31.png",
+			"type": "image",
+			"name": "buwei31_png"
+		},
+		{
+			"url": "assets/game/word/buwei40.png",
+			"type": "image",
+			"name": "buwei40_png"
+		},
+		{
+			"url": "assets/game/word/buwei41.png",
+			"type": "image",
+			"name": "buwei41_png"
+		},
+		{
+			"url": "assets/game/word/chengjiu.png",
+			"type": "image",
+			"name": "chengjiu_png"
+		},
+		{
+			"url": "assets/game/word/dailytask_title.png",
+			"type": "image",
+			"name": "dailytask_title_png"
+		},
+		{
+			"url": "assets/game/word/goumaijinbi.png",
+			"type": "image",
+			"name": "goumaijinbi_png"
+		},
+		{
+			"url": "assets/game/word/goumaizuanshi.png",
+			"type": "image",
+			"name": "goumaizuanshi_png"
+		},
+		{
+			"url": "assets/game/word/heaven_title.png",
+			"type": "image",
+			"name": "heaven_title_png"
+		},
+		{
+			"url": "assets/game/word/huiyuanka.png",
+			"type": "image",
+			"name": "huiyuanka_png"
+		},
+		{
+			"url": "assets/game/word/huoqu.png",
+			"type": "image",
+			"name": "huoqu_png"
+		},
+		{
+			"url": "assets/game/word/lingqu.png",
+			"type": "image",
+			"name": "lingqu_png"
+		},
+		{
+			"url": "assets/game/word/niuartifact.png",
+			"type": "image",
+			"name": "niuartifact_png"
+		},
+		{
+			"url": "assets/game/word/niudiamond.png",
+			"type": "image",
+			"name": "niudiamond_png"
+		},
+		{
+			"url": "assets/game/word/number1_fnt.fnt",
+			"type": "font",
+			"name": "number1_fnt_fnt"
+		},
+		{
+			"url": "assets/game/word/paihang00.png",
+			"type": "image",
+			"name": "paihang00_png"
+		},
+		{
+			"url": "assets/game/word/paihang01.png",
+			"type": "image",
+			"name": "paihang01_png"
+		},
+		{
+			"url": "assets/game/word/paihang10.png",
+			"type": "image",
+			"name": "paihang10_png"
+		},
+		{
+			"url": "assets/game/word/paihang11.png",
+			"type": "image",
+			"name": "paihang11_png"
+		},
+		{
+			"url": "assets/game/word/paihangbang.png",
+			"type": "image",
+			"name": "paihangbang_png"
+		},
+		{
+			"url": "assets/game/word/shangcheng.png",
+			"type": "image",
+			"name": "shangcheng_png"
+		},
+		{
+			"url": "assets/game/word/shenhaishuizuxiang.png",
+			"type": "image",
+			"name": "shenhaishuizuxiang_png"
+		},
+		{
+			"url": "assets/game/word/shoptype10.png",
+			"type": "image",
+			"name": "shoptype10_png"
+		},
+		{
+			"url": "assets/game/word/shoptype11.png",
+			"type": "image",
+			"name": "shoptype11_png"
+		},
+		{
+			"url": "assets/game/word/shoptype20.png",
+			"type": "image",
+			"name": "shoptype20_png"
+		},
+		{
+			"url": "assets/game/word/shoptype21.png",
+			"type": "image",
+			"name": "shoptype21_png"
+		},
+		{
+			"url": "assets/game/word/technology_title.png",
+			"type": "image",
+			"name": "technology_title_png"
+		},
+		{
+			"url": "assets/game/word/weilingqu.png",
+			"type": "image",
+			"name": "weilingqu_png"
+		},
+		{
+			"url": "assets/game/word/yilingqu.png",
+			"type": "image",
+			"name": "yilingqu_png"
+		},
+		{
+			"url": "assets/game/word/yugangbeijing.png",
+			"type": "image",
+			"name": "yugangbeijing_png"
+		},
+		{
+			"url": "assets/game/word/zhuangpei.png",
+			"type": "image",
+			"name": "zhuangpei_png"
+		},
+		{
+			"url": "assets/game/word/zhuanzuanshi.png",
+			"type": "image",
+			"name": "zhuanzuanshi_png"
+		},
+		{
+			"url": "assets/official/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/official/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/official/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/official/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/official/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/official/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/official/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/official/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/official/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/official/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/official/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/official/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/official/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/official/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/official/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/official/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/official/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/official/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/official/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/official/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/official/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/official/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/official/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/game/other/feed_bg.png",
+			"type": "image",
+			"name": "feed_bg_png"
+		},
+		{
+			"url": "assets/game/other/feed_DegreeOfJoy_0.png",
+			"type": "image",
+			"name": "feed_DegreeOfJoy_0_png"
+		},
+		{
+			"url": "assets/game/other/feed_DegreeOfJoy_1.png",
+			"type": "image",
+			"name": "feed_DegreeOfJoy_1_png"
+		},
+		{
+			"url": "assets/game/other/feed_DegreeOfJoy_2.png",
+			"type": "image",
+			"name": "feed_DegreeOfJoy_2_png"
+		},
+		{
+			"url": "assets/game/other/feed_enemy_btn.png",
+			"type": "image",
+			"name": "feed_enemy_btn_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_spread.png",
+			"type": "image",
+			"name": "main_btn_spread_png"
+		},
+		{
+			"url": "assets/game/main/main_btn_spread.png",
+			"type": "image",
+			"name": "main_btn_spread2_png"
+		},
+		{
+			"url": "assets/game/button/btn_icon_qinwen.png",
+			"type": "image",
+			"name": "btn_icon_qinwen_png"
+		},
+		{
+			"url": "assets/game/other/feed_enemy_title.png",
+			"type": "image",
+			"name": "feed_enemy_title_png"
+		},
+		{
+			"url": "assets/game/login/logo.png",
+			"type": "image",
+			"name": "logo_png"
+		},
+		{
+			"url": "assets/game/icon/goods/jiewen.png",
+			"type": "image",
+			"name": "jiewen_png"
+		},
+		{
+			"url": "assets/game/icon/goods/zhuanpan.png",
+			"type": "image",
+			"name": "zhuanpan_png"
+		},
+		{
+			"url": "assets/game/test6.jpg",
+			"type": "image",
+			"name": "test6_jpg"
+		},
+		{
+			"url": "assets/game/font/FlutterBigFont.png",
+			"type": "image",
+			"name": "FlutterBigFont_png"
+		},
+		{
+			"url": "assets/game/font/FlutterBlueFont.png",
+			"type": "image",
+			"name": "FlutterBlueFont_png"
+		},
+		{
+			"url": "assets/game/font/FlutterFont.png",
+			"type": "image",
+			"name": "FlutterFont_png"
+		},
+		{
+			"url": "assets/game/word/number1_fnt.png",
+			"type": "image",
+			"name": "number1_fnt_png"
+		}
+	]
+}

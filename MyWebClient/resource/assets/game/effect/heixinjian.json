@@ -1,0 +1,58 @@
+{"mc":{
+	"action":{
+		"frameRate":12,
+		"labels":[
+			{"name":"1","frame":1,"end":7}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"heixinjian0001",
+			"x":-16,
+			"y":-16
+			},
+			{
+			"res":"heixinjian0003",
+			"x":-17,
+			"y":-15
+			},
+			{
+			"res":"heixinjian0005",
+			"x":-13,
+			"y":-16
+			},
+			{
+			"res":"heixinjian0007",
+			"x":-26,
+			"y":-26
+			},
+			{
+			"res":"heixinjian0009",
+			"x":-36,
+			"y":-27
+			},
+			{
+			"res":"heixinjian0011",
+			"x":-46,
+			"y":-22
+			},
+			{
+			"res":"heixinjian0013",
+			"x":-58,
+			"y":-11
+			}
+			]
+}},
+	"res":{
+		"heixinjian0005":{"x":221,"y":1,"w":31,"h":31},
+		"heixinjian0007":{"x":76,"y":85,"w":50,"h":57},
+		"heixinjian0001":{"x":221,"y":34,"w":31,"h":31},
+		"heixinjian0003":{"x":221,"y":67,"w":30,"h":29},
+		"heixinjian0011":{"x":121,"y":1,"w":98,"h":82},
+		"heixinjian0009":{"x":1,"y":74,"w":73,"h":73},
+		"heixinjian0013":{"x":1,"y":1,"w":118,"h":71}
+	}}

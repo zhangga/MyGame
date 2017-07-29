@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.CrownBarSkin" currentState="other" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="other" >
+	<e:Group>
+		<e:Image id="img_crown0" x="10" y="-10.53" source="fieldGuide_crown_off_png" source.other="fieldGuide_crown_on_png"/>
+		<e:layout>
+		<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:Group>
+	<e:Label id="lab_num" text="3/3" includeIn="other" size="26" fontFamily="Microsoft YaHei" left="68" verticalCenter="0" bold="true"/>
+</e:Skin>

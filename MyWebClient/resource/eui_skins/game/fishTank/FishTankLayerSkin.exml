@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.FishTankLayerSkin" width="600" height="683" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="0" y="0" height="683">
+		<e:Image id="fishtank_bg_back" x="0" source="shenqi_1_001_1_png" y="0"/>
+		<e:Image id="fishtank_dec_2" x="0" source="" y="283"/>
+		<e:Image id="fishtank_bg_font" x="0" source="shenqi_1_001_2_png" bottom="0"/>
+		<e:Image id="fishtank_dec_3" source="" x="0" y="0"/>
+		<e:Image id="fishtank_dec_1" x="300" y="383" source=""/>
+		<e:Group id="animLayer" x="0" y="0"/>
+	</e:Group>
+</e:Skin>

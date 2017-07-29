@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ShopTipsBarSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image source="public_pop_bg_png" x="0" y="6" locked="true"/>
+		<e:Group y="27" width="390" horizontalCenter="0" height="322">
+			<e:Image source="public_frame_3_png" left="0" right="0" top="0" bottom="0" scale9Grid="39,35,76,83"/>
+			<e:Image source="public_frame_2_png" left="16" right="16" top="16" bottom="16" scale9Grid="19,19,119,119"/>
+		</e:Group>
+		<e:Button id="Btn_close" label="" right="0" top="9">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="public_close_png" source.down="public_close_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image x="202" y="90" source="item_quality_bar2_png"/>
+		<e:Group x="42" y="43">
+			<e:Image source="item_quality_frame2_png" x="14" y="9"/>
+			<e:Image source="item_photo_frame_png" x="0" y="0"/>
+			<e:Image id="img_fish" scaleX="-1" horizontalCenter="0" verticalCenter="0" source=""/>
+		</e:Group>
+		<e:Label text="描述" fontFamily="Microsoft YaHei" size="20" textColor="0x590A0A" x="69" y="202" bold="true"/>
+		<e:Image source="public_frame_5_png" y="233" scale9Grid="19,19,119,119" horizontalCenter="0" height="86" width="300"/>
+		<ns1:BatchDisposebar id="buyBar" y="410" skinName="skins.BatchDisposebarSkin" horizontalCenter="0"/>
+	</e:Group>
+	<e:Label id="lab_name" text="啥啥小鱼" fontFamily="Microsoft YaHei" size="24" textColor="0x590A0A" bold="true" x="300" y="294"/>
+</e:Skin>

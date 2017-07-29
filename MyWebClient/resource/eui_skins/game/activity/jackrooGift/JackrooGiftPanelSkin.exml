@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.JackrooGiftPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" skinName="skins.PopSkin2" width="558" height="637" y="170" horizontalCenter="0"
+                  currentState="green"/>
+	<e:Image source="jackroogift_banner_png" y="265" horizontalCenter="0" locked="true"/>
+	<e:Button label="" y="686" skinName="skins.Comn_Btn_OrgSkin" width="160" horizontalCenter="0" icon="btn_icon_yaoqing_png"/>
+	<e:Label text="机会难得仅此一次" y="753" horizontalCenter="0" fontFamily="Microsoft YaHei" size="22" stroke="1" strokeColor="0x700b0b" bold="true"/>
+</e:Skin>

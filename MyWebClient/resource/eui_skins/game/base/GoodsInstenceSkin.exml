@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.GoodsInstenceSkin" currentState="displayName" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="concise,displayName" >
+	<e:Group y="0" horizontalCenter="0">
+		<e:Image source="main_bubble_rect_png" x="6" y="3"/>
+		<e:Image source="item_bg_0_png" x="0" y="0"/>
+		<e:Image id="img_fish" scaleX="-1" horizontalCenter="0" verticalCenter="0" source="" width="80" height="80"/>
+	</e:Group>
+	<e:Group y="89" includeIn="displayName" horizontalCenter="0">
+		<e:Image y="0" width="96" x="0" source="item_bg_name_png" scale9Grid="13,3,65,19"/>
+		<e:Label id="lab_name" text="啥啥小鱼" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" verticalCenter="0" textColor="0x590a0a" bold="true"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,22 @@
+{"mc":{
+	"action":{
+		"frameRate":1,
+		"labels":[
+			{"name":"1","frame":1,"end":1}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"1 (5)_png",
+			"x":-27,
+			"y":-24
+			}
+			]
+}},
+	"res":{
+		"1 (5)_png":{"x":0,"y":0,"w":55,"h":47}
+	}}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ShopItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="shop_item_bg_png"/>
+	<e:Label id="lab_name" text="啥啥小鱼" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0" textColor="0x590A0A" bold="true" x="7" y="22"/>
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image id="img_fish" scaleX="-1" horizontalCenter="0" verticalCenter="0" source=""/>
+	</e:Group>
+	<e:Group y="134" horizontalCenter="0">
+		<e:Image id="img_coin" source="goods_gold_png" scaleX="0.5" scaleY="0.5" anchorOffsetX="32" anchorOffsetY="32" x="0" y="0"/>
+		<e:Label id="lab_price" text="99999" fontFamily="Microsoft YaHei" size="20" bold="true" x="28" y="5" textColor="0xffffff"/>
+		<e:layout>
+			<e:HorizontalLayout verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

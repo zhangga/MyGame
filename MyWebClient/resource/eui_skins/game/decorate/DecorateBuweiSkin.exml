@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.DecorateBuweiSkin" width="130" height="239" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Image anchorOffsetX="0" anchorOffsetY="0" source="decorate_frame_png" width="100%" scale9Grid="27,29,59,73"
+	         height="240" />
+	<e:Group y="39" horizontalCenter="0">
+		<e:Image id="itemq" source="item_quality_frame2_png" y="0" anchorOffsetX="0" anchorOffsetY="0" width="75" height="75"
+		         horizontalCenter="0" />
+		<e:Image id="icon" y="0" anchorOffsetX="0" anchorOffsetY="0" source="ishenqi_3_005_png" width="70" height="70"
+		         horizontalCenter="0" />
+		<e:Image y="64" horizontalCenter="0" source="fieldGuide_tab_unselected_png" height="30" scale9Grid="14,15,86,6"
+		         width="110" />
+		<e:Label id="label_lv" text="Lv.1" y="70" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" bold="true"
+		         textColor="0x2a0505" />
+	</e:Group>
+	<e:Label id="label_name" text="金字塔" y="12" textColor="0xffffff" fontFamily="Microsoft YaHei" size="20"
+	         horizontalCenter="0" strokeColor="0x0a7fc9" stroke="2" />
+	<e:Label id="label_desc" text="神器描述" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" bold="true"
+	         textColor="0x2A0505" verticalAlign="middle" textAlign="center" verticalCenter="30.5"  lineSpacing="6"/>
+
+	<e:Button id="btn_cloth" label="" y="167" skinName="skins.Comn_Btn_BlueSkin" horizontalCenter="0"  width="110" height="45" icon="zhuangpei_png"/>
+	<e:Label id="cloth_label" text="已装配'城市'" fontFamily="Microsoft YaHei" size="18" horizontalCenter="0" bold="true" verticalAlign="middle" textAlign="center" lineSpacing="6" y="211" textColor="0x071af7"/>
+	<e:Label id="label_cloth" text="已装配" y="179" fontFamily="Microsoft YaHei" size="20" horizontalCenter="0.5" bold="true" textColor="0x2A0505" width="105" verticalAlign="middle" textAlign="center"/>
+</e:Skin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.CrownSynthesisPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="可合成配方：0个" y="150" fontFamily="Microsoft YaHei" size="22" textColor="0x060E96" bold="true" horizontalCenter="0"/>
+	<e:Scroller y="221" skinName="skins.BagScrollBarSkin" width="532" x="44" height="740">
+		<e:Group id="itemLayer">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

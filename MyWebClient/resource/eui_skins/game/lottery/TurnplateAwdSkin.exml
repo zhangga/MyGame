@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TurnplateAwdSkin" width="484" height="486" xmlns:e="http://ns.egret.com/eui">
+    <e:Group>
+        <e:Image id="lottery_item0" x="196" source="zhuanpanxiaojinbi_png" width="94" height="94" y="49" />
+        <e:Image id="lottery_item1" x="70" source="zhuanpanxiaojinbi_png" width="94" height="94" y="138" rotation="-45" />
+        <e:Image id="lottery_item2" x="49" source="zhuanpanxiaojinbi_png" width="94" height="94" y="292" rotation="-90" />
+        <e:Image id="lottery_item3" x="140" source="zhuanpanxiaojinbi_png" width="94" height="94" y="414"
+                 rotation="-135" />
+        <e:Image id="lottery_item4" x="292" source="zhuanpanxiaojinbi_png" width="94" height="94" y="437"
+                 rotation="-180" />
+        <e:Image id="lottery_item5" x="413" source="zhuanpanxiaojinbi_png" width="94" height="94" y="346"
+                 rotation="-225" />
+        <e:Image id="lottery_item6" x="435" source="zhuanpanxiaojinbi_png" width="94" height="94" y="195"
+                 rotation="-270" />
+        <e:Image id="lottery_item7" x="346" source="zhuanpanxiaojinbi_png" width="94" height="94" y="72" rotation="-315" />
+        <e:Image id="lottery_desc0" source="turnplate_desc1_png" x="176" y="0" />
+        <e:Image id="lottery_desc1" source="turnplate_desc1_png" x="25" y="118" rotation="-45" />
+        <e:Image id="lottery_desc2" source="turnplate_desc1_png" x="0" y="312" rotation="-90" />
+        <e:Image id="lottery_desc3" source="turnplate_desc1_png" x="117" y="462" rotation="-135" />
+        <e:Image id="lottery_desc4" source="turnplate_desc1_png" x="309" y="486" rotation="-180" />
+        <e:Image id="lottery_desc5" source="turnplate_desc1_png" x="460" y="370" rotation="-225" />
+        <e:Image id="lottery_desc6" source="turnplate_desc1_png" x="484" y="179" rotation="-270" />
+        <e:Image id="lottery_desc7" source="turnplate_desc1_png" x="367" y="24" rotation="-315" />
+    </e:Group>
+</e:Skin>

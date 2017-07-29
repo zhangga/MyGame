@@ -1,0 +1,58 @@
+{"mc":{
+	"action":{
+		"frameRate":12,
+		"labels":[
+			{"name":"1","frame":1,"end":7}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"liebiaoshuaxin0001",
+			"x":-287,
+			"y":-59
+			},
+			{
+			"res":"liebiaoshuaxin0002",
+			"x":-287,
+			"y":-60
+			},
+			{
+			"res":"liebiaoshuaxin0003",
+			"x":-287,
+			"y":-63
+			},
+			{
+			"res":"liebiaoshuaxin0004",
+			"x":-287,
+			"y":-64
+			},
+			{
+			"res":"liebiaoshuaxin0005",
+			"x":-287,
+			"y":-64
+			},
+			{
+			"res":"liebiaoshuaxin0006",
+			"x":-287,
+			"y":-62
+			},
+			{
+			"res":"liebiaoshuaxin0007",
+			"x":-287,
+			"y":-62
+			}
+			]
+}},
+	"res":{
+		"liebiaoshuaxin0006":{"x":0,"y":385,"w":575,"h":123},
+		"liebiaoshuaxin0003":{"x":0,"y":510,"w":451,"h":125},
+		"liebiaoshuaxin0002":{"x":576,"y":130,"w":279,"h":119},
+		"liebiaoshuaxin0005":{"x":0,"y":0,"w":575,"h":128},
+		"liebiaoshuaxin0007":{"x":0,"y":260,"w":575,"h":123},
+		"liebiaoshuaxin0004":{"x":0,"y":130,"w":574,"h":128},
+		"liebiaoshuaxin0001":{"x":577,"y":0,"w":30,"h":117}
+	}}

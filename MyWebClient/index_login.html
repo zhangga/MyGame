@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MyWebClient</title>
+	<!--防止index.html被浏览器缓存--begin-->
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+	<!--防止index.html被浏览器缓存--over-->
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="full-screen" content="true" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<meta name="format-detection" content="telephone=no">
+	<style>
+        html, body {
+            -ms-touch-action: none;
+            background: #888888;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+	<script src="https://h5.talkingdata.com/g/h5/v1/0DD340E252244935BE76FC2D23EE9B2B?v=170728" type="text/javascript"></script>
+<!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+</head>
+
+<body onload="ready()">
+	
+	<div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30" data-content-width="600"
+data-content-height="1067" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false" data-show-log="false"
+data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+</div>
+
+<script>
+		var wbCss;
+		var version = "17250705";
+		var loadingInterID = setInterval(loadCodeAndRes, 50);
+		var loadtime = 0;
+		function loadCodeAndRes() {
+			var onloaded = window["Egert_Main_Status"];
+			if (onloaded == "Egert_Main_RemoveLoaded") {
+				removeLoading();
+			} else if (onloaded == "Egert_Main_Loaded") {
+				showLoadProgress(100, "正在进入游戏，稍后为您呈现精彩内容");
+			} else {
+				if (loadtime < 4000) {
+					loadtime++;
+				} else {
+					onFailLoad();
+				}
+			}
+		}
+		function removeLoading() {
+			clearInterval(loadingInterID);
+			removeLoad();
+		}
+		function onFailLoad() {
+			removeLoading();
+			alert("网络异常，请刷新重试");
+			location.reload(true);
+		}
+		function ready() {
+			showLoadPage();
+			showLoadProgress(0, "正在连接服务器（无法进入游戏请刷新）");
+			setTimeout(enterGame, 1000);
+		}
+		function showLoadPage() {
+			var nod = document.createElement("style");
+			var s = "";
+			var star = "";
+			var pt = window.innerHeight < 470 ? 0 : 119;
+			str = "*{margin: 0;}.h5-container-lay div{position:relative;}.h5-container-lay{background: #f3f3f3;position:absolute;}.h5c-row{width:100%}#h5-loading-page-lay{z-index:10000;width:100%;height:100%;position:absolute;top:0px;}#h5-rotate-tip-lay{z-index:10001;width:100%;height:100%;}#h5-loading-page{width:100%;height:100%;background: #fefcfe;}#h5-rotate-tip{width:100%;height:100%;background: #f3f3f3;}#h5-logo-box{padding-top:" + pt + "px}#h5-logo{height:177px;width:244px;margin:0 auto; background:url(resource/assets/game/login/logo.png" + "?v=" + version + ") no-repeat;background-size:contain;background-position:center;}#h5-rotate-box{width:100%; height:100%}#h5-rotate{height:100%;width:100%;margin:0 auto; background-size:151px 151px;background-position:center center;}#h5-slogan-box{padding-top:26px}#h5-loading-box{padding-top:20px}#h5-loading-text{color:#a27e7e;font-size:14px;width:100%;text-align:center;font-family:微软雅黑}#h5-slogan{width:194px;height:38px;margin:0 auto;" + s + "background-size:cover;}#h5-loading{width:237px;height:4px;margin:23px auto 0;-webkit-border-radius:4.528125px;-moz-border-radius:4.528125px;border-radius:4.528125px;background:#343234;}#h5-loading-finish{margin:0;width:0;height:100%;background:#fbd067;-webkit-border-radius:4.528125px;-moz-border-radius:4.528125px;border-radius:4.528125px;}@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotate{from{-moz-transform:rotate(0deg)}to{-moz-transform:rotate(360deg)}}@-ms-keyframes rotate{from{-ms-transform:rotate(0deg)}to{-ms-transform:rotate(360deg)}}@-o-keyframes rotate{from{-o-transform:rotate(0deg)}to{-o-transform:rotate(360deg)}}#h5-loading-star{width:17px;height:17px;margin:-10.35px 0 0 -10.35px;" + star + "background-size:contain;background-repeat:no-repeatanimation: 1s linear 0s normal none infinite rotate;-webkit-animation:1s linear 0s normal none infinite rotate;}";
+			nod.type = "text/css";
+			if (nod.styleSheet) {         //ie下
+				nod.styleSheet.cssText = str;
+			} else {
+				nod.innerHTML = str;       //或者写成 nod.appendChild(document.createTextNode(str))
+			}
+			document.getElementsByTagName("head")[0].appendChild(nod);
+			wbCss = nod;
+
+			var d = document.createElement("div");
+			d.id = "h5-loading-page-lay";
+			d.class = "h5-container-lay";
+			d.innerHTML = '<div id="h5-loading-page"><div id="h5-logo-box" class="h5c-row"><div id="h5-logo"></div></div><div id="h5-slogan-box" class="h5c-row"><div id="h5-slogan"></div></div><div id="h5-loading-box" class="h5c-row"><div id="h5-loading-text">首次加载时间稍长,请耐心等待...<br><font color="#f69638" size="1">无法进入游戏请<font color="#00ff00">刷新</font>，<span id="loadingFile"></span></font></div><div id="h5-loading"><div id="h5-loading-finish"></div><div id="h5-loading-star"></div></div></div></div>';
+			document.body.appendChild(d);
+		}
+		function enterGame() {
+			showLoadProgress(10, "服务器连接成功！正在为您加载引擎文件");
+			loadSdkFiles1();
+		}
+		function loadEngineFiles() {
+			loadScript("libs/modules/engine.min.js?v=170725",
+				function () {
+					showLoadProgress(60, "引擎文件加载成功！正在加载游戏主程序");
+					loadScript("main.min.js?v=" + version, startEgert);
+				});
+		}
+		function loadSdkFiles1() {
+			loadScript("libs/SDK/SDKUtil.min.js?v=170602",
+				function () {
+					showLoadProgress(15, "服务器连接成功！正在为您加载引擎文件");
+					loadSdkFiles2();
+				});
+		}
+		function loadSdkFiles2() {
+			loadScript("libs/SDK/SDKTalkingData.js?v=170602",
+				function () {
+					showLoadProgress(30, "服务器连接成功！正在为您加载引擎文件");
+					loadEngineFiles();
+				});
+		}
+		function startEgert() {
+			showLoadProgress(80, "游戏主程序加载成功！正在加载游戏资源");
+			var mode = "canvas";
+			// try {
+			// 	var pf = window.OPEN_DATA?window.OPEN_DATA["pf"]:"";
+			// 	if(pf.indexOf("wanba") >= 0){
+			// 		mode = "canvas";
+			// 	}else{
+			// 		var os = navigator.userAgent.toLowerCase();
+			// 		if (/iphone|ipad|ipod|mac os/.test(os)) {
+			// 			mode = "canvas";
+			// 		} else {
+			// 			mode = "webgl";
+			// 		}
+			// 	}
+			// } catch (e) {
+			// 	mode = "canvas";
+			// }
+			egret.runEgret({ renderMode: mode, audioType: 0 });
+		}
+		function loadScript(url, callback) {
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.setAttribute('crossorigin', '');
+
+			script.onload = function () {
+				callback && callback();
+			};
+			script.onerror = function () {
+				script.parentNode.removeChild(script);
+				setTimeout(function () {
+					loadScript(url, callback);
+				}, 1000);
+			};
+
+			script.src = url;
+			document.getElementsByTagName("head")[0].appendChild(script);
+		}
+		function showLoadProgress(v, str) {
+			var d = document.getElementById("h5-loading-finish");
+			var w = v / 100 * 237;
+			d.style.width = w + "px";
+			d = document.getElementById("h5-loading-star");
+			d.style.marginLeft = (w - 10.35) + "px";
+
+			var sFont = document.getElementById('loadingFile');
+			sFont.innerHTML = str;
+		}
+		function removeLoad() {
+			var d = document.getElementById("h5-loading-page-lay");
+			if (d) document.body.removeChild(d);
+			// document.getElementsByTagName("head")[0].removeChild(wbCss);
+		}
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": "" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * }
+         **/
+		// egret.runEgret({ renderMode: "webgl", audioType: 0 });
+	</script>
+</body>
+
+</html>

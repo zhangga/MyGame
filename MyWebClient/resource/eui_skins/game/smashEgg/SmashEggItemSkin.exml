@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.SmashEggItemSkin" width="100" height="120" currentState="unopen" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" states="unopen,open">
+    <e:Image source="smash_egg_unopen_png" horizontalCenter="0" source.open="smash_egg_open_png" locked="true" />
+	<ns1:PlayerHeadBar id="head_bar" includeIn="open" y="26" skinName="skins.PlayerHeadBarSkin" scaleX="0.7" scaleY="0.7" horizontalCenter="2"/>
+    <e:Image source="textinput_bg_png" y="87" width="80" height="25" horizontalCenter="0" width.open="100"
+             width.unopen="70"  locked="true"/>
+    <e:Label id="player_name_label" text="玩家名字" includeIn="open" y="89" fontFamily="Microsoft YaHei" size="18"
+             textColor="0x2a0505" width="100" height="20" horizontalCenter="0" textAlign="center" verticalAlign="middle"
+             bold="true" />
+    <e:Image source="icon_chuizi_png" x="5" y="72" width="55" height="55" includeIn="unopen" />
+    <e:Label id="consume_label" text="×2" y="89" fontFamily="Microsoft YaHei" size="22" textColor="0x2a0505" right="17"
+             includeIn="unopen" />
+    <e:Group includeIn="open" y="-1" horizontalCenter="0">
+        <e:Image source="public_frame_15_png" includeIn="open" width="88" height="24" scale9Grid="34,11,205,12" x="0"
+                 y="1" locked="true" />
+        <e:Label id="award_desc_label" text="钻石×100" includeIn="open" y="5" size="16" fontFamily="Microsoft YaHei"
+                 horizontalCenter="0.5" />
+    </e:Group>
+</e:Skin>

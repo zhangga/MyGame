@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.GiftTimeLimitPanelSkin" width="600" height="1067" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Component id="basic" skinName="skins.PopGiftSkin" horizontalCenter="9"  locked="true"/>
+    <e:Image source="public_frame_7_png" y="395" scale9Grid="48,45,292,134" width="400" height="360"
+             horizontalCenter="0" />
+    <e:Group y="759" horizontalCenter="0">
+        <e:Label text="活动剩余时间：" y="0" fontFamily="Microsoft YaHei" size="22" x="0"  bold="true"/>
+        <e:Label text="99：99：99" y="0" fontFamily="Microsoft YaHei" size="22" x="0"  bold="true"/>
+        <e:layout>
+            <e:HorizontalLayout/>
+        </e:layout>
+    </e:Group>
+    <e:Button label="" y="795" skinName="skins.Comn_Btn_YellowSkin" horizontalCenter="0.5" width="155" />
+    <e:Group y="609" horizontalCenter="0.5">
+        <ns1:GoodsInstence x="0" y="1" skinName="skins.GoodsInstenceSkin" />
+        <ns1:GoodsInstence x="151" y="0" skinName="skins.GoodsInstenceSkin" />
+    </e:Group>
+</e:Skin>

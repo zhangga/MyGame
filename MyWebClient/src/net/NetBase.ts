@@ -1,0 +1,5 @@
+class NetBase {
+	
+	public constructor() {
+	}
+}
