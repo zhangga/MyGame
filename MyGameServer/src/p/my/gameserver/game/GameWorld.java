@@ -1,7 +1,16 @@
 package p.my.gameserver.game;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.common.base.Preconditions;
+
+import p.my.common.db.JedisManager;
 import p.my.common.message.Message;
 import p.my.common.util.HttpUtil;
+import p.my.common.util.StringUtil;
+import p.my.gameserver.data.GameRole;
+import p.my.gameserver.data.Player;
 
 public class GameWorld {
 	
@@ -11,8 +20,35 @@ public class GameWorld {
 		return instance;
 	}
 	
+	//在线玩家列表
+	private Map<Integer, GameRole> onlines = new HashMap<>();
+	
 	public void init() {
 		
+	}
+	
+	public GameRole getGameRole(int id) {
+		//从缓存中获取
+		GameRole role = onlines.get(id);
+		if (role != null)
+			return role;
+		//从reids中获取
+		String value = JedisManager.gi().getKey(String.valueOf(id));
+		if (value == null)
+			return null;
+		Player player = StringUtil.json2Obj(value, Player.class);
+		Preconditions.checkNotNull(player, "获取玩家数据出错");
+		role = new GameRole(player);
+		role.init();
+		return role;
+	}
+	
+	/**
+	 * 在线玩家数量
+	 * @return
+	 */
+	public int getOnlineNum() {
+		return this.onlines.size();
 	}
 	
 	/**

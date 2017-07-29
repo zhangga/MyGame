@@ -10,12 +10,19 @@ import p.my.gameserver.manager.MsgManager;
  */
 public class GameRole {
 	
+	//角色数据
+	private Player player;
+	
 	private int token;
 	
 	//-=-=-=-=-=-=-=-=-=Manager-=-=-=-=-=-=-=-=-=//
 	private MsgManager msgMgr;
 	
 	
+	
+	public GameRole(Player player) {
+		this.player = player;
+	}
 	
 	public void init() {
 		msgMgr = new MsgManager(this);
@@ -33,6 +40,10 @@ public class GameRole {
 
 	public void setToken(int token) {
 		this.token = token;
+	}
+
+	public Player getPlayer() {
+		return player;
 	}
 
 	public MsgManager getMsgMgr() {

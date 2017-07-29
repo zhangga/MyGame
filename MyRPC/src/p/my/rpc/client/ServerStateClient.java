@@ -45,8 +45,8 @@ public class ServerStateClient {
 			ServerStateRequest req = ServerStateRequest.newBuilder()
 					.setId(id).setName(name).setHost(host).setPort(port).setOnline(online)
 					.build();
+			@SuppressWarnings("unused")
 			ServerStateResponse resp = blockingStub.sendState(req);
-			logger.info("result from login server: " + resp.getState());
 		} catch (RuntimeException e) {
 			logger.error("RPC failed:", e);
 			return;

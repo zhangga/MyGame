@@ -24,9 +24,9 @@ import p.my.gameserver.constant.GameConfig;
 import p.my.gameserver.constant.GameConstant;
 import p.my.gameserver.core.HttpMessageHandler;
 import p.my.gameserver.game.GameWorld;
+import p.my.gameserver.service.RPCService;
 import p.my.gameserver.task.GlobalTasks;
 import p.my.gameserver.task.TaskManager;
-import p.my.rpc.client.ServerStateClient;
 
 /**
  * 游戏服主入口
@@ -39,9 +39,6 @@ public class MyGameServer {
 	private static final Logger logger = Logger.getLogger(MyGameServer.class);
 	
 	public static void main(String[] args) {
-		ServerStateClient client = new ServerStateClient("192.168.0.17", 29999);
-		client.sendState(1, "zzq", "192.168.0.17", 3001, 10);
-		
 		MyGameServer server = new MyGameServer();
 		server.start();
 		logger.info("=========游戏服启动成功=========");
@@ -56,6 +53,8 @@ public class MyGameServer {
     	WebActionManager.init(GameConstant.WEB_ACTION_PACKAGE);
     	
     	GameWorld.gi().init();
+    	
+    	RPCService.init();
     	
     	logger.info("初始化任务管理器");
         TaskManager.gi().init();

@@ -10,6 +10,7 @@ public enum ErrorCmd {
 	
 	OPERATION_FAILED(1, "操作失败"),
 	TOKEN_EXPIRE(2, "登陆失效"),
+	LOGIN_EXPIRE(3, "登陆超时"),
 	;
 	
 	private short id;

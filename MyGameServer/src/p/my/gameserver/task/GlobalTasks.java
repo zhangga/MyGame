@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import p.my.common.task.Task;
 import p.my.common.util.TimeUtil;
+import p.my.gameserver.service.RPCService;
 
 public class GlobalTasks {
 	
@@ -33,7 +34,8 @@ public class GlobalTasks {
 			TaskManager.gi().schedulePeriodicTask(ETaskType.GLOBAL, new Task() {
 				@Override
 				public void run() {
-					
+					//发送服务器状态
+					RPCService.sendServerState();
 				}
 				
 				@Override

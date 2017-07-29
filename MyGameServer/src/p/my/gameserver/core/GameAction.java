@@ -1,8 +1,10 @@
 package p.my.gameserver.core;
 
 import p.my.common.message.Message;
+import p.my.gameserver.action.GameActions;
 import p.my.gameserver.constant.ErrorCmd;
 import p.my.gameserver.data.GameRole;
+import p.my.gameserver.game.GameWorld;
 
 /**
  * 这个Action主要的操作是将传递过来的byte[]转换成消息对象。 具体的实现执行具体的逻辑
@@ -24,20 +26,29 @@ public abstract class GameAction
 	 */
 	public void action(Message req, int uid, int token)
 	{
-		if (!doValid(req, uid, token))
+		//获取玩家数据
+		GameRole role = GameWorld.gi().getGameRole(uid);
+		//有效性检查
+		if (!doValid(req, role, token))
 			return;
-		doAction(null, req);
+		doAction(role, req);
 	}
 	
 	/**
 	 * 有效性检查
 	 * @param req
-	 * @param uid
+	 * @param role
 	 * @param token
 	 * @return
 	 */
-	public boolean doValid(Message req, int uid, int token) {
-		GameRole role = null;
+	public boolean doValid(Message req, GameRole role, int token) {
+		//获取玩家数据
+		if (role == null) {
+			Message errMsg = new Message(GameActions.ERROR.cmd, req.getCtx());
+			errMsg.setShort(ErrorCmd.LOGIN_EXPIRE.getId());
+			GameWorld.gi().sendMsg(errMsg);
+			return false;
+		}
 		//判断token，持有过期token的玩家将被踢下线
 		if (role.getToken() != token) {
 			role.getMsgMgr().sendErrorMsg(req.getCtx(), ErrorCmd.TOKEN_EXPIRE);

@@ -21,6 +21,8 @@ public class ServiceResult {
 	
 	public static final String COMMA = ",";
 	
+	public static final int RPC_PORT = 9999;
+	
 	/**
 	 * 根据key存放rpc收到的结果
 	 */

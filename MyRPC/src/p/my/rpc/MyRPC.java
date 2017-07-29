@@ -10,6 +10,7 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import p.my.rpc.proto.service.ServerStateServiceGrpc;
 import p.my.rpc.service.ServerStateServiceImpl;
+import p.my.rpc.service.ServiceResult;
 
 /**
  * RPC服务器
@@ -37,7 +38,7 @@ public class MyRPC {
 			@Override
 			public void run() {
 				try {
-					server = ServerBuilder.forPort(9999)
+					server = ServerBuilder.forPort(ServiceResult.RPC_PORT)
 							//添加所有的RPC服务
 							.addService(ServerStateServiceGrpc.bindService(new ServerStateServiceImpl()))
 							.build().start();

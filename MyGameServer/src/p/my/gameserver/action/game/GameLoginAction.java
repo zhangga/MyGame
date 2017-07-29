@@ -12,7 +12,7 @@ public class GameLoginAction extends GameAction {
 	}
 
 	@Override
-	public boolean doValid(Message req, int uid, int token) {
+	public boolean doValid(Message req, GameRole role, int token) {
 		return true;
 	}
 
