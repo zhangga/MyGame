@@ -2,6 +2,8 @@ package p.my.common.util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.Temporal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -107,6 +109,17 @@ public class TimeUtil {
 	public static int getDistanceDay(long before, long after)
 	{
 		return (int) (Math.abs(getDayStartTime(after) - getDayStartTime(before)) / DAY);
+	}
+	
+	/**
+	 * 获取两天时间的天数差
+	 * @param before
+	 * @param after
+	 * @return
+	 * @since 1.8
+	 */
+	public static long betweenDays(Temporal before, Temporal after) {
+		return ChronoUnit.DAYS.between(before, after);
 	}
 	
 	/**
