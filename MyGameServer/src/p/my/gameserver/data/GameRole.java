@@ -1,11 +1,16 @@
 package p.my.gameserver.data;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.apache.log4j.Logger;
 
 import p.my.common.db.JedisManager;
 import p.my.common.message.Message;
+import p.my.common.message.MessageArray;
 import p.my.common.util.MonitorUtil;
 import p.my.common.util.StringUtil;
+import p.my.gameserver.game.GameWorld;
+import p.my.gameserver.manager.FunctionManager;
 import p.my.gameserver.manager.MsgManager;
 
 /**
@@ -21,13 +26,16 @@ public class GameRole {
 	//角色数据
 	private Player player;
 	
-	private int token;
+	//令牌,在线玩家数据
+	private AtomicInteger token = new AtomicInteger(0);
 	
 	//登陆时携带的UID
 	private int loginId;
 	
 	//-=-=-=-=-=-=-=-=-=Manager-=-=-=-=-=-=-=-=-=//
 	private MsgManager msgMgr;
+	
+	private FunctionManager funcMgr;
 	
 	
 	
@@ -37,13 +45,26 @@ public class GameRole {
 	
 	public void init() {
 		msgMgr = new MsgManager(this);
+		funcMgr = new FunctionManager(this);
 	}
 
 	/**
 	 * 进入游戏
 	 */
 	public void enterGame(Message msg) {
+		//token加1
+		token.incrementAndGet();
+		//登录时间
+		long curr = System.currentTimeMillis();
+		player.setLoginTime(curr);
 		
+		//成功登录
+		GameWorld.gi().addOnlineRole(this);
+		//保存数据
+		save();
+		//消息
+		MessageArray msgs = funcMgr.getLoginMsgs(msg.getCtx());
+		GameWorld.gi().sendMsg(msgs);
 	}
 	
 	/**
@@ -72,11 +93,7 @@ public class GameRole {
 	}
 	
 	public int getToken() {
-		return token;
-	}
-
-	public void setToken(int token) {
-		this.token = token;
+		return token.get();
 	}
 
 	public Player getPlayer() {

@@ -28,6 +28,11 @@ public class GameWorld {
 		
 	}
 	
+	/**
+	 * 获取用户数据。只能自己持有该引用
+	 * @param id
+	 * @return
+	 */
 	public GameRole getGameRole(int id) {
 		//从缓存中获取
 		GameRole role = onlines.get(id);
@@ -42,6 +47,10 @@ public class GameWorld {
 		role = new GameRole(player);
 		role.init();
 		return role;
+	}
+	
+	public void addOnlineRole(GameRole role) {
+		this.onlines.put(role.getId(), role);
 	}
 	
 	/**
