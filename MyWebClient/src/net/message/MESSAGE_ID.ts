@@ -7,6 +7,7 @@ enum MESSAGE_ID {
 
     GAME_LOGON_MESSAGE = 100,   //登录服
     LOGIN_SERVER_MESSAGE = 101, //登录游戏服
+    CREATE_ROLE_MESSAGE = 102,	//创建角色
     ERROR_TIP_MESSAGE = 110,    //错误提示信息
 
 
@@ -28,7 +29,7 @@ enum MESSAGE_ID {
 
     GAME_TICK_MESSAGE = 99,  //游戏心跳
     
-    CREATE_ROLE_MESSAGE = 104,	//创建角色
+    
     ENTER_GAME_MESSAGE = 105,	//进入游戏
     PLAYER_MESSAGE = 106,		//玩家消息
     GAME_SYNC_MESSAGE = 107,         //同步数据消息

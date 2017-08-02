@@ -39,11 +39,10 @@ var LoginManager = (function () {
     LoginManager.prototype.onSendCreateMessage = function (name, sex) {
         if (sex === void 0) { sex = 0; }
         var msg = new Message(MESSAGE_ID.CREATE_ROLE_MESSAGE);
-        msg.setShort(DataManager.instance.channel); //channel
+        msg.setInt(DataManager.instance.channel); //channel
         msg.setString(DataManager.instance.account); //account
         msg.setByte(DataManager.instance.platform); //platform
         msg.setString(name);
-        msg.setByte(sex);
         msg.setInt(SDKManager.loginInfo.inviter);
         msg.setString(DataManager.instance.avatarUrl);
         _GF.instance.net.onAddMessage(msg);

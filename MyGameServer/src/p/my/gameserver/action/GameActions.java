@@ -3,6 +3,7 @@ package p.my.gameserver.action;
 import java.util.HashMap;
 import java.util.Map;
 
+import p.my.gameserver.action.game.GameCreateRoleAction;
 import p.my.gameserver.action.game.GameLoginAction;
 import p.my.gameserver.core.GameAction;
 
@@ -16,6 +17,7 @@ public enum GameActions
 {
 	
 	LOGIN(101, GameLoginAction.class, "进入游戏"),
+	CREATE(102, GameCreateRoleAction.class, "创建角色"),
 	ERROR(110, null, "错误提示")
 	;
 	

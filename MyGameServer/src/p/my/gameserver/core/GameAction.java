@@ -28,6 +28,11 @@ public abstract class GameAction
 	{
 		//获取玩家数据
 		GameRole role = GameWorld.gi().getGameRole(uid);
+		if (role == null) {
+			//向LoginAction携带UID
+			role = new GameRole(null);
+		}
+		role.setLoginId(uid);
 		//有效性检查
 		if (!doValid(req, role, token))
 			return;

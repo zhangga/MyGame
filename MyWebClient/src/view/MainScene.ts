@@ -30,7 +30,8 @@ class MainScene extends egret.DisplayObjectContainer {
 				this.sceneLayer.addChild(login);
 				break;
 			case MAINSCENE_STATE.CREATE:
-				if(DataManager.instance.channel==1005){
+				//玩吧建角
+				if(DataManager.instance.channel == EChannel.CHANNEL_WANBA){
 					DataManager.instance.loginM.onSendCreateMessage(SDKManager.loginInfo.nickName);
 				}else{
 					var create = new CreateRoleView();

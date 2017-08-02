@@ -9,8 +9,10 @@ package p.my.gameserver.constant;
 public enum ErrorCmd {
 	
 	OPERATION_FAILED(101, "操作失败"),
-	TOKEN_EXPIRE(102, "登陆失效"),
-	LOGIN_EXPIRE(103, "登陆超时"),
+	PLAYER_FREEZE(102, "角色冻结"),
+	PLAYER_EXIST(103, "角色已存在"),
+	TOKEN_EXPIRE(104, "登陆失效"),
+	LOGIN_EXPIRE(105, "登陆超时"),
 	;
 	
 	private short id;

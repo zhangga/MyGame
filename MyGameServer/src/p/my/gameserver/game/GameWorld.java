@@ -7,6 +7,7 @@ import com.google.common.base.Preconditions;
 
 import p.my.common.db.JedisManager;
 import p.my.common.message.Message;
+import p.my.common.message.MessageArray;
 import p.my.common.util.HttpUtil;
 import p.my.common.util.StringUtil;
 import p.my.gameserver.data.GameRole;
@@ -55,8 +56,14 @@ public class GameWorld {
 	 * 发送消息
 	 * @param msg
 	 */
-	public void sendMsg(Message msg) {
-		HttpUtil.sendResponse(msg.getCtx(), msg.getBuf());
+	public void sendMsg(Message resp) {
+		MessageArray msgs = new MessageArray(resp);
+		sendMsg(msgs);
+	}
+	
+	public void sendMsg(MessageArray msgs) {
+		msgs.pack();
+		HttpUtil.sendResponse(msgs.getCtx(), msgs.getBuf());
 	}
 
 }
