@@ -9822,7 +9822,6 @@ declare namespace egret.sys {
      */
     let $requestRenderingFlag: boolean;
     /**
-     * @private
      * Egret心跳计时器
      */
     class SystemTicker {
@@ -9878,7 +9877,13 @@ declare namespace egret.sys {
          * @private
          */
         private frameInterval;
+        /**
+         * @private
+         */
         private frameDeltaTime;
+        /**
+         * @private
+         */
         private lastTimeStamp;
         /**
          * @private
@@ -9894,6 +9899,13 @@ declare namespace egret.sys {
          * ticker 花销的时间
          */
         private costEnterFrame;
+        /**
+         * @private
+         * 是否被暂停
+         */
+        private isPaused;
+        pause(): void;
+        resume(): void;
         /**
          * @private
          * 执行一次刷新
@@ -9923,11 +9935,32 @@ declare namespace egret.sys {
          */
         private callLaterAsyncs();
     }
+}
+declare module egret {
     /**
-     * @private
      * 心跳计时器单例
      */
-    let $ticker: SystemTicker;
+    let $ticker: sys.SystemTicker;
+    namespace lifecycle {
+        type LifecyclePlugin = (context: LifecycleContext) => void;
+        /**
+         * @private
+         */
+        let stage: egret.Stage;
+        /**
+         * @private
+         */
+        let contexts: LifecycleContext[];
+        class LifecycleContext {
+            pause(): void;
+            resume(): void;
+            onUpdate?: () => void;
+        }
+        let onResume: () => void;
+        let onPause: () => void;
+        function addLifecycleListener(plugin: LifecyclePlugin): void;
+    }
+    let ticker: sys.SystemTicker;
 }
 /**
  * @private
@@ -10192,6 +10225,18 @@ declare namespace egret.sys {
          * 顶点索引。
          */
         bounds: Rectangle;
+        /**
+         * 使用的混合模式
+         */
+        blendMode: number;
+        /**
+         * 相对透明度
+         */
+        alpha: number;
+        /**
+         * 颜色变换滤镜
+         */
+        filter: ColorMatrixFilter;
         /**
          * 绘制一次位图
          */

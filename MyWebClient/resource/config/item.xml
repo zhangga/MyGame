@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<items>
+    <!--
+        id:材料id  name:名称
+        type:资源类型
+        	GOLD	(1),
+            DIAMOND (2),
+            POWER	(3),
+            EXP		(4),
+            FISH	(5),
+            GEM		(6),
+            CROWN	(7),
+    -->
+    <item id="6001" type="6" name="item_name_gem1"/>
+    <item id="6002" type="6" name="item_name_gem2"/>
+    <item id="6003" type="6" name="item_name_gem3"/>
+    <item id="7001" type="7" name="item_name_crown1"/>
+    <item id="7002" type="7" name="item_name_crown2"/>
+    <item id="7003" type="7" name="item_name_crown3"/>
+</items>

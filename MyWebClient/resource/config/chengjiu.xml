@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskDailys>
+	<taskDaily id="1" icon="shoujiyu_png" goType="1" start="1" dist="5" end="300" reward="2,0,100" name="累计收集{0}条鱼" eventType="6"/>
+	<taskDaily id="2" icon="dianjiyu_png" goType="1" start="100" dist="400" end="4100" reward="2,0,100" name="累计点击鱼{0}次" eventType="7"/>
+	<taskDaily id="3" icon="jihuoshenqi_png" goType="3" start="1" dist="1" end="15" reward="2,0,100" name="累计激活{0}个神器" eventType="10"/>
+	<taskDaily id="4" icon="qinwen_png" goType="5" start="10" dist="20" end="190" reward="2,0,100" name="累计与好友接吻{0}次" eventType="3"/>
+	<taskDaily id="5" icon="zhuanpanwuran_png" goType="6" start="10" dist="20" end="190" reward="2,0,100" name="累计污染对方{0}次" eventType="12"/>
+	<taskDaily id="6" icon="touqu_png" goType="6" start="10" dist="20" end="190" reward="2,0,100" name="累计偷取对方{0}次" eventType="13"/>
+</taskDailys>

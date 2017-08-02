@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskDailys>
+	<taskDaily id="1" icon="zhuanpan_png" goType="6" eventType="1" reward="8" name="转20次转盘" count="20"/>
+	<taskDaily id="2" icon="yushi_png" goType="5" eventType="2" reward="8" name="送好友5次鱼食" count="5"/>
+	<taskDaily id="3" icon="jiewen_png" goType="5" eventType="3" reward="8" name="与好友接吻5次" count="5"/>
+	<taskDaily id="4" icon="icon_goods_gold_png" goType="1" eventType="4" reward="8" name="消费30K金币" count="30000"/>
+</taskDailys>

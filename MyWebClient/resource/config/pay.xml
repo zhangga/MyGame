@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pays>
+	<pay id="6" rmb="6" diamond="600" type="0"/>
+	<pay id="28" rmb="28" diamond="2800" type="1"/>
+	<pay id="30" rmb="30" diamond="3000" type="0"/>
+	<pay id="80" rmb="80" diamond="8000" type="2"/>
+	<pay id="98" rmb="98" diamond="9800" type="0"/>
+	<pay id="198" rmb="198" diamond="19800" type="0"/>
+	<pay id="328" rmb="328" diamond="32800" type="0"/>
+	<pay id="648" rmb="648" diamond="64800" type="0"/>
+</pays>

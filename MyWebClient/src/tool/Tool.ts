@@ -4,9 +4,9 @@ class Tool {
 	public constructor() {
 	}
 	public static log(str) {
-		// if (SDKManager.getChannel() == EChannel.CHANNEL_WYCX) {
-		egret.log("log: " + str);
-		// }
+		if (SDKManager.getChannel() == EChannel.CHANNEL_WYCX) {
+			egret.log("log: " + str);
+		}
 	}
 	public static callback(callback, target, ...param) {
 		egret.callLater(callback, target, ...param);

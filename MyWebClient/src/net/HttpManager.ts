@@ -15,9 +15,7 @@ class HttpManager {
 		}
 	}
 	public sendMessage(message: Message): void {
-		if (message.getCmdId() != 100) {
-			Tool.log("发送消息：" + message.getCmdId());
-		}
+		Tool.log("发送消息：" + message.getCmdId());
 		if (message.isCheckLoading) {
 			// this.gameWorld.openLoading();
 		}

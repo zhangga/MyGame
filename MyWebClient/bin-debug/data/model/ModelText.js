@@ -13,8 +13,24 @@ var ModelText = (function (_super) {
     }
     ModelText.prototype.parseXML = function (result) {
         _super.prototype.parseXML.call(this, result);
-        this.local = this.getXmlValue(result, "local");
+        this.cn = this.getXmlValue(result, "cn");
     };
+    Object.defineProperty(ModelText.prototype, "local", {
+        get: function () {
+            var local = "";
+            switch (Language.instance.type) {
+                case LANGUAGE_TYPE.CN:
+                    local = this.cn;
+                    break;
+                case LANGUAGE_TYPE.EN:
+                    local = this.cn;
+                    break;
+            }
+            return local;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return ModelText;
 }(ModelBase));
 __reflect(ModelText.prototype, "ModelText");

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fishes>
+	<fish id="1" name="tujian1" waixing="shenqi_1_001_2_png" type="1" icon="ishenqi_1_001_png" jieduan="0,100" tiaojian="0" cost="0" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="2" name="tujian1" waixing="shenqi_1_001_2_png" type="1" icon="ishenqi_1_001_png" jieduan="1,200" tiaojian="42252800" cost="1,0,2683461057" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="3" name="tujian1" waixing="shenqi_1_001_3_png" type="1" icon="ishenqi_1_001_png" jieduan="2,300" tiaojian="345446400" cost="1,0,36979736561665" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="4" name="tujian1" waixing="shenqi_1_001_4_png" type="1" icon="ishenqi_1_001_png" jieduan="3,400" tiaojian="3876019200" cost="1,0,509603413985061000" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="5" name="tujian1" waixing="shenqi_1_001_5_png" type="1" icon="ishenqi_1_001_png" jieduan="4,450" tiaojian="21716582400" cost="1,0,509603413985061000" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="6" name="tujian1" waixing="shenqi_1_001_6_png" type="1" icon="ishenqi_1_001_png" jieduan="5,500" tiaojian="24431155200" cost="1,0,9.67763772180294E+25" fishId="5001,5002,5003,5004,5005" kejiId="61"/>
+	<fish id="7" name="tujian2" waixing="shenqi_1_002_2_png" type="2" icon="ishenqi_1_002_png" jieduan="0,100" tiaojian="0" cost="1,0,1356600" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="8" name="tujian2" waixing="shenqi_1_002_2_png" type="2" icon="ishenqi_1_002_png" jieduan="1,200" tiaojian="72577875200" cost="1,0,338609179207427" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="9" name="tujian2" waixing="shenqi_1_002_3_png" type="2" icon="ishenqi_1_002_png" jieduan="2,300" tiaojian="1102593792000" cost="1,0,4666241833362990000" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="10" name="tujian2" waixing="shenqi_1_002_4_png" type="2" icon="ishenqi_1_002_png" jieduan="3,400" tiaojian="9696545971200" cost="1,0,6.43036697894374E+22" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="11" name="tujian2" waixing="shenqi_1_002_5_png" type="2" icon="ishenqi_1_002_png" jieduan="4,450" tiaojian="51714911846400" cost="1,0,6.43036697894374E+22" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="12" name="tujian2" waixing="shenqi_1_002_6_png" type="2" icon="ishenqi_1_002_png" jieduan="5,500" tiaojian="58179275827200" cost="1,0,1.22116061887855E+31" fishId="5006,5007,5008,5009,5010" kejiId="62"/>
+	<fish id="13" name="tujian3" waixing="shenqi_1_003_2_png" type="3" icon="ishenqi_1_003_png" jieduan="0,100" tiaojian="0" cost="1,0,216228474000" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="14" name="tujian3" waixing="shenqi_1_003_2_png" type="3" icon="ishenqi_1_003_png" jieduan="1,200" tiaojian="2725950298779200" cost="1,0,1.24794412996897E+20" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="15" name="tujian3" waixing="shenqi_1_003_3_png" type="3" icon="ishenqi_1_003_png" jieduan="2,300" tiaojian="22595410980467200" cost="1,0,1.71974342768593E+24" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="16" name="tujian3" waixing="shenqi_1_003_4_png" type="3" icon="ishenqi_1_003_png" jieduan="3,400" tiaojian="196740860790758000" cost="1,0,2.36991175008971E+28" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="17" name="tujian3" waixing="shenqi_1_003_5_png" type="3" icon="ishenqi_1_003_png" jieduan="4,450" tiaojian="808846398123725000" cost="1,0,2.36991175008971E+28" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="18" name="tujian3" waixing="shenqi_1_003_6_png" type="3" icon="ishenqi_1_003_png" jieduan="5,500" tiaojian="1830880921968460000" cost="1,0,4.5005874608769E+36" fishId="5011,5012,5013,5014,5015" kejiId="63"/>
+	<fish id="19" name="tujian4" waixing="shenqi_1_004_2_png" type="4" icon="ishenqi_1_004_png" jieduan="0,100" tiaojian="0" cost="1,0,96293296612012500" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="20" name="tujian4" waixing="shenqi_1_004_2_png" type="4" icon="ishenqi_1_004_png" jieduan="1,200" tiaojian="12214371424425600000" cost="1,0,1.21165391466948E+26" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="21" name="tujian4" waixing="shenqi_1_004_3_png" type="4" icon="ishenqi_1_004_png" jieduan="2,300" tiaojian="173346909669424000000" cost="1,0,1.66973328880882E+30" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="22" name="tujian4" waixing="shenqi_1_004_4_png" type="4" icon="ishenqi_1_004_png" jieduan="3,400" tiaojian="2414561074339900000000" cost="1,0,2.30099471639711E+34" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="23" name="tujian4" waixing="shenqi_1_004_5_png" type="4" icon="ishenqi_1_004_png" jieduan="4,450" tiaojian="19693112372444400000000" cost="1,0,2.30099471639711E+34" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="24" name="tujian4" waixing="shenqi_1_004_6_png" type="4" icon="ishenqi_1_004_png" jieduan="5,500" tiaojian="44309502837999900000000" cost="1,0,4.3697103775146E+42" fishId="5016,5017,5018,5019,5020" kejiId="64"/>
+	<fish id="25" name="tujian5" waixing="shenqi_1_005_2_png" type="5" icon="ishenqi_1_005_png" jieduan="0,100" tiaojian="0" cost="1,0,1.28955982822807E+23" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="26" name="tujian5" waixing="shenqi_1_005_2_png" type="5" icon="ishenqi_1_005_png" jieduan="1,200" tiaojian="303632000000000000000000" cost="1,0,9.31480756672623E+32" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="27" name="tujian5" waixing="shenqi_1_005_3_png" type="5" icon="ishenqi_1_005_png" jieduan="2,300" tiaojian="5218830000000000000000000" cost="1,0,1.28363752097098E+37" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="28" name="tujian5" waixing="shenqi_1_005_4_png" type="5" icon="ishenqi_1_005_png" jieduan="3,400" tiaojian="67621800000000000000000000" cost="1,0,1.76893110613517E+41" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="29" name="tujian5" waixing="shenqi_1_005_5_png" type="5" icon="ishenqi_1_005_png" jieduan="4,450" tiaojian="376179000000000000000000000" cost="1,0,1.76893110613517E+41" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="30" name="tujian5" waixing="shenqi_1_005_6_png" type="5" icon="ishenqi_1_005_png" jieduan="5,500" tiaojian="846403000000000000000000000" cost="1,0,3.35929350750115E+49" fishId="5021,5022,5023,5024,5025" kejiId="65"/>
+	<fish id="31" name="tujian6" waixing="shenqi_1_006_2_png" type="6" icon="ishenqi_1_006_png" jieduan="0,100" tiaojian="0" cost="1,0,1.48705849504086E+30" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+	<fish id="32" name="tujian6" waixing="shenqi_1_006_2_png" type="6" icon="ishenqi_1_006_png" jieduan="1,200" tiaojian="2384970000000000000000000000" cost="1,0,4.15920316361828E+40" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+	<fish id="33" name="tujian6" waixing="shenqi_1_006_3_png" type="6" icon="ishenqi_1_006_png" jieduan="2,300" tiaojian="37768600000000000000000000000" cost="1,0,5.73163664403862E+44" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+	<fish id="34" name="tujian6" waixing="shenqi_1_006_4_png" type="6" icon="ishenqi_1_006_png" jieduan="3,400" tiaojian="254210000000000000000000000000" cost="1,0,7.89854626642167E+48" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+	<fish id="35" name="tujian6" waixing="shenqi_1_006_5_png" type="6" icon="ishenqi_1_006_png" jieduan="4,450" tiaojian="1376970000000000000000000000000" cost="1,0,7.89854626642167E+48" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+	<fish id="36" name="tujian6" waixing="shenqi_1_006_6_png" type="6" icon="ishenqi_1_006_png" jieduan="5,500" tiaojian="5463440000000000000000000000000" cost="1,0,1.49997561236058E+57" fishId="5026,5027,5028,5029,5030" kejiId="66"/>
+</fishes>

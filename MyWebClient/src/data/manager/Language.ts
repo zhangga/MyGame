@@ -1,5 +1,6 @@
 class Language {
 	private static language: Language;
+	//当前选择的语言版本
 	private _type: number;
 	private json;
 	public constructor() {
@@ -10,14 +11,10 @@ class Language {
 		}
 		return this.language;
 	}
+	//切换语言版本
 	public set type(param) {
 		this._type = param;
-		switch (param) {
-			case LANGUAGE_TYPE.CN:
-				break;
-			case LANGUAGE_TYPE.EN:
-				break;
-		}
+		//TODO 
 	}
 	public getDescByKey(key: string, ...args) {
 		var model: ModelText = ModelManager.instance.modelText[key];
@@ -38,6 +35,10 @@ class Language {
 			}
 		}
 		return str;
+	}
+	/**当前语言版本 */
+	public get type(): number {
+		return this._type;
 	}
 }
 enum LANGUAGE_TYPE {

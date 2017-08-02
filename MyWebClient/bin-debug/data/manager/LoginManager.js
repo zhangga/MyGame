@@ -18,7 +18,6 @@ var LoginManager = (function () {
     };
     LoginManager.prototype.onParseLoginMessage = function (msg) {
         this.isPublish = msg.getBoolean();
-        this.state = msg.getByte();
         this.uid = msg.getInt();
         DataManager.instance.playerM.player.id = this.uid;
         this.host = msg.getString();

@@ -15,14 +15,14 @@ var Language = (function () {
         configurable: true
     });
     Object.defineProperty(Language.prototype, "type", {
+        /**当前语言版本 */
+        get: function () {
+            return this._type;
+        },
+        //切换语言版本
         set: function (param) {
             this._type = param;
-            switch (param) {
-                case LANGUAGE_TYPE.CN:
-                    break;
-                case LANGUAGE_TYPE.EN:
-                    break;
-            }
+            //TODO 
         },
         enumerable: true,
         configurable: true

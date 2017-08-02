@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shops>
+	<shop id="1" type="1" desc="获得金币：{0}" effect="1000"/>
+	<shop id="2" type="1" desc="获得金币：{0}" effect="1800"/>
+	<shop id="3" type="2" desc="随机【污染】一个玩家或者仇人鱼缸，使其减少一点欢乐度" effect="600"/>
+	<shop id="4" type="3" desc="随机【盗取】一个玩家或者仇人的金币" effect="1100"/>
+	<shop id="5" type="4" desc="降低秒产50%，持续30秒" effect="50,30"/>
+	<shop id="6" type="5" desc="提高秒产50倍，持续10秒" effect="5000,10"/>
+	<shop id="7" type="6" desc="清洁鱼缸互动产出金币" effect="800"/>
+	<shop id="8" type="1" desc="1小时金币收益" effect="3600"/>
+</shops>

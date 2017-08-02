@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<logics>
+	<logic days="1" reward="1,0,100" />
+	<logic days="2" reward="1,0,100" />
+	<logic days="3" reward="1,0,100" />
+	<logic days="4" reward="1,0,100" />
+	<logic days="5" reward="1,0,100" />
+	<logic days="6" reward="1,0,100" />
+	<logic days="7" reward="1,0,100" />
+</logics>

@@ -1,18 +1,38 @@
 /**
- *
+ * 消息号
  * @author 
  * 
  */
 enum MESSAGE_ID {
+
+    GAME_LOGON_MESSAGE = 100,   //登录服
+    ERROR_TIP_MESSAGE = 110,    //错误提示信息
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     GAME_TICK_MESSAGE = 99,  //游戏心跳
-    GAME_LOGON_MESSAGE = 100,  //登录服
     LOGIN_SERVER_MESSAGE = 103,//登录游戏服
     CREATE_ROLE_MESSAGE = 104,	//创建角色
     ENTER_GAME_MESSAGE = 105,	//进入游戏
     PLAYER_MESSAGE = 106,		//玩家消息
     GAME_SYNC_MESSAGE = 107,         //同步数据消息
     GAME_TOKEN_MESSAGE = 109,       //游戏token
-    ERROR_TIP_MESSAGE = 110,		//错误提示信息
+    
     TIMEOUT_MESSAGE = 111,		    //登录超时
     REPEAT_LOGIN_MESSAGE = 112,		//重复登录
     PALYER_HAPPINESS_MSG = 160,     //玩家欢乐度

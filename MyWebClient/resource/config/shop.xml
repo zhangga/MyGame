@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shops>
+	<shop id="1001" type="1" rewrad="5,5001,1" cosume="1,0,10"/>
+	<shop id="1002" type="1" rewrad="5,5002,1" cosume="1,0,10"/>
+	<shop id="1003" type="1" rewrad="5,5003,1" cosume="1,0,10"/>
+	<shop id="1004" type="1" rewrad="5,5004,1" cosume="1,0,10"/>
+	<shop id="1005" type="1" rewrad="5,5005,1" cosume="1,0,10"/>
+	<shop id="1006" type="1" rewrad="5,5006,1" cosume="1,0,10"/>
+	<shop id="1007" type="1" rewrad="5,5007,1" cosume="1,0,10"/>
+	<shop id="1008" type="1" rewrad="5,5008,1" cosume="1,0,10"/>
+</shops>

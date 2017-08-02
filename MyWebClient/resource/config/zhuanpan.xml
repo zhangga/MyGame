@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<text>
+	<data id="1" effectId="1" icon="zhuanpanxiaojinbi_png" reward="0" gailv="1800"/>
+	<data id="2" effectId="0" icon="zhuanpanxiaozuanshi_png" reward="2,0,50" gailv="1000"/>
+	<data id="3" effectId="4" icon="zhuanpantoudao_png" reward="0" gailv="1600"/>
+	<data id="4" effectId="6" icon="zhuanpanmiaochanzhufu_png" reward="0" gailv="1000"/>
+	<data id="5" effectId="0" icon="zhuanpandazuanshi_png" reward="2,0,100" gailv="200"/>
+	<data id="6" effectId="3" icon="zhuanpanwuran_png" reward="0" gailv="2400"/>
+	<data id="7" effectId="2" icon="zhuanpandajinbi_png" reward="0" gailv="1000"/>
+	<data id="8" effectId="5" icon="zhuanpanmiaochanzuzhou_png" reward="0" gailv="1000"/>
+</text>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shops>
+	<shop type="1" effect="10,5" gailv="6000" time="120"/>
+	<shop type="2" effect="100" gailv="4000" time="120"/>
+</shops>

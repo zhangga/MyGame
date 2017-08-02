@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<yuekas>
+	<yueka id="1" name="月卡" rewards="2,0,300" keepDay="30" diejia="1" effect="99"/>
+	<yueka id="2" name="终身卡" rewards="2,0,400" keepDay="-1" diejia="0" effect="200"/>
+</yuekas>

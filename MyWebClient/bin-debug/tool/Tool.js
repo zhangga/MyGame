@@ -5,9 +5,9 @@ var Tool = (function () {
     function Tool() {
     }
     Tool.log = function (str) {
-        // if (SDKManager.getChannel() == EChannel.CHANNEL_WYCX) {
-        egret.log("log: " + str);
-        // }
+        if (SDKManager.getChannel() == EChannel.CHANNEL_WYCX) {
+            egret.log("log: " + str);
+        }
     };
     Tool.callback = function (callback, target) {
         var param = [];

@@ -1,6 +1,5 @@
 class LoginManager {
 	public isPublish: boolean;
-	public state: number;
 	public uid: number;
 	public host: string;
 	public port: number;
@@ -22,7 +21,6 @@ class LoginManager {
 	}
 	public onParseLoginMessage(msg: Message) {
 		this.isPublish = msg.getBoolean();
-		this.state = msg.getByte();
 		this.uid = msg.getInt();
 		DataManager.instance.playerM.player.id = this.uid;
 		this.host = msg.getString();

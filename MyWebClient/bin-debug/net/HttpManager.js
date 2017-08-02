@@ -21,9 +21,7 @@ var HttpManager = (function () {
         }
     };
     HttpManager.prototype.sendMessage = function (message) {
-        if (message.getCmdId() != 100) {
-            Tool.log("发送消息：" + message.getCmdId());
-        }
+        Tool.log("发送消息：" + message.getCmdId());
         if (message.isCheckLoading) {
         }
         var request = new egret.HttpRequest();
