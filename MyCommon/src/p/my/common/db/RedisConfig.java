@@ -34,9 +34,7 @@ public class RedisConfig {
 	public static void loadData() {
 		Properties prop = new Properties();
 		final File file = new File(CONFIG_NAME);
-		InputStream is = null;
-		try {
-			is = new FileInputStream(file);
+		try (InputStream is = new FileInputStream(file)) {
 			prop.load(is);
 			//端口
 			String port = prop.getProperty("port");
@@ -62,7 +60,6 @@ public class RedisConfig {
 			conn_timeout = Integer.valueOf(prop.getProperty("conn_timeout"));
 			so_timeout = Integer.valueOf(prop.getProperty("so_timeout"));
 			max_attempts = Integer.valueOf(prop.getProperty("max_attempts"));
-			is.close();
 		} catch (FileNotFoundException e) {
 			logger.error("cannot find file: "+CONFIG_NAME, e);
 		} catch (IOException e) {

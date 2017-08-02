@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Paths;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -25,19 +26,12 @@ public class MyBatisFactory {
 	private static SqlSessionFactory factory = null;
 	
 	public static void init() {
-		InputStream is = null;
-        try {
-        	File file = new File(CONFIG_NAME);
-        	is = new FileInputStream(file);
-        } catch (IOException e) {
+		final File file = Paths.get(CONFIG_NAME).toFile();
+		try (InputStream is = new FileInputStream(file)) {
+			factory = new SqlSessionFactoryBuilder().build(is);
+		} catch (IOException e) {
         	logger.error("读取文件异常: "+CONFIG_NAME, e);
         }
-        factory = new SqlSessionFactoryBuilder().build(is);
-        try {
-			is.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	public static SqlSessionFactory getFactory() {
