@@ -22,8 +22,6 @@ public class MyRPC {
 	
 	private static final Logger logger = Logger.getLogger(MyRPC.class);
 	
-	private static final int PORT = 29999;
-	
 	private Server server = null;
 	
 	private ExecutorService exec = null;
@@ -49,7 +47,7 @@ public class MyRPC {
 					logger.error("启动RPC服务失败!!!");
 					return;
 				}
-				logger.info("GPRC Server started, listening on " + PORT);
+				logger.info("GPRC Server started, listening on " + ServiceResult.RPC_PORT);
 				try {
 					server.awaitTermination();
 				} catch (InterruptedException e) {

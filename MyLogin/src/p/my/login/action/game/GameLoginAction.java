@@ -54,6 +54,9 @@ public class GameLoginAction extends GameAction {
 		
 		//没有开启的服务器
 		if (target == null) {
+			Message msg = new Message(GameActions.ERROR.cmd, req.getCtx());
+			msg.setShort(11);
+			sendMsg(msg);
 			return;
 		}
 		

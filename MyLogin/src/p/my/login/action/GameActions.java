@@ -18,6 +18,7 @@ public enum GameActions
 	
 	TEST(0, GameTestAction.class, "测试"),
 	LOGIN(100, GameLoginAction.class, "登陆"),
+	ERROR(110, null, "错误提示")
 	;
 	
 	//消息号

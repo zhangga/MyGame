@@ -1,6 +1,7 @@
 package p.my.login.core;
 
 import p.my.common.message.Message;
+import p.my.common.message.MessageArray;
 import p.my.common.util.HttpUtil;
 import p.my.login.bean.User;
 
@@ -41,7 +42,13 @@ public abstract class GameAction
 	 */
 	protected void sendMsg(Message resp)
 	{
-		HttpUtil.sendResponse(resp.getCtx(), resp.getBuf());
+		MessageArray msgs = new MessageArray(resp);
+		sendMsg(msgs);
+	}
+	
+	protected void sendMsg(MessageArray msgs) {
+		msgs.pack();
+		HttpUtil.sendResponse(msgs.getCtx(), msgs.getBuf());
 	}
 
 	public int getCmd() {

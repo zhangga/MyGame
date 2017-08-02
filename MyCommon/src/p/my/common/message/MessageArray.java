@@ -47,7 +47,7 @@ public class MessageArray {
 		for (int i = 0; i < size; ++i) {
 			Message msg = msgList.get(i);
 			msg.pack();
-			buf.writeBytes(msg.toArray());
+			buf.writeBytes(msg.getBuf());
 		}
 	}
 

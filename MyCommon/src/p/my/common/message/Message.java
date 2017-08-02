@@ -142,16 +142,6 @@ public class Message {
     	size = buf.writerIndex();
     }
 	
-	public byte[] getData() {
-    	return toArray();
-    }
-    
-	public byte[] toArray() {
-		byte[] array = buf.readBytes(size).array();
-		buf.resetReaderIndex();
-		return array;
-	}
-	
 	public int getSize() {
     	return size;
     }
