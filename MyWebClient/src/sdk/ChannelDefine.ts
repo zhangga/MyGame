@@ -59,7 +59,7 @@ class ChannelDefine {
      */
     private static LOGON_URL = {
         CHANNEL_WANBA: ChannelDefine.PROTCOL + "://mh1.milgame.cn:10000",
-        CHANNEL_WYCX: ChannelDefine.PROTCOL + "://127.0.0.1:10000",
+        CHANNEL_WYCX: ChannelDefine.PROTCOL + "://myyiba.xin:10000",
     }
 
     private static SDK_URL = {

@@ -85,7 +85,7 @@ ChannelDefine.CHANNEL_LIBS = {
  */
 ChannelDefine.LOGON_URL = {
     CHANNEL_WANBA: ChannelDefine.PROTCOL + "://mh1.milgame.cn:10000",
-    CHANNEL_WYCX: ChannelDefine.PROTCOL + "://127.0.0.1:10000",
+    CHANNEL_WYCX: ChannelDefine.PROTCOL + "://myyiba.xin:10000",
 };
 ChannelDefine.SDK_URL = {
     CHANNEL_WANBA: ChannelDefine.PROTCOL + "://mh1.milgame.cn:20000",
