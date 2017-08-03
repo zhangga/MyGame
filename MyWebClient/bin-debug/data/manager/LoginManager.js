@@ -16,13 +16,18 @@ var LoginManager = (function () {
         msg.setByte(DataManager.instance.platform); //platform
         _GF.instance.net.onAddMessage(msg);
     };
-    LoginManager.prototype.onParseLoginMessage = function (msg) {
+    //要登录的服务器信息
+    LoginManager.prototype.onParseLogonMessage = function (msg) {
         this.isPublish = msg.getBoolean();
         this.uid = msg.getInt();
         DataManager.instance.playerM.player.id = this.uid;
         this.host = msg.getString();
         this.port = msg.getShort();
         this.severId = msg.getShort();
+    };
+    //进入游戏的消息
+    LoginManager.prototype.onParseLoginMessage = function (msg) {
+        DataManager.instance.playerM.player.loginCode = msg.getInt();
     };
     Object.defineProperty(LoginManager.prototype, "gameURL", {
         get: function () {

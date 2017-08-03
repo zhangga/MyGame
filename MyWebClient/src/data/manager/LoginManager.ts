@@ -19,13 +19,18 @@ class LoginManager {
 		msg.setByte(DataManager.instance.platform);//platform
 		_GF.instance.net.onAddMessage(msg);
 	}
-	public onParseLoginMessage(msg: Message) {
+	//要登录的服务器信息
+	public onParseLogonMessage(msg: Message) {
 		this.isPublish = msg.getBoolean();
 		this.uid = msg.getInt();
 		DataManager.instance.playerM.player.id = this.uid;
 		this.host = msg.getString();
 		this.port = msg.getShort();
 		this.severId = msg.getShort();
+	}
+	//进入游戏的消息
+	public onParseLoginMessage(msg: Message) {
+		DataManager.instance.playerM.player.loginCode = msg.getInt();
 	}
 	public get gameURL() {
 		return ChannelDefine.PROTCOL+`://${this.host}:${this.port}`;

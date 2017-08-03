@@ -59,7 +59,7 @@ var MainScene = (function (_super) {
     MainScene.prototype.onRegist = function () {
         GameDispatcher.instance.addEventListener(MESSAGE_ID.GAME_LOGON_MESSAGE.toString(), this.onLoginSucceed, this);
         GameDispatcher.instance.addEventListener(MESSAGE_ID.CREATE_ROLE_MESSAGE.toString(), this.onGameSucceed, this);
-        GameDispatcher.instance.addEventListener(MESSAGE_ID.ENTER_GAME_MESSAGE.toString(), this.onEnterSucceed, this);
+        GameDispatcher.instance.addEventListener(MESSAGE_ID.LOGIN_SERVER_MESSAGE.toString(), this.onEnterSucceed, this);
         GameDispatcher.instance.addEventListener(GameEvent.GAME_RELOGIN_EVENT, this.onLoginSucceed, this);
     };
     MainScene.prototype.onLoginSucceed = function () {

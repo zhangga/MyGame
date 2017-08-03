@@ -30,10 +30,8 @@ enum MESSAGE_ID {
     GAME_TICK_MESSAGE = 99,  //游戏心跳
     
     
-    ENTER_GAME_MESSAGE = 105,	//进入游戏
     PLAYER_MESSAGE = 106,		//玩家消息
     GAME_SYNC_MESSAGE = 107,         //同步数据消息
-    GAME_TOKEN_MESSAGE = 109,       //游戏token
     
     TIMEOUT_MESSAGE = 111,		    //登录超时
     REPEAT_LOGIN_MESSAGE = 112,		//重复登录

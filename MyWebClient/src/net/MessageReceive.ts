@@ -11,13 +11,12 @@ class MessageReceive {
         var cmdID = message.getCmdId();
         switch (cmdID) {
             case MESSAGE_ID.GAME_LOGON_MESSAGE:
-                DataManager.instance.loginM.onParseLoginMessage(message);
-                break;
-            case MESSAGE_ID.LOGIN_SERVER_MESSAGE:
+                DataManager.instance.loginM.onParseLogonMessage(message);
                 break;
             case MESSAGE_ID.CREATE_ROLE_MESSAGE:
                 break;
-            case MESSAGE_ID.ENTER_GAME_MESSAGE:
+            case MESSAGE_ID.LOGIN_SERVER_MESSAGE:
+                DataManager.instance.loginM.onParseLoginMessage(message);
                 //因为没有建角成功的返回消息，只能在此处抛出可能的建角事件。配合CreateRole中的监听判断是否建角成功。
                 GameDispatcher.instance.dispatcherEventWith(GameEvent.GAME_CREATE_ROLE, false);
                 SDKManager.onEnterGame(DataManager.instance.playerM.player);
@@ -27,9 +26,6 @@ class MessageReceive {
                 break;
             case MESSAGE_ID.GAME_SYNC_MESSAGE:
                 DataManager.instance.syncM.onParseMessage(message);
-                break;
-            case MESSAGE_ID.GAME_TOKEN_MESSAGE:
-                DataManager.instance.playerM.player.loginCode = message.getShort();
                 break;
             case MESSAGE_ID.ERROR_TIP_MESSAGE:
                 GameCommon.instance.addHintBar(message);
