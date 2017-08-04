@@ -10,6 +10,7 @@ var Player = (function () {
         /**图鉴页开启的最大值**/
         this.openFGID = 1;
         this.MAX_UID = 999;
+        this._book = {}; //鱼缸记录
         this._artifact = 0; //神器点
         this.isInit = false;
         /**增益值，直接通过加这个值算出结果（如果是增益的为正数，减少效果就是负数） **/

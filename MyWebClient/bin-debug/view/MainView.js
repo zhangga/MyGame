@@ -284,6 +284,17 @@ var MainView = (function (_super) {
         this.fishtank_bar.onTriggerAllItems();
         this.buttons_bar.onTrigger();
     };
+    /**主界面尺寸变化 */
+    MainView.prototype.resize = function () {
+        if (_GF.IS_PC_GAME) {
+            this.width = size.width;
+            this.height = size.height;
+        }
+        else {
+            this.width = GameDefine.SCREEN_WIDTH;
+            this.height = GameDefine.SCREEN_HEIGHT;
+        }
+    };
     MainView.prototype.onCheckTurnplateRedPoint = function () {
         if (DataManager.instance.playerM.player.fishfood > 0)
             return true;

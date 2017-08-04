@@ -20,7 +20,7 @@ var ModuleLayer = (function (_super) {
     };
     //供子类覆盖
     ModuleLayer.prototype.onInit = function () {
-        this._fishTank = new FishTankView();
+        // this._fishTank = new FishTankView();
         this._main = new MainView();
         this._pop = new eui.Group();
         this._hint = new egret.DisplayObjectContainer();
@@ -31,12 +31,13 @@ var ModuleLayer = (function (_super) {
         this._mask.graphics.beginFill(0x000000, 0.6);
         this._mask.graphics.drawRect(0, 0, _GF.stageWidth, _GF.stageHeight);
         this._mask.graphics.endFill();
-        this.addChild(this._fishTank);
+        // this.addChild(this._fishTank);
         this.addChild(this._main);
         this.addChild(this._pop);
         this.addChild(this._hint);
         this.addChild(this._animLayer);
         this.onRegist();
+        this.onResizeLayer();
     };
     ModuleLayer.prototype.onRegist = function () {
         GameDispatcher.instance.addEventListener(FishTankEevent.FISH_OUT_PUT_EVENT, this.onShowDrop, this);
@@ -79,6 +80,14 @@ var ModuleLayer = (function (_super) {
         anim.data = e.data;
         GameCommon.instance.addChildByLayer(anim, this._animLayer, new egret.Point(_GF.centerPos.x, _GF.centerPos.y - 200), new egret.Point(308 / 2, 43 / 2));
         TweenLiteUtil.secOutputAddTween(anim, this.onDone, this, new egret.Point(anim.x, anim.y - 100));
+    };
+    /**舞台发生变化**/
+    ModuleLayer.prototype.onResizeLayer = function () {
+        this._main.resize();
+        if (_GF.IS_PC_GAME) {
+            this.hintBar.x = Globar_Pos.x;
+            this.PupoBar.x = Globar_Pos.x;
+        }
     };
     //不带参数的打开某面板
     ModuleLayer.prototype.onOpenWindow = function (event) {
@@ -185,7 +194,7 @@ var ModuleLayer = (function (_super) {
         DataManager.instance.syncM.onTime();
         DataManager.instance.buff.onTime();
         DataManager.instance.random.onTime();
-        this._fishTank.onTime();
+        // this._fishTank.onTime();
         this._main.onTime();
         this.onTimerDown();
         //检查新手引导

@@ -6,6 +6,16 @@ var GameDefine = (function () {
     }
     return GameDefine;
 }());
+/**屏幕宽高 */
+GameDefine.SCREEN_WIDTH = 600;
+GameDefine.SCREEN_HEIGHT = 1068;
+/**地图切片的宽高 */
+GameDefine.MapRes_Width = 384;
+GameDefine.MapRes_Height = 384;
+//横竖多预加载几个图
+GameDefine.MapRes_RelaodNum = 1;
+//最大缓存多张地图
+GameDefine.MapCache_MaxNum = 200;
 GameDefine.FISHTANK_WIDTH = 600;
 GameDefine.FISHTANK_HEIGHT = 643;
 /*鱼转方向的边缘*/

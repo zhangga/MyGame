@@ -13,7 +13,7 @@ class Player implements IPlayerInfo {
 	public openFGID: number = 1;
 	private MAX_UID: number = 999;
 	private _fishs;//鱼群
-	private _book;//鱼缸记录
+	private _book={};//鱼缸记录
 	private _artifact: number = 0;//神器点
 	private _fishfood: number;//鱼食
 	private isInit: boolean = false;

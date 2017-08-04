@@ -309,6 +309,16 @@ class MainView extends BaseUI {
 		this.fishtank_bar.onTriggerAllItems();
 		this.buttons_bar.onTrigger();
 	}
+	/**主界面尺寸变化 */
+	public resize(): void {
+        if (_GF.IS_PC_GAME) {
+            this.width = size.width;
+            this.height = size.height;
+        } else {
+            this.width = GameDefine.SCREEN_WIDTH;
+            this.height = GameDefine.SCREEN_HEIGHT;
+        }
+    }
 	public onCheckTurnplateRedPoint(): boolean {
 		if (DataManager.instance.playerM.player.fishfood > 0) return true;
 		return false;

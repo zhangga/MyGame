@@ -51,6 +51,7 @@ class Main extends eui.UILayer {
         if ("Windows PC" == egret.Capabilities.os || "Mac OS" == egret.Capabilities.os) {
             this.stage.scaleMode = egret.StageScaleMode.SHOW_ALL;
             this.stage.orientation = egret.OrientationMode.AUTO;
+            _GF.IS_PC_GAME = true;
         } else {
             this.stage.orientation = egret.OrientationMode.PORTRAIT;
         }
@@ -157,66 +158,8 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
-        // let sky = this.createBitmapByName("bg_jpg");
-        // this.addChild(sky);
-        // let stageW = this.stage.stageWidth;
-        // let stageH = this.stage.stageHeight;
-        // sky.width = stageW;
-        // sky.height = stageH;
+        this.onStageResize();
 
-        // let topMask = new egret.Shape();
-        // topMask.graphics.beginFill(0x000000, 0.5);
-        // topMask.graphics.drawRect(0, 0, stageW, 172);
-        // topMask.graphics.endFill();
-        // topMask.y = 33;
-        // this.addChild(topMask);
-
-        // let icon:egret.Bitmap = this.createBitmapByName("egret_icon_png");
-        // this.addChild(icon);
-        // icon.x = 26;
-        // icon.y = 33;
-
-        // let line = new egret.Shape();
-        // line.graphics.lineStyle(2,0xffffff);
-        // line.graphics.moveTo(0,0);
-        // line.graphics.lineTo(0,117);
-        // line.graphics.endFill();
-        // line.x = 172;
-        // line.y = 61;
-        // this.addChild(line);
-
-
-        // let colorLabel = new egret.TextField();
-        // colorLabel.textColor = 0xffffff;
-        // colorLabel.width = stageW - 172;
-        // colorLabel.textAlign = "center";
-        // colorLabel.text = "Hello Egret";
-        // colorLabel.size = 24;
-        // colorLabel.x = 172;
-        // colorLabel.y = 80;
-        // this.addChild(colorLabel);
-
-        // let textfield = new egret.TextField();
-        // this.addChild(textfield);
-        // textfield.alpha = 0;
-        // textfield.width = stageW - 172;
-        // textfield.textAlign = egret.HorizontalAlign.CENTER;
-        // textfield.size = 24;
-        // textfield.textColor = 0xffffff;
-        // textfield.x = 172;
-        // textfield.y = 135;
-        // this.textfield = textfield;
-
-        // //根据name关键字，异步获取一个json配置文件，name属性请参考resources/resource.json配置文件的内容。
-        // // Get asynchronously a json configuration file according to name keyword. As for the property of name please refer to the configuration file of resources/resource.json.
-        // RES.getResAsync("description_json", this.startAnimation, this);
-
-        // let button = new eui.Button();
-        // button.label = "Click!";
-        // button.horizontalCenter = 0;
-        // button.verticalCenter = 0;
-        // this.addChild(button);
-        // button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
         MainScene.state = MAINSCENE_STATE.LOGIN;
         DataManager.instance.init();
 
@@ -227,6 +170,21 @@ class Main extends eui.UILayer {
         this.addChild(_GF.instance.scene);
         SoundFactory.playMusic(SoundDefine.SOUND_BGM);
         this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onHandler, this);
+
+        window["Egert_Main_Status"] = "Egert_Main_RemoveLoaded";
+        if (_GF.IS_PC_GAME) {
+            this.stage.addEventListener(egret.Event.RESIZE, this.onStageResize, this);
+        }
+    }
+    /**舞台尺寸发生变化 */
+    private onStageResize(): void {
+        size.width = this.stage.stageWidth;
+        size.height = this.stage.stageHeight;
+        if (_GF.IS_PC_GAME) {
+            Globar_Pos.x = (size.width - GameDefine.SCREEN_WIDTH) / 2;
+            if (_GF.instance.scene)
+                _GF.instance.scene.onResize();
+        }
     }
     private onHandler(e: egret.Event): void {
         if (egret.is(e.target, `eui.Button`)) {
@@ -285,3 +243,6 @@ class Main extends eui.UILayer {
         this.addChild(panel);
     }
 }
+
+var size = { width: 0, height: 0 };
+var Globar_Pos = { x: 0, y: 0 };

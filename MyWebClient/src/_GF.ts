@@ -5,8 +5,10 @@ class _GF {
 	private _net: HttpManager;
 	public isDemo: boolean = false;
 	public isOpenSound: boolean = true;
+	public static IS_PC_GAME = false;
 	
-	private static _version: string = "v.0.0.1.170726";//版本号
+	//版本号
+	private static _version: string = "v.0.0.1.170726";
 
 	public constructor() {
 	}

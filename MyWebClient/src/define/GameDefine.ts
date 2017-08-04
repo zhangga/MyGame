@@ -1,4 +1,21 @@
 class GameDefine {
+	/**屏幕宽高 */
+	public static SCREEN_WIDTH: number = 600;
+	public static SCREEN_HEIGHT: number = 1068;
+	
+	/**地图切片的宽高 */
+	public static MapRes_Width: number = 384;
+	public static MapRes_Height: number = 384;
+
+	//横竖多预加载几个图
+    public static MapRes_RelaodNum: number = 1;
+	//最大缓存多张地图
+	public static MapCache_MaxNum: number = 200;
+
+
+
+
+
 	public static FISHTANK_WIDTH: number = 600;
 	public static FISHTANK_HEIGHT: number = 643;
 	/*鱼转方向的边缘*/

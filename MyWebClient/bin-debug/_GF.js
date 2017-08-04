@@ -85,6 +85,8 @@ var _GF = (function () {
     });
     return _GF;
 }());
-_GF._version = "v.0.0.1.170726"; //版本号
+_GF.IS_PC_GAME = false;
+//版本号
+_GF._version = "v.0.0.1.170726";
 __reflect(_GF.prototype, "_GF");
 //# sourceMappingURL=_GF.js.map
