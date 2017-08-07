@@ -3,7 +3,7 @@
 	<ServerID>1</ServerID>
 	<Protocol>http</Protocol>
 	<IsPublish>false</IsPublish>					<!-- 是否发布 -->
-	<GameHost>192.168.0.17</GameHost>
+	<GameHost>127.0.0.1</GameHost>
 	<GamePort>10001</GamePort>						<!-- 游戏端口号 -->
 	<LoginHost>47.95.10.167</LoginHost>			<!-- 登录服地址 -->
 	<LoginPort>10000</LoginPort>
