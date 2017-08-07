@@ -11,6 +11,10 @@ var MapLayer = (function (_super) {
     __extends(MapLayer, _super);
     function MapLayer(mainScene) {
         var _this = _super.call(this) || this;
+        //地图层当前触摸状态，按下时，值为true
+        _this._touchStatus = false;
+        //鼠标点击时，鼠标全局坐标与地图层的位置差
+        _this._distance = new egret.Point();
         //缓存地图的textture
         _this.mapImgCache = {}; //缓存地图的texttrue 如果存的是Image等于正在加载此对象
         _this.mapUrlLoadedList = []; //已加载成功的 地图URL列表
@@ -40,6 +44,12 @@ var MapLayer = (function (_super) {
                 this.mapResImgs.push(_mapImg);
             }
         }
+        //地图初始位置
+        this._mapLayer.x = 0;
+        this._mapLayer.y = 0;
+        //整个地图层的拖动
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
         //DELETE
         this.onRefreshMap();
     };
@@ -49,9 +59,44 @@ var MapLayer = (function (_super) {
         this.mapSmallImg.source = "map_" + 1001 + "_small_jpg";
         this.mapSmallImg.width = this._mapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this._mapInfo.MAP_HEIGHT;
-        this.moveMapResLayer();
-        this._mapLayer.x = 100;
-        this._mapLayer.y = 100;
+        //DELETE
+        var catImg = new eui.Image();
+        catImg.source = "item_bg_2_png";
+        catImg.x = 300;
+        catImg.y = 500;
+        this._bodyLayer.addChild(catImg);
+        catImg.addEventListener(egret.TouchEvent.TOUCH_TAP, function (evt) {
+            Tool.log(evt.target);
+        }, this);
+    };
+    MapLayer.prototype.mouseDown = function (evt) {
+        Tool.log("Mouse Down.");
+        this._touchStatus = true;
+        this._distance.x = evt.stageX - this._mapLayer.x;
+        this._distance.y = evt.stageY - this._mapLayer.y;
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.mouseMove, this);
+    };
+    MapLayer.prototype.mouseUp = function (evt) {
+        Tool.log("Mouse Up.");
+        this._touchStatus = false;
+        this.stage.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.mouseMove, this);
+    };
+    MapLayer.prototype.mouseMove = function (evt) {
+        if (this._touchStatus) {
+            this._mapLayer.x = evt.stageX - this._distance.x;
+            this._mapLayer.y = evt.stageY - this._distance.y;
+            //地图边界检测
+            if (this._mapLayer.x > 0)
+                this._mapLayer.x = 0;
+            else if (this._mapLayer.x < size.width - this._mapInfo.MAP_WIDTH)
+                this._mapLayer.x = size.width - this._mapInfo.MAP_WIDTH;
+            if (this._mapLayer.y > 0)
+                this._mapLayer.y = 0;
+            else if (this._mapLayer.y < size.height - this._mapInfo.MAP_HEIGHT)
+                this._mapLayer.y = size.height - this._mapInfo.MAP_HEIGHT;
+            //移动地图资源
+            this.moveMapResLayer();
+        }
     };
     /**移动地图资源刷新 */
     MapLayer.prototype.moveMapResLayer = function () {

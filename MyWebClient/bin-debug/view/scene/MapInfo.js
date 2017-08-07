@@ -4,8 +4,8 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 //地图信息，处理地图逻辑
 var MapInfo = (function () {
     function MapInfo() {
-        this.MAP_WIDTH = 1200;
-        this.MAP_HEIGHT = 2136;
+        this.MAP_WIDTH = GameDefine.MapRes_Width * 10;
+        this.MAP_HEIGHT = GameDefine.MapRes_Height * 10;
     }
     return MapInfo;
 }());

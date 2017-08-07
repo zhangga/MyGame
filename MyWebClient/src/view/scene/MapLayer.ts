@@ -10,7 +10,7 @@ class MapLayer extends egret.DisplayObjectContainer {
 
     //整个地图层
     private _mapLayer: egret.DisplayObjectContainer;
-    //地图资源层
+    //地图资源容器
     private _resLayer: egret.DisplayObjectContainer;
     private _bottomLayer: egret.DisplayObjectContainer;
     private _bodyLayer: egret.DisplayObjectContainer;
@@ -47,6 +47,13 @@ class MapLayer extends egret.DisplayObjectContainer {
                 this.mapResImgs.push(_mapImg);
             }
         }
+        //地图初始位置
+        this._mapLayer.x = 0;
+        this._mapLayer.y = 0;
+        //整个地图层的拖动
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
+
         //DELETE
         this.onRefreshMap();
     }
@@ -59,9 +66,51 @@ class MapLayer extends egret.DisplayObjectContainer {
         this.mapSmallImg.height = this._mapInfo.MAP_HEIGHT;
 
         //DELETE
-        this.moveMapResLayer();
-        this._mapLayer.x = 100;
-        this._mapLayer.y = 100;
+        var catImg = new eui.Image();
+        catImg.source = "item_bg_2_png";
+        catImg.x = 300;
+        catImg.y = 500;
+        this._bodyLayer.addChild(catImg);
+        catImg.addEventListener(egret.TouchEvent.TOUCH_TAP, function(evt: egret.TouchEvent) {
+            Tool.log(evt.target);
+        }, this);
+    }
+
+    //地图层当前触摸状态，按下时，值为true
+    private _touchStatus: boolean = false;
+    //鼠标点击时，鼠标全局坐标与地图层的位置差
+    private _distance: egret.Point = new egret.Point();
+    private mouseDown(evt: egret.TouchEvent): void {
+        Tool.log("Mouse Down.");
+        this._touchStatus = true;
+        this._distance.x = evt.stageX - this._mapLayer.x;
+        this._distance.y = evt.stageY - this._mapLayer.y;
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.mouseMove, this);
+    }
+
+    private mouseUp(evt: egret.TouchEvent): void {
+        Tool.log("Mouse Up.");
+        this._touchStatus = false;
+        this.stage.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.mouseMove, this);
+    }
+
+    private mouseMove(evt: egret.TouchEvent): void {
+        if( this._touchStatus )
+        {
+            this._mapLayer.x = evt.stageX - this._distance.x;
+            this._mapLayer.y = evt.stageY - this._distance.y;
+            //地图边界检测
+            if (this._mapLayer.x > 0)
+                this._mapLayer.x = 0;
+            else if (this._mapLayer.x < size.width-this._mapInfo.MAP_WIDTH)
+                this._mapLayer.x = size.width-this._mapInfo.MAP_WIDTH;
+            if (this._mapLayer.y > 0)
+                this._mapLayer.y = 0;
+            else if (this._mapLayer.y < size.height-this._mapInfo.MAP_HEIGHT)
+                this._mapLayer.y = size.height-this._mapInfo.MAP_HEIGHT;
+            //移动地图资源
+            this.moveMapResLayer();
+        }
     }
 
     /**移动地图资源刷新 */
