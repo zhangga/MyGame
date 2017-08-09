@@ -61,7 +61,7 @@ class MapLayer extends egret.DisplayObjectContainer {
     public onRefreshMap() {
         this._mapInfo = this._mainScene.mapInfo;
         //把地图放大成整个地图的大小
-        this.mapSmallImg.source = "map_" + 1001 + "_small_jpg";
+        this.mapSmallImg.source = "map_" + 1 + "_small_jpg";
         this.mapSmallImg.width = this._mapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this._mapInfo.MAP_HEIGHT;
 

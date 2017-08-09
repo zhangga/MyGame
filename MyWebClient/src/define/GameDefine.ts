@@ -5,7 +5,7 @@ class GameDefine {
 	
 	/**地图切片的宽高 */
 	public static MapRes_Width: number = 450;
-	public static MapRes_Height: number = 554;
+	public static MapRes_Height: number = 415;
 
 	//横竖多预加载几个图
     public static MapRes_RelaodNum: number = 1;
