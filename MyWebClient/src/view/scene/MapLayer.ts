@@ -149,7 +149,7 @@ class MapLayer extends egret.DisplayObjectContainer {
             //对应的图片编号
             var imgIndex: number = row * Math.ceil(this._mapInfo.MAP_WIDTH / GameDefine.MapRes_Width) + col + 1;
             // var mapUrl: string = "resource/mapres/" + mapModel.resourcesId + "/map_" + mapModel.resourcesId + "_" + imgIndex + ".jpg";
-            var mapUrl: string = "resource/mapres/" + 1001 + "/map_" + "1001" + "_" + 1 + ".jpg";
+            var mapUrl: string = "resource/mapres/" + 1 + "/map_" + "1" + "_" + 1 + ".jpg";
             var cachekey: string = this.mapCacheKey(mapUrl);
             if (mapImg.texture && (mapImg.texture as MapTexture).url == mapUrl)
                 return;
