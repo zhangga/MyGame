@@ -67,7 +67,7 @@ class MapLayer extends egret.DisplayObjectContainer {
 
         //DELETE
         var catImg = new eui.Image();
-        catImg.source = "item_bg_2_png";
+        catImg.source = "build_city_1_png";
         catImg.x = 300;
         catImg.y = 500;
         this._bodyLayer.addChild(catImg);

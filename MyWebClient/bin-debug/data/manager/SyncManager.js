@@ -63,7 +63,7 @@ var SyncManager = (function () {
             }
             this.sendQue = [];
         }
-        _GF.instance.net.onAddMessage(msg);
+        // _GF.instance.net.onAddMessage(msg);
     };
     SyncManager.prototype.onAddMessage = function (base) {
         this.sendQue.push(base);
