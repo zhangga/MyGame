@@ -68,7 +68,7 @@ class SyncManager {
 			}
 			this.sendQue = [];
 		}
-		_GF.instance.net.onAddMessage(msg);
+		// _GF.instance.net.onAddMessage(msg);
 	}
 	public onAddMessage(base: SyneBase): void {
 		this.sendQue.push(base);
