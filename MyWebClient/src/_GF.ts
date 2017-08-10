@@ -3,7 +3,7 @@ class _GF {
 	private static _stage: egret.Stage;
 	private _scene: MainScene;
 	private _net: HttpManager;
-	public isDemo: boolean = true;
+	public isDemo: boolean = false;
 	public isOpenSound: boolean = true;
 	public static IS_PC_GAME = false;
 	
