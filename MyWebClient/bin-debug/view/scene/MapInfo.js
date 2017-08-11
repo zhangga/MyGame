@@ -1,10 +1,21 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-//地图信息，处理地图逻辑
+//地图信息，处理地图逻辑，单例
 var MapInfo = (function () {
     function MapInfo() {
+        this.fullMapNode = false;
     }
+    Object.defineProperty(MapInfo, "instance", {
+        get: function () {
+            if (!this._instance) {
+                this._instance = new MapInfo();
+            }
+            return this._instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * 刷新地图信息
      */
@@ -52,7 +63,38 @@ var MapInfo = (function () {
             this.MapNodeXmlData = {};
         }
         this.modelMapNodes = [];
+        //读取XML中配置的地图信息
         ModelManager.instance.parseXmlToModel(this.MapNodeXmlData, ModelMapNode, key);
+        //填充所有格子信息
+        if (this.fullMapNode) {
+            var _allGridNum = this.mapRowNum * this.mapColNum;
+            for (var index = 0; index < _allGridNum; index++) {
+                var currNodeId = this.getGridId(index + 1);
+                var _modelMapNode = this.MapNodeXmlData[currNodeId];
+                if (!_modelMapNode) {
+                    _modelMapNode = new ModelMapNode();
+                    _modelMapNode.nodeType = MAP_GRID_TYPE.COLLSION;
+                    _modelMapNode.nodeId = currNodeId;
+                }
+                _modelMapNode.colIndex = index % this.mapColNum;
+                _modelMapNode.rowIndex = Math.floor(index / this.mapColNum);
+                this.modelMapNodes.push(_modelMapNode);
+            }
+        }
+        else {
+            for (var nodeId in this.MapNodeXmlData) {
+                var node = this.MapNodeXmlData[nodeId];
+                var index = node.nodeId % GameDefine.MAP_GRID_MAX - 1;
+                node.colIndex = index % this.mapColNum;
+                node.rowIndex = Math.floor(index / this.mapColNum);
+            }
+        }
+    };
+    /**
+     * 通过地图ID和格子索引获取格子的唯一ID
+     */
+    MapInfo.prototype.getGridId = function (index) {
+        return this.mapId * GameDefine.MAP_GRID_MAX + index;
     };
     /**
      * 获取缩略图的资源名称
@@ -68,6 +110,7 @@ var MapInfo = (function () {
     };
     return MapInfo;
 }());
+MapInfo._instance = null;
 __reflect(MapInfo.prototype, "MapInfo");
 var MAP_GRID_TYPE;
 (function (MAP_GRID_TYPE) {

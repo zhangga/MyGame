@@ -15,6 +15,8 @@ GameDefine.MapRes_Height = 415;
 /**地图每格子的宽高 */
 GameDefine.MAP_GRID_WIDTH = 20;
 GameDefine.MAP_GRID_HEIGHT = 20;
+/**每张地图格子区间 第一格ID = mapId*MAP_GRID_MAX+1 */
+GameDefine.MAP_GRID_MAX = 100000;
 //横竖多预加载几个图
 GameDefine.MapRes_RelaodNum = 1;
 //最大缓存多张地图

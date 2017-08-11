@@ -10,6 +10,8 @@ class GameDefine {
 	/**地图每格子的宽高 */
 	public static MAP_GRID_WIDTH: number = 20;
     public static MAP_GRID_HEIGHT: number = 20;
+	/**每张地图格子区间 第一格ID = mapId*MAP_GRID_MAX+1 */
+	public static MAP_GRID_MAX: number = 100000;
 
 	//横竖多预加载几个图
     public static MapRes_RelaodNum: number = 1;

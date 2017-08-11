@@ -87,16 +87,6 @@ var MainScene = (function (_super) {
         MainScene.state = MAINSCENE_STATE.GAME;
         this.onChangeState();
     };
-    Object.defineProperty(MainScene.prototype, "mapInfo", {
-        get: function () {
-            if (!this._mapinfo) {
-                this._mapinfo = new MapInfo();
-            }
-            return this._mapinfo;
-        },
-        enumerable: true,
-        configurable: true
-    });
     //地图层
     MainScene.prototype.getMapLayer = function () {
         return this._mapLayer;

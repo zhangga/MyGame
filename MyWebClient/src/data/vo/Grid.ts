@@ -3,8 +3,10 @@
  */
 class Grid {
 
+    //格子所在的列 从0开始
     private _x: number;
 
+    //格子所在的行 从0开始
     private _y: number;
 
     public constructor(x: number = 0, y: number = 0) {

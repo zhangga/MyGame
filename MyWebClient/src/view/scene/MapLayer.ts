@@ -2,7 +2,8 @@
 class MapLayer extends egret.DisplayObjectContainer {
 
     private _mainScene: MainScene;
-    private _mapInfo: MapInfo;
+    //单例的引用
+    private currMapInfo: MapInfo;
 
     //地图图片列、行数
     private mapImgColNum: number;
@@ -59,12 +60,12 @@ class MapLayer extends egret.DisplayObjectContainer {
     }
 
     public onRefreshMap() {
-        this._mapInfo = this._mainScene.mapInfo;
-        this._mapInfo.onRefreshMapInfo(1);
+        this.currMapInfo = MapInfo.instance;
+        this.currMapInfo.onRefreshMapInfo(1);
         //把地图放大成整个地图的大小
-        this.mapSmallImg.source = this._mapInfo.getSmallMapSource();
-        this.mapSmallImg.width = this._mapInfo.MAP_WIDTH;
-        this.mapSmallImg.height = this._mapInfo.MAP_HEIGHT;
+        this.mapSmallImg.source = this.currMapInfo.getSmallMapSource();
+        this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
+        this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
 
         //DELETE
         var catImg = new eui.Image();
@@ -101,12 +102,12 @@ class MapLayer extends egret.DisplayObjectContainer {
             //地图边界检测
             if (this._mapLayer.x > 0)
                 this._mapLayer.x = 0;
-            else if (this._mapLayer.x < this._mapInfo.mapMinX)
-                this._mapLayer.x = this._mapInfo.mapMinX;
+            else if (this._mapLayer.x < this.currMapInfo.mapMinX)
+                this._mapLayer.x = this.currMapInfo.mapMinX;
             if (this._mapLayer.y > 0)
                 this._mapLayer.y = 0;
-            else if (this._mapLayer.y < this._mapInfo.mapMinY)
-                this._mapLayer.y = this._mapInfo.mapMinY;
+            else if (this._mapLayer.y < this.currMapInfo.mapMinY)
+                this._mapLayer.y = this.currMapInfo.mapMinY;
             //移动地图资源
             this.moveMapResLayer();
         }
@@ -141,12 +142,12 @@ class MapLayer extends egret.DisplayObjectContainer {
             this.mapUrlLoadingList = [];
 
         var isLoading: boolean = false;
-        if (mapImg.x >= 0 && mapImg.y >= 0 && mapImg.x < this._mapInfo.MAP_WIDTH && mapImg.y < this._mapInfo.MAP_HEIGHT) {
+        if (mapImg.x >= 0 && mapImg.y >= 0 && mapImg.x < this.currMapInfo.MAP_WIDTH && mapImg.y < this.currMapInfo.MAP_HEIGHT) {
             var col: number = Math.floor(mapImg.x / GameDefine.MapRes_Width);
             var row: number = Math.floor(mapImg.y / GameDefine.MapRes_Height);
             //对应的图片编号
-            var imgIndex: number = row * Math.ceil(this._mapInfo.MAP_WIDTH / GameDefine.MapRes_Width) + col + 1;
-            var mapUrl: string = this._mapInfo.getMapResUrl(imgIndex);
+            var imgIndex: number = row * Math.ceil(this.currMapInfo.MAP_WIDTH / GameDefine.MapRes_Width) + col + 1;
+            var mapUrl: string = this.currMapInfo.getMapResUrl(imgIndex);
             var cachekey: string = this.mapCacheKey(mapUrl);
             if (mapImg.texture && (mapImg.texture as MapTexture).url == mapUrl)
                 return;

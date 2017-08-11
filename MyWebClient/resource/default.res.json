@@ -3994,7 +3994,7 @@
 		},
 		{
 			"url": "config/map/1_map.xml",
-			"type": "bin",
+			"type": "xml",
 			"name": "1_map_xml"
 		}
 	]

@@ -15,11 +15,15 @@ class PathManager {
     }
 
     /**
-     * 获取距离当前点最近的格子的位置
+     * 获取距离目标格子最近的道路格子的位置
      */
     public getNearestRoad(grid: Grid): Grid {
-        var result: Grid = Grid.NULL;
-        return null;
+        //判断格子是否在道路上
+        if (MapInfo.instance.isRoad(grid)) {
+            return grid;
+        }
+        //找到距离目标格子最近的
+        return MapInfo.instance.getNearestRoad(grid);
     }
 
 }

@@ -26,6 +26,11 @@ class GameCommon {
 		return grid;
 	}
 
+	/**两个格子的距离 */
+	public distance(a: Grid, b: Grid): number {
+		return Math.pow(a.x-b.x, 2) + Math.pow(a.y-b.y, 2);
+	}
+
 	public addChildByLayer(target: egret.DisplayObject, parent: egret.DisplayObjectContainer, pos: egret.Point, register?: egret.Point) {
 		if (register) {
 			target.anchorOffsetX = register.x;

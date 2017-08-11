@@ -4,7 +4,6 @@ class MainScene extends egret.DisplayObjectContainer {
 	public promptLayer: egret.DisplayObjectContainer;
 	private _moduleLayer: ModuleLayer;
 	private _mapLayer: MapLayer;
-	private _mapInfo: MapInfo;
 	public constructor() {
 		super();
 		this.once(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -82,14 +81,6 @@ class MainScene extends egret.DisplayObjectContainer {
 		this.onChangeState();
 	}
 
-	//地图属性
-    private _mapinfo: MapInfo;
-    public get mapInfo(): MapInfo {
-        if (!this._mapinfo) {
-            this._mapinfo = new MapInfo();
-        }
-        return this._mapinfo;
-    }
 	//地图层
     public getMapLayer(): MapLayer {
         return this._mapLayer;
