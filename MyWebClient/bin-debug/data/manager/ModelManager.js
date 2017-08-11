@@ -3,7 +3,6 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var ModelManager = (function () {
     function ModelManager() {
-        this.modelFishs = {};
         this.onInit();
     }
     Object.defineProperty(ModelManager, "instance", {
@@ -18,6 +17,28 @@ var ModelManager = (function () {
     });
     ModelManager.prototype.onInit = function () {
     };
+    Object.defineProperty(ModelManager.prototype, "modelText", {
+        get: function () {
+            if (!this._modelText) {
+                this._modelText = {};
+                this.initModel(this._modelText, ModelText, "text.xml");
+            }
+            return this._modelText;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ModelManager.prototype, "modelMap", {
+        get: function () {
+            if (!this._modelMap) {
+                this._modelMap = {};
+                this.initModel(this._modelMap, ModelMap, "map.xml");
+            }
+            return this._modelMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(ModelManager.prototype, "modelFish", {
         get: function () {
             if (!this._modelFish) {
@@ -139,17 +160,6 @@ var ModelManager = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(ModelManager.prototype, "modelText", {
-        get: function () {
-            if (!this._modelText) {
-                this._modelText = {};
-                this.initModel(this._modelText, ModelText, "text.xml");
-            }
-            return this._modelText;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(ModelManager.prototype, "modelTurnplate", {
         get: function () {
             if (!this._modelTurnplate) {
@@ -215,6 +225,38 @@ var ModelManager = (function () {
         if (isAll === void 0) { isAll = false; }
         if (map && classz && xml) {
             var res = this.readZipToXml("model_zzp", xml);
+            var mapType = 0;
+            if (map instanceof Array) {
+                mapType = 1;
+            }
+            for (var i = 0; i < res.children.length; ++i) {
+                var model = new classz();
+                model.parseXML(res.children[i]);
+                if (isAll) {
+                    map.push(model);
+                    map[model.id] = model;
+                }
+                else {
+                    switch (mapType) {
+                        case 0:
+                            map[model.id] = model;
+                            break;
+                        case 1:
+                            map.push(model);
+                            break;
+                    }
+                }
+            }
+        }
+        else {
+            Tool.throwException();
+        }
+    };
+    /**实时解析类型**/
+    ModelManager.prototype.parseXmlToModel = function (map, classz, xml, isAll) {
+        if (isAll === void 0) { isAll = false; }
+        if (map && classz && xml) {
+            var res = RES.getRes(xml);
             var mapType = 0;
             if (map instanceof Array) {
                 mapType = 1;

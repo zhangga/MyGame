@@ -8,6 +8,10 @@ abstract class ModelBase {
 
     public constructor() { }
 
+    public parseXML(result: egret.XML) {
+        this.id = this.getXmlValue(result, "id");
+    }
+
     public getXmlValue(xml: egret.XML, key) {
         return xml.attributes[key];
     }
@@ -16,7 +20,4 @@ abstract class ModelBase {
         return parseInt(this.getXmlValue(xml, key) ? this.getXmlValue(xml, key) : 0);
     }
 
-    public parseXML(result: egret.XML) {
-        this.id = this.getXmlValue(result, "id");
-    }
 }

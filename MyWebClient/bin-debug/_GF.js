@@ -3,7 +3,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var _GF = (function () {
     function _GF() {
-        this.isDemo = false;
+        this.isDemo = true;
         this.isOpenSound = true;
     }
     Object.defineProperty(_GF, "instance", {

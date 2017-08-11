@@ -1,6 +1,5 @@
 class ModelManager {
 	private static _instance: ModelManager;
-	public modelFishs = {};
 	public constructor() {
 		this.onInit();
 	}
@@ -12,6 +11,47 @@ class ModelManager {
 	}
 	public onInit() {
 	}
+
+	//语言文件
+	private _modelText;
+	public get modelText() {
+		if (!this._modelText) {
+			this._modelText = {};
+			this.initModel(this._modelText, ModelText, "text.xml");
+		}
+		return this._modelText;
+	}
+
+	//地图
+	private _modelMap;
+	public get modelMap() {
+		if (!this._modelMap) {
+			this._modelMap = {};
+			this.initModel(this._modelMap, ModelMap, "map.xml");
+		}
+		return this._modelMap;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	private _modelFish;
 	public get modelFish() {
@@ -112,14 +152,6 @@ class ModelManager {
 		return this._modelTechnology;
 	}
 
-	private _modelText;
-	public get modelText() {
-		if (!this._modelText) {
-			this._modelText = {};
-			this.initModel(this._modelText, ModelText, "text.xml");
-		}
-		return this._modelText;
-	}
 
 	private _modelTurnplate;
 	public get modelTurnplate(): Object {
@@ -201,6 +233,37 @@ class ModelManager {
 			Tool.throwException();
 		}
 	}
+
+	/**实时解析类型**/
+    public parseXmlToModel(map, classz, xml, isAll = false): void {
+        if (map && classz && xml) {
+            var res: egret.XML = <egret.XML>RES.getRes(xml);
+            var mapType = 0;
+            if (map instanceof Array) {
+                mapType = 1;
+            }
+            for (var i = 0; i < res.children.length; ++i) {
+                var model = new classz();
+                model.parseXML(<egret.XML>res.children[i]);
+                if (isAll) {
+                    map.push(model);
+                    map[model.id] = model;
+                } else {
+                    switch (mapType) {
+                        case 0:
+                            map[model.id] = model;
+                            break;
+                        case 1:
+                            map.push(model);
+                            break;
+                    }
+                }
+            }
+        } else {
+            Tool.throwException();
+        }
+    }
+	
 	//解压ZIP
 	public readZipToXml(resKey: string, xmlName: string): egret.XML {
 		try {

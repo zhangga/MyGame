@@ -7,10 +7,25 @@ class GameDefine {
 	public static MapRes_Width: number = 450;
 	public static MapRes_Height: number = 415;
 
+	/**地图每格子的宽高 */
+	public static MAP_GRID_WIDTH: number = 20;
+    public static MAP_GRID_HEIGHT: number = 20;
+
 	//横竖多预加载几个图
     public static MapRes_RelaodNum: number = 1;
 	//最大缓存多张地图
 	public static MapCache_MaxNum: number = 200;
+
+
+
+
+
+
+
+
+
+
+
 
 
 

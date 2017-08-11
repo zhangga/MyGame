@@ -14,6 +14,20 @@ var GameCommon = (function () {
         enumerable: true,
         configurable: true
     });
+    /**
+     * 将一个x,y格式的字符串转换为Grid对象
+     */
+    GameCommon.prototype.parseGrid = function (value) {
+        var grid = new Grid();
+        if (value) {
+            var vs = value.split(",");
+            if (vs.length == 2) {
+                grid.x = parseInt(vs[0]);
+                grid.y = parseInt(vs[1]);
+            }
+        }
+        return grid;
+    };
     GameCommon.prototype.addChildByLayer = function (target, parent, pos, register) {
         if (register) {
             target.anchorOffsetX = register.x;

@@ -12,6 +12,9 @@ GameDefine.SCREEN_HEIGHT = 1068;
 /**地图切片的宽高 */
 GameDefine.MapRes_Width = 450;
 GameDefine.MapRes_Height = 415;
+/**地图每格子的宽高 */
+GameDefine.MAP_GRID_WIDTH = 20;
+GameDefine.MAP_GRID_HEIGHT = 20;
 //横竖多预加载几个图
 GameDefine.MapRes_RelaodNum = 1;
 //最大缓存多张地图

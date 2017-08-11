@@ -10,6 +10,22 @@ class GameCommon {
 		}
 		return this._instance;
 	}
+
+	/**
+	 * 将一个x,y格式的字符串转换为Grid对象
+	 */
+	public parseGrid(value: string): Grid {
+		var grid: Grid = new Grid();
+		if (value) {
+			var vs: string[] = value.split(",");
+			if (vs.length == 2) {
+				grid.x = parseInt(vs[0]);
+				grid.y = parseInt(vs[1]);
+			}
+		}
+		return grid;
+	}
+
 	public addChildByLayer(target: egret.DisplayObject, parent: egret.DisplayObjectContainer, pos: egret.Point, register?: egret.Point) {
 		if (register) {
 			target.anchorOffsetX = register.x;
