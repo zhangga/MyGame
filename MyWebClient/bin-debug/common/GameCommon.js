@@ -28,6 +28,10 @@ var GameCommon = (function () {
         }
         return grid;
     };
+    /**两个格子的距离 */
+    GameCommon.prototype.distance = function (a, b) {
+        return Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2);
+    };
     GameCommon.prototype.addChildByLayer = function (target, parent, pos, register) {
         if (register) {
             target.anchorOffsetX = register.x;

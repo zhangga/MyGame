@@ -86,7 +86,7 @@ class MapInfo {
         if (this.fullMapNode) {
             var _allGridNum: number = this.mapRowNum * this.mapColNum;
             for (var index: number = 0; index < _allGridNum; index++) {
-                var currNodeId: number = this.getGridId(index+1);
+                var currNodeId: number = this.getGridId(index);
                 var _modelMapNode: ModelMapNode = this.MapNodeXmlData[currNodeId];
                 if (!_modelMapNode) {
                     _modelMapNode = new ModelMapNode();
@@ -102,7 +102,7 @@ class MapInfo {
         else {
             for (var nodeId in this.MapNodeXmlData) {
                 var node: ModelMapNode = this.MapNodeXmlData[nodeId];
-                var index: number = node.nodeId % GameDefine.MAP_GRID_MAX - 1;
+                var index: number = node.nodeId % GameDefine.MAP_GRID_MAX;
                 node.colIndex = index % this.mapColNum;
                 node.rowIndex = Math.floor(index / this.mapColNum);
             }
@@ -113,13 +113,14 @@ class MapInfo {
      * 判断一个格子是否是道路
      */
     public isRoad(grid: Grid): boolean {
-        for (var nodeId in this.MapNodeXmlData) {
-            var node: ModelMapNode = this.MapNodeXmlData[nodeId];
-            if (node.colIndex == grid.x && node.rowIndex == grid.y) {
-                return node.nodeType == MAP_GRID_TYPE.NORMAL;
-            }
-        }
-        return false;
+        var index = grid.getGridIndex();
+        if (index == -1)
+            return false;
+        var nodeId = this.getGridId(index);
+        var node: ModelMapNode = this.MapNodeXmlData[nodeId];
+        if (!node)
+            return false;
+        return node.nodeType == MAP_GRID_TYPE.NORMAL;
     }
 
     /**
@@ -169,11 +170,4 @@ class MapInfo {
         return "resource/mapres/" + this.mapResId + "/map_" + this.mapResId + "_" + imgIndex + ".jpg";
     }
 
-}
-
-enum MAP_GRID_TYPE {
-    NORMAL = 0,//正常点
-    COLLSION = 1,//碰撞点
-    JUMP = 2,//跳跃点
-    COVER = 3,//遮挡
 }

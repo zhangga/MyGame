@@ -1,5 +1,5 @@
 class ModelMapNode extends ModelBase {
-    public nodeId;//格子编号
+    public nodeId;//格子编号 从0开始
     public nodeType;//格子类型
     public areaIndex = 0;//对应区域
     public colIndex: number;//格子所在的列 从0开始 ==Grid.x

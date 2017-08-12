@@ -69,7 +69,7 @@ var MapInfo = (function () {
         if (this.fullMapNode) {
             var _allGridNum = this.mapRowNum * this.mapColNum;
             for (var index = 0; index < _allGridNum; index++) {
-                var currNodeId = this.getGridId(index + 1);
+                var currNodeId = this.getGridId(index);
                 var _modelMapNode = this.MapNodeXmlData[currNodeId];
                 if (!_modelMapNode) {
                     _modelMapNode = new ModelMapNode();
@@ -84,11 +84,49 @@ var MapInfo = (function () {
         else {
             for (var nodeId in this.MapNodeXmlData) {
                 var node = this.MapNodeXmlData[nodeId];
-                var index = node.nodeId % GameDefine.MAP_GRID_MAX - 1;
+                var index = node.nodeId % GameDefine.MAP_GRID_MAX;
                 node.colIndex = index % this.mapColNum;
                 node.rowIndex = Math.floor(index / this.mapColNum);
             }
         }
+    };
+    /**
+     * 判断一个格子是否是道路
+     */
+    MapInfo.prototype.isRoad = function (grid) {
+        var index = grid.getGridIndex();
+        if (index == -1)
+            return false;
+        var nodeId = this.getGridId(index);
+        var node = this.MapNodeXmlData[nodeId];
+        if (!node)
+            return false;
+        return node.nodeType == MAP_GRID_TYPE.NORMAL;
+    };
+    /**
+     * 找到距离格子最近的道路
+     */
+    MapInfo.prototype.getNearestRoad = function (grid) {
+        var result = Grid.NULL;
+        var min = -1;
+        for (var nodeId in this.MapNodeXmlData) {
+            var node = this.MapNodeXmlData[nodeId];
+            //道路
+            if (node.nodeType == MAP_GRID_TYPE.NORMAL) {
+                var road = node.toGrid();
+                var dis = GameCommon.instance.distance(grid, road);
+                if (min == -1) {
+                    min = dis;
+                    result = road;
+                    continue;
+                }
+                if (dis < min) {
+                    min = dis;
+                    result = road;
+                }
+            }
+        }
+        return result;
     };
     /**
      * 通过地图ID和格子索引获取格子的唯一ID
@@ -112,11 +150,4 @@ var MapInfo = (function () {
 }());
 MapInfo._instance = null;
 __reflect(MapInfo.prototype, "MapInfo");
-var MAP_GRID_TYPE;
-(function (MAP_GRID_TYPE) {
-    MAP_GRID_TYPE[MAP_GRID_TYPE["NORMAL"] = 0] = "NORMAL";
-    MAP_GRID_TYPE[MAP_GRID_TYPE["COLLSION"] = 1] = "COLLSION";
-    MAP_GRID_TYPE[MAP_GRID_TYPE["JUMP"] = 2] = "JUMP";
-    MAP_GRID_TYPE[MAP_GRID_TYPE["COVER"] = 3] = "COVER";
-})(MAP_GRID_TYPE || (MAP_GRID_TYPE = {}));
 //# sourceMappingURL=MapInfo.js.map

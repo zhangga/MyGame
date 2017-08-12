@@ -26,4 +26,18 @@ class PathManager {
         return MapInfo.instance.getNearestRoad(grid);
     }
 
+    /**
+     * 根据开始节点和终止节点搜索路径
+     */
+    public find(start: Grid, end: Grid): Array<Grid> {
+        var finder: PathFinder = new PathFinder(start, end);
+        var endGrid: PathGrid = finder.start();
+        if (endGrid != null) {
+            return endGrid.getPath();
+        }
+        else {
+            return null;
+        }
+    }
+
 }

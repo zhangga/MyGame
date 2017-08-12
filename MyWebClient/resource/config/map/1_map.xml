@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <maps>
-	<map id="100001" type="0" area="0"/>
+	<map id="100000" type="0" area="0"/>
+	<map id="100014" type="0" area="0"/>
+	<map id="100015" type="0" area="0"/>
+	<map id="100016" type="0" area="0"/>
+	<map id="100029" type="0" area="0"/>
+	<map id="100030" type="0" area="0"/>
+	<map id="100031" type="0" area="0"/>
 </maps>

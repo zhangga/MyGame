@@ -74,7 +74,7 @@ class MapLayer extends egret.DisplayObjectContainer {
         catImg.y = 500;
         this._bodyLayer.addChild(catImg);
         catImg.addEventListener(egret.TouchEvent.TOUCH_TAP, function(evt: egret.TouchEvent) {
-            Tool.log(evt.target);
+            PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
         }, this);
     }
 

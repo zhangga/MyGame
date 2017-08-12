@@ -8,8 +8,8 @@ class GameDefine {
 	public static MapRes_Height: number = 415;
 
 	/**地图每格子的宽高 */
-	public static MAP_GRID_WIDTH: number = 20;
-    public static MAP_GRID_HEIGHT: number = 20;
+	public static MAP_GRID_WIDTH: number = 200;
+    public static MAP_GRID_HEIGHT: number = 200;
 	/**每张地图格子区间 第一格ID = mapId*MAP_GRID_MAX+1 */
 	public static MAP_GRID_MAX: number = 100000;
 
