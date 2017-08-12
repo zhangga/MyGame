@@ -3,10 +3,10 @@
  */
 class Grid {
 
-    //格子所在的列 从0开始
+    //格子所在的行 从0开始
     private _x: number;
 
-    //格子所在的行 从0开始
+    //格子所在的列 从0开始
     private _y: number;
 
     public constructor(x: number = 0, y: number = 0) {
@@ -21,7 +21,7 @@ class Grid {
      * Grid的对象的KEY
      */
     public get key(): string {
-        return this._x+":"+this._y;
+        return this._x+","+this._y;
     }
 
     public add(add: Grid): Grid {
@@ -33,15 +33,6 @@ class Grid {
 
     public equal(grid: Grid): boolean {
         return this._x == grid._x && this._y == grid._y;
-    }
-
-    //通过格子的XY获取格子索引。-1表示出了地图范围
-    public getGridIndex(): number {
-        if (this._x < 0 || this._y < 0)
-            return -1;
-        if (this._x >= MapInfo.instance.mapColNum || this._y >= MapInfo.instance.mapRowNum)
-            return -1;
-        return this.x * MapInfo.instance.mapColNum + this.y;
     }
 
     public getDirGrid(type: DIRECTION_TYPE): Grid {

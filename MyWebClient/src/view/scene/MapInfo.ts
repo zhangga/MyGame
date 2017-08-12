@@ -21,7 +21,7 @@ class MapInfo {
     //地图上所有的格子（包括XML中未配置的）
     private modelMapNodes: Array<ModelMapNode>;//数组更新需要彻底清除
     //XML中配置的道路节点信息
-    public MapNodeXmlData;
+    public MapNodeXmlData = {};
 
     private static _instance: MapInfo = null;
     private constructor() { }
@@ -70,57 +70,55 @@ class MapInfo {
     private loadingMapConfig(data,key): void {
         if (!key)
             key = this.mapResId + "_map_xml";
-        if (this.MapNodeXmlData) {
-            for (var nodeId in this.MapNodeXmlData) {
-                var cacheMapNode: ModelMapNode = this.MapNodeXmlData[nodeId];
-                cacheMapNode = null;
-                delete this.MapNodeXmlData[nodeId];
-            }
-        } else {
-            this.MapNodeXmlData = {};
-        }
+        var xmlDatas: Array<ModelMapNode> = [];
         this.modelMapNodes = [];
+        this.MapNodeXmlData = {};
         //读取XML中配置的地图信息
-        ModelManager.instance.parseXmlToModel(this.MapNodeXmlData, ModelMapNode, key);
+        ModelManager.instance.parseXmlToModel(xmlDatas, ModelMapNode, key);
+        //地图中配置的节点
+        for (var i = 0; i < xmlDatas.length; i++) {
+            var model: ModelMapNode = xmlDatas[i];
+            this.MapNodeXmlData[model.grid.key] = model;
+        }
         //填充所有格子信息
         if (this.fullMapNode) {
-            var _allGridNum: number = this.mapRowNum * this.mapColNum;
-            for (var index: number = 0; index < _allGridNum; index++) {
-                var currNodeId: number = this.getGridId(index);
-                var _modelMapNode: ModelMapNode = this.MapNodeXmlData[currNodeId];
-                if (!_modelMapNode) {
-                    _modelMapNode = new ModelMapNode();
-                    _modelMapNode.nodeType = MAP_GRID_TYPE.COLLSION;
-                    _modelMapNode.nodeId = currNodeId;
+            for (var i = 0; i < this.mapRowNum; i++) {
+                for (var j = 0; j < this.mapColNum; j++) {
+                    var grid: Grid = new Grid(i, j);
+                    var _modelMapNode: ModelMapNode = this.MapNodeXmlData[grid.key];
+                    if (!_modelMapNode) {
+                        _modelMapNode = new ModelMapNode();
+                        _modelMapNode.grid = new Grid(i, j);
+                        _modelMapNode.nodeType = MAP_GRID_TYPE.COLLSION;
+                        _modelMapNode.areaIndex = 0;
+                        this.modelMapNodes.push(_modelMapNode);
+                    }
                 }
-                _modelMapNode.colIndex = index % this.mapColNum;
-                _modelMapNode.rowIndex = Math.floor(index / this.mapColNum);
-                this.modelMapNodes.push(_modelMapNode);
             }
         }
-        //计算配置的格子所在的行列数
-        else {
-            for (var nodeId in this.MapNodeXmlData) {
-                var node: ModelMapNode = this.MapNodeXmlData[nodeId];
-                var index: number = node.nodeId % GameDefine.MAP_GRID_MAX;
-                node.colIndex = index % this.mapColNum;
-                node.rowIndex = Math.floor(index / this.mapColNum);
-            }
-        }
+    }
+
+    /**
+     * 判断一个格子是否在地图内
+     */
+    public inMap(grid: Grid): boolean {
+        if (grid.x < 0 || grid.y < 0)
+            return false;
+        if (grid.x >= this.mapRowNum || grid.y >= this.mapColNum)
+            return false;
+        return true;
     }
 
     /**
      * 判断一个格子是否是道路
      */
     public isRoad(grid: Grid): boolean {
-        var index = grid.getGridIndex();
-        if (index == -1)
+        if (!this.inMap(grid))
             return false;
-        var nodeId = this.getGridId(index);
-        var node: ModelMapNode = this.MapNodeXmlData[nodeId];
+        var node: ModelMapNode = this.MapNodeXmlData[grid.key];
         if (!node)
             return false;
-        return node.nodeType == MAP_GRID_TYPE.NORMAL;
+        return node.isCanWalk;
     }
 
     /**
@@ -129,11 +127,11 @@ class MapInfo {
     public getNearestRoad(grid: Grid): Grid {
         var result: Grid = Grid.NULL;
         var min: number = -1;
-        for (var nodeId in this.MapNodeXmlData) {
-            var node: ModelMapNode = this.MapNodeXmlData[nodeId];
+        for (var key in this.MapNodeXmlData) {
+            var node: ModelMapNode = this.MapNodeXmlData[key];
             //道路
-            if (node.nodeType == MAP_GRID_TYPE.NORMAL) {
-                var road: Grid = node.toGrid();
+            if (node.isCanWalk) {
+                var road: Grid = node.grid;
                 var dis = GameCommon.instance.distance(grid, road);
                 if (min == -1) {
                     min = dis;
@@ -150,6 +148,7 @@ class MapInfo {
     }
 
     /**
+     * 已过时
      * 通过地图ID和格子索引获取格子的唯一ID
      */
     public getGridId(index: number): number {

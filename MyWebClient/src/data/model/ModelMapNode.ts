@@ -1,24 +1,15 @@
 class ModelMapNode extends ModelBase {
-    public nodeId;//格子编号 从0开始
-    public nodeType;//格子类型
-    public areaIndex = 0;//对应区域
-    public colIndex: number;//格子所在的列 从0开始 ==Grid.x
-    public rowIndex: number;//格子所在的行 从0开始 ==Grid.y
-    public findNode: FindNode;//寻路用父节点
+    public grid: Grid;
+    public nodeType: number;//格子类型
+    public areaIndex: number = 0;//对应区域
 
     public constructor() {
         super();
-        this.findNode = new FindNode();
     }
     public parseXML(result: egret.XML) {
-        super.parseXML(result);
-        this.nodeId = this.id;
+        this.grid = GameCommon.instance.parseGrid(this.getXmlValue(result, "grid"));
         this.nodeType = this.getXmlValueNumber(result, "type");
-        this.areaIndex = this.getXmlValue(result, "area");
-    }
-
-    public toGrid(): Grid {
-        return new Grid(this.colIndex, this.rowIndex);
+        this.areaIndex = this.getXmlValueNumber(result, "area");
     }
 
     public get isCanWalk(): boolean {
@@ -31,15 +22,5 @@ class ModelMapNode extends ModelBase {
 
     public get isJump(): boolean {
         return this.nodeType == MAP_GRID_TYPE.JUMP;
-    }
-}
-class FindNode {
-    public parentNodeId;
-    public gValue;
-    public hValue;
-    public onReset(): void {
-        this.parentNodeId = null;
-        this.gValue = null;
-        this.hValue = null;
     }
 }
