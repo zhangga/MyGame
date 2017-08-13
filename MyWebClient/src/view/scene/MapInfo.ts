@@ -148,6 +148,16 @@ class MapInfo {
     }
 
     /**
+     * 将格子转换为Point
+     */
+    public getPoint(grid: Grid): egret.Point {
+        var point: egret.Point = new egret.Point();
+        point.x = grid.x * GameDefine.MAP_GRID_HEIGHT;
+        point.y = grid.y * GameDefine.MAP_GRID_WIDTH;
+        return point;
+    }
+
+    /**
      * 已过时
      * 通过地图ID和格子索引获取格子的唯一ID
      */

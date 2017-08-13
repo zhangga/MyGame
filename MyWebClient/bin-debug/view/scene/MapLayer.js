@@ -11,6 +11,8 @@ var MapLayer = (function (_super) {
     __extends(MapLayer, _super);
     function MapLayer(mainScene) {
         var _this = _super.call(this) || this;
+        _this.last = 0;
+        _this.DELETE = null;
         //地图层当前触摸状态，按下时，值为true
         _this._touchStatus = false;
         //鼠标点击时，鼠标全局坐标与地图层的位置差
@@ -29,8 +31,8 @@ var MapLayer = (function (_super) {
         this._mapLayer.addChildAt(this._resLayer, 0);
         this._bottomLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._bottomLayer, 1);
-        this._bodyLayer = new egret.DisplayObjectContainer();
-        this._mapLayer.addChildAt(this._bodyLayer, 2);
+        this._spriteLayer = new egret.DisplayObjectContainer();
+        this._mapLayer.addChildAt(this._spriteLayer, 2);
         //地图资源
         this.mapSmallImg = new eui.Image();
         this._resLayer.addChildAt(this.mapSmallImg, 1);
@@ -52,6 +54,10 @@ var MapLayer = (function (_super) {
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
         //DELETE
         this.onRefreshMap();
+        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+    };
+    MapLayer.prototype.onEnterFrame = function () {
+        this.DELETE.onMove();
     };
     MapLayer.prototype.onRefreshMap = function () {
         this.currMapInfo = MapInfo.instance;
@@ -61,13 +67,16 @@ var MapLayer = (function (_super) {
         this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
         //DELETE
+        this.DELETE = new ActiveArmy();
         var catImg = new eui.Image();
         catImg.source = "build_city_1_png";
-        catImg.x = 300;
-        catImg.y = 500;
-        this._bodyLayer.addChild(catImg);
-        catImg.addEventListener(egret.TouchEvent.TOUCH_TAP, function (evt) {
-            PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
+        this.DELETE.addChild(catImg);
+        this.DELETE.x = 300;
+        this.DELETE.y = 500;
+        this._spriteLayer.addChild(this.DELETE);
+        this.DELETE.addEventListener(egret.TouchEvent.TOUCH_TAP, function (evt) {
+            var path = PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
+            this.DELETE.setMovePath(path);
         }, this);
     };
     MapLayer.prototype.mouseDown = function (evt) {

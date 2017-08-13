@@ -31,19 +31,19 @@ class PathGrid {
      */
     private initNextRoad(): void {
         //左格子
-        var left: Grid = this.grid.getDirGrid(DIRECTION_TYPE.LEFT);
+        var left: Grid = this.grid.getDirGrid(DIRECTION.LEFT);
         if (MapInfo.instance.isRoad(left))
             this.nextRoadList.push(left);
         //右格子
-        var right: Grid = this.grid.getDirGrid(DIRECTION_TYPE.RIGHT);
+        var right: Grid = this.grid.getDirGrid(DIRECTION.RIGHT);
         if (MapInfo.instance.isRoad(right))
             this.nextRoadList.push(right);
         //上格子
-        var up: Grid = this.grid.getDirGrid(DIRECTION_TYPE.UP);
+        var up: Grid = this.grid.getDirGrid(DIRECTION.UP);
         if (MapInfo.instance.isRoad(up))
             this.nextRoadList.push(up);
         //下格子
-        var down: Grid = this.grid.getDirGrid(DIRECTION_TYPE.DOWN);
+        var down: Grid = this.grid.getDirGrid(DIRECTION.DOWN);
         if (MapInfo.instance.isRoad(down))
             this.nextRoadList.push(down);
     }

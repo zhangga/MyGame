@@ -36,12 +36,6 @@ var Tool = (function () {
         }
         return timeoutKey;
     };
-    // public static throwException(logstr = undefined, classz = ExceptionBase) {
-    // 	if (logstr) {
-    // 		this.log(logstr);
-    // 	}
-    // 	throw new classz();
-    // }
     Tool.addTimer = function (callback, thisObject, time) {
         if (time === void 0) { time = 1000; }
         if (!Tool.timerManager[time.toString()]) {
@@ -69,6 +63,52 @@ var Tool = (function () {
     Tool.rand = function (limit, wave, scale) {
         if (scale === void 0) { scale = 1; }
         return Math.floor(Math.random() * wave + limit) * scale;
+    };
+    //计算朝向
+    Tool.checkFace8 = function (startx, starty, endx, endy) {
+        var angle = (-(Math.atan2((endy - starty), (endx - startx))) * (180 / Math.PI));
+        return Tool.getFaceByAngle(angle);
+    };
+    //根据角度计算出朝向 angle角度 X逆时针0~180；X轴顺时针0~-180
+    Tool.getFaceByAngle = function (angle) {
+        var _diretion;
+        if (angle > 67.5 && angle < 112.5) {
+            _diretion = DIRECTION.UP;
+        }
+        else {
+            if (angle > 22.5 && angle < 67.5) {
+                _diretion = DIRECTION.RIGHT_UP;
+            }
+            else {
+                if (angle > -22.5 && angle < 22.5) {
+                    _diretion = DIRECTION.RIGHT;
+                }
+                else {
+                    if (angle > -67.5 && angle < -22.5) {
+                        _diretion = DIRECTION.RIGHT_DOWN;
+                    }
+                    else {
+                        if (angle > -112.5 && angle < -67.5) {
+                            _diretion = DIRECTION.DOWN;
+                        }
+                        else {
+                            if (angle > -157.5 && angle < -112.5) {
+                                _diretion = DIRECTION.LEFT_DOWN;
+                            }
+                            else {
+                                if (angle > 112.5 && angle < 157.5) {
+                                    _diretion = DIRECTION.LEFT_UP;
+                                }
+                                else {
+                                    _diretion = DIRECTION.LEFT;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return _diretion;
     };
     return Tool;
 }());

@@ -10,6 +10,12 @@ var MainScene = (function (_super) {
     __extends(MainScene, _super);
     function MainScene() {
         var _this = _super.call(this) || this;
+        //游戏时钟是否启动
+        _this.isTicked = false;
+        //游戏场景暂停
+        _this.isScenePause = false;
+        //下次心跳时间
+        _this._nextHeartBeat = 0;
         _this.once(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
@@ -35,6 +41,29 @@ var MainScene = (function (_super) {
             this._moduleLayer.onReset();
         }
         this.sceneLayer.addChild(this._moduleLayer);
+        this.startTick();
+    };
+    //启动游戏时钟
+    MainScene.prototype.startTick = function () {
+        if (!this.isTicked) {
+            this.isTicked = true;
+            this.addEventListener(egret.Event.ENTER_FRAME, this.gameTick, this);
+        }
+        if (!this.isScenePause) {
+            this.isScenePause = true;
+        }
+    };
+    //游戏时钟逻辑
+    MainScene.prototype.gameTick = function () {
+        var curr = egret.getTimer();
+        if (this._nextHeartBeat <= curr) {
+            if (this._nextHeartBeat > 0) {
+                this.onSendHearBeatMsg();
+            }
+            this._nextHeartBeat = curr + GameDefine.HEART_BEAT_INTERVAL;
+        }
+        if (this.isScenePause) {
+        }
     };
     //状态切换
     MainScene.prototype.onChangeState = function () {
@@ -86,6 +115,9 @@ var MainScene = (function (_super) {
     MainScene.prototype.onEnterSucceed = function () {
         MainScene.state = MAINSCENE_STATE.GAME;
         this.onChangeState();
+    };
+    //发送心跳消息
+    MainScene.prototype.onSendHearBeatMsg = function () {
     };
     //地图层
     MainScene.prototype.getMapLayer = function () {

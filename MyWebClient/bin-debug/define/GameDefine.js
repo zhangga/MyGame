@@ -21,6 +21,12 @@ GameDefine.MAP_GRID_MAX = 100000;
 GameDefine.MapRes_RelaodNum = 1;
 //最大缓存多张地图
 GameDefine.MapCache_MaxNum = 200;
+//游戏心跳的间隔
+GameDefine.HEART_BEAT_INTERVAL = 5000;
+//精灵的移动速度
+GameDefine.SPRITE_MOVE_SPEED = 8000;
+//精灵逻辑移动的时间间隔
+GameDefine.SPRITE_MOVE_DT = 40;
 GameDefine.FISHTANK_WIDTH = 600;
 GameDefine.FISHTANK_HEIGHT = 643;
 /*鱼转方向的边缘*/

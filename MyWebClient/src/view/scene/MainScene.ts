@@ -4,10 +4,17 @@ class MainScene extends egret.DisplayObjectContainer {
 	public promptLayer: egret.DisplayObjectContainer;
 	private _moduleLayer: ModuleLayer;
 	private _mapLayer: MapLayer;
+
+	//游戏时钟是否启动
+	private isTicked = false;
+	//游戏场景暂停
+	private isScenePause = false;
+	
 	public constructor() {
 		super();
 		this.once(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
 	}
+
 	private onAddToStage(): void {
 		this.onRegist();
 		//场景层
@@ -19,6 +26,7 @@ class MainScene extends egret.DisplayObjectContainer {
 		this.promptLayer.addChild(PromptPanel.getInstance());
 		this.onChangeState();
 	}
+
 	//开始创建游戏
 	public onStartGame():void {
 		this._mapLayer = new MapLayer(this);
@@ -29,7 +37,37 @@ class MainScene extends egret.DisplayObjectContainer {
 			this._moduleLayer.onReset();
 		}
 		this.sceneLayer.addChild(this._moduleLayer);
+		this.startTick();
 	}
+
+	//启动游戏时钟
+	public startTick(): void {
+		if (!this.isTicked) {
+			this.isTicked = true;
+			this.addEventListener(egret.Event.ENTER_FRAME, this.gameTick, this);
+		}
+		if (!this.isScenePause) {
+            this.isScenePause = true;
+        }
+	}
+
+	//下次心跳时间
+	private _nextHeartBeat = 0;
+	//游戏时钟逻辑
+	private gameTick(): void {
+		var curr: number = egret.getTimer();
+		if (this._nextHeartBeat <= curr) {
+			if (this._nextHeartBeat > 0) {
+				this.onSendHearBeatMsg();
+			}
+			this._nextHeartBeat = curr + GameDefine.HEART_BEAT_INTERVAL;
+		}
+
+		if (this.isScenePause) {
+
+		}
+	}
+
 	//状态切换
 	public onChangeState(): void {
 		this.sceneLayer.removeChildren();
@@ -79,6 +117,11 @@ class MainScene extends egret.DisplayObjectContainer {
 	private onEnterSucceed(): void {
 		MainScene.state = MAINSCENE_STATE.GAME;
 		this.onChangeState();
+	}
+
+	//发送心跳消息
+	private onSendHearBeatMsg(): void {
+
 	}
 
 	//地图层

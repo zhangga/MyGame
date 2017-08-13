@@ -35,31 +35,31 @@ class Grid {
         return this._x == grid._x && this._y == grid._y;
     }
 
-    public getDirGrid(type: DIRECTION_TYPE): Grid {
+    public getDirGrid(type: DIRECTION): Grid {
         var dir: Grid = null;
         switch (type) {
-            case DIRECTION_TYPE.LEFT:
+            case DIRECTION.LEFT:
                 dir = new Grid(this._x, this._y-1);
                 break;
-            case DIRECTION_TYPE.RIGHT:
+            case DIRECTION.RIGHT:
                 dir = new Grid(this._x, this._y+1);
                 break;
-            case DIRECTION_TYPE.UP:
+            case DIRECTION.UP:
                 dir = new Grid(this._x-1, this._y);
                 break;
-            case DIRECTION_TYPE.DOWN:
+            case DIRECTION.DOWN:
                 dir = new Grid(this._x+1, this._y);
                 break;
-            case DIRECTION_TYPE.LEFT_UP:
+            case DIRECTION.LEFT_UP:
                 dir = new Grid(this._x-1, this._y-1);
                 break;
-            case DIRECTION_TYPE.RIGHT_UP:
+            case DIRECTION.RIGHT_UP:
                 dir = new Grid(this._x-1, this._y+1);
                 break;
-            case DIRECTION_TYPE.LEFT_DOWN:
+            case DIRECTION.LEFT_DOWN:
                 dir = new Grid(this._x+1, this._y-1);
                 break;
-            case DIRECTION_TYPE.RIGHT_DOWN:
+            case DIRECTION.RIGHT_DOWN:
                 dir = new Grid(this._x+1, this._y+1);
                 break;
         }
@@ -89,15 +89,4 @@ enum MAP_GRID_TYPE {
     COLLSION = 1,//碰撞点
     JUMP = 2,//跳跃点
     COVER = 3,//遮挡
-}
-
-enum DIRECTION_TYPE {
-    LEFT = 0,//左
-    RIGHT = 1,//右
-    UP = 2,//上
-    DOWN = 3,//下
-    LEFT_UP = 4,//左上
-    RIGHT_UP = 5,//右上
-    LEFT_DOWN = 6,//左下
-    RIGHT_DOWN = 7,//右下
 }

@@ -14,7 +14,7 @@ class MapLayer extends egret.DisplayObjectContainer {
     //地图资源容器
     private _resLayer: egret.DisplayObjectContainer;
     private _bottomLayer: egret.DisplayObjectContainer;
-    private _bodyLayer: egret.DisplayObjectContainer;
+    private _spriteLayer: egret.DisplayObjectContainer;
     //地图资源的引用
     private mapSmallImg: eui.Image;
     private mapResImgs: eui.Image[];
@@ -32,8 +32,8 @@ class MapLayer extends egret.DisplayObjectContainer {
         this._mapLayer.addChildAt(this._resLayer, 0);
         this._bottomLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._bottomLayer, 1);
-        this._bodyLayer = new egret.DisplayObjectContainer();
-        this._mapLayer.addChildAt(this._bodyLayer, 2);
+        this._spriteLayer = new egret.DisplayObjectContainer();
+        this._mapLayer.addChildAt(this._spriteLayer, 2);
 
         //地图资源
         this.mapSmallImg = new eui.Image();
@@ -57,6 +57,12 @@ class MapLayer extends egret.DisplayObjectContainer {
 
         //DELETE
         this.onRefreshMap();
+        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+    }
+
+    private last: number = 0;
+    private onEnterFrame(): void {
+        this.DELETE.onMove();
     }
 
     public onRefreshMap() {
@@ -68,15 +74,20 @@ class MapLayer extends egret.DisplayObjectContainer {
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
 
         //DELETE
+        this.DELETE = new ActiveArmy();
         var catImg = new eui.Image();
         catImg.source = "build_city_1_png";
-        catImg.x = 300;
-        catImg.y = 500;
-        this._bodyLayer.addChild(catImg);
-        catImg.addEventListener(egret.TouchEvent.TOUCH_TAP, function(evt: egret.TouchEvent) {
-            PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
+        this.DELETE.addChild(catImg);
+        this.DELETE.x = 300;
+        this.DELETE.y = 500;
+        this._spriteLayer.addChild(this.DELETE);
+        this.DELETE.addEventListener(egret.TouchEvent.TOUCH_TAP, function(evt: egret.TouchEvent) {
+            var path = PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
+            this.DELETE.setMovePath(path);
         }, this);
     }
+    private DELETE: ActiveArmy = null;
+
 
     //地图层当前触摸状态，按下时，值为true
     private _touchStatus: boolean = false;

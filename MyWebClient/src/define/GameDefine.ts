@@ -18,6 +18,14 @@ class GameDefine {
 	//最大缓存多张地图
 	public static MapCache_MaxNum: number = 200;
 
+	//游戏心跳的间隔
+	public static HEART_BEAT_INTERVAL: number = 5000;
+
+	//精灵的移动速度
+	public static SPRITE_MOVE_SPEED: number = 8000;
+	//精灵逻辑移动的时间间隔
+	public static SPRITE_MOVE_DT: number = 40;
+
 
 
 
