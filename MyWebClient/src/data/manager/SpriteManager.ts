@@ -49,6 +49,7 @@ class SpriteManager {
         activeArmy.data = armyVo;
         activeArmy.x = Math.random() * 500;
         activeArmy.y = Math.random() * 1000;
+        activeArmy.setBodyLayer();
         this._activeArmys.push(activeArmy);
         this._mapLayer.addSprite(activeArmy);
 
