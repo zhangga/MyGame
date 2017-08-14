@@ -7,8 +7,6 @@ class MainScene extends egret.DisplayObjectContainer {
 
 	//游戏时钟是否启动
 	private isTicked = false;
-	//游戏场景暂停
-	private isScenePause = false;
 	
 	public constructor() {
 		super();
@@ -36,6 +34,7 @@ class MainScene extends egret.DisplayObjectContainer {
 		} else {
 			this._moduleLayer.onReset();
 		}
+		SpriteManager.instance.mapLayer = this._mapLayer;
 		this.sceneLayer.addChild(this._moduleLayer);
 		this.startTick();
 	}
@@ -46,9 +45,6 @@ class MainScene extends egret.DisplayObjectContainer {
 			this.isTicked = true;
 			this.addEventListener(egret.Event.ENTER_FRAME, this.gameTick, this);
 		}
-		if (!this.isScenePause) {
-            this.isScenePause = true;
-        }
 	}
 
 	//下次心跳时间
@@ -62,9 +58,10 @@ class MainScene extends egret.DisplayObjectContainer {
 			}
 			this._nextHeartBeat = curr + GameDefine.HEART_BEAT_INTERVAL;
 		}
-
-		if (this.isScenePause) {
-
+		SpriteManager.instance.onTick();
+		//震屏
+		if (this.isEarthQuake) {
+            this.earthQuakeHandler();
 		}
 	}
 
@@ -101,6 +98,7 @@ class MainScene extends egret.DisplayObjectContainer {
 		GameDispatcher.instance.addEventListener(MESSAGE_ID.CREATE_ROLE_MESSAGE.toString(), this.onGameSucceed, this);
 		GameDispatcher.instance.addEventListener(MESSAGE_ID.LOGIN_SERVER_MESSAGE.toString(), this.onEnterSucceed, this);
 		GameDispatcher.instance.addEventListener(GameEvent.GAME_RELOGIN_EVENT, this.onLoginSucceed, this);
+		GameDispatcher.instance.addEventListener(GameEvent.GAME_EARTHQUAKE_STRAT, this.onEarthQuake, this);
 	}
 	/**登录 */
 	public onLoginSucceed(): void {
@@ -127,6 +125,48 @@ class MainScene extends egret.DisplayObjectContainer {
 	//地图层
     public getMapLayer(): MapLayer {
         return this._mapLayer;
+    }
+	//震屏
+    private isEarthQuake: boolean = false;
+    private earthQuakeOffValue: number;
+    private earthUpDown: number;//0上1下
+    private earthLeftRight: number;//0左1右
+    private earthTime: number;
+	//震屏
+	public onEarthQuake(): void {
+        if (!this.isEarthQuake) {
+            this.isEarthQuake = true;
+            this.earthQuakeOffValue = 4;
+            this.earthUpDown = Math.floor(Math.random() * 2);
+            this.earthLeftRight = Math.floor(Math.random() * 2);
+        }
+    }
+	private earthQuakeHandler(): void {
+        if (egret.getTimer() - this.earthTime < 100)
+            return;
+        this.earthTime = egret.getTimer();
+        if (this.earthUpDown == 0) {
+            this._mapLayer.y = -this.earthQuakeOffValue;
+            this.earthUpDown = 1;
+        } else {
+            this._mapLayer.y = this.earthQuakeOffValue;
+            this.earthUpDown = 0;
+        }
+
+        if (this.earthLeftRight == 0) {
+            this._mapLayer.x = -this.earthQuakeOffValue;
+            this.earthLeftRight = 1;
+        } else {
+            this._mapLayer.x = this.earthQuakeOffValue;
+            this.earthLeftRight = 0;
+        }
+
+        if (this.earthQuakeOffValue <= 0) {
+            this.isEarthQuake = false;
+            this.earthQuakeOffValue = 0;
+        }
+        else
+            this.earthQuakeOffValue -= 1;
     }
 
 	/**舞台尺寸发生变化**/

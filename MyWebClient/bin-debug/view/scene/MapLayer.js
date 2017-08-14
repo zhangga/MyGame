@@ -11,8 +11,6 @@ var MapLayer = (function (_super) {
     __extends(MapLayer, _super);
     function MapLayer(mainScene) {
         var _this = _super.call(this) || this;
-        _this.last = 0;
-        _this.DELETE = null;
         //地图层当前触摸状态，按下时，值为true
         _this._touchStatus = false;
         //鼠标点击时，鼠标全局坐标与地图层的位置差
@@ -52,12 +50,12 @@ var MapLayer = (function (_super) {
         //整个地图层的拖动
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_TAP, this.DELETE, this);
         //DELETE
         this.onRefreshMap();
-        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
     };
-    MapLayer.prototype.onEnterFrame = function () {
-        this.DELETE.onMove();
+    MapLayer.prototype.DELETE = function () {
+        SpriteManager.instance.addArmy(null);
     };
     MapLayer.prototype.onRefreshMap = function () {
         this.currMapInfo = MapInfo.instance;
@@ -66,18 +64,6 @@ var MapLayer = (function (_super) {
         this.mapSmallImg.source = this.currMapInfo.getSmallMapSource();
         this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
-        //DELETE
-        this.DELETE = new ActiveArmy();
-        var catImg = new eui.Image();
-        catImg.source = "build_city_1_png";
-        this.DELETE.addChild(catImg);
-        this.DELETE.x = 300;
-        this.DELETE.y = 500;
-        this._spriteLayer.addChild(this.DELETE);
-        this.DELETE.addEventListener(egret.TouchEvent.TOUCH_TAP, function (evt) {
-            var path = PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
-            this.DELETE.setMovePath(path);
-        }, this);
     };
     MapLayer.prototype.mouseDown = function (evt) {
         this._touchStatus = true;
@@ -223,6 +209,10 @@ var MapLayer = (function (_super) {
     };
     /**地图层尺寸变化 */
     MapLayer.prototype.onResizeLayer = function () {
+    };
+    //添加精灵到精灵层
+    MapLayer.prototype.addSprite = function (sprite) {
+        this._spriteLayer.addChild(sprite);
     };
     return MapLayer;
 }(egret.DisplayObjectContainer));

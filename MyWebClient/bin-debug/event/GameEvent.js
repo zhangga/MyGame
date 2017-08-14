@@ -6,6 +6,8 @@ var GameEvent = (function () {
     }
     return GameEvent;
 }());
+//游戏震屏
+GameEvent.GAME_EARTHQUAKE_STRAT = "GAME_EARTHQUAKE_STRAT";
 GameEvent.PLAYER_CURRENCY_UPDATE = "player_currency_update";
 /**window**/
 GameEvent.MODULE_WINDOW_OPEN = "game_module_window_open";

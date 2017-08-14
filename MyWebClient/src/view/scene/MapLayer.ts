@@ -14,6 +14,7 @@ class MapLayer extends egret.DisplayObjectContainer {
     //地图资源容器
     private _resLayer: egret.DisplayObjectContainer;
     private _bottomLayer: egret.DisplayObjectContainer;
+    //精灵层
     private _spriteLayer: egret.DisplayObjectContainer;
     //地图资源的引用
     private mapSmallImg: eui.Image;
@@ -54,15 +55,14 @@ class MapLayer extends egret.DisplayObjectContainer {
         //整个地图层的拖动
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
+        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_TAP, this.DELETE, this);
 
         //DELETE
         this.onRefreshMap();
-        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
     }
 
-    private last: number = 0;
-    private onEnterFrame(): void {
-        this.DELETE.onMove();
+    private DELETE(): void {
+        SpriteManager.instance.addArmy(null);
     }
 
     public onRefreshMap() {
@@ -72,21 +72,7 @@ class MapLayer extends egret.DisplayObjectContainer {
         this.mapSmallImg.source = this.currMapInfo.getSmallMapSource();
         this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
-
-        //DELETE
-        this.DELETE = new ActiveArmy();
-        var catImg = new eui.Image();
-        catImg.source = "build_city_1_png";
-        this.DELETE.addChild(catImg);
-        this.DELETE.x = 300;
-        this.DELETE.y = 500;
-        this._spriteLayer.addChild(this.DELETE);
-        this.DELETE.addEventListener(egret.TouchEvent.TOUCH_TAP, function(evt: egret.TouchEvent) {
-            var path = PathManager.instance.find(new Grid(1, 1), new Grid(2, 3));
-            this.DELETE.setMovePath(path);
-        }, this);
     }
-    private DELETE: ActiveArmy = null;
 
 
     //地图层当前触摸状态，按下时，值为true
@@ -252,6 +238,11 @@ class MapLayer extends egret.DisplayObjectContainer {
     /**地图层尺寸变化 */
     public onResizeLayer(): void {
 
+    }
+
+    //添加精灵到精灵层
+    public addSprite(sprite: egret.DisplayObjectContainer): void {
+        this._spriteLayer.addChild(sprite);
     }
 
 }

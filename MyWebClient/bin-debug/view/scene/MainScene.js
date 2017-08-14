@@ -12,10 +12,10 @@ var MainScene = (function (_super) {
         var _this = _super.call(this) || this;
         //游戏时钟是否启动
         _this.isTicked = false;
-        //游戏场景暂停
-        _this.isScenePause = false;
         //下次心跳时间
         _this._nextHeartBeat = 0;
+        //震屏
+        _this.isEarthQuake = false;
         _this.once(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
@@ -40,6 +40,7 @@ var MainScene = (function (_super) {
         else {
             this._moduleLayer.onReset();
         }
+        SpriteManager.instance.mapLayer = this._mapLayer;
         this.sceneLayer.addChild(this._moduleLayer);
         this.startTick();
     };
@@ -48,9 +49,6 @@ var MainScene = (function (_super) {
         if (!this.isTicked) {
             this.isTicked = true;
             this.addEventListener(egret.Event.ENTER_FRAME, this.gameTick, this);
-        }
-        if (!this.isScenePause) {
-            this.isScenePause = true;
         }
     };
     //游戏时钟逻辑
@@ -62,7 +60,10 @@ var MainScene = (function (_super) {
             }
             this._nextHeartBeat = curr + GameDefine.HEART_BEAT_INTERVAL;
         }
-        if (this.isScenePause) {
+        SpriteManager.instance.onTick();
+        //震屏
+        if (this.isEarthQuake) {
+            this.earthQuakeHandler();
         }
     };
     //状态切换
@@ -99,6 +100,7 @@ var MainScene = (function (_super) {
         GameDispatcher.instance.addEventListener(MESSAGE_ID.CREATE_ROLE_MESSAGE.toString(), this.onGameSucceed, this);
         GameDispatcher.instance.addEventListener(MESSAGE_ID.LOGIN_SERVER_MESSAGE.toString(), this.onEnterSucceed, this);
         GameDispatcher.instance.addEventListener(GameEvent.GAME_RELOGIN_EVENT, this.onLoginSucceed, this);
+        GameDispatcher.instance.addEventListener(GameEvent.GAME_EARTHQUAKE_STRAT, this.onEarthQuake, this);
     };
     /**登录 */
     MainScene.prototype.onLoginSucceed = function () {
@@ -122,6 +124,42 @@ var MainScene = (function (_super) {
     //地图层
     MainScene.prototype.getMapLayer = function () {
         return this._mapLayer;
+    };
+    //震屏
+    MainScene.prototype.onEarthQuake = function () {
+        if (!this.isEarthQuake) {
+            this.isEarthQuake = true;
+            this.earthQuakeOffValue = 4;
+            this.earthUpDown = Math.floor(Math.random() * 2);
+            this.earthLeftRight = Math.floor(Math.random() * 2);
+        }
+    };
+    MainScene.prototype.earthQuakeHandler = function () {
+        if (egret.getTimer() - this.earthTime < 100)
+            return;
+        this.earthTime = egret.getTimer();
+        if (this.earthUpDown == 0) {
+            this._mapLayer.y = -this.earthQuakeOffValue;
+            this.earthUpDown = 1;
+        }
+        else {
+            this._mapLayer.y = this.earthQuakeOffValue;
+            this.earthUpDown = 0;
+        }
+        if (this.earthLeftRight == 0) {
+            this._mapLayer.x = -this.earthQuakeOffValue;
+            this.earthLeftRight = 1;
+        }
+        else {
+            this._mapLayer.x = this.earthQuakeOffValue;
+            this.earthLeftRight = 0;
+        }
+        if (this.earthQuakeOffValue <= 0) {
+            this.isEarthQuake = false;
+            this.earthQuakeOffValue = 0;
+        }
+        else
+            this.earthQuakeOffValue -= 1;
     };
     /**舞台尺寸发生变化**/
     MainScene.prototype.onResize = function () {

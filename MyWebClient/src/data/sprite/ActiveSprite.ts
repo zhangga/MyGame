@@ -3,9 +3,6 @@
  */
 abstract class ActiveSprite extends BaseActive {
 
-    //精灵的数据
-    private _data;
-
     //精灵的方向
     private _direction: DIRECTION;
     //一次逻辑移动的时间间隔

@@ -1,4 +1,24 @@
 class GameEvent {
+
+    //游戏震屏
+    public static GAME_EARTHQUAKE_STRAT: string = "GAME_EARTHQUAKE_STRAT";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static PLAYER_CURRENCY_UPDATE: string = "player_currency_update";
     /**window**/
     public static MODULE_WINDOW_OPEN: string = "game_module_window_open";
