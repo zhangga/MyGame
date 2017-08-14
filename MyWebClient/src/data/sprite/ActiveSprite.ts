@@ -3,11 +3,25 @@
  */
 abstract class ActiveSprite extends BaseActive {
 
+    //模型下层
+    protected bottomLayer: egret.DisplayObjectContainer;
+    //模型层
+    protected bodyLayer: egret.DisplayObjectContainer;
+
     //精灵的方向
     private _direction: DIRECTION;
     //一次逻辑移动的时间间隔
     private moveDT: number = GameDefine.SPRITE_MOVE_DT;
 
+
+    public constructor() {
+        super();
+        //所有层级
+		this.bottomLayer = new egret.DisplayObjectContainer();
+		this.addChildAt(this.bottomLayer, 0);
+		this.bodyLayer = new egret.DisplayObjectContainer();
+		this.addChildAt(this.bodyLayer, 1);
+    }
 
 
 
@@ -51,7 +65,7 @@ abstract class ActiveSprite extends BaseActive {
         this._lastMoveLogicTime = curr;
         if (this.moveTarget) {
             //设置方向
-            this._direction = this.checkFace(this.moveTarget.x, this.moveTarget.y);
+            this.direction = this.checkFace(this.moveTarget.x, this.moveTarget.y);
         }
         super.logicMove();
     }
@@ -63,6 +77,35 @@ abstract class ActiveSprite extends BaseActive {
     //检查精灵的朝向
     public checkFace(x: number, y: number): DIRECTION {
         return Tool.checkFace8(this.x, this.y, x, y);
+    }
+
+    private _isFlip: boolean = false;
+    //更新模型方向
+    public set direction(direction: DIRECTION) {
+        if (this._direction != direction) {
+            this._direction = direction;
+            this.directionHandler();
+			this.updateDirection();
+        }
+    }
+
+    private directionHandler(): void {
+        var _flip: boolean;
+		if (this.direction == DIRECTION.LEFT_UP || this.direction == DIRECTION.LEFT 
+            || this.direction == DIRECTION.LEFT_DOWN) {
+			_flip = true;
+		} else {
+			_flip = false;
+		}
+		if (_flip != this._isFlip) {
+			this._isFlip = _flip;
+			this.bodyLayer.scaleX *= -1;
+		}
+    }
+
+    //供子类覆盖
+    protected updateDirection(): void {
+
     }
 
 }

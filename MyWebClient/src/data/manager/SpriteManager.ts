@@ -47,9 +47,6 @@ class SpriteManager {
         var activeArmy: ActiveArmy = new ActiveArmy();
         //数据
         activeArmy.data = armyVo;
-        var img: eui.Image = new eui.Image();
-        img.source = "build_city_1_png";
-        activeArmy.addChild(img);
         activeArmy.x = Math.random() * 500;
         activeArmy.y = Math.random() * 1000;
         this._activeArmys.push(activeArmy);

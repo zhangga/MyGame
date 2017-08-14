@@ -9,6 +9,12 @@ class ActiveArmy extends ActiveSprite {
         super();
     }
 
+    public setBodyLayer(): void {
+        var img: eui.Image = new eui.Image();
+        img.source = "build_city_1_png";
+        this.bodyLayer.addChild(img);
+    }
+
     public get data(): ArmyVo {
         return this._data;
     }
