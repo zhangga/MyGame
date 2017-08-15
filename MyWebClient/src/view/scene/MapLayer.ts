@@ -13,7 +13,8 @@ class MapLayer extends egret.DisplayObjectContainer {
     private _mapLayer: egret.DisplayObjectContainer;
     //地图资源容器
     private _resLayer: egret.DisplayObjectContainer;
-    private _bottomLayer: egret.DisplayObjectContainer;
+    //建筑层
+    private _buildLayer: egret.DisplayObjectContainer;
     //精灵层
     private _spriteLayer: egret.DisplayObjectContainer;
     //地图资源的引用
@@ -31,8 +32,8 @@ class MapLayer extends egret.DisplayObjectContainer {
         this.addChild(this._mapLayer);
         this._resLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._resLayer, 0);
-        this._bottomLayer = new egret.DisplayObjectContainer();
-        this._mapLayer.addChildAt(this._bottomLayer, 1);
+        this._buildLayer = new egret.DisplayObjectContainer();
+        this._mapLayer.addChildAt(this._buildLayer, 1);
         this._spriteLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._spriteLayer, 2);
 
@@ -243,6 +244,11 @@ class MapLayer extends egret.DisplayObjectContainer {
     //添加精灵到精灵层
     public addSprite(sprite: egret.DisplayObjectContainer): void {
         this._spriteLayer.addChild(sprite);
+    }
+
+    //添加建筑到建筑层
+    public addBuild(build: egret.DisplayObjectContainer): void {
+        this._buildLayer.addChild(build);
     }
 
 }

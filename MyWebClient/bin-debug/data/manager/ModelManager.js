@@ -39,6 +39,17 @@ var ModelManager = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(ModelManager.prototype, "modelBuild", {
+        get: function () {
+            if (!this._modelBuild) {
+                this._modelBuild = {};
+                this.initModel(this._modelBuild, ModelBuild, "build.xml");
+            }
+            return this._modelBuild;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(ModelManager.prototype, "modelFish", {
         get: function () {
             if (!this._modelFish) {

@@ -6,6 +6,8 @@ var MapInfo = (function () {
     function MapInfo() {
         //XML中配置的道路节点信息
         this.MapNodeXmlData = {};
+        //XML中配置的建筑信息
+        this.MapBuildXmlData = {};
         this.fullMapNode = false;
     }
     Object.defineProperty(MapInfo, "instance", {
@@ -42,18 +44,24 @@ var MapInfo = (function () {
      * 加载地图配置信息
      */
     MapInfo.prototype.onLoadMapConfig = function () {
-        var mapXmlRes = this.mapResId + "_map_xml";
-        if (RES.getRes(mapXmlRes)) {
-            this.loadingMapConfig(null, mapXmlRes);
+        var mapKey = this.getMapKey();
+        if (RES.getRes(mapKey)) {
+            this.loadingMapConfig(null, mapKey);
         }
         else {
-            RES.getResAsync(mapXmlRes, this.loadingMapConfig, this);
+            RES.getResAsync(mapKey, this.loadingMapConfig, this);
+        }
+        var buildKey = this.getBuildKey();
+        if (RES.getRes(buildKey)) {
+            this.loadingBuildConfig(null, buildKey);
+        }
+        else {
+            RES.getResAsync(buildKey, this.loadingBuildConfig, this);
         }
     };
     /**读取地图配置 */
     MapInfo.prototype.loadingMapConfig = function (data, key) {
-        if (!key)
-            key = this.mapResId + "_map_xml";
+        key = this.getMapKey();
         var xmlDatas = [];
         this.modelMapNodes = [];
         this.MapNodeXmlData = {};
@@ -80,6 +88,13 @@ var MapInfo = (function () {
                 }
             }
         }
+    };
+    /**读取建筑配置 */
+    MapInfo.prototype.loadingBuildConfig = function (data, key) {
+        key = this.getBuildKey();
+        this.MapBuildXmlData = {};
+        //读取XML中配置的地图信息
+        ModelManager.instance.parseXmlToModel(this.MapBuildXmlData, ModelBuild, key);
     };
     /**
      * 判断一个格子是否在地图内
@@ -154,6 +169,12 @@ var MapInfo = (function () {
      */
     MapInfo.prototype.getMapResUrl = function (imgIndex) {
         return "resource/mapres/" + this.mapResId + "/map_" + this.mapResId + "_" + imgIndex + ".jpg";
+    };
+    MapInfo.prototype.getMapKey = function () {
+        return this.mapResId + "_map_xml";
+    };
+    MapInfo.prototype.getBuildKey = function () {
+        return this.mapResId + "_build_xml";
     };
     return MapInfo;
 }());

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<builds>
+	<build id="10001" name="主城" type="1" grid="20,20" prefab=""/>
+</builds>

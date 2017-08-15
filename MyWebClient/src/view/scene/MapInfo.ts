@@ -22,6 +22,8 @@ class MapInfo {
     private modelMapNodes: Array<ModelMapNode>;//数组更新需要彻底清除
     //XML中配置的道路节点信息
     public MapNodeXmlData = {};
+    //XML中配置的建筑信息
+    public MapBuildXmlData = {};
 
     private static _instance: MapInfo = null;
     private constructor() { }
@@ -57,19 +59,24 @@ class MapInfo {
      * 加载地图配置信息
      */
     private onLoadMapConfig(): void {
-        var mapXmlRes: string = this.mapResId + "_map_xml";
-        if (RES.getRes(mapXmlRes)) {
-            this.loadingMapConfig(null, mapXmlRes);
+        var mapKey: string = this.getMapKey();
+        if (RES.getRes(mapKey)) {
+            this.loadingMapConfig(null, mapKey);
         } else {
-            RES.getResAsync(mapXmlRes, this.loadingMapConfig, this);
+            RES.getResAsync(mapKey, this.loadingMapConfig, this);
+        }
+        var buildKey: string = this.getBuildKey();
+        if (RES.getRes(buildKey)) {
+            this.loadingBuildConfig(null, buildKey);
+        } else {
+            RES.getResAsync(buildKey, this.loadingBuildConfig, this);
         }
     }
 
     private fullMapNode: boolean = false;
     /**读取地图配置 */
     private loadingMapConfig(data,key): void {
-        if (!key)
-            key = this.mapResId + "_map_xml";
+        key = this.getMapKey();
         var xmlDatas: Array<ModelMapNode> = [];
         this.modelMapNodes = [];
         this.MapNodeXmlData = {};
@@ -96,6 +103,14 @@ class MapInfo {
                 }
             }
         }
+    }
+
+    /**读取建筑配置 */
+    private loadingBuildConfig(data,key): void {
+        key = this.getBuildKey();
+        this.MapBuildXmlData = {};
+        //读取XML中配置的地图信息
+        ModelManager.instance.parseXmlToModel(this.MapBuildXmlData, ModelBuild, key);
     }
 
     /**
@@ -177,6 +192,14 @@ class MapInfo {
      */
     public getMapResUrl(imgIndex: number) {
         return "resource/mapres/" + this.mapResId + "/map_" + this.mapResId + "_" + imgIndex + ".jpg";
+    }
+
+    private getMapKey(): string {
+        return this.mapResId + "_map_xml";
+    }
+
+    private getBuildKey(): string {
+        return this.mapResId + "_build_xml";
     }
 
 }

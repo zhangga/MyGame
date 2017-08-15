@@ -3996,6 +3996,11 @@
 			"url": "config/map/1_map.xml",
 			"type": "xml",
 			"name": "1_map_xml"
+		},
+		{
+			"url": "config/map/1_build.xml",
+			"type": "xml",
+			"name": "1_build_xml"
 		}
 	]
 }

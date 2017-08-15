@@ -16,8 +16,20 @@ class BuildManager {
 
     }
 
+    /**将建筑显示到地图上 */
+    public showOnMap(): void {
+
+    }
+
     public set mapLayer(mapLayer: MapLayer) {
         this._mapLayer = mapLayer;
     }
 
+}
+
+enum BUILD_TYPE {
+    //主城
+    main = 1,
+    //兵营
+    camp = 2,
 }

@@ -27,8 +27,8 @@ var MapLayer = (function (_super) {
         this.addChild(this._mapLayer);
         this._resLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._resLayer, 0);
-        this._bottomLayer = new egret.DisplayObjectContainer();
-        this._mapLayer.addChildAt(this._bottomLayer, 1);
+        this._buildLayer = new egret.DisplayObjectContainer();
+        this._mapLayer.addChildAt(this._buildLayer, 1);
         this._spriteLayer = new egret.DisplayObjectContainer();
         this._mapLayer.addChildAt(this._spriteLayer, 2);
         //地图资源
@@ -213,6 +213,10 @@ var MapLayer = (function (_super) {
     //添加精灵到精灵层
     MapLayer.prototype.addSprite = function (sprite) {
         this._spriteLayer.addChild(sprite);
+    };
+    //添加建筑到建筑层
+    MapLayer.prototype.addBuild = function (build) {
+        this._buildLayer.addChild(build);
     };
     return MapLayer;
 }(egret.DisplayObjectContainer));
