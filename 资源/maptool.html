@@ -1,0 +1,23 @@
+<html>
+<body>
+<script language="javascript">
+function getPic(htmlObj){
+var zb = {x:0,y:0}
+do{
+zb.x += htmlObj.offsetLeft
+zb.y += htmlObj.offsetTop
+htmlObj = htmlObj.offsetParent
+}   
+while(htmlObj)
+return zb
+}
+function getXY(){
+var x = window.event.clientX - getPic(mypic).x;
+var y = window.event.clientY - getPic(mypic).y;
+alert("X:"+parseInt(x/5)+"\nY:"+parseInt(y/3.33));
+}
+</script>
+<div style="padding-left:10px"><img id=mypic src="D:\1.jpg" 
+onclick="getXY()"></div>
+</body>
+</html>
