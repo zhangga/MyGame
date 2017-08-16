@@ -46,6 +46,22 @@ class PathGrid {
         var down: Grid = this.grid.getDirGrid(DIRECTION.DOWN);
         if (MapInfo.instance.isRoad(down))
             this.nextRoadList.push(down);
+        //左上
+        var leftup: Grid = this.grid.getDirGrid(DIRECTION.LEFT_UP);
+        if (MapInfo.instance.isRoad(leftup))
+            this.nextRoadList.push(leftup);
+        //右上
+        var rightup: Grid = this.grid.getDirGrid(DIRECTION.RIGHT_UP);
+        if (MapInfo.instance.isRoad(rightup))
+            this.nextRoadList.push(rightup);
+        //左下
+        var leftdown: Grid = this.grid.getDirGrid(DIRECTION.LEFT_DOWN);
+        if (MapInfo.instance.isRoad(leftdown))
+            this.nextRoadList.push(leftdown);
+        //右下
+        var rightdown: Grid = this.grid.getDirGrid(DIRECTION.RIGHT_DOWN);
+        if (MapInfo.instance.isRoad(rightdown))
+            this.nextRoadList.push(rightdown);
     }
 
     //设置前置节点,同时从连接节点中剔除前置节点
