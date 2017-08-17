@@ -17,9 +17,8 @@ abstract class BaseActive extends egret.DisplayObjectContainer {
     //设置移动路径
     public setMovePath(gridPath: Array<Grid>): void {
         this.movePath = [];
-        var mapInfo: MapInfo = MapInfo.instance;
         for (var i = 0; i < gridPath.length; i++) {
-            this.movePath.push(mapInfo.getPoint(gridPath[i]));
+            this.movePath.push(gridPath[i].toPoint());
         }
         if (this.movePath && this.movePath.length > 0) {
             this.moveTarget = this.movePath.shift();
@@ -69,8 +68,8 @@ abstract class BaseActive extends egret.DisplayObjectContainer {
 
     //移动
     private moveRun(disx: number, disy: number): void {
-        this.x += disx;
-        this.y += disy;
+        this.x = this.x + disx;
+        this.y = this.y + disy;
     }
 
     //计算自身与目标距离

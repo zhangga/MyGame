@@ -13,8 +13,8 @@ GameDefine.SCREEN_HEIGHT = 1068;
 GameDefine.MapRes_Width = 450;
 GameDefine.MapRes_Height = 415;
 /**地图每格子的宽高 */
-GameDefine.MAP_GRID_WIDTH = 200;
-GameDefine.MAP_GRID_HEIGHT = 200;
+GameDefine.MAP_GRID_WIDTH = 30;
+GameDefine.MAP_GRID_HEIGHT = 30;
 /**每张地图格子区间 第一格ID = mapId*MAP_GRID_MAX+1 */
 GameDefine.MAP_GRID_MAX = 100000;
 //横竖多预加载几个图
@@ -27,6 +27,9 @@ GameDefine.HEART_BEAT_INTERVAL = 5000;
 GameDefine.SPRITE_MOVE_SPEED = 8000;
 //精灵逻辑移动的时间间隔
 GameDefine.SPRITE_MOVE_DT = 40;
+//军队动画的宽高
+GameDefine.ARMY_WIDTH = 120;
+GameDefine.ARMY_HEIGHT = 80;
 GameDefine.FISHTANK_WIDTH = 600;
 GameDefine.FISHTANK_HEIGHT = 643;
 /*鱼转方向的边缘*/

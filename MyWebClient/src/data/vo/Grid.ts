@@ -35,6 +35,16 @@ class Grid {
         return this._x == grid._x && this._y == grid._y;
     }
 
+    /**
+     * 将格子转换为地图上的点坐标，锚点在左下
+     */
+    public toPoint(): egret.Point {
+        var point: egret.Point = new egret.Point();
+        point.x = this._y * GameDefine.MAP_GRID_WIDTH;
+        point.y = (this._x+1) * GameDefine.MAP_GRID_HEIGHT;
+        return point;
+    }
+
     public getDirGrid(type: DIRECTION): Grid {
         var dir: Grid = null;
         switch (type) {

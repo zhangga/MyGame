@@ -8,8 +8,8 @@ class GameDefine {
 	public static MapRes_Height: number = 415;
 
 	/**地图每格子的宽高 */
-	public static MAP_GRID_WIDTH: number = 200;
-    public static MAP_GRID_HEIGHT: number = 200;
+	public static MAP_GRID_WIDTH: number = 30;
+    public static MAP_GRID_HEIGHT: number = 30;
 	/**每张地图格子区间 第一格ID = mapId*MAP_GRID_MAX+1 */
 	public static MAP_GRID_MAX: number = 100000;
 
@@ -25,6 +25,9 @@ class GameDefine {
 	public static SPRITE_MOVE_SPEED: number = 8000;
 	//精灵逻辑移动的时间间隔
 	public static SPRITE_MOVE_DT: number = 40;
+	//军队动画的宽高
+	public static ARMY_WIDTH: number = 120;
+	public static ARMY_HEIGHT: number = 80;
 
 
 

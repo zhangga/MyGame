@@ -15,6 +15,12 @@ class ActiveArmy extends ActiveSprite {
         this.bodyLayer.addChild(img);
     }
 
+    //设置显示在地图上的位置
+    public setPoint(point: egret.Point): void {
+        this.x = point.x - GameDefine.ARMY_WIDTH;
+        this.y = point.y - GameDefine.ARMY_HEIGHT;
+    }
+
     public get data(): ArmyVo {
         return this._data;
     }

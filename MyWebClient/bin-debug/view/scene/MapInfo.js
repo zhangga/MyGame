@@ -143,15 +143,6 @@ var MapInfo = (function () {
         return result;
     };
     /**
-     * 将格子转换为Point
-     */
-    MapInfo.prototype.getPoint = function (grid) {
-        var point = new egret.Point();
-        point.x = grid.x * GameDefine.MAP_GRID_HEIGHT;
-        point.y = grid.y * GameDefine.MAP_GRID_WIDTH;
-        return point;
-    };
-    /**
      * 已过时
      * 通过地图ID和格子索引获取格子的唯一ID
      */
