@@ -5,6 +5,10 @@ MyGameServer/logs
 MyLogin/bin/*
 MyLogin/logs/*
 MyLogin/logs
+MyTool/bin/*
+MyTool/logs/*
+MyTool/input/*
+MyTool/output/*
 MyWebClient/bin-debug/*
 MyWebClient/bin-release/*
 *.class
