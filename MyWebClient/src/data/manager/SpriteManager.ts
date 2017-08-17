@@ -47,14 +47,14 @@ class SpriteManager {
         var activeArmy: ActiveArmy = new ActiveArmy();
         //数据
         activeArmy.data = armyVo;
-        activeArmy.setPoint(new Grid(18, 11).toPoint());
         activeArmy.initBodyLayer();
+        activeArmy.setPoint(new Grid(18, 11).toPoint());
         this._activeArmys.push(activeArmy);
         this._mapLayer.addSprite(activeArmy);
 
         //路径
         var path = PathManager.instance.find(new Grid(18, 12), new Grid(11, 18));
-        // activeArmy.setMovePath(path);
+        activeArmy.setMovePath(path);
     }
 
     public set mapLayer(mapLayer: MapLayer) {

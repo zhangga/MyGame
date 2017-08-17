@@ -9,16 +9,14 @@ class ActiveArmy extends ActiveSprite {
         super();
     }
 
-    public initBodyLayer(): void {
-        var img: eui.Image = new eui.Image();
-        img.source = "build_city_1_png";
-        this.bodyLayer.addChild(img);
+    protected getHeight(): number {
+        return GameDefine.ARMY_HEIGHT;
     }
 
-    //设置显示在地图上的位置
-    public setPoint(point: egret.Point): void {
-        this.x = point.x - GameDefine.ARMY_WIDTH;
-        this.y = point.y - GameDefine.ARMY_HEIGHT;
+    public initBodyLayer(): void {
+        var img: eui.Image = new eui.Image();
+        img.source = "soldier_1_png";
+        this.bodyLayer.addChild(img);
     }
 
     public get data(): ArmyVo {

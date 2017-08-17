@@ -24,11 +24,11 @@ GameDefine.MapCache_MaxNum = 200;
 //游戏心跳的间隔
 GameDefine.HEART_BEAT_INTERVAL = 5000;
 //精灵的移动速度
-GameDefine.SPRITE_MOVE_SPEED = 8000;
+GameDefine.SPRITE_MOVE_SPEED = 6000;
 //精灵逻辑移动的时间间隔
 GameDefine.SPRITE_MOVE_DT = 40;
 //军队动画的宽高
-GameDefine.ARMY_WIDTH = 120;
+GameDefine.ARMY_WIDTH = 80;
 GameDefine.ARMY_HEIGHT = 80;
 GameDefine.FISHTANK_WIDTH = 600;
 GameDefine.FISHTANK_HEIGHT = 643;

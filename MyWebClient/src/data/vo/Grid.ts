@@ -36,7 +36,7 @@ class Grid {
     }
 
     /**
-     * 将格子转换为地图上的点坐标，锚点在左下
+     * 获取格子左下对应地图上的点
      */
     public toPoint(): egret.Point {
         var point: egret.Point = new egret.Point();

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.MapTest" width="2700" height="2493" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="map_1_grid_png"/>
+	<e:Image x="331.31" y="488.01" source="soldier_1_png"/>
+</e:Skin>

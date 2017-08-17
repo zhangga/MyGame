@@ -467,6 +467,10 @@ declare module skins{
 	}
 }
 declare module skins{
+	class MapTest extends eui.Skin{
+	}
+}
+declare module skins{
 	class ButtonSkin extends eui.Skin{
 	}
 }
