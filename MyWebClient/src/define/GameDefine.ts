@@ -22,7 +22,7 @@ class GameDefine {
 	public static HEART_BEAT_INTERVAL: number = 5000;
 
 	//精灵的移动速度
-	public static SPRITE_MOVE_SPEED: number = 6000;
+	public static SPRITE_MOVE_SPEED: number = 2000;
 	//精灵逻辑移动的时间间隔
 	public static SPRITE_MOVE_DT: number = 40;
 	//军队动画的宽高

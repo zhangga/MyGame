@@ -14,9 +14,7 @@ class ActiveArmy extends ActiveSprite {
     }
 
     public initBodyLayer(): void {
-        var img: eui.Image = new eui.Image();
-        img.source = "soldier_1_png";
-        this.bodyLayer.addChild(img);
+        GameCommon.instance.addAnimation(this.bodyLayer, "soldier_1", new egret.Point(0, 0), -1, false);
     }
 
     public get data(): ArmyVo {
