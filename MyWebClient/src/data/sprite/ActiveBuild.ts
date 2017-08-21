@@ -3,7 +3,8 @@
  */
 class ActiveBuild extends egret.DisplayObjectContainer {
 
-    private _data: BuildVo;
+    //建筑ID
+    private _id: number;
 
     //模型层
     private bodyLayer: egret.DisplayObjectContainer;
@@ -21,9 +22,28 @@ class ActiveBuild extends egret.DisplayObjectContainer {
 
     /**初始化模型 */
     public initBodyLayer(): void {
+        var model: ModelBuild = this.model;
         var img: eui.Image = new eui.Image();
-        img.source = "build_city_1_png";
+        img.source = model.prefab;
         this.bodyLayer.addChild(img);
+        this.x = model.grid.toPoint().x;
+        this.y = model.grid.toPoint().y;
+    }
+
+    public set id(id: number) {
+        this._id = id;
+    }
+
+    public get id(): number {
+        return this._id;
+    }
+
+    public get model(): ModelBuild {
+        return MapInfo.instance.MapBuildXmlData[this._id];
+    }
+
+    public get buildVo(): BuildVo {
+        return null;
     }
 
 }

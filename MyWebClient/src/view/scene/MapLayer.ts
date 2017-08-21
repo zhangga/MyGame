@@ -73,6 +73,8 @@ class MapLayer extends egret.DisplayObjectContainer {
         this.mapSmallImg.source = this.currMapInfo.getSmallMapSource();
         this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
+        //初始化建筑
+        BuildManager.instance.showOnMap();
     }
 
 

@@ -32,16 +32,6 @@ class ModelManager {
 		return this._modelMap;
 	}
 
-	//建筑
-	private _modelBuild;
-	public get modelBuild() {
-		if (!this._modelBuild) {
-			this._modelBuild = {};
-			this.initModel(this._modelBuild, ModelBuild, "build.xml");
-		}
-		return this._modelBuild;
-	}
-
 
 
 

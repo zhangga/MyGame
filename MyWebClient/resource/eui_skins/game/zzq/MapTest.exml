@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="skins.MapTest" width="2700" height="2493" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="map_1_grid_png"/>
-	<e:Image x="331.31" y="488.01" source="soldier_1_png"/>
+	<e:Image source="map_1_grid_png" x="0" y="0"/>
+	<e:Image source="1_png" x="322" y="499" anchorOffsetX="0" anchorOffsetY="0" width="90" height="84"/>
+	<e:Image x="751.82" y="1046.96" anchorOffsetX="0" anchorOffsetY="0" source="build_1_png"/>
 </e:Skin>
