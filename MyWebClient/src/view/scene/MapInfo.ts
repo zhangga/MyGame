@@ -111,6 +111,8 @@ class MapInfo {
         this.MapBuildXmlData = {};
         //读取XML中配置的地图信息
         ModelManager.instance.parseXmlToModel(this.MapBuildXmlData, ModelBuild, key);
+        //初始化建筑
+        BuildManager.instance.showOnMap();
     }
 
     /**

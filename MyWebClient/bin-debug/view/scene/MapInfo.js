@@ -95,6 +95,8 @@ var MapInfo = (function () {
         this.MapBuildXmlData = {};
         //读取XML中配置的地图信息
         ModelManager.instance.parseXmlToModel(this.MapBuildXmlData, ModelBuild, key);
+        //初始化建筑
+        BuildManager.instance.showOnMap();
     };
     /**
      * 判断一个格子是否在地图内

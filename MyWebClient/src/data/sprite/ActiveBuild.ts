@@ -26,8 +26,9 @@ class ActiveBuild extends egret.DisplayObjectContainer {
         var img: eui.Image = new eui.Image();
         img.source = model.prefab;
         this.bodyLayer.addChild(img);
-        this.x = model.grid.toPoint().x;
-        this.y = model.grid.toPoint().y;
+        var point: egret.Point = model.grid.toPoint();
+        this.x = point.x;
+        this.y = point.y;
     }
 
     public set id(id: number) {
@@ -38,10 +39,12 @@ class ActiveBuild extends egret.DisplayObjectContainer {
         return this._id;
     }
 
+    //建筑模型数据
     public get model(): ModelBuild {
         return MapInfo.instance.MapBuildXmlData[this._id];
     }
 
+    //玩家建筑数据
     public get buildVo(): BuildVo {
         return null;
     }
