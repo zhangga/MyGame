@@ -56,14 +56,9 @@ class MapLayer extends egret.DisplayObjectContainer {
         //整个地图层的拖动
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
-        this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_TAP, this.DELETE, this);
 
         //DELETE
         this.onRefreshMap();
-    }
-
-    private DELETE(): void {
-        SpriteManager.instance.addArmy(null);
     }
 
     public onRefreshMap() {

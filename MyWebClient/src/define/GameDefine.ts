@@ -1,4 +1,8 @@
 class GameDefine {
+
+	//下划线
+	public static UNDERLINE: string = "_";
+
 	/**屏幕宽高 */
 	public static SCREEN_WIDTH: number = 600;
 	public static SCREEN_HEIGHT: number = 1068;

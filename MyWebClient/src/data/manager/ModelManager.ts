@@ -32,6 +32,16 @@ class ModelManager {
 		return this._modelMap;
 	}
 
+	//建筑等级
+	private _modelBuildCommon;
+	public get modelBuildCommon() {
+		if (!this._modelBuildCommon) {
+			this._modelBuildCommon = {};
+			this.initModel(this._modelBuildCommon, ModelBuildLvCommon, "build_common_lv.xml");
+		}
+		return this._modelBuildCommon;
+	}
+
 
 
 

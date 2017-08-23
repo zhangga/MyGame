@@ -41,19 +41,19 @@ class SpriteManager {
         }
     }
 
-    //添加军队
-    public addArmy(armyVo: ArmyVo): void {
+    //派遣军队
+    public dispatchArmy(armyVo: ArmyVo, start: Grid, end: Grid): void {
         //精灵
         var activeArmy: ActiveArmy = new ActiveArmy();
         //数据
         activeArmy.data = armyVo;
         activeArmy.initBodyLayer();
-        activeArmy.setPoint(new Grid(18, 11).toPoint());
+        activeArmy.setPoint(start.toPoint());
         this._activeArmys.push(activeArmy);
         this._mapLayer.addSprite(activeArmy);
 
         //路径
-        var path = PathManager.instance.find(new Grid(18, 12), new Grid(11, 18));
+        var path = PathManager.instance.find(start, end);
         activeArmy.setMovePath(path);
     }
 

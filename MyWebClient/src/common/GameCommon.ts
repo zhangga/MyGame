@@ -12,6 +12,22 @@ class GameCommon {
 	}
 
 	/**
+	 * 将XML中的条件数据转换为ConditionData
+	 */
+	public parseCondition(value: string): ConditionData {
+		var condition: ConditionData = new ConditionData();
+		if (value) {
+			var vs: string[] = value.split(",");
+			if (vs.length == 3) {
+				condition.type = parseInt(vs[0]);
+				condition.id = parseInt(vs[1]);
+				condition.value = parseInt(vs[2]);
+			}
+		}
+		return condition;
+	}
+
+	/**
 	 * 将一个x,y格式的字符串转换为Grid对象
 	 */
 	public parseGrid(value: string): Grid {

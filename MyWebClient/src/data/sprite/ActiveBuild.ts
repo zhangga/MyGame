@@ -24,7 +24,7 @@ class ActiveBuild extends egret.DisplayObjectContainer {
     public initBodyLayer(): void {
         var model: ModelBuild = this.model;
         var img: eui.Image = new eui.Image();
-        img.source = model.prefab;
+        img.source = model.icon;
         this.bodyLayer.addChild(img);
         var point: egret.Point = model.grid.toPoint();
         this.x = point.x;

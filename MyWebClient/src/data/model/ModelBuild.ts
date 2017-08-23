@@ -1,9 +1,10 @@
 class ModelBuild extends ModelBase {
 
     public name: string;
-    public type: BUILD_TYPE;
+    public type: EBuildType;
     public grid: Grid;
-    public prefab: string;
+    public icon: string;
+    public gate: Grid;
 
     public constructor() {
 		super();
@@ -14,7 +15,8 @@ class ModelBuild extends ModelBase {
 		this.name = this.getXmlValue(result, "name");
         this.type = this.getXmlValueNumber(result, "type");
         this.grid = GameCommon.instance.parseGrid(this.getXmlValue(result, "grid"));
-        this.prefab = this.getXmlValue(result, "prefab");
+        this.icon = this.getXmlValue(result, "icon");
+        this.gate = GameCommon.instance.parseGrid(this.getXmlValue(result, "gate"));
 	}
 
 }
