@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <builds>
-	<build id="10001" name="主城" type="1" grid="34,25" icon="build_10001_png" gate="37,28" />
-	<build id="10002" name="农田" type="2" grid="39,21" icon="build_10002_png" gate="42,22" />
+	<build id="10001" name="主城" type="1" grid="41,28" icon="build_10001_png" gate="43,30" />
+	<build id="10002" name="农田" type="2" grid="40,20" icon="build_10002_png" gate="43,21" />
 </builds>

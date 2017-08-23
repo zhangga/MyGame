@@ -2,6 +2,7 @@
 <e:Skin class="skins.MapTest" width="2700" height="2493" xmlns:e="http://ns.egret.com/eui">
 	<e:Image source="map_1_grid_png" x="0" y="0"/>
 
-	<e:Image x="755.15" y="1049.96" anchorOffsetX="0" anchorOffsetY="0" source="build_10001_png"/>
+	<e:Image x="840.73" y="1261.69" anchorOffsetX="0" anchorOffsetY="0" source="build_10001_png"/>
 	<e:Image source="1_png" x="623.15" y="1107.96" width="105" height="98"/>
+	<e:Image source="build_10002_png" x="601.83" y="1229.16"/>
 </e:Skin>

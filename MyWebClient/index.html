@@ -39,15 +39,15 @@
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
+	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelBase.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/BaseActive.js"></script>
-	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
-	<script egret="lib" src="bin-debug/sdk/data/ILoginInfo.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/BaseBuildManager.js"></script>
+	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelBuildLvBase.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelThing.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/ActiveSprite.js"></script>
 	<script egret="lib" src="bin-debug/data/FishData.js"></script>
-	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/data/condition/ConditionCmd.js"></script>
 	<script egret="lib" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
 	<script egret="lib" src="bin-debug/sdk/sa/SaTalkingData.js"></script>
@@ -57,7 +57,9 @@
 	<script egret="lib" src="bin-debug/view/base/BaseUI.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseWindowPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/FishBase.js"></script>
-	<script egret="lib" src="bin-debug/sdk/container/ISDKGiftContainer.js"></script>
+	<script egret="lib" src="bin-debug/sdk/data/ILoginInfo.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/ModelManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/old/AchieveManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/old/BagManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/old/DecorateManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/old/EnemyManager.js"></script>
@@ -81,9 +83,9 @@
 	<script egret="lib" src="bin-debug/data/manager/PathFinder.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/PathManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/SpriteManager.js"></script>
-	<script egret="lib" src="bin-debug/common/GameErrorTip.js"></script>
-	<script egret="lib" src="bin-debug/data/model/ModelBuild.js"></script>
 	<script egret="lib" src="bin-debug/common/GameSkin.js"></script>
+	<script egret="lib" src="bin-debug/data/model/ModelBuild.js"></script>
+	<script egret="lib" src="bin-debug/common/InfiniteNumber.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelBuildLvCommon.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelMap.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelMapNode.js"></script>
@@ -106,7 +108,7 @@
 	<script egret="lib" src="bin-debug/data/model/old/ModelShop.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelSynthetic.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelTechnology.js"></script>
-	<script egret="lib" src="bin-debug/common/InfiniteNumber.js"></script>
+	<script egret="lib" src="bin-debug/common/RedPoint.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelTurnplate.js"></script>
 	<script egret="lib" src="bin-debug/data/MonthCard.js"></script>
 	<script egret="lib" src="bin-debug/data/Player.js"></script>
@@ -114,8 +116,8 @@
 	<script egret="lib" src="bin-debug/data/SimplePlayer.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/ActiveArmy.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/ActiveBuild.js"></script>
-	<script egret="lib" src="bin-debug/common/RedPoint.js"></script>
 	<script egret="lib" src="bin-debug/data/BeVisitedPlayer.js"></script>
+	<script egret="lib" src="bin-debug/data/BookData.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/ArmyVo.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/BuildVo.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/ConditionData.js"></script>
@@ -147,8 +149,8 @@
 	<script egret="lib" src="bin-debug/net/MessageSend.js"></script>
 	<script egret="lib" src="bin-debug/net/NetBase.js"></script>
 	<script egret="lib" src="bin-debug/net/NetManager.js"></script>
-	<script egret="lib" src="bin-debug/data/BookData.js"></script>
 	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="lib" src="bin-debug/sdk/container/ISDKGiftContainer.js"></script>
 	<script egret="lib" src="bin-debug/sdk/container/ISDKPayContainer.js"></script>
 	<script egret="lib" src="bin-debug/sdk/container/ISDKShareContainer.js"></script>
 	<script egret="lib" src="bin-debug/sdk/container/SDKShareContainer.js"></script>
@@ -184,10 +186,10 @@
 	<script egret="lib" src="bin-debug/view/alert/WarningPanel.js"></script>
 	<script egret="lib" src="bin-debug/common/GameCommon.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BasePopPanel.js"></script>
+	<script egret="lib" src="bin-debug/common/GameErrorTip.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/FarmManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/BuildManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/ConditionManager.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/DataManager.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/Language.js"></script>
 	<script egret="lib" src="bin-debug/view/base/CurrencyBar.js"></script>
 	<script egret="lib" src="bin-debug/view/base/GoodsInstence.js"></script>
 	<script egret="lib" src="bin-debug/view/base/SoundBtn.js"></script>
@@ -200,7 +202,7 @@
 	<script egret="lib" src="bin-debug/view/body/fish/CdLock.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/EnjoyFish.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/Fish.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/ModelManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/DataManager.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/RandEevent.js"></script>
 	<script egret="lib" src="bin-debug/view/body/FlutterHint.js"></script>
 	<script egret="lib" src="bin-debug/view/body/LevelUpHint.js"></script>
@@ -219,7 +221,7 @@
 	<script egret="lib" src="bin-debug/view/friend/FriendPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/friend/FriendSeachPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/heaven/HeavenPanel.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/old/AchieveManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/Language.js"></script>
 	<script egret="lib" src="bin-debug/view/item/FieldGuideTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/view/item/ItemIntroducebar.js"></script>
 	<script egret="lib" src="bin-debug/view/item/ShopTipsBar.js"></script>
