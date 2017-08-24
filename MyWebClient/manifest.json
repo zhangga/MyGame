@@ -10,7 +10,6 @@
 		"libs/SDK/SDKUtil.js"
 	],
 	"game": [
-		"bin-debug/sdk/ChannelDefine.js",
 		"bin-debug/data/model/ModelBase.js",
 		"bin-debug/data/sprite/BaseActive.js",
 		"bin-debug/data/manager/build/BaseBuildManager.js",
@@ -20,7 +19,7 @@
 		"bin-debug/data/sprite/ActiveSprite.js",
 		"bin-debug/data/FishData.js",
 		"bin-debug/data/condition/ConditionCmd.js",
-		"bin-debug/sdk/handler/SDKWanBa.js",
+		"bin-debug/sdk/ChannelDefine.js",
 		"bin-debug/sdk/sa/SaTalkingData.js",
 		"bin-debug/view/base/BaseComp.js",
 		"bin-debug/view/base/BaseSystemPanel.js",
@@ -29,6 +28,7 @@
 		"bin-debug/view/base/BaseWindowPanel.js",
 		"bin-debug/view/body/fish/FishBase.js",
 		"bin-debug/sdk/data/ILoginInfo.js",
+		"bin-debug/sdk/handler/SDKWanBa.js",
 		"bin-debug/data/manager/ModelManager.js",
 		"bin-debug/data/manager/old/AchieveManager.js",
 		"bin-debug/data/manager/old/BagManager.js",
@@ -120,7 +120,7 @@
 		"bin-debug/net/MessageSend.js",
 		"bin-debug/net/NetBase.js",
 		"bin-debug/net/NetManager.js",
-		"bin-debug/AssetAdapter.js",
+		"bin-debug/view/warehouse/WarehousePanel.js",
 		"bin-debug/sdk/container/ISDKGiftContainer.js",
 		"bin-debug/sdk/container/ISDKPayContainer.js",
 		"bin-debug/sdk/container/ISDKShareContainer.js",
@@ -230,6 +230,6 @@
 		"bin-debug/view/warehouse/BagPanel.js",
 		"bin-debug/view/warehouse/CrownSynthesisPanel.js",
 		"bin-debug/view/warehouse/GemSynthesisPanel.js",
-		"bin-debug/view/warehouse/WarehousePanel.js"
+		"bin-debug/AssetAdapter.js"
 	]
 }

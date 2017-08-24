@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <builds>
 	<build id="10001" name="主城" type="1" grid="41,28" icon="build_10001_png" gate="43,30" />
-	<build id="10002" name="农田" type="2" grid="40,20" icon="build_10002_png" gate="43,21" />
+	<build id="10002" name="仓库" type="2" grid="41,39" icon="build_10002_png" gate="44,40" />
+	<build id="10003" name="兵营" type="3" grid="40,20" icon="build_10003_png" gate="43,21" />
+	<build id="10004" name="农田" type="4" grid="40,20" icon="build_10004_png" gate="43,21" />
+	<build id="10005" name="矿场" type="5" grid="40,20" icon="build_10005_png" gate="43,21" />
+	<build id="10006" name="木场" type="6" grid="40,20" icon="build_10006_png" gate="43,21" />
+	
 </builds>

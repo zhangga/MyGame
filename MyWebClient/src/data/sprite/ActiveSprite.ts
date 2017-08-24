@@ -108,6 +108,19 @@ abstract class ActiveSprite extends BaseActive {
 
     }
 
+    //获取当前方向的帧标签
+	protected getDirectionFrame(): string {
+		var _dirFrame: string = this._direction + "";
+		if (this.direction == DIRECTION.LEFT_UP) {
+			_dirFrame = DIRECTION.RIGHT_UP + "";
+		} else if (this.direction == DIRECTION.LEFT) {
+			_dirFrame = DIRECTION.RIGHT + "";
+		} else if (this.direction == DIRECTION.LEFT_DOWN) {
+			_dirFrame = DIRECTION.RIGHT_DOWN + "";
+		}
+		return _dirFrame;
+	}
+
 }
 
 enum DIRECTION {
