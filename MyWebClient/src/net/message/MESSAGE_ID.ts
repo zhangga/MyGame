@@ -10,6 +10,8 @@ enum MESSAGE_ID {
     CREATE_ROLE_MESSAGE = 102,	//创建角色
     ERROR_TIP_MESSAGE = 110,    //错误提示信息
 
+    FIGHT_JUNGLE_DETAIL_MSG = 1001,     //野外战斗的详情
+
 
 
 

@@ -28,6 +28,8 @@ class MapLayer extends egret.DisplayObjectContainer {
     }
 
     private onInit(): void {
+        this.currMapInfo = MapInfo.instance;
+
         this._mapLayer = new egret.DisplayObjectContainer();
         this.addChild(this._mapLayer);
         this._resLayer = new egret.DisplayObjectContainer();
@@ -50,24 +52,34 @@ class MapLayer extends egret.DisplayObjectContainer {
                 this.mapResImgs.push(_mapImg);
             }
         }
-        //地图初始位置
-        this._mapLayer.x = 0;
-        this._mapLayer.y = 0;
         //整个地图层的拖动
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.mouseDown, this);
         this._mapLayer.addEventListener(egret.TouchEvent.TOUCH_END, this.mouseUp, this);
 
         //DELETE
-        this.onRefreshMap();
+        this.onChangeMap(1);
     }
 
-    public onRefreshMap() {
-        this.currMapInfo = MapInfo.instance;
-        this.currMapInfo.onRefreshMapInfo(1);
-        //把地图放大成整个地图的大小
+    //切换地图
+    public onChangeMap(mapId: number): void {
+        var modelMap: ModelMap = ModelManager.instance.modelMap[mapId];
+        if (!modelMap) {
+            Tool.throwException("缺少地图配置文件！MapId:" + mapId);
+        }
+        // var testCamera: Grid = new Grid(24, 19);
+        // var camera: egret.Point = testCamera.toPoint();
+        var camera: egret.Point = modelMap.camera.toPoint();
+        //地图初始位置
+        this._mapLayer.x = -camera.x;
+        this._mapLayer.y = -camera.y;
+        //切换地图逻辑信息
+        this.currMapInfo.onRefreshMapInfo(mapId);
+        //把缩略图放大成整个地图的大小
         this.mapSmallImg.source = this.currMapInfo.getSmallMapSource();
         this.mapSmallImg.width = this.currMapInfo.MAP_WIDTH;
         this.mapSmallImg.height = this.currMapInfo.MAP_HEIGHT;
+        //加载初始地图
+        this.moveMapResLayer();
     }
 
 

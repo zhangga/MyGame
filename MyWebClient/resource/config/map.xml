@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <maps>
-	<map id="1" name="PVE地图" width="2700" height="2490" camera="0,0" resource="1" />
+	<map id="1" name="PVE地图" width="2700" height="2490" camera="24,19" resource="1" />
 </maps>

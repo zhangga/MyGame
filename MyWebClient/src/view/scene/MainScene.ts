@@ -34,9 +34,10 @@ class MainScene extends egret.DisplayObjectContainer {
 		} else {
 			this._moduleLayer.onReset();
 		}
+		this.sceneLayer.addChild(this._moduleLayer);
 		SpriteManager.instance.mapLayer = this._mapLayer;
 		BuildManager.instance.mapLayer = this._mapLayer;
-		this.sceneLayer.addChild(this._moduleLayer);
+		SceneManager.instance.onRegisterAllScene();
 		this.startTick();
 	}
 

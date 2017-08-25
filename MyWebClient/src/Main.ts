@@ -168,6 +168,11 @@ class Main extends eui.UILayer {
         _GF.instance.net.url = SDKManager.loginInfo.url;
         _GF.instance.scene = new MainScene();
         this.addChild(_GF.instance.scene);
+
+        GameWorld.instance.mainScene = _GF.instance.scene;
+        this.addChild(GameWorld.instance);
+
+        //音乐音效管理
         SoundFactory.playMusic(SoundDefine.SOUND_BGM);
         this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onHandler, this);
 

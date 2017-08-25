@@ -40,9 +40,6 @@ class MapInfo {
     public onRefreshMapInfo(mapId: number): void {
         this.mapId = mapId;
         var modelMap: ModelMap = ModelManager.instance.modelMap[mapId];
-        if (!modelMap) {
-            Tool.throwException("缺少地图配置文件！MapId:" + mapId);
-        }
         this.MAP_WIDTH = modelMap.width;
         this.MAP_HEIGHT = modelMap.height;
         this.camera = modelMap.camera;
