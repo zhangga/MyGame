@@ -64,8 +64,23 @@ class BuildManager {
     public getManager(type: EBuildType): BaseBuildManager {
         var mgr: BaseBuildManager = null;
         switch (type) {
+            case EBuildType.MAIN:
+                mgr = MainManager.instance;
+                break;
+            case EBuildType.DEPOT:
+                mgr = DepotManager.instance;
+                break;
+            case EBuildType.CAMP:
+                mgr = CampManager.instance;
+                break;
             case EBuildType.FARM:
                 mgr = FarmManager.instance;
+                break;
+            case EBuildType.STOPE:
+                mgr = StopeManager.instance;
+                break;
+            case EBuildType.LOGGING:
+                mgr = LoggingManager.instance;
                 break;
             default:
                 break;

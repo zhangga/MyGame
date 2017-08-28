@@ -15,7 +15,7 @@ class FarmManager extends BaseBuildManager {
     //点击
     public onClick(build: ActiveBuild): void {
         var main: ModelBuild = MapInfo.instance.MapBuildXmlData[10001];
-        var farm: ModelBuild = MapInfo.instance.MapBuildXmlData[10002];
+        var farm: ModelBuild = MapInfo.instance.MapBuildXmlData[10004];
         SpriteManager.instance.dispatchArmy(null, main.gate, farm.gate);
     }
 

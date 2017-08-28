@@ -41,16 +41,15 @@
     <!--game_files_start-->
 	<script egret="lib" src="bin-debug/data/model/ModelBase.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/BaseActive.js"></script>
-	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
+	<script egret="lib" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
 	<script egret="lib" src="bin-debug/sdk/data/ILoginInfo.js"></script>
-	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelBuildLvBase.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelThing.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/ActiveSprite.js"></script>
 	<script egret="lib" src="bin-debug/data/FishData.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/build/BaseBuildManager.js"></script>
-	<script egret="lib" src="bin-debug/data/condition/ConditionCmd.js"></script>
-	<script egret="lib" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
+	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
+	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/sdk/sa/SaTalkingData.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseComp.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseSystemPanel.js"></script>
@@ -58,7 +57,13 @@
 	<script egret="lib" src="bin-debug/view/base/BaseUI.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseWindowPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/FishBase.js"></script>
-	<script egret="lib" src="bin-debug/net/NetBase.js"></script>
+	<script egret="lib" src="bin-debug/data/condition/ConditionCmd.js"></script>
+	<script egret="lib" src="bin-debug/net/MessageErrorManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/BuildManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/ConditionManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/DataManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/FightManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/GameWorld.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/Language.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/ModelManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/old/AchieveManager.js"></script>
@@ -149,10 +154,10 @@
 	<script egret="lib" src="bin-debug/net/message/BuffManager.js"></script>
 	<script egret="lib" src="bin-debug/net/message/MESSAGE_ID.js"></script>
 	<script egret="lib" src="bin-debug/net/message/Message.js"></script>
-	<script egret="lib" src="bin-debug/net/MessageErrorManager.js"></script>
+	<script egret="lib" src="bin-debug/view/warehouse/WarehousePanel.js"></script>
 	<script egret="lib" src="bin-debug/net/MessageReceive.js"></script>
 	<script egret="lib" src="bin-debug/net/MessageSend.js"></script>
-	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="lib" src="bin-debug/net/NetBase.js"></script>
 	<script egret="lib" src="bin-debug/net/NetManager.js"></script>
 	<script egret="lib" src="bin-debug/data/condition/ConditionBuildLv.js"></script>
 	<script egret="lib" src="bin-debug/sdk/container/ISDKGiftContainer.js"></script>
@@ -191,10 +196,10 @@
 	<script egret="lib" src="bin-debug/view/alert/WarningPanel.js"></script>
 	<script egret="lib" src="bin-debug/common/GameErrorTip.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BasePopPanel.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/CampManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/DepotManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/build/FarmManager.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/BuildManager.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/ConditionManager.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/DataManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/LoggingManager.js"></script>
 	<script egret="lib" src="bin-debug/view/base/CurrencyBar.js"></script>
 	<script egret="lib" src="bin-debug/view/base/GoodsInstence.js"></script>
 	<script egret="lib" src="bin-debug/view/base/SoundBtn.js"></script>
@@ -207,7 +212,7 @@
 	<script egret="lib" src="bin-debug/view/body/fish/CdLock.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/EnjoyFish.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/Fish.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/FightManager.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/MainManager.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/RandEevent.js"></script>
 	<script egret="lib" src="bin-debug/view/body/FlutterHint.js"></script>
 	<script egret="lib" src="bin-debug/view/body/LevelUpHint.js"></script>
@@ -226,7 +231,7 @@
 	<script egret="lib" src="bin-debug/view/friend/FriendPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/friend/FriendSeachPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/heaven/HeavenPanel.js"></script>
-	<script egret="lib" src="bin-debug/data/manager/GameWorld.js"></script>
+	<script egret="lib" src="bin-debug/data/manager/build/StopeManager.js"></script>
 	<script egret="lib" src="bin-debug/view/item/FieldGuideTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/view/item/ItemIntroducebar.js"></script>
 	<script egret="lib" src="bin-debug/view/item/ShopTipsBar.js"></script>
@@ -264,7 +269,7 @@
 	<script egret="lib" src="bin-debug/view/warehouse/BagPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/warehouse/CrownSynthesisPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/warehouse/GemSynthesisPanel.js"></script>
-	<script egret="lib" src="bin-debug/view/warehouse/WarehousePanel.js"></script>
+	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
 	<!--game_files_end-->
 </head>
 <body>

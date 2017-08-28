@@ -30,14 +30,24 @@ class PathManager {
      * 根据开始节点和终止节点搜索路径
      */
     public find(start: Grid, end: Grid): Array<Grid> {
-        var finder: PathFinder = new PathFinder(start, end);
+        //开始、终止节点并不一定在路径上，找出距离最近的道路格子
+        var startRoad: Grid = this.getNearestRoad(start);
+        var endRoad: Grid = this.getNearestRoad(end);
+        //寻路的结果
+        var result: Array<Grid> = [];
+        if (!start.equal(startRoad)) {
+            result.push(start);
+        }
+        //道路上的路径
+        var finder: PathFinder = new PathFinder(startRoad, endRoad);
         var endGrid: PathGrid = finder.start();
         if (endGrid != null) {
-            return endGrid.getPath();
+            result = result.concat(endGrid.getPath());
         }
-        else {
-            return null;
+        if (!end.equal(endRoad)) {
+            result.push(end);
         }
+        return result;
     }
 
 }
