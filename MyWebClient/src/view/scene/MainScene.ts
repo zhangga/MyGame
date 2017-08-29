@@ -2,8 +2,12 @@ class MainScene extends egret.DisplayObjectContainer {
 	public static state: number;
 	private sceneLayer: egret.DisplayObjectContainer;
 	public promptLayer: egret.DisplayObjectContainer;
-	private _moduleLayer: ModuleLayer;
+	//地图层
 	private _mapLayer: MapLayer;
+	//UI层
+	private _moduleLayer: ModuleLayer;
+	//战斗场景层
+	private _fightLayer: FightLayer;
 
 	//游戏时钟是否启动
 	private isTicked = false;
@@ -19,8 +23,8 @@ class MainScene extends egret.DisplayObjectContainer {
 		this.sceneLayer = new egret.DisplayObjectContainer();
 		//提示层
 		this.promptLayer = new egret.DisplayObjectContainer();
-		this.addChild(this.sceneLayer);
-		this.addChild(this.promptLayer);
+		this.addChildAt(this.sceneLayer, 1);
+		this.addChildAt(this.promptLayer, 2);
 		this.promptLayer.addChild(PromptPanel.getInstance());
 		this.onChangeState();
 	}
@@ -28,15 +32,22 @@ class MainScene extends egret.DisplayObjectContainer {
 	//开始创建游戏
 	public onStartGame():void {
 		this._mapLayer = new MapLayer(this);
-		this.addChild(this._mapLayer);
+		this.addChildAt(this._mapLayer, 0);
 		if (!this._moduleLayer) {
 			this._moduleLayer = new ModuleLayer();
 		} else {
 			this._moduleLayer.onReset();
 		}
-		this.sceneLayer.addChild(this._moduleLayer);
+		if (!this._fightLayer) {
+			this._fightLayer = new FightLayer();
+		} else {
+			this._fightLayer.onReset();
+		}
+		this.sceneLayer.addChildAt(this._moduleLayer, 0);
+		this.sceneLayer.addChildAt(this._fightLayer, 1);
 		SpriteManager.instance.mapLayer = this._mapLayer;
 		BuildManager.instance.mapLayer = this._mapLayer;
+		FightManager.instance.fightLayer = this._fightLayer;
 		SceneManager.instance.onRegisterAllScene();
 		this.startTick();
 	}
@@ -178,6 +189,7 @@ class MainScene extends egret.DisplayObjectContainer {
             try {
                 this._moduleLayer.onResizeLayer();
                 this._mapLayer.onResizeLayer();
+				this._fightLayer.onResizeLayer();
             } catch (e) {
             }
         }

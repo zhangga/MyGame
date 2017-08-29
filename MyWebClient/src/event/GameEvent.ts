@@ -3,6 +3,11 @@ class GameEvent {
     //游戏震屏
     public static GAME_EARTHQUAKE_STRAT: string = "GAME_EARTHQUAKE_STRAT";
 
+    //打开游戏场景
+    public static GAME_SCENE_OPEN: string = "GAME_SCENE_OPEN";
+
+    
+
 
 
 

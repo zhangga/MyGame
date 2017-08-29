@@ -129,4 +129,5 @@
 		</e:layout>
 	</e:Group>
 	<e:Group id="system_set_btn" width="50" height="50" x="8" y="8"/>
+	<e:Image source="zzq1_jpg" x="0" y="0"/>
 </e:Skin>

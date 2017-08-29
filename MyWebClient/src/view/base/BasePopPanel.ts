@@ -111,7 +111,7 @@ class BasePopPanel extends eui.Component implements IPop {
         this.removeEventListener(egret.Event.ADDED, this.onAddedHandler, this);
     }
     protected get parentLayer(): egret.DisplayObjectContainer {
-        return this.owner.hintBar;
+        return this.owner.promptLayer;
     }
     public setTitle(title: string): void {
         this.basic["panel_title"].source = title;

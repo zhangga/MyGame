@@ -3,9 +3,6 @@
  */
 class SceneManager {
 
-    //所有注册的战斗场景
-    private fightScenes: {} = null;
-
     private static _instance: SceneManager;
     public static get instance(): SceneManager {
         if (!this._instance)
@@ -16,6 +13,12 @@ class SceneManager {
 
     }
 
+    //当前场景
+    private currScene: ESceneType;
+
+    //场景所需数据
+    private data: SceneParamVo;
+
     //初始化
     public init(): void {
 
@@ -23,24 +26,22 @@ class SceneManager {
 
     //初始化注册所有场景
     public onRegisterAllScene(): void {
-        this.onRegisterFightScene();
+        //增加监听
+        GameDispatcher.instance.addEventListener(GameEvent.GAME_SCENE_OPEN, this.onChangeFightScene, this);
     }
     
-    //注册所有战斗场景
-    private onRegisterFightScene(): void {
-        this.fightScenes = {};
-        this.fightScenes[MESSAGE_ID.FIGHT_JUNGLE_DETAIL_MSG] = ESceneType.JUNGLE;
-
-        for (var msgID in this.fightScenes) {
-            GameWorld.instance.addEventListener(msgID.toString(), this.onChangeFightScene, this);
-        }
+    //打开场景
+    public onOpenScene(sceneType: ESceneType, data: SceneParamVo): void {
+        this.currScene = sceneType;
+        this.data = data;
+        GameDispatcher.instance.dispatcherEventWith(GameEvent.GAME_SCENE_OPEN, false, this);
     }
 
     /**
      * 切换战斗场景
      */
-    private onChangeFightScene(evt: GameMessageEvent): void {
-
+    private onChangeFightScene(): void {
+        Tool.log("打开场景：" + this.currScene);
     }
 
 }

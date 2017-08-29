@@ -119,7 +119,7 @@ class BaseWindowPanel extends eui.Component {
         this.removeEventListener(egret.Event.ADDED, this.onAddedHandler, this);
     }
     protected get parentLayer(): egret.DisplayObjectContainer {
-        return this.owner.PupoBar;
+        return this.owner.popLayer;
     }
     public setTitle(title: string, isShow: boolean = false, bg: string = ""): void {
         this.basic["panel_title"].source = title;

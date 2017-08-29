@@ -13,4 +13,11 @@ class FightManager {
 
     }
 
+    //战斗场景层
+    private _fightLayer: FightLayer;
+
+    public set fightLayer(fightLayer: FightLayer) {
+        this._fightLayer = fightLayer;
+    }
+
 }

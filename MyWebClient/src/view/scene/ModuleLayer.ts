@@ -1,9 +1,13 @@
 class ModuleLayer extends egret.DisplayObjectContainer {
-	private _fishTank: FishTankView;
+	//主界面
 	private _main: MainView;
-	private _pop: eui.Group;
-	private _hint: egret.DisplayObjectContainer;
+	//提示
+	private _prompt: egret.DisplayObjectContainer;
+	//动画层
 	private _animLayer: eui.Group;
+	//弹出层
+	private _popLayer: eui.Group;
+	//遮罩
 	private _mask: egret.Sprite;
 	private allwindows = {};
 	public constructor() {
@@ -15,24 +19,21 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 	}
 	//供子类覆盖
 	public onInit(): void {
-		// this._fishTank = new FishTankView();
 		this._main = new MainView();
 
-		this._pop = new eui.Group();
-		this._hint = new egret.DisplayObjectContainer();
+		this._prompt = new egret.DisplayObjectContainer();
 		this._animLayer = new eui.Group;
 		this._animLayer.touchEnabled = false;
+		this._popLayer = new eui.Group();
 		this._mask = new egret.Sprite();
 		this._mask.touchEnabled = true;
 		this._mask.graphics.beginFill(0x000000, 0.6);
 		this._mask.graphics.drawRect(0, 0, _GF.stageWidth, _GF.stageHeight);
 		this._mask.graphics.endFill();
 
-		// this.addChild(this._fishTank);
 		this.addChild(this._main);
-
-		this.addChild(this._pop);
-		this.addChild(this._hint);
+		this.addChild(this._prompt);
+		this.addChild(this._popLayer);
 		this.addChild(this._animLayer);
 		this.onRegist();
 		this.onResizeLayer();
@@ -42,13 +43,7 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 		GameDispatcher.instance.addEventListener(FishTankEevent.FISH_RECYCLE_CROWN_EVENT, this.onRecycleCrow, this);
 		GameDispatcher.instance.addEventListener(FishTankEevent.DROP_TOUCH_EVENT, this.onShowFlutterHint, this);
 		GameDispatcher.instance.addEventListener(FishTankEevent.COIN_OUT_PUT_EVENT, this.onOutPutCoin, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.FISH_INPUT_EVENT, this.onPutInFishTank, this);
 		GameDispatcher.instance.addEventListener(FishTankEevent.FISH_TOUCH_EVENT, this.onTouchFishHandler, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.TANK_REFRESH_BG_EVENT, this.onTankRefreshBg, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.TANK_REFRESH_PART_EVENT, this.onTankRefreshPart, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.TANK_REFRESH_SHOW_EVENT, this.onTankRefreshShow, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.FISH_EVOLUTION_EVENT, this.onEvolutionHandler, this);
-		GameDispatcher.instance.addEventListener(FishTankEevent.FISH_SHOW_EMOJI_EVENT, this.onShowEmojiHandler, this);
 
 		GameDispatcher.instance.addEventListener(GameEvent.MODULE_WINDOW_OPEN, this.onOpenWindow, this);
 		GameDispatcher.instance.addEventListener(GameEvent.MODULE_WINDOW_CLOSE, this.onCloseWindow, this);
@@ -56,9 +51,6 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 		GameDispatcher.instance.addEventListener(GameEvent.MODULE_WINDOW_ALLREMOVED, this.onEventRemoveWindow, this);
 		GameDispatcher.instance.addEventListener(GameEvent.MODULE_GOTYPE_OPEN_WINDOW, this.gotypeHandler, this);
 		GameDispatcher.instance.addEventListener(GameEvent.RESET_MASK_CHILD_INDEX, this.onResetMask, this);
-		GameDispatcher.instance.addEventListener(GameEvent.FISH_SELL_EVENT, this.onDelFish, this);
-		GameDispatcher.instance.addEventListener(GameEvent.FISH_UPGRADE_EVENT, this.onUpgradeHandler, this);
-		GameDispatcher.instance.addEventListener(GameEvent.FIELDGUIDE_DEBLOCKING_EVENT, this.onRefreshFishTankBtn, this);
 		GameDispatcher.instance.addEventListener(GameEvent.OFFLINE_EVENT, this.delTimer, this);
 		GameDispatcher.instance.addEventListener(GameEvent.SHOW_SECOUTPUT_ADD, this.onShowOutputAdd, this);
 
@@ -87,10 +79,8 @@ class ModuleLayer extends egret.DisplayObjectContainer {
     public onResizeLayer(): void {
         this._main.resize();
         if (_GF.IS_PC_GAME) {
-            this.hintBar.x = Globar_Pos.x;
-            this.PupoBar.x = Globar_Pos.x;
-            // this.playerMessagePanel.x = Globar_Pos.x;
-            // this.systemMessagePanel.x = Globar_Pos.x;
+            this.promptLayer.x = Globar_Pos.x;
+            this.popLayer.x = Globar_Pos.x;
         }
     }
 
@@ -125,13 +115,13 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 			_windowPanel.onShow();
 	}
 	private onResetMask(): void {
-		if (this._pop.numChildren == 1 && this._pop.contains(this._mask)) {
-			if (this._pop.contains(this._mask)) {
-				this._pop.removeChild(this._mask);
+		if (this._popLayer.numChildren == 1 && this._popLayer.contains(this._mask)) {
+			if (this._popLayer.contains(this._mask)) {
+				this._popLayer.removeChild(this._mask);
 				GameDispatcher.instance.dispatcherEventWith(GameEvent.GAME_REDPOINT_TRIGGER, false, new RedPointTrigger(null));
 			}
 		} else {
-			this._pop.addChildAt(this._mask, Math.max(this._pop.numChildren - 2, 0));
+			this._popLayer.addChildAt(this._mask, Math.max(this._popLayer.numChildren - 2, 0));
 		}
 	}
 
@@ -152,15 +142,15 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 	}
 	//关闭所有面板
 	public removeAllWindows(): void {
-		if (this._pop) {
-			while (this._pop.numChildren != 0) {
-				var windowPanel = this._pop.getChildAt(0);
+		if (this._popLayer) {
+			while (this._popLayer.numChildren != 0) {
+				var windowPanel = this._popLayer.getChildAt(0);
 				if (egret.is(windowPanel, "BaseWindowPanel")) {
 					(windowPanel as BaseWindowPanel).onHide();
 				} else if (egret.is(windowPanel, "BasePopPanel")) {
 					(windowPanel as BasePopPanel).onHide();
 				} else {
-					this._pop.removeChildAt(0);
+					this._popLayer.removeChildAt(0);
 				}
 			}
 		}
@@ -202,7 +192,7 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 	}
 	private pointCheckTime: number = 0;
 	private onTimerDown(): void {
-		if (this.PupoBar.numChildren == 0 && this.pointCheckTime < egret.getTimer()) {
+		if (this.popLayer.numChildren == 0 && this.pointCheckTime < egret.getTimer()) {
 			this._main.trigger(true);
 			this.pointCheckTime = 5000 + egret.getTimer();
 		}
@@ -286,64 +276,23 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 		icon.data = ModelAward.onParseByParam(GOODS_TYPE.GOLD, 1, 1);
 		icon.x = pos.x;
 		icon.y = pos.y;
-		this._fishTank.addChild(icon);
 		var _randomPosX: number = pos.x;
 		var _randomPosY: number = GameDefine.FISHTANK_HEIGHT - 80;
 		TweenLiteUtil.dropbodyFly1(icon, this.onRecycle, this, new egret.Point(_randomPosX, _randomPosY));
 	}
-	public get PupoBar() {
-		return this._pop;
+	public get popLayer() {
+		return this._popLayer;
 	}
-	public get hintBar() {
-		return this._hint;
-	}
-	private onPutInFishTank(e: egret.Event): void {
-		this._fishTank.onPutInFishTank(e);
+	public get promptLayer() {
+		return this._prompt;
 	}
 	private onTouchFishHandler(e: egret.Event): void {
 		var fish = e.data as Fish;
 		this._main.onTouchFishHandler(fish.data);
 	}
-	/**
-	 * 鱼缸部位显示刷新
-	 */
-	private onTankRefreshPart(e: egret.Event): void {
-		this._fishTank.onRefreshPart();
-	}
-	/**
-	 * 鱼缸背景显示刷新
-	 */
-	private onTankRefreshBg(e: egret.Event): void {
-		this._fishTank.onRefreshBg();
-	}
-	/**
-	 * 鱼缸显示刷新
-	 */
-	private onTankRefreshShow(e: egret.Event): void {
-		this._fishTank.onRefreshShow();
-		this._fishTank.onReset();
-		this._main.onChangeFishTank();
-	}
-	private onEvolutionHandler(e: egret.Event): void {
-		this._fishTank.onEvolutionHandler(e);
-	}
-	private onShowEmojiHandler(e: egret.Event): void {
-		this._fishTank.onShowEmojiHandler(e);
-	}
-	public onUpgradeHandler(e: egret.Event): void {
-		this._fishTank.onUpgradeHandler(e);
-	}
 	public onReset(): void {
 		this.removeAllWindows();
 		this.startTimer();
-		this._fishTank.onReset();
-	}
-	private onDelFish(e: egret.Event): void {
-		DataManager.instance.playerM.player.delFishByUID(e.data);
-		this._fishTank.delFish(e.data);
-	}
-	private onRefreshFishTankBtn(): void {
-		this._fishTank.onRefreshArrow();
 	}
 	private onOpenOther(e: egret.Event): void {
 		DataManager.instance.playerM.player.inOtherHome = true;
@@ -364,7 +313,7 @@ class ModuleLayer extends egret.DisplayObjectContainer {
 		}
 	}
 	private trigger(e: egret.Event) {
-		if (this.PupoBar.numChildren == 0) {
+		if (this.popLayer.numChildren == 0) {
 			this._main.trigger();
 		}
 		var trig: RedPointTrigger = e.data;

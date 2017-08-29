@@ -47,6 +47,11 @@ class GameCommon {
 		return Math.pow(a.x-b.x, 2) + Math.pow(a.y-b.y, 2);
 	}
 
+	/**震屏 */
+	public earthQuake(): void {
+		GameDispatcher.instance.dispatcherEventWith(GameEvent.GAME_EARTHQUAKE_STRAT);
+	}
+
 	public addChildByLayer(target: egret.DisplayObject, parent: egret.DisplayObjectContainer, pos: egret.Point, register?: egret.Point) {
 		if (register) {
 			target.anchorOffsetX = register.x;

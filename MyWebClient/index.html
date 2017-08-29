@@ -41,15 +41,16 @@
     <!--game_files_start-->
 	<script egret="lib" src="bin-debug/data/model/ModelBase.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/BaseActive.js"></script>
-	<script egret="lib" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
+	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
 	<script egret="lib" src="bin-debug/sdk/data/ILoginInfo.js"></script>
+	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
 	<script egret="lib" src="bin-debug/data/model/ModelBuildLvBase.js"></script>
 	<script egret="lib" src="bin-debug/data/model/old/ModelThing.js"></script>
 	<script egret="lib" src="bin-debug/data/sprite/ActiveSprite.js"></script>
 	<script egret="lib" src="bin-debug/data/FishData.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/build/BaseBuildManager.js"></script>
-	<script egret="lib" src="bin-debug/sdk/ChannelDefine.js"></script>
-	<script egret="lib" src="bin-debug/view/item/BaseTipsBar.js"></script>
+	<script egret="lib" src="bin-debug/data/condition/ConditionCmd.js"></script>
+	<script egret="lib" src="bin-debug/sdk/handler/SDKWanBa.js"></script>
 	<script egret="lib" src="bin-debug/sdk/sa/SaTalkingData.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseComp.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseSystemPanel.js"></script>
@@ -57,8 +58,7 @@
 	<script egret="lib" src="bin-debug/view/base/BaseUI.js"></script>
 	<script egret="lib" src="bin-debug/view/base/BaseWindowPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/body/fish/FishBase.js"></script>
-	<script egret="lib" src="bin-debug/data/condition/ConditionCmd.js"></script>
-	<script egret="lib" src="bin-debug/net/MessageErrorManager.js"></script>
+	<script egret="lib" src="bin-debug/net/message/Message.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/BuildManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/ConditionManager.js"></script>
 	<script egret="lib" src="bin-debug/data/manager/DataManager.js"></script>
@@ -132,6 +132,7 @@
 	<script egret="lib" src="bin-debug/data/vo/Grid.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/HeroVo.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/PathGrid.js"></script>
+	<script egret="lib" src="bin-debug/data/vo/SceneParamVo.js"></script>
 	<script egret="lib" src="bin-debug/data/vo/SoldierVo.js"></script>
 	<script egret="lib" src="bin-debug/define/EBuildType.js"></script>
 	<script egret="lib" src="bin-debug/define/EConditionType.js"></script>
@@ -143,6 +144,7 @@
 	<script egret="lib" src="bin-debug/event/GameDispatcher.js"></script>
 	<script egret="lib" src="bin-debug/event/GameEvent.js"></script>
 	<script egret="lib" src="bin-debug/event/GameMessageEvent.js"></script>
+	<script egret="lib" src="bin-debug/event/SceneEvent.js"></script>
 	<script egret="lib" src="bin-debug/GraphicsUtils.js"></script>
 	<script egret="lib" src="bin-debug/interface/IFish.js"></script>
 	<script egret="lib" src="bin-debug/interface/IModule.js"></script>
@@ -153,8 +155,8 @@
 	<script egret="lib" src="bin-debug/net/HttpManager.js"></script>
 	<script egret="lib" src="bin-debug/net/message/BuffManager.js"></script>
 	<script egret="lib" src="bin-debug/net/message/MESSAGE_ID.js"></script>
-	<script egret="lib" src="bin-debug/net/message/Message.js"></script>
-	<script egret="lib" src="bin-debug/view/warehouse/WarehousePanel.js"></script>
+	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="lib" src="bin-debug/net/MessageErrorManager.js"></script>
 	<script egret="lib" src="bin-debug/net/MessageReceive.js"></script>
 	<script egret="lib" src="bin-debug/net/MessageSend.js"></script>
 	<script egret="lib" src="bin-debug/net/NetBase.js"></script>
@@ -224,7 +226,6 @@
 	<script egret="lib" src="bin-debug/view/fieldguide/CrownBar.js"></script>
 	<script egret="lib" src="bin-debug/view/fieldguide/FieldGuidePanel.js"></script>
 	<script egret="lib" src="bin-debug/view/FishTankLayer.js"></script>
-	<script egret="lib" src="bin-debug/view/FishTankView.js"></script>
 	<script egret="lib" src="bin-debug/view/friend/FriendApplyListPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/friend/FriendGiftListPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/friend/FriendGiftPanel.js"></script>
@@ -251,6 +252,7 @@
 	<script egret="lib" src="bin-debug/view/prompt/NoviceGuidePanel.js"></script>
 	<script egret="lib" src="bin-debug/view/prompt/PromptInfo.js"></script>
 	<script egret="lib" src="bin-debug/view/prompt/PromptPanel.js"></script>
+	<script egret="lib" src="bin-debug/view/scene/FightLayer.js"></script>
 	<script egret="lib" src="bin-debug/view/scene/MainScene.js"></script>
 	<script egret="lib" src="bin-debug/view/scene/MapInfo.js"></script>
 	<script egret="lib" src="bin-debug/view/scene/MapLayer.js"></script>
@@ -269,7 +271,7 @@
 	<script egret="lib" src="bin-debug/view/warehouse/BagPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/warehouse/CrownSynthesisPanel.js"></script>
 	<script egret="lib" src="bin-debug/view/warehouse/GemSynthesisPanel.js"></script>
-	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="lib" src="bin-debug/view/warehouse/WarehousePanel.js"></script>
 	<!--game_files_end-->
 </head>
 <body>
