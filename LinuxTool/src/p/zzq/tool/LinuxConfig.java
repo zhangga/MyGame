@@ -25,6 +25,10 @@ public class LinuxConfig {
 	public static List<String> hosts;
 	public static String user;
 	public static String pwd;
+	public static String dir;
+	public static String projHead;
+	public static int closeMin = 0;
+	public static int closeMax = 0;
 	
 	/**
 	 * 初始化配置文件
@@ -39,6 +43,14 @@ public class LinuxConfig {
 			//user
 			user = prop.getProperty("user");
 			pwd = prop.getProperty("pwd");
+			dir = prop.getProperty("dir");
+			projHead = prop.getProperty("projHead");
+			String close = prop.getProperty("closeServer");
+			if (close != null && close.length() > 0) {
+				String[] cs = close.split("-");
+				closeMin = Integer.valueOf(cs[0]);
+				closeMax = Integer.valueOf(cs[1]);
+			}
 		} catch (FileNotFoundException e) {
 			logger.error("cannot find file: "+CONFIG_PATH, e);
 		} catch (IOException e) {
